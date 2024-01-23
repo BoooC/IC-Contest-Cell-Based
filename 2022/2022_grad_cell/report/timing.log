@@ -1,0 +1,92 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : JAM
+Version: L-2016.03
+Date   : Wed Jan 24 02:00:52 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: perm_reg[4][2]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: state_reg[1]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  JAM                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  perm_reg[4][2]/CK (DFFHQX8)              0.00       0.50 r
+  perm_reg[4][2]/Q (DFFHQX8)               0.31       0.81 r
+  U520/Y (INVX4)                           0.17       0.98 f
+  U489/Y (OR2X1)                           0.31       1.30 f
+  U844/Y (AOI32X1)                         0.29       1.59 r
+  U563/Y (OAI31X4)                         0.36       1.95 f
+  U562/Y (CLKINVX8)                        0.05       2.00 r
+  U632/Y (OAI31X4)                         0.24       2.24 f
+  U644/Y (OAI21X2)                         0.21       2.45 r
+  U715/Y (BUFX12)                          0.24       2.69 r
+  U533/Y (INVX12)                          0.16       2.85 f
+  U539/Y (AND2X2)                          0.37       3.22 f
+  U504/Y (AO22X1)                          0.46       3.67 f
+  U423/Y (AOI221X4)                        0.41       4.09 r
+  U624/Y (OR2X8)                           0.13       4.21 r
+  U625/Y (NAND2X8)                         0.08       4.30 f
+  U930/Y (INVX8)                           0.07       4.36 r
+  U427/Y (CLKBUFX20)                       0.16       4.52 r
+  U426/Y (NOR2X2)                          0.10       4.63 f
+  U864/Y (INVX1)                           0.17       4.80 r
+  U552/Y (AOI32XL)                         0.28       5.08 f
+  U728/Y (OAI31X1)                         0.27       5.35 r
+  U488/Y (NAND2X1)                         0.17       5.52 f
+  U853/Y (AOI211X1)                        0.37       5.90 r
+  U197/Y (OAI31X2)                         0.20       6.10 f
+  U179/Y (OAI2BB1X4)                       0.20       6.30 f
+  U168/Y (AOI21X4)                         0.29       6.59 r
+  U659/Y (NAND2X6)                         0.18       6.77 f
+  U671/Y (NOR2X4)                          0.13       6.90 r
+  U670/Y (OAI2BB2X2)                       0.13       7.04 f
+  U557/Y (XNOR2X4)                         0.13       7.17 r
+  U706/Y (XNOR2X4)                         0.20       7.36 r
+  U435/Y (BUFX20)                          0.15       7.52 r
+  U707/Y (NOR2X4)                          0.08       7.60 f
+  U661/Y (NAND2X4)                         0.13       7.73 r
+  U701/Y (AND3X4)                          0.21       7.94 r
+  U772/Y (AND2X2)                          0.26       8.20 r
+  U436/Y (AOI222X4)                        0.29       8.49 f
+  U805/Y (OAI221XL)                        0.26       8.75 r
+  U440/Y (BUFX3)                           0.25       9.00 r
+  U421/Y (INVX3)                           0.07       9.06 f
+  U810/Y (NOR3X1)                          0.31       9.38 r
+  U694/Y (NAND4X2)                         0.21       9.58 f
+  U733/Y (NOR4X2)                          0.27       9.85 r
+  U732/Y (OAI21X2)                         0.13       9.98 f
+  U885/Y (AOI21X1)                         0.26      10.24 r
+  state_reg[1]/D (DFFQX1)                  0.00      10.24 r
+  data arrival time                                  10.24
+
+  clock CLK (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  state_reg[1]/CK (DFFQX1)                 0.00      10.40 r
+  library setup time                      -0.15      10.25
+  data required time                                 10.25
+  -----------------------------------------------------------
+  data required time                                 10.25
+  data arrival time                                 -10.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

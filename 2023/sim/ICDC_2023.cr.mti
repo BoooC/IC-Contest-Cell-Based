@@ -1,4 +1,12 @@
-C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/tb.sv {1 {vlog -work work -sv -stats=none C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/tb.sv
+C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/LASER.v {1 {vlog -work work -stats=none C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/LASER.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LASER
+-- Compiling module determine_inside
+
+Top level modules:
+	LASER
+
+} {} {}} C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/tb.sv {1 {vlog -work work -sv -stats=none C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module testfixture
 

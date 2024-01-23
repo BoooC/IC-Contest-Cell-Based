@@ -10,23 +10,23 @@ z2
 cModel Technology
 dC:/Users/p8101/Desktop/school/Univ/Special_project/LeNet_5_Eyeriss_v2/sim
 vdetermine_inside
-Z0 !s110 1705949642
+Z0 !s110 1706005555
 !i10b 1
-!s100 j8zUO9SQA6OzHFclNmBKk1
+!s100 ^a>J[o`B?BFga7J:_TU^=0
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Ij;01W_XkEK:08INWPjI_72
+I@=cKR@27[``JHn<^KmZe`3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 dC:/Users/p8101/Desktop/ic_design/ICDC/2023/sim
-Z4 w1705949640
+Z4 w1705949716
 Z5 8C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/LASER.v
 Z6 FC:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/LASER.v
-!i122 203
-L0 351 40
+!i122 204
+L0 350 40
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1705949642.000000
+Z8 !s108 1706005555.000000
 !s107 C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/LASER.v|
 Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/LASER.v|
 !i113 1
@@ -35,16 +35,16 @@ Z11 tCvgOpt 0
 vLASER
 R0
 !i10b 1
-!s100 QcGjWYKR;gbG@SDTMPV=l3
+!s100 6D<lR:k1I?T7cA[lDi`m20
 R1
-I?_@cMm?RBg7Ef7806_8hR0
+InF6?>nBO@7ME:Og3@37YC0
 R2
 R3
 R4
 R5
 R6
-!i122 203
-L0 24 324
+!i122 204
+L0 24 323
 R7
 r1
 !s85 0
