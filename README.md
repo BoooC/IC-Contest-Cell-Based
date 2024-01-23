@@ -1,4 +1,4 @@
-# IC Design Contest Submissions
+# IC Design Contest
 
 This repository contains my submissions for the IC Design Contest. 
 You can find more information about the contest [here](https://moeisoc.web2.ncku.edu.tw/p/406-1166-211155,r11.php?Lang=zh-tw). 
