@@ -33,7 +33,7 @@ The focus for 2022 was on implementing the lexicographical permutation algorithm
   - All patterns passed successfully.
 
 
-### Grade A Standards for 2022:
+#### Grade A Standards for 2022:
 
 - Gate-Level and RTL simulation must be completely accurate under a clock cycle of 10 ns.
 - Total simulation cycle count < 430,000 cycles.
