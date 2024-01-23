@@ -2,7 +2,7 @@
 
 This repository contains my submissions for the IC Design Contest. 
 You can find more information about the contest [here](https://moeisoc.web2.ncku.edu.tw/p/406-1166-211155,r11.php?Lang=zh-tw). 
-Each folder corresponds to the respective year's competition and includes problem statements, RTL (Register-Transfer Level) code, synthesis reports, and other relevant files.
+Each folder corresponds to the respective year's competition and includes problem statements, RTL code, synthesis reports, and other relevant files.
 
 ## 2023 Submission: LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
