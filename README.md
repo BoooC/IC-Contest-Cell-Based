@@ -10,12 +10,12 @@ There are two versions of the circuit:
 
 - **4-Processor Version:**
   - Area: 23614.2 um²
-  - Cycle Count: 56574
+  - Cycle Count: 112894
   - All patterns passed successfully.
 
 - **8-Processor Version:**
   - Area: 28246.4 um²
-  - Cycle Count: 112894
+  - Cycle Count: 56574
   - All patterns passed successfully.
 
 
