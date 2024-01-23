@@ -4,7 +4,7 @@ This repository contains my submissions for the IC Design Contest.
 You can find more information about the contest [here](https://moeisoc.web2.ncku.edu.tw/p/406-1166-211155,r11.php?Lang=zh-tw). 
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, synthesis reports, and other relevant files.
 
-## 2023 Submission: LASER
+## 2023 : LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
 There are two versions of the circuit:
 
@@ -24,7 +24,7 @@ There are two versions of the circuit:
 - Gate-Level and RTL simulation must be completely accurate under a clock cycle of 8 ns.
 
 
-## 2022 Submission: JAM
+## 2022 : JAM (Jan Assignment Machine)
 The focus for 2022 was on implementing the lexicographical permutation algorithm in a circuit.
 
 - **Circuit Design:**
