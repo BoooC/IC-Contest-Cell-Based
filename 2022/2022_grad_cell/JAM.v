@@ -95,14 +95,14 @@ wire [2:0] distance = min_point - exchange_point;
 
 // Set the values of points on the left of the exchange points, 
 // and those points with values less than exchange_num, to the maximum value (4'd15).
-assign temp_perm[0] = (exchange_point > 0 | perm[0] <= exchange_num) ? 4'd15 : {1'b0, perm[0]};
-assign temp_perm[1] = (exchange_point > 1 | perm[1] <= exchange_num) ? 4'd15 : {1'b0, perm[1]};
-assign temp_perm[2] = (exchange_point > 2 | perm[2] <= exchange_num) ? 4'd15 : {1'b0, perm[2]};
-assign temp_perm[3] = (exchange_point > 3 | perm[3] <= exchange_num) ? 4'd15 : {1'b0, perm[3]};
-assign temp_perm[4] = (exchange_point > 4 | perm[4] <= exchange_num) ? 4'd15 : {1'b0, perm[4]};
-assign temp_perm[5] = (exchange_point > 5 | perm[5] <= exchange_num) ? 4'd15 : {1'b0, perm[5]};
-assign temp_perm[6] = (exchange_point > 6 | perm[6] <= exchange_num) ? 4'd15 : {1'b0, perm[6]};
-assign temp_perm[7] = (exchange_point > 7 | perm[7] <= exchange_num) ? 4'd15 : {1'b0, perm[7]};
+assign temp_perm[0] = (exchange_point > 3'd0 | perm[0] <= exchange_num) ? 4'd15 : {1'b0, perm[0]};
+assign temp_perm[1] = (exchange_point > 3'd1 | perm[1] <= exchange_num) ? 4'd15 : {1'b0, perm[1]};
+assign temp_perm[2] = (exchange_point > 3'd2 | perm[2] <= exchange_num) ? 4'd15 : {1'b0, perm[2]};
+assign temp_perm[3] = (exchange_point > 3'd3 | perm[3] <= exchange_num) ? 4'd15 : {1'b0, perm[3]};
+assign temp_perm[4] = (exchange_point > 3'd4 | perm[4] <= exchange_num) ? 4'd15 : {1'b0, perm[4]};
+assign temp_perm[5] = (exchange_point > 3'd5 | perm[5] <= exchange_num) ? 4'd15 : {1'b0, perm[5]};
+assign temp_perm[6] = (exchange_point > 3'd6 | perm[6] <= exchange_num) ? 4'd15 : {1'b0, perm[6]};
+assign temp_perm[7] = (exchange_point > 3'd7 | perm[7] <= exchange_num) ? 4'd15 : {1'b0, perm[7]};
 
 // output
 assign J = perm[W];
@@ -110,80 +110,80 @@ assign Valid = DONE_wire;
 
 // Lexicographic Permutation Algorithm
 always @(*) begin
-	if(exchange_point == 0) 		
+	if(exchange_point == 3'd0) 		
 		next_perm[0] = perm[min_point];
-	else if (exchange_point > 0) 
+	else if (exchange_point > 3'd0) 
 		next_perm[0] = perm[0];
 end
 
 always @(*) begin
-	if(exchange_point == 1) 		
+	if(exchange_point == 3'd1) 		
 		next_perm[1] = perm[min_point];
-	else if (exchange_point > 1) 
+	else if (exchange_point > 3'd1) 
 		next_perm[1] = perm[1];
-	else if(distance == 7) 	 	
+	else if(distance == 3'd7) 	 	
 		next_perm[1] = perm[exchange_point];
 	else 			  			
-		next_perm[1] = perm[7 + exchange_point];
+		next_perm[1] = perm[3'd7 + exchange_point];
 end
 
 always @(*) begin
-	if(exchange_point == 2) 		
+	if(exchange_point == 3'd2) 		
 		next_perm[2] = perm[min_point];
-	else if (exchange_point > 2) 
+	else if (exchange_point > 3'd2) 
 		next_perm[2] = perm[2];
-	else if(distance == 6) 	 	
+	else if(distance == 3'd6) 	 	
 		next_perm[2] = perm[exchange_point];
 	else 			  			
-		next_perm[2] = perm[6 + exchange_point];
+		next_perm[2] = perm[3'd6 + exchange_point];
 end
 
 always @(*) begin
-	if(exchange_point == 3) 		
+	if(exchange_point == 3'd3) 		
 		next_perm[3] = perm[min_point];
-	else if (exchange_point > 3) 
+	else if (exchange_point > 3'd3) 
 		next_perm[3] = perm[3];
-	else if(distance == 5) 	 	
+	else if(distance == 3'd5) 	 	
 		next_perm[3] = perm[exchange_point];
 	else 			  			
-		next_perm[3] = perm[5 + exchange_point];
+		next_perm[3] = perm[3'd5 + exchange_point];
 end
 
 always @(*) begin
-	if(exchange_point == 4) 		
+	if(exchange_point == 3'd4) 		
 		next_perm[4] = perm[min_point];
-	else if (exchange_point > 4) 
+	else if (exchange_point > 3'd4) 
 		next_perm[4] = perm[4];
-	else if(distance == 4) 	 	
+	else if(distance == 3'd4) 	 	
 		next_perm[4] = perm[exchange_point];
 	else 			  			
-		next_perm[4] = perm[4 + exchange_point];
+		next_perm[4] = perm[3'd4 + exchange_point];
 end
 
 always @(*) begin
-	if(exchange_point == 5) 		
+	if(exchange_point == 3'd5) 		
 		next_perm[5] = perm[min_point];
-	else if (exchange_point > 5) 
+	else if (exchange_point > 3'd5) 
 		next_perm[5] = perm[5];
-	else if(distance == 3) 	 	
+	else if(distance == 3'd3) 	 	
 		next_perm[5] = perm[exchange_point];
 	else 			  			
-		next_perm[5] = perm[3 + exchange_point];
+		next_perm[5] = perm[3'd3 + exchange_point];
 end
 
 always @(*) begin
-	if(exchange_point == 6) 		
+	if(exchange_point == 3'd6) 		
 		next_perm[6] = perm[min_point];
-	else if(distance == 2) 	 	
+	else if(distance == 3'd2) 	 	
 		next_perm[6] = perm[exchange_point];
 	else 			  			
-		next_perm[6] = perm[2 + exchange_point];
+		next_perm[6] = perm[3'd2 + exchange_point];
 end
 always @(*) begin
-	if(distance == 1) 	 		
+	if(distance == 3'd1) 	 		
 		next_perm[7] = perm[exchange_point];
 	else 			  			
-		next_perm[7] = perm[1 + exchange_point];
+		next_perm[7] = perm[3'd1 + exchange_point];
 end
 
 				 
