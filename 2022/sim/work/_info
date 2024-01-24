@@ -10,23 +10,23 @@ z2
 cModel Technology
 dC:/Users/p8101/Desktop/ic_design/ICDC/2023/sim
 vJAM
-!s110 1706035516
+!s110 1706078893
 !i10b 1
-!s100 V;mNe1MhIi4INk4@95]?o3
+!s100 59f7KRnlnQfB0TdKI3QKV1
 Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IN48;WM:8GB@En?Cmi>QMk1
+Io]QJ0Ehg767L]bJVTL;X32
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/p8101/Desktop/ic_design/ICDC/2022/sim
-w1706035514
+w1706078891
 8C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/JAM.v
 FC:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/JAM.v
-!i122 81
-L0 27 237
+!i122 86
+L0 27 178
 Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1706035516.000000
+!s108 1706078893.000000
 !s107 C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/JAM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/JAM.v|
 !i113 1
@@ -35,24 +35,24 @@ Z4 tCvgOpt 0
 n@j@a@m
 vtestfixture
 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1706031597
+!s110 1706078832
 !i10b 1
-!s100 KYa3]Lkal1<ZIRU8E>4zJ1
+!s100 ;N:;mb?DDNah=39Q5J@@41
 R0
-IPOTO`am_C<P7<R?GkeLA]3
+II?l9G?069mIFSng8ZSXYQ1
 R1
 S1
 R2
-w1706031595
+w1706078830
 8C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv
 FC:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv
-!i122 78
+!i122 85
 L0 19 170
 R3
 r1
 !s85 0
 31
-!s108 1706031597.000000
+!s108 1706078832.000000
 !s107 C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv|
 !i113 1

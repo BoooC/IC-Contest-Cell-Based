@@ -20,7 +20,7 @@
 // # **  FUNCTION  CORRECT  **
 // # *************************
 //
-// Area : 8337.6
+// Area : 8166.2
 // 
 // ====================================================================================================== //
 
@@ -109,84 +109,24 @@ assign J = perm[W];
 assign Valid = DONE_wire;
 
 // Lexicographic Permutation Algorithm
-always @(*) begin
-	if(exchange_point == 3'd0) 		
-		next_perm[0] = perm[min_point];
-	else if (exchange_point > 3'd0) 
-		next_perm[0] = perm[0];
+integer i;
+always@(*) begin
+	for(i=0; i<8; i=i+1) begin
+		if(exchange_point == i) begin		
+			next_perm[i] = perm[min_point];
+		end
+		else if(exchange_point > i) begin
+			next_perm[i] = perm[i];
+		end
+		else if(distance == 8-i) begin 	
+			next_perm[i] = perm[exchange_point];
+		end
+		else begin
+			next_perm[i] = perm[8-i + exchange_point];
+		end
+	end
 end
 
-always @(*) begin
-	if(exchange_point == 3'd1) 		
-		next_perm[1] = perm[min_point];
-	else if (exchange_point > 3'd1) 
-		next_perm[1] = perm[1];
-	else if(distance == 3'd7) 	 	
-		next_perm[1] = perm[exchange_point];
-	else 			  			
-		next_perm[1] = perm[3'd7 + exchange_point];
-end
-
-always @(*) begin
-	if(exchange_point == 3'd2) 		
-		next_perm[2] = perm[min_point];
-	else if (exchange_point > 3'd2) 
-		next_perm[2] = perm[2];
-	else if(distance == 3'd6) 	 	
-		next_perm[2] = perm[exchange_point];
-	else 			  			
-		next_perm[2] = perm[3'd6 + exchange_point];
-end
-
-always @(*) begin
-	if(exchange_point == 3'd3) 		
-		next_perm[3] = perm[min_point];
-	else if (exchange_point > 3'd3) 
-		next_perm[3] = perm[3];
-	else if(distance == 3'd5) 	 	
-		next_perm[3] = perm[exchange_point];
-	else 			  			
-		next_perm[3] = perm[3'd5 + exchange_point];
-end
-
-always @(*) begin
-	if(exchange_point == 3'd4) 		
-		next_perm[4] = perm[min_point];
-	else if (exchange_point > 3'd4) 
-		next_perm[4] = perm[4];
-	else if(distance == 3'd4) 	 	
-		next_perm[4] = perm[exchange_point];
-	else 			  			
-		next_perm[4] = perm[3'd4 + exchange_point];
-end
-
-always @(*) begin
-	if(exchange_point == 3'd5) 		
-		next_perm[5] = perm[min_point];
-	else if (exchange_point > 3'd5) 
-		next_perm[5] = perm[5];
-	else if(distance == 3'd3) 	 	
-		next_perm[5] = perm[exchange_point];
-	else 			  			
-		next_perm[5] = perm[3'd3 + exchange_point];
-end
-
-always @(*) begin
-	if(exchange_point == 3'd6) 		
-		next_perm[6] = perm[min_point];
-	else if(distance == 3'd2) 	 	
-		next_perm[6] = perm[exchange_point];
-	else 			  			
-		next_perm[6] = perm[3'd2 + exchange_point];
-end
-always @(*) begin
-	if(distance == 3'd1) 	 		
-		next_perm[7] = perm[exchange_point];
-	else 			  			
-		next_perm[7] = perm[3'd1 + exchange_point];
-end
-
-				 
 // next state logic
 always@(*) begin
 	case(state)
@@ -208,16 +148,16 @@ always@(posedge CLK) begin
 	end
 end
 
-integer i;
+integer j;
 always@(posedge CLK) begin
 	if(RST) begin
-		for(i=0; i<WORKERS; i=i+1) begin
-			perm[i] <= i;
+		for(j=0; j<WORKERS; j=j+1) begin
+			perm[j] <= j;
 		end
 	end
 	else if(cal_cost_done) begin
-		for(i=0; i<WORKERS; i=i+1) begin
-			perm[i] <= next_perm[i];
+		for(j=0; j<WORKERS; j=j+1) begin
+			perm[j] <= next_perm[j];
 		end
 	end
 end
