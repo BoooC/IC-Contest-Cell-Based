@@ -7,6 +7,10 @@ Each folder corresponds to the respective year's competition and includes proble
 ## 2023 : LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
 
+#### Grade A Standards for 2023:
+- Area < 37,000 um²
+- Gate-Level and RTL simulation must be completely accurate under a clock cycle of 8 ns.
+  
 - **Circuit Design:**
   - **4-Processor Version:**
     - Area: 23614.2 um²
@@ -17,9 +21,6 @@ The key objective for 2023 was to use iterative methods to find two circles that
     - Cycle Count: 56574
     - All patterns passed successfully.
 
-#### Grade A Standards for 2023:
-- Area < 37,000 um²
-- Gate-Level and RTL simulation must be completely accurate under a clock cycle of 8 ns.
 
 ## 2022 : JAM (Jan Assignment Machine)
 The focus for 2022 was on implementing the lexicographical permutation algorithm in a circuit.
