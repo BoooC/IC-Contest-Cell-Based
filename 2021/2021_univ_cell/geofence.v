@@ -24,7 +24,9 @@ module geofence (
 	output 	reg		is_inside
 );
 
-
+// ====================================================================	//
+// 						 		Parameters  							//
+// ====================================================================	//
 localparam IDLE 		= 'd0;
 localparam READ_DATA 	= 'd1;
 localparam CROSS_A 		= 'd2;
@@ -35,6 +37,9 @@ localparam IS_INSIDE_B	= 'd6;
 localparam DONE			= 'd7;
 
 
+// ====================================================================	//
+// 						 		Registers  								//
+// ====================================================================	//
 reg [2:0] state, next_state;
 
 // 2-cycle cross
@@ -48,6 +53,10 @@ reg [1:0] sort_count;	// Bubble sort
 reg [9:0] Buffer_X [0:6];
 reg [9:0] Buffer_Y [0:6];
 
+
+// ====================================================================	//
+// 						 			Wires  								//
+// ====================================================================	//
 // state 
 wire IDLE_wire			= state == IDLE;
 wire READ_DATA_wire	    = state == READ_DATA;
@@ -84,14 +93,15 @@ wire signed [10:0] vector_B = point_by - point_oy;
 
 wire signed [20:0] vector_product = vector_A * vector_B;
 
-wire signed [21:0] cross_result = vector_product_reg - vector_product;
+wire signed [20:0] cross_result = vector_product_reg - vector_product;
 
-wire cross_negative = cross_result[21];
+wire cross_negative = cross_result[20];
 
 wire addr_done = addr 		== 3'd6;
 wire sort_done = sort_count == 2'd3;	// (2,3,4,5), (2,3,4), (2,3), (2)
 wire sort_one_iter_done = addr == (3'd5-sort_count);
 
+//  output
 assign valid = DONE_wire;
 
 // next state logic
@@ -167,6 +177,7 @@ always@(posedge clk) begin
 	end
 end
 
+// store Ax*By
 always@(posedge clk) begin
 	if(reset) begin
 		vector_product_reg <= 3'd0;
@@ -176,6 +187,7 @@ always@(posedge clk) begin
 	end
 end
 
+// output
 always@(posedge clk) begin
 	if(reset) begin
 		is_inside <= 1'b1;
