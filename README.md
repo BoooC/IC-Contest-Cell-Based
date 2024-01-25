@@ -39,4 +39,17 @@ The focus for 2022 was on implementing the lexicographical permutation algorithm
 - Total simulation cycle count < 430,000 cycles.
 - Area < 10,000 um²
 
+
+## 2021 : Geofence
+The challenge for 2021 was to sort six coordinate points in a clockwise (or counterclockwise) order using the cross product of vectors, and then to use the cross product again to determine if an object is within the geofence formed by these points.
+
+- **Circuit Design:**
+  - Area: 16731.3 um²
+  - Cycle Count: 2505
+  - All patterns passed successfully.
+
+#### Grade A Standards for 2021:
+- Gate-Level and RTL simulation must be completely accurate under a clock cycle of 30 ns.
+- Area < 22,000 um²
+
 ---
