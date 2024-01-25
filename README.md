@@ -11,10 +11,11 @@ The key objective for 2023 was to use iterative methods to find two circles that
   - **4-Processor Version:**
     - Area: 23614.2 um²
     - Cycle Count: 112894
+    - All patterns passed successfully.
   - **8-Processor Version:**
     - Area: 28246.4 um²
     - Cycle Count: 56574
-  - All patterns passed successfully.
+    - All patterns passed successfully.
 
 #### Grade A Standards for 2023:
 - Area < 37,000 um²
