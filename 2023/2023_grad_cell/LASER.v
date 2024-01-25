@@ -3,6 +3,8 @@
 // To increase the level of parallelism, in addition to adjusting the 'PARALLEL' parameter, 
 // you should also modify the 'is_inside[0:PARALLEL-1]' array accordingly and the bit width of parallel_ptr.
 //
+// The following is simulation result
+//
 // For a scenario with 6 patterns and 8 parallel processes, the simulation results are as follows:
 // # *******************************
 // # **   Finish Simulation       **

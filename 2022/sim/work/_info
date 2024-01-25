@@ -10,23 +10,23 @@ z2
 cModel Technology
 dC:/Users/p8101/Desktop/ic_design/ICDC/2023/sim
 vJAM
-!s110 1706078893
+!s110 1706109853
 !i10b 1
-!s100 59f7KRnlnQfB0TdKI3QKV1
+!s100 W>Xg3VL_VLzf`U>zGXO`;1
 Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Io]QJ0Ehg767L]bJVTL;X32
+I[M5?f<5[M2W?9OR?g12GR0
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/p8101/Desktop/ic_design/ICDC/2022/sim
-w1706078891
+w1706079036
 8C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/JAM.v
 FC:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/JAM.v
-!i122 86
-L0 27 178
+!i122 87
+L0 27 177
 Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1706078893.000000
+!s108 1706109853.000000
 !s107 C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/JAM.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/JAM.v|
 !i113 1

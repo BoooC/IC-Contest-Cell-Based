@@ -1,4 +1,10 @@
 // ====================================================================================================== //
+// This module is designed for the Job Assignment Machine.
+// It implements the Lexicographic Permutation Algorithm to determine the minimum workload.
+// The implementation utilizes combination logic to generate the next permutation, as
+// it is required that the total cycles do not exceed 430000.
+// 
+// The following is simulation result
 //
 // For a scenario with Pattern 1.
 // # ----------------------------------------------------------------------

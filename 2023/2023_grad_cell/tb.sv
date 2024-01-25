@@ -113,7 +113,7 @@ initial begin
         fd = $fopen(PAT[i],"r");
         if (fd == 0) begin
             $display ("Failed open %s",PAT[i]);
-            $stop;
+            $finish;
         end
         else begin
             charcount = $fgets (line, fd);
@@ -185,7 +185,7 @@ always @(posedge CLK ) begin
                 if (pixel_count == 0) begin
                     if(DONE === 1'bx) begin
                         $display("\n%10t , ERROR, DONE is in unknown state. Simlation terminated\n",$time);
-                        $stop;
+                        $finish;
                     end
                     else begin
                         #1;
@@ -193,13 +193,13 @@ always @(posedge CLK ) begin
                         wait_done <= wait_done+1;
                         if(wait_done >10) begin
                             $display("\n%t , ERROR, please pull down signal DONE. Simlation terminated\n",$time);
-                            $stop;
+                            $finish;
                         end
                     end
                 end
                 else begin
                 $display("\n%10t, ERROR, received DONE while send pattern, %s %3d pixel. Simlation terminated\n",$time, PAT[pat_n],pixel_count);
-                $stop;
+                $finish;
                 end
             end
         end
@@ -229,7 +229,7 @@ always @(posedge CLK ) begin
                      $display ("**   RUN CYCLE = %10d  **",cycle_total);
                      $display ("**   Cover total = %3d/%3d   **", total_cover_sum,optimum_sum);
                      $display ("*******************************");
-                     $stop;
+                     $finish;
                     end
                 end
             end
@@ -256,7 +256,7 @@ always @(posedge CLK ) begin
                  $display ("**   RUN CYCLE = %10d  **",cycle_total);
                  $display ("**   Cover total = %3d/%3d   **", total_cover_sum,optimum_sum);
                  $display ("*******************************");
-                 $stop;
+                 $finish;
                 end
             end
         end

@@ -1,178 +1,37 @@
-# Compile of JAM.v failed with 2 errors.
-# Compile of JAM.v was successful.
 # Compile of JAM.v was successful.
 vsim work.testfixture
 # vsim work.testfixture 
-# Start time: 14:45:34 on Jan 24,2024
+# Start time: 23:24:16 on Jan 24,2024
 # Loading sv_std.std
 # Loading work.testfixture
 # Loading work.JAM
+run -all
+# *******************************
+# ** Simulation Start          **
+# *******************************
+# PATTERN:   3
+# -------------- Cost Table --------------
+# Jobs       0   1   2   3   4   5   6   7
+# worker0:  81  60  60  65  96  60  65  96
+# worker1:  96  60  66  96  60  60  60  81
+# worker2:  96  66  60  99  60  81  65  65
+# worker3:  66  96  80  99  81  81  96  60
+# worker4:  81  96  65  96  60  96  60  81
+# worker5:  60  96  80  96  80  60  81  60
+# worker6:  99  60  99  65  80  80  81  66
+# worker7:  65  60  60  99  99  80  60  96
+# ----------------------------------------------------------------------
+# Get Valid at cycle:    362877
+# receive MinCost/MatchCount=  485/ 9 , golden MinCost/MatchCount= 485/ 9
+# ----------------------------------------------------------------------
+# *************************
+# **  FUNCTION  CORRECT  **
+# *************************
+# 
+# ** Note: $finish    : C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv(181)
+#    Time: 3628765 ns  Iteration: 1  Instance: /testfixture
+# 1
+# Break in Module testfixture at C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv line 181
 quit -sim
-# End time: 14:46:03 on Jan 24,2024, Elapsed time: 0:00:29
-# Errors: 0, Warnings: 4
-vsim work.testfixture
-# vsim work.testfixture 
-# Start time: 14:46:05 on Jan 24,2024
-# Loading sv_std.std
-# Loading work.testfixture
-# Loading work.JAM
-add wave -position end  sim:/testfixture/u_JAM/CAL_COST
-add wave -position end  sim:/testfixture/u_JAM/cal_cost_done
-add wave -position end  sim:/testfixture/u_JAM/CAL_COST_wire
-add wave -position end  sim:/testfixture/u_JAM/CLK
-add wave -position end  sim:/testfixture/u_JAM/Cost
-add wave -position end  sim:/testfixture/u_JAM/cost_temp
-add wave -position end  sim:/testfixture/u_JAM/distance
-add wave -position end  sim:/testfixture/u_JAM/DONE
-add wave -position end  sim:/testfixture/u_JAM/DONE_wire
-add wave -position end  sim:/testfixture/u_JAM/exchange_num
-add wave -position end  sim:/testfixture/u_JAM/exchange_point
-add wave -position end  sim:/testfixture/u_JAM/FIND_NEXT_SET
-add wave -position end  sim:/testfixture/u_JAM/FIND_NEXT_SET_wire
-add wave -position end  sim:/testfixture/u_JAM/i
-add wave -position end  sim:/testfixture/u_JAM/IDLE
-add wave -position end  sim:/testfixture/u_JAM/IDLE_wire
-add wave -position end  sim:/testfixture/u_JAM/iteration_done
-add wave -position end  sim:/testfixture/u_JAM/j
-add wave -position end  sim:/testfixture/u_JAM/J
-add wave -position end  sim:/testfixture/u_JAM/MatchCount
-add wave -position end  sim:/testfixture/u_JAM/min_point
-add wave -position end  sim:/testfixture/u_JAM/MinCost
-add wave -position end  sim:/testfixture/u_JAM/next_perm
-add wave -position end  sim:/testfixture/u_JAM/next_state
-add wave -position end  sim:/testfixture/u_JAM/perm
-add wave -position end  sim:/testfixture/u_JAM/RST
-add wave -position end  sim:/testfixture/u_JAM/state
-add wave -position end  sim:/testfixture/u_JAM/temp_perm
-add wave -position end  sim:/testfixture/u_JAM/Valid
-add wave -position end  sim:/testfixture/u_JAM/W
-add wave -position end  sim:/testfixture/u_JAM/WORKERS
-run -all
-# *******************************
-# ** Simulation Start          **
-# *******************************
-# PATTERN:   2
-# -------------- Cost Table --------------
-# Jobs       0   1   2   3   4   5   6   7
-# worker0:  54  59  59  59  32  40  62  40
-# worker1:  54  32  32  79  32  38  32  62
-# worker2:  54  54  30  38  32  38  59  54
-# worker3:  30  59  32  32  62  40  45  79
-# worker4:  32  32  38  32  62  38  62  32
-# worker5:  79  45  32  62  32  32  32  59
-# worker6:  32  38  32  59  54  30  30  45
-# worker7:  30  79  32  32  62  30  45  32
-# ----------------------------------------------------------------------
-# Get Valid at cycle:    362877
-# receive MinCost/MatchCount=  250/ 6 , golden MinCost/MatchCount= 250/ 6
-# ----------------------------------------------------------------------
-# *************************
-# **  FUNCTION  CORRECT  **
-# *************************
-# 
-# ** Note: $finish    : C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv(181)
-#    Time: 3628765 ns  Iteration: 1  Instance: /testfixture
-# 1
-# Break in Module testfixture at C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv line 181
-# Compile of tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testfixture
-run -all
-# GetModuleFileName: 找不到指定的模組。
-# 
-# 
-# *******************************
-# ** Simulation Start          **
-# *******************************
-# PATTERN:   1
-# -------------- Cost Table --------------
-# Jobs       0   1   2   3   4   5   6   7
-# worker0:  11  25  53  41  59  32  25  59
-# worker1:   4  11  25  11  59  31  53  11
-# worker2:  11  59  15  11  15  15  53  53
-# worker3:   4  59  32  34  53  41  34  59
-# worker4:  15  32  41  34   4  59  34  32
-# worker5:  41  59  59   4   4  41  34  34
-# worker6:  53  31  25  41  59  32  31  53
-# worker7:  11  31  25  11  34  34  53  32
-# ----------------------------------------------------------------------
-# Get Valid at cycle:    362877
-# receive MinCost/MatchCount=  119/ 3 , golden MinCost/MatchCount= 119/ 3
-# ----------------------------------------------------------------------
-# *************************
-# **  FUNCTION  CORRECT  **
-# *************************
-# 
-# ** Note: $finish    : C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv(181)
-#    Time: 3628765 ns  Iteration: 1  Instance: /testfixture
-# 1
-# Break in Module testfixture at C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv line 181
-# Compile of tb.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.testfixture
-run -all
-# GetModuleFileName: 找不到指定的模組。
-# 
-# 
-# *******************************
-# ** Simulation Start          **
-# *******************************
-# PATTERN:   3
-# -------------- Cost Table --------------
-# Jobs       0   1   2   3   4   5   6   7
-# worker0:  81  60  60  65  96  60  65  96
-# worker1:  96  60  66  96  60  60  60  81
-# worker2:  96  66  60  99  60  81  65  65
-# worker3:  66  96  80  99  81  81  96  60
-# worker4:  81  96  65  96  60  96  60  81
-# worker5:  60  96  80  96  80  60  81  60
-# worker6:  99  60  99  65  80  80  81  66
-# worker7:  65  60  60  99  99  80  60  96
-# ----------------------------------------------------------------------
-# Get Valid at cycle:    362877
-# receive MinCost/MatchCount=  485/ 9 , golden MinCost/MatchCount= 485/ 9
-# ----------------------------------------------------------------------
-# *************************
-# **  FUNCTION  CORRECT  **
-# *************************
-# 
-# ** Note: $finish    : C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv(181)
-#    Time: 3628765 ns  Iteration: 1  Instance: /testfixture
-# 1
-# Break in Module testfixture at C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv line 181
-# Compile of JAM.v was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.JAM
-run -all
-# GetModuleFileName: 找不到指定的模組。
-# 
-# 
-# *******************************
-# ** Simulation Start          **
-# *******************************
-# PATTERN:   3
-# -------------- Cost Table --------------
-# Jobs       0   1   2   3   4   5   6   7
-# worker0:  81  60  60  65  96  60  65  96
-# worker1:  96  60  66  96  60  60  60  81
-# worker2:  96  66  60  99  60  81  65  65
-# worker3:  66  96  80  99  81  81  96  60
-# worker4:  81  96  65  96  60  96  60  81
-# worker5:  60  96  80  96  80  60  81  60
-# worker6:  99  60  99  65  80  80  81  66
-# worker7:  65  60  60  99  99  80  60  96
-# ----------------------------------------------------------------------
-# Get Valid at cycle:    362877
-# receive MinCost/MatchCount=  485/ 9 , golden MinCost/MatchCount= 485/ 9
-# ----------------------------------------------------------------------
-# *************************
-# **  FUNCTION  CORRECT  **
-# *************************
-# 
-# ** Note: $finish    : C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv(181)
-#    Time: 3628765 ns  Iteration: 1  Instance: /testfixture
-# 1
-# Break in Module testfixture at C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/tb.sv line 181
+# End time: 23:30:08 on Jan 24,2024, Elapsed time: 0:05:52
+# Errors: 0, Warnings: 2
