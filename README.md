@@ -18,8 +18,8 @@ The key objective for 2023 was to use iterative methods to find two circles that
     - All patterns passed successfully.
 
 #### Grade A Standards for 2023:
-- [x] Area < 37,000 um²
 - [x] Gate-Level and RTL simulation must be completely accurate under a clock cycle of 8 ns.
+- [x] Area < 37,000 um²
 
 ## 2022 : JAM (Jan Assignment Machine)
 The focus for 2022 was on implementing the lexicographical permutation algorithm in a circuit.
