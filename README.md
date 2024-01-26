@@ -5,11 +5,12 @@ You can find more information about the contest [here](https://moeisoc.web2.ncku
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Project Name                | Clock Period (ns) | Simulation Cycle (A Grade Standard / My Spec) | Area (um²) (A Grade Standard / My Spec) |
-|------|-----------------------------|-------------------|-----------------------------------------------|-----------------------------------------|
-| 2023 | LASER                       | < 8               | / 4-Proc: 112,894; 8-Proc: 56,574             | < 37,000 / 4-Proc: 23,614.2; 8-Proc: 28,246.4 |
-| 2022 | JAM (Jan Assignment Machine)| < 10              | < 430,000 / 362,877                          | < 10,000 / 8,337.6                      |
-| 2021 | Geofence                    | < 30              | / 2,505                                      | < 22,000 / 16,731.3                     |
+| Year | Project Name                | Clock Period (ns) | A Grade Standards                              | My Specifications                          |
+|------|-----------------------------|-------------------|-----------------------------------------------|--------------------------------------------|
+| 2023 | LASER                       | < 8               | Area < 37,000                                 | 4-Proc: Cycle Count: 112,894<br>Area: 23,614.2<br>8-Proc: Cycle Count: 56,574<br>Area: 28,246.4 |
+| 2022 | JAM (Jan Assignment Machine)| < 10              | Cycle Count < 430,000<br>Area < 10,000        | Cycle Count: 362,877<br>Area: 8,337.6      |
+| 2021 | Geofence                    | < 30              | Area < 22,000                                 | Cycle Count: 2,505<br>Area: 16,731.3       |
+
 
 
 
