@@ -7,9 +7,9 @@ Each folder corresponds to the respective year's competition and includes proble
 
 | Year | Project Name    | Clock period | A Grade Standards                     | Simulation Cycle                   | Area (um²)                         |
 |------|-----------------|------------------------------------------------------|------------------------------------|------------------------------------|
-| 2023 | LASER           | 8 ns             Area < 37000                        | 4-Proc: 112894<br> 8-Proc: 56574   | 4-Proc: 23614.2<br> 8-Proc: 28246.4 |
-| 2022 | JAM             | 10 ns            Cycles < 430000<br> Area < 10000    | 362877                             | 8337.6                            |
-| 2021 | Geofence        | 30 ns            Area < 22000                        | 2505                               | 16731.3                           |
+| 2023 | LASER           | 8 ns         | Area < 37000                          | 4-Proc: 112894<br> 8-Proc: 56574   | 4-Proc: 23614.2<br> 8-Proc: 28246.4|
+| 2022 | JAM             | 10 ns        | Cycles < 430000<br> Area < 10000      | 362877                             | 8337.6                             |
+| 2021 | Geofence        | 30 ns        | Area < 22000                          | 2505                               | 16731.3                            |
 
 
 
