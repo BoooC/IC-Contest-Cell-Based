@@ -4,11 +4,12 @@ This repository contains my submissions for the IC Design Contest.
 You can find more information about the contest [here](https://moeisoc.web2.ncku.edu.tw/p/406-1166-211155,r11.php?Lang=zh-tw). 
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
-| Year | Project Name | A Grade Standards | My Design Specs | Simulation Cycle | Area (um²) |
-|------|--------------|-------------------|-----------------|------------------|------------|
-| 2023 | LASER        | Clock Cycle < 8 ns, Area < 37,000 | 4-Proc: Cycles: 112,894, Area: 23,614.2; 8-Proc: Cycles: 56,574, Area: 28,246.4 | 4-Proc: 112,894; 8-Proc: 56,574 | 4-Proc: 23,614.2; 8-Proc: 28,246.4 |
-| 2022 | JAM (Jan Assignment Machine) | Clock Cycle < 10 ns, Cycles < 430,000, Area < 10,000 | Cycles: 362,877, Area: 8,337.6 | 362,877 | 8,337.6 |
-| 2021 | Geofence     | Clock Cycle < 30 ns, Area < 22,000 | Cycles: 2,505, Area: 16,731.3 | 2,505 | 16,731.3 |
+| Year | Project Name                | A Grade Standards                             | Simulation Cycle                   | Area (um²)                         |
+|------|-----------------------------|-----------------------------------------------|------------------------------------|------------------------------------|
+| 2023 | LASER                       | Clock Cycle < 8 ns<br>Area < 37,000           | 4-Proc: 112,894<br>8-Proc: 56,574  | 4-Proc: 23,614.2<br>8-Proc: 28,246.4 |
+| 2022 | JAM (Jan Assignment Machine)| Clock Cycle < 10 ns<br>Cycles < 430,000<br>Area < 10,000 | 362,877                          | 8,337.6                            |
+| 2021 | Geofence                    | Clock Cycle < 30 ns<br>Area < 22,000           | 2,505                              | 16,731.3                           |
+
 
 ## 20
 
