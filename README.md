@@ -7,9 +7,9 @@ Each folder corresponds to the respective year's competition and includes proble
 
 | Year | Project Name                | Clock Period      | A Grade Standards                             | My Specifications                          |
 |------|-----------------------------|-------------------|-----------------------------------------------|--------------------------------------------|
-| 2023 | LASER                       | 8 ns              | Area < 37000                                  | 4-Proc: Cycle Count: 112894<br>Area: 23,14.2<br>8-Proc: Cycle Count: 56574<br>Area: 28246.4 |
-| 2022 | JAM                         | 10 ns             | Cycle Count < 430000<br>Area < 10000          | Cycle Count: 362877<br>Area: 8337.6      |
-| 2021 | Geofence                    | 30 ns             | Area < 22000                                  | Cycle Count: 2505<br>Area: 16731.3       |
+| 2023 | LASER                       | 8 ns              | Area < 37000um²                               | 4-Proc: Cycle Count: 112894<br>Area: 2314.2um²<br>8-Proc: Cycle Count: 56574<br>Area: 28246.4um² |
+| 2022 | JAM                         | 10 ns             | Cycle Count < 430000<br>Area < 10000um²       | Cycle Count: 362877<br>Area: 8337.6um²      |
+| 2021 | Geofence                    | 30 ns             | Area < 22000um²                               | Cycle Count: 2505<br>Area: 16731.3um²       |
 
 
 
