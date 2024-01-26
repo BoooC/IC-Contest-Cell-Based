@@ -12,12 +12,6 @@ Each folder corresponds to the respective year's competition and includes proble
 | 2021 | Geofence     | 30 ns        | Area < 22000um²                         | Area: 16731.3um² <br> Cycle: 2505  |  ✓   |
 
 
-
-
-
-
-## 20
-
 ## 2023 : LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
 
