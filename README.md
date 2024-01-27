@@ -27,7 +27,7 @@ The key objective for 2023 was to use iterative methods to find two circles that
     - All patterns passed successfully.
 
 #### Grade A Standards for 2023:
-- [x] Gate-Level and RTL simulation must be completely accurate under a clock cycle of 8 ns.
+- [x] All test patterns have successfully passed both gate-level and RTL simulations under a clock cycle of 8 ns.
 - [x] Area < 37,000 um²
 
 ## 2022 : JAM (Jan Assignment Machine)
@@ -39,7 +39,7 @@ The focus for 2022 was on implementing the lexicographical permutation algorithm
   - All patterns passed successfully.
 
 #### Grade A Standards for 2022:
-- [x] Gate-Level and RTL simulation must be completely accurate under a clock cycle of 10 ns.
+- [x] All test patterns have successfully passed both gate-level and RTL simulations under a clock cycle of 10 ns.
 - [x] Total simulation cycle count < 430,000 cycles.
 - [x] Area < 10,000 um²
 
@@ -52,7 +52,7 @@ The challenge for 2021 was to sort six coordinate points in a clockwise (or coun
   - All patterns passed successfully.
 
 #### Grade A Standards for 2021:
-- [x] Gate-Level and RTL simulation must be completely accurate under a clock cycle of 30 ns.
+- [x] All test patterns have successfully passed both gate-level and RTL simulations under a clock cycle of 30 ns.
 - [x] Area < 22,000 um²
 
 
@@ -65,7 +65,7 @@ The challenge for 2020 was to process a given string and multiple patterns, then
   - All patterns passed successfully with a score of 100.
 
 #### Grade A Standards for 2020:
-- [x] Gate-Level and RTL simulation must be completely accurate. Clock period can be adjusted as needed.
+- [x] All test patterns have successfully passed both gate-level and RTL simulations. Clock period = 20 ns(default).
 - [x] Score = 100
 
 ---
