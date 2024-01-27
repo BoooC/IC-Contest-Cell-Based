@@ -55,4 +55,17 @@ The challenge for 2021 was to sort six coordinate points in a clockwise (or coun
 - [x] Gate-Level and RTL simulation must be completely accurate under a clock cycle of 30 ns.
 - [x] Area < 22,000 um²
 
+
+## 2020 : SME(String Matching Engine)
+The challenge for 2020 was to process a given string and multiple patterns, then to identify the locations of these patterns within the string. Special attention was required for four types of special symbols that necessitated unique handling.
+
+- **Circuit Design:**
+  - Area: 17374.6 um²
+  - Cycle Count: 1822
+  - All patterns passed successfully with a score of 100.
+
+#### Grade A Standards for 2020:
+- [x] Gate-Level and RTL simulation must be completely accurate. Clock period can be adjusted as needed.
+- [x] Score = 100
+
 ---
