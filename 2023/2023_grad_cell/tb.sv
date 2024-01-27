@@ -52,30 +52,30 @@ always begin #(`CYCLE/2) CLK = ~CLK; end
 //end
 
 `ifdef P1
-    string PAT [1] = {"C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img1.pattern"};
+    string PAT [1] = {"img1.pattern"};
     parameter pat_number = 1;
 `elsif P2
-    string PAT [1] = {"C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img2.pattern"};
+    string PAT [1] = {"img2.pattern"};
     parameter pat_number = 1;
 `elsif P3
-    string PAT [1] = {"C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img3.pattern"};
+    string PAT [1] = {"img3.pattern"};
     parameter pat_number = 1;
 `elsif P4
-    string PAT [1] = {"C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img4.pattern"};
+    string PAT [1] = {"img4.pattern"};
     parameter pat_number = 1;
 `elsif P5
-    string PAT [1] = {"C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img5.pattern"};
+    string PAT [1] = {"img5.pattern"};
     parameter pat_number = 1;
 `elsif P6
-    string PAT [1] = {"C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img6.pattern"};
+    string PAT [1] = {"img6.pattern"};
     parameter pat_number = 1;
 `else
-    string PAT [6] = {"C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img1.pattern",
-					  "C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img2.pattern",
-					  "C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img3.pattern",
-					  "C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img4.pattern",
-					  "C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img5.pattern",
-					  "C:/Users/p8101/Desktop/ic_design/ICDC/2023/2023_grad_cell/img6.pattern"};
+    string PAT [6] = {"img1.pattern",
+					  "img2.pattern",
+					  "img3.pattern",
+					  "img4.pattern",
+					  "img5.pattern",
+					  "img6.pattern"};
     parameter pat_number = 6;
 `endif
 

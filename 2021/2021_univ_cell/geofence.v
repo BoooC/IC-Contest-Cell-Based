@@ -1,5 +1,5 @@
 // ====================================================================================================== //
-// This module is designed for Geofencing.
+// This module is designed for Geofence.
 // The first step involves implementing a sorting algorithm. 
 // For this design, bubble sort is used due to its hardware-friendly nature.
 // The second step involves performing consecutive vector cross operations to determine whether an item is within the geofence.
@@ -12,7 +12,7 @@
 // # -------------------------------------------------
 //
 // Area : 16731.3
-// 
+// Cycle: 2505
 // ====================================================================================================== //
 
 module geofence (
@@ -27,14 +27,14 @@ module geofence (
 // ====================================================================	//
 // 						 		Parameters  							//
 // ====================================================================	//
-localparam IDLE 		= 'd0;
-localparam READ_DATA 	= 'd1;
-localparam CROSS_A 		= 'd2;
-localparam CROSS_B 		= 'd3;
-localparam EXCHANGE 	= 'd4;
-localparam IS_INSIDE_A	= 'd5;
-localparam IS_INSIDE_B	= 'd6;
-localparam DONE			= 'd7;
+localparam IDLE 		= 3'd0;
+localparam READ_DATA 	= 3'd1;
+localparam CROSS_A 		= 3'd2;
+localparam CROSS_B 		= 3'd3;
+localparam EXCHANGE 	= 3'd4;
+localparam IS_INSIDE_A	= 3'd5;
+localparam IS_INSIDE_B	= 3'd6;
+localparam DONE			= 3'd7;
 
 
 // ====================================================================	//

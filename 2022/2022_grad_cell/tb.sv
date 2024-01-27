@@ -2,7 +2,7 @@
 `define CYCLE      10.0  
 //`define SDFFILE    "./JAM_syn.sdf"
 `define End_CYCLE  10000000
-`define PAT        "C:/Users/p8101/Desktop/ic_design/ICDC/2022/2022_grad_cell/cost_rom"
+`define PAT        "cost_rom"
 `define P3
 
 `ifdef P1

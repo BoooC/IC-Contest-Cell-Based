@@ -2,7 +2,7 @@
 `define CYCLE      30.0  
 //`define SDFFILE    "./geofence_syn.sdf"
 `define End_CYCLE  1000000
-`define PAT        "C:/Users/p8101/Desktop/ic_design/ICDC/2021/2021_univ_cell/univ.data"
+`define PAT        "univ.data"
 
 module testfixture();
 integer fd;
