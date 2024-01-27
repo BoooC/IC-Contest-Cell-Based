@@ -1,0 +1,8 @@
+C:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/SME.v {1 {vlog -work work -stats=none C:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/SME.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SME
+
+Top level modules:
+	SME
+
+} {} {}}

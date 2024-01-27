@@ -1,0 +1,87 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/p8101/Desktop/ic_design/ICDC/2021/sim
+vSME
+!s110 1706355207
+!i10b 1
+!s100 fz7;n:V3cC7bWU^3TZkjK0
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ik?]8_9;5F72AMUX@AC6=F1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/p8101/Desktop/ic_design/ICDC/2020/sim
+w1706355199
+8C:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/SME.v
+FC:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/SME.v
+!i122 93
+L0 14 288
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1706355207.000000
+!s107 C:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/SME.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/SME.v|
+!i113 1
+o-work work
+Z4 tCvgOpt 0
+n@s@m@e
+Xtb_sv_unit
+Z5 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z6 !s110 1706272411
+VNLD9BGXQO@`?eRkXOX=>b3
+r1
+!s85 0
+!i10b 1
+!s100 dd^EK2z<@09:0j@C8QP0I2
+INLD9BGXQO@`?eRkXOX=>b3
+!i103 1
+S1
+R2
+Z7 w1706266224
+Z8 8C:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/tb.sv
+Z9 FC:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/tb.sv
+!i122 18
+L0 210 0
+R3
+31
+Z10 !s108 1706272411.000000
+Z11 !s107 C:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/tb.sv|
+Z12 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/p8101/Desktop/ic_design/ICDC/2020/2020_grad_cell/tb.sv|
+!i113 1
+Z13 o-work work -sv
+R4
+vtestfixture
+!s105 tb_sv_unit
+DXx4 work 10 tb_sv_unit 0 22 NLD9BGXQO@`?eRkXOX=>b3
+R5
+R6
+!i10b 1
+!s100 GF7b7Y5BVkBfA<@:ioS4B1
+R0
+I^^;<nC^fJF`0R`LXcH9Bk2
+R1
+S1
+R2
+R7
+R8
+R9
+!i122 18
+L0 7 202
+R3
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 1
+R13
+R4
