@@ -4,6 +4,14 @@ This repository contains my submissions for the IC Design Contest.
 You can find more information about the contest [here](https://moeisoc.web2.ncku.edu.tw/p/406-1166-211155,r11.php?Lang=zh-tw). 
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
+
+| Year | Level | Project Name | Clock Period | A Grade Standards                       | Specifications                           | Grade |
+|------|-------|--------------|--------------|-----------------------------------------|------------------------------------------|-------|
+| 2023 | Grad  | LASER        | 8 ns         | Area < 37000um²                         | Area : 28246um² <br> Cycle: 56574         |  A    |
+| 2022 | Grad  | JAM          | 10 ns        | Area < 10000um²<br>Cycle < 430000       | Area : 8338um²  <br> Cycle: 362877        |  A    |
+| 2021 | Univ  | Geofence     | 30 ns        | Area < 22000um²                         | Area : 16731um² <br> Cycle: 2505          |  A    |
+
+
 ## 2023 : LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
 
