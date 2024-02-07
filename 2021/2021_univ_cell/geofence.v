@@ -67,7 +67,7 @@ wire IS_INSIDE_A_wire	= state == IS_INSIDE_A;
 wire IS_INSIDE_B_wire	= state == IS_INSIDE_B;
 wire DONE_wire	        = state == DONE;
 
-wire CROSS_wire 		= CROSS_A_wire 		| CROSS_B_wire;
+wire CROSS_wire 		= CROSS_A_wire 		| CROSS_B_wire | EXCHANGE_wire;
 wire IS_INSIDE_wire 	= IS_INSIDE_A_wire 	| IS_INSIDE_B_wire;
 
 wire [2:0] next_addr = (addr == 3'd6) ? 3'd1 : (addr + 3'd1);
@@ -99,7 +99,7 @@ wire cross_negative = cross_result[20];
 
 wire addr_done = addr 		== 3'd6;
 wire sort_done = sort_count == 2'd3;	// (2,3,4,5), (2,3,4), (2,3), (2)
-wire sort_one_iter_done = addr == (3'd5-sort_count);
+wire sort_one_iter_done = addr == (3'd5-{1'b0, sort_count});
 
 //  output
 assign valid = DONE_wire;
@@ -142,7 +142,7 @@ always@(posedge clk) begin
 		Buffer_X[addr] <= X; 
 		Buffer_Y[addr] <= Y; 
 	end
-	else if(CROSS_B_wire & ~cross_negative) begin
+	else if(EXCHANGE_wire & ~cross_negative) begin
 		Buffer_X[addr]		<= Buffer_X[next_addr]; 
 		Buffer_Y[addr]		<= Buffer_Y[next_addr]; 
 		Buffer_X[next_addr] <= Buffer_X[addr]; 
@@ -169,8 +169,8 @@ always@(posedge clk) begin
 	if(reset) begin
 		sort_count <= 2'd0;
 	end
-	else if(EXCHANGE_wire) begin
-		sort_count <= sort_one_iter_done ? (sort_count + 2'd1) : sort_count;
+	else if(EXCHANGE_wire & sort_one_iter_done) begin
+		sort_count <= sort_count + 2'd1;
 	end
 	else if(DONE_wire) begin
 		sort_count <= 2'd0;
@@ -180,7 +180,7 @@ end
 // store Ax*By
 always@(posedge clk) begin
 	if(reset) begin
-		vector_product_reg <= 3'd0;
+		vector_product_reg <= 21'sd0;
 	end
 	else if(CROSS_A_wire | IS_INSIDE_A_wire) begin
 		vector_product_reg <= vector_product;

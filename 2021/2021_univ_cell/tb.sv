@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 `define CYCLE      30.0  
-//`define SDFFILE    "./geofence_syn.sdf"
+`define SDFFILE    "geofence_syn.sdf"
 `define End_CYCLE  1000000
 `define PAT        "univ.data"
 
@@ -33,19 +33,17 @@ geofence u_geofence(.clk(clk),
 
 always begin #(`CYCLE/2) clk = ~clk; end
 
-/*
 initial begin
     $fsdbDumpfile("geofence.fsdb");
     $fsdbDumpvars();
     $fsdbDumpMDA;
 end
 
-//initial begin
-//    $dumpfile("geofence.vcd");
-//    $dumpvars;
-//end
-*/
-
+initial begin
+    $dumpfile("geofence.vcd");
+    $dumpvars;
+end
+ 
 initial begin
     $display("----------------------");
     $display("-- Simulation Start --");
@@ -98,11 +96,11 @@ always @(posedge clk ) begin
                 get_inside=is_inside;
                 if(get_inside == obj_isin) begin
                     pass = pass +1;
-                    $display("Object%0d: Golde/Return => %0d/%d, PASS\n",objnum,obj_isin,get_inside);
+                    $display("Object%0d: Golde/Return => %0d/%d, PASS/n",objnum,obj_isin,get_inside);
                 end
                 else begin
                     fail = fail +1;
-                    $display("Object%0d: Golde/Return => %0d/%d, FAIL\n",objnum,obj_isin,get_inside);
+                    $display("Object%0d: Golde/Return => %0d/%d, FAIL/n",objnum,obj_isin,get_inside);
                 end
             end
         end

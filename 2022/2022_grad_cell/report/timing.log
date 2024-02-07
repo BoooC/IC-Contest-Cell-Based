@@ -5,8 +5,8 @@ Report : timing
         -delay max
         -max_paths 1
 Design : JAM
-Version: L-2016.03
-Date   : Wed Jan 24 02:00:52 2024
+Version: U-2022.12
+Date   : Tue Feb  6 22:45:34 2024
 ****************************************
 
 Operating Conditions: slow   Library: slow
@@ -27,52 +27,51 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock CLK (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.50       0.50
-  perm_reg[4][2]/CK (DFFHQX8)              0.00       0.50 r
-  perm_reg[4][2]/Q (DFFHQX8)               0.31       0.81 r
-  U520/Y (INVX4)                           0.17       0.98 f
-  U489/Y (OR2X1)                           0.31       1.30 f
-  U844/Y (AOI32X1)                         0.29       1.59 r
-  U563/Y (OAI31X4)                         0.36       1.95 f
-  U562/Y (CLKINVX8)                        0.05       2.00 r
-  U632/Y (OAI31X4)                         0.24       2.24 f
-  U644/Y (OAI21X2)                         0.21       2.45 r
-  U715/Y (BUFX12)                          0.24       2.69 r
-  U533/Y (INVX12)                          0.16       2.85 f
-  U539/Y (AND2X2)                          0.37       3.22 f
-  U504/Y (AO22X1)                          0.46       3.67 f
-  U423/Y (AOI221X4)                        0.41       4.09 r
-  U624/Y (OR2X8)                           0.13       4.21 r
-  U625/Y (NAND2X8)                         0.08       4.30 f
-  U930/Y (INVX8)                           0.07       4.36 r
-  U427/Y (CLKBUFX20)                       0.16       4.52 r
-  U426/Y (NOR2X2)                          0.10       4.63 f
-  U864/Y (INVX1)                           0.17       4.80 r
-  U552/Y (AOI32XL)                         0.28       5.08 f
-  U728/Y (OAI31X1)                         0.27       5.35 r
-  U488/Y (NAND2X1)                         0.17       5.52 f
-  U853/Y (AOI211X1)                        0.37       5.90 r
-  U197/Y (OAI31X2)                         0.20       6.10 f
-  U179/Y (OAI2BB1X4)                       0.20       6.30 f
-  U168/Y (AOI21X4)                         0.29       6.59 r
-  U659/Y (NAND2X6)                         0.18       6.77 f
-  U671/Y (NOR2X4)                          0.13       6.90 r
-  U670/Y (OAI2BB2X2)                       0.13       7.04 f
-  U557/Y (XNOR2X4)                         0.13       7.17 r
-  U706/Y (XNOR2X4)                         0.20       7.36 r
-  U435/Y (BUFX20)                          0.15       7.52 r
-  U707/Y (NOR2X4)                          0.08       7.60 f
-  U661/Y (NAND2X4)                         0.13       7.73 r
-  U701/Y (AND3X4)                          0.21       7.94 r
-  U772/Y (AND2X2)                          0.26       8.20 r
-  U436/Y (AOI222X4)                        0.29       8.49 f
-  U805/Y (OAI221XL)                        0.26       8.75 r
-  U440/Y (BUFX3)                           0.25       9.00 r
-  U421/Y (INVX3)                           0.07       9.06 f
-  U810/Y (NOR3X1)                          0.31       9.38 r
-  U694/Y (NAND4X2)                         0.21       9.58 f
-  U733/Y (NOR4X2)                          0.27       9.85 r
-  U732/Y (OAI21X2)                         0.13       9.98 f
-  U885/Y (AOI21X1)                         0.26      10.24 r
+  perm_reg[4][2]/CK (DFFQX2)               0.00       0.50 r
+  perm_reg[4][2]/Q (DFFQX2)                0.35       0.85 r
+  U756/Y (BUFX20)                          0.16       1.01 r
+  U688/Y (INVX2)                           0.23       1.24 f
+  U495/Y (NOR2X2)                          0.29       1.53 r
+  U865/Y (INVX4)                           0.09       1.62 f
+  U864/Y (AOI32X1)                         0.28       1.89 r
+  U445/Y (OAI31X4)                         0.38       2.27 f
+  U821/Y (OAI21X2)                         0.23       2.49 r
+  U264/Y (NAND2X4)                         0.25       2.75 f
+  U477/Y (CLKINVX8)                        0.14       2.89 r
+  U612/Y (INVX2)                           0.11       3.00 f
+  U720/Y (NOR2X1)                          0.24       3.24 r
+  U482/Y (BUFX6)                           0.22       3.46 r
+  U662/Y (AO22X4)                          0.17       3.62 r
+  U652/Y (AOI221X4)                        0.24       3.87 f
+  U734/Y (OAI22X4)                         0.20       4.06 r
+  U562/Y (INVX8)                           0.16       4.22 f
+  U904/Y (NOR2X1)                          0.35       4.57 r
+  U903/Y (CLKINVX1)                        0.21       4.78 f
+  U902/Y (AOI32X1)                         0.30       5.09 r
+  U906/Y (OAI31XL)                         0.30       5.39 f
+  U647/Y (NAND2X2)                         0.19       5.57 r
+  U421/Y (AOI211X2)                        0.10       5.68 f
+  U639/Y (OAI31X1)                         0.34       6.02 r
+  U602/Y (OAI2BB1X4)                       0.23       6.24 r
+  U204/Y (AOI21X4)                         0.15       6.40 f
+  U638/Y (NAND2X4)                         0.20       6.60 r
+  U637/Y (NOR2X4)                          0.12       6.72 f
+  U582/Y (OAI2BB2X2)                       0.22       6.93 r
+  U618/Y (XNOR2X4)                         0.17       7.10 r
+  U730/Y (XOR2X4)                          0.25       7.35 f
+  U422/Y (INVX12)                          0.11       7.46 r
+  U471/Y (NOR2X6)                          0.07       7.53 f
+  U795/Y (NAND2X1)                         0.25       7.78 r
+  U483/Y (AND3X4)                          0.26       8.04 r
+  U660/Y (AND2X1)                          0.45       8.49 r
+  U592/Y (AOI222X4)                        0.42       8.90 f
+  U715/Y (OAI221X4)                        0.28       9.19 r
+  U714/Y (INVX6)                           0.06       9.25 f
+  U722/Y (NOR3X4)                          0.13       9.38 r
+  U529/Y (NAND4X2)                         0.18       9.56 f
+  U755/Y (NOR4X2)                          0.29       9.85 r
+  U754/Y (OAI21X2)                         0.13       9.98 f
+  U867/Y (AOI21X1)                         0.26      10.24 r
   state_reg[1]/D (DFFQX1)                  0.00      10.24 r
   data arrival time                                  10.24
 

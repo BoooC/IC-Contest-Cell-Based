@@ -1,0 +1,1 @@
+vcs -R -full64 -sverilog tb.sv JAM_syn.v +access+r +vcs+fsdbon +define+P2+SDF -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v +maxdelays

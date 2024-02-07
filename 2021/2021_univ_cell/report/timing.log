@@ -5,8 +5,8 @@ Report : timing
         -delay max
         -max_paths 1
 Design : geofence
-Version: L-2016.03
-Date   : Thu Jan 25 19:29:51 2024
+Version: U-2022.12
+Date   : Wed Feb  7 20:34:09 2024
 ****************************************
 
 Operating Conditions: slow   Library: slow
@@ -14,7 +14,7 @@ Wire Load Model Mode: top
 
   Startpoint: addr_reg[1]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: Buffer_X_reg[1][1]
+  Endpoint: Buffer_X_reg[2][0]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -29,103 +29,95 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.50       0.50
   addr_reg[1]/CK (DFFX2)                                  0.00       0.50 r
   addr_reg[1]/Q (DFFX2)                                   0.59       1.09 r
-  U929/Y (AND2XL)                                         0.58       1.66 r
-  U946/Y (NAND2X2)                                        0.50       2.17 f
-  U908/Y (AND2X2)                                         0.60       2.77 f
-  U1136/Y (CLKINVX1)                                      0.50       3.27 r
-  U916/Y (XNOR2X2)                                        0.63       3.90 r
-  U1092/Y (CLKINVX1)                                      0.71       4.60 f
-  U956/Y (AND2X2)                                         0.44       5.04 f
-  U1097/Y (AND2X2)                                        0.20       5.24 f
-  U1096/Y (CLKBUFX3)                                      0.80       6.04 f
-  U1609/Y (AOI222XL)                                      0.84       6.89 r
-  U965/Y (AND3X2)                                         0.56       7.45 r
-  U898/Y (OR2X1)                                          0.27       7.72 r
-  U897/Y (NAND2X1)                                        0.21       7.93 f
-  sub_65/A[0] (geofence_DW01_sub_2)                       0.00       7.93 f
-  sub_65/U6/Y (CLKINVX1)                                  0.17       8.10 r
-  sub_65/U3/Y (NAND2X2)                                   0.11       8.22 f
-  sub_65/U2_1/CO (ADDFHX4)                                0.25       8.47 f
-  sub_65/U2_2/CO (ADDFHX4)                                0.19       8.66 f
-  sub_65/U2_3/CO (ADDFXL)                                 0.47       9.13 f
-  sub_65/U2_4/CO (ADDFXL)                                 0.53       9.66 f
-  sub_65/U2_5/S (ADDFXL)                                  0.99      10.64 r
-  sub_65/DIFF[5] (geofence_DW01_sub_2)                    0.00      10.64 r
-  mult_68/a[5] (geofence_DW_mult_tc_0)                    0.00      10.64 r
-  mult_68/U307/Y (INVX2)                                  0.66      11.31 f
-  mult_68/U413/Y (XOR2X1)                                 0.39      11.70 f
-  mult_68/U411/Y (OAI22XL)                                0.54      12.24 r
-  mult_68/U56/S (ADDHXL)                                  0.61      12.85 r
-  mult_68/U277/S (ADDFXL)                                 0.73      13.58 r
-  mult_68/U272/S (ADDFXL)                                 0.99      14.57 r
-  mult_68/product[5] (geofence_DW_mult_tc_0)              0.00      14.57 r
-  sub_70/B[5] (geofence_DW01_sub_0)                       0.00      14.57 r
-  sub_70/U11/Y (NOR2X2)                                   0.16      14.73 f
-  sub_70/U3/Y (OR2X1)                                     0.39      15.12 f
-  sub_70/U38/Y (NOR2X1)                                   0.22      15.34 r
-  sub_70/U24/Y (AOI2BB2XL)                                0.56      15.90 r
-  sub_70/U5/Y (AND2X2)                                    0.26      16.17 r
-  sub_70/U4/Y (OR2X1)                                     0.35      16.51 r
-  sub_70/U23/Y (NAND2X8)                                  0.12      16.63 f
-  sub_70/U19/Y (NOR2X1)                                   0.25      16.88 r
-  sub_70/U25/Y (AOI2BB2X4)                                0.23      17.11 r
-  sub_70/U15/Y (CLKAND2X4)                                0.19      17.30 r
-  sub_70/U7/Y (OR2X1)                                     0.21      17.51 r
-  sub_70/U6/Y (NAND2X1)                                   0.21      17.72 f
-  sub_70/U48/Y (NOR2X1)                                   0.23      17.95 r
-  sub_70/U44/Y (AOI2BB2X1)                                0.46      18.41 r
-  sub_70/U2/Y (AND2X6)                                    0.22      18.63 r
-  sub_70/U1/Y (OAI22X2)                                   0.15      18.78 f
-  sub_70/U52/Y (NOR2XL)                                   0.38      19.16 r
-  sub_70/U27/Y (AOI2BB2XL)                                0.60      19.75 r
-  sub_70/U28/Y (CLKAND2X6)                                0.33      20.08 r
-  sub_70/U26/Y (OR2X8)                                    0.12      20.20 r
-  sub_70/U8/Y (NAND2X1)                                   0.18      20.38 f
-  sub_70/U20/Y (NOR2X1)                                   0.23      20.61 r
-  sub_70/U14/Y (AOI2BB2X1)                                0.37      20.99 r
-  sub_70/U32/Y (AND2X2)                                   0.24      21.22 r
-  sub_70/U34/Y (OR2X1)                                    0.22      21.44 r
-  sub_70/U33/Y (NAND2X1)                                  0.20      21.65 f
-  sub_70/U49/Y (NOR2X1)                                   0.23      21.88 r
-  sub_70/U17/Y (AOI2BB2XL)                                0.55      22.43 r
-  sub_70/U50/Y (AND2X2)                                   0.29      22.71 r
-  sub_70/U18/Y (OR2X8)                                    0.14      22.85 r
-  sub_70/U16/Y (NAND2X4)                                  0.10      22.95 f
-  sub_70/U53/Y (NOR2X1)                                   0.34      23.29 r
-  sub_70/U10/Y (AOI2BB2X1)                                0.28      23.57 r
-  sub_70/U30/Y (AND2X2)                                   0.21      23.78 r
-  sub_70/U31/Y (NOR2X1)                                   0.10      23.88 f
-  sub_70/U29/Y (OR2X1)                                    0.39      24.28 f
-  sub_70/U36/Y (NOR2X1)                                   0.23      24.51 r
-  sub_70/U37/Y (OAI2BB2XL)                                0.23      24.74 f
-  sub_70/U45/Y (XNOR3X1)                                  0.42      25.15 f
-  sub_70/DIFF[21] (geofence_DW01_sub_0)                   0.00      25.15 f
-  U1197/Y (NAND3BX2)                                      0.60      25.76 f
-  U900/Y (NAND2X1)                                        0.55      26.30 r
-  U1093/Y (CLKINVX1)                                      0.32      26.62 f
-  U1198/Y (NOR2X2)                                        0.40      27.03 r
-  U971/Y (NAND3X1)                                        0.23      27.25 f
-  U980/Y (OAI211XL)                                       0.53      27.78 r
-  U887/Y (INVX3)                                          0.17      27.95 f
-  U886/Y (CLKINVX4)                                       0.49      28.44 r
-  U954/Y (AND2X2)                                         0.33      28.77 r
-  U906/Y (AND2X2)                                         0.28      29.05 r
-  U1076/Y (CLKINVX1)                                      0.56      29.60 f
-  U1317/Y (OAI221XL)                                      0.62      30.23 r
-  Buffer_X_reg[1][1]/D (DFFX1)                            0.00      30.23 r
-  data arrival time                                                 30.23
+  U939/Y (NAND2X1)                                        0.36       1.45 f
+  U928/Y (NOR2X1)                                         0.74       2.18 r
+  U909/Y (INVX4)                                          0.36       2.54 f
+  U980/Y (AND2X2)                                         0.55       3.09 f
+  U1153/Y (CLKINVX1)                                      0.49       3.57 r
+  U926/Y (XNOR2X2)                                        0.57       4.15 r
+  U1107/Y (CLKINVX1)                                      0.73       4.87 f
+  U994/Y (NOR2XL)                                         0.83       5.70 r
+  U1115/Y (AND2X2)                                        0.26       5.97 r
+  U1114/Y (CLKBUFX3)                                      0.69       6.66 r
+  U1651/Y (AOI222XL)                                      0.40       7.06 f
+  U979/Y (AND3X2)                                         0.57       7.62 f
+  U1152/Y (OAI22XL)                                       0.60       8.22 r
+  sub_91/A[1] (geofence_DW01_sub_2_DW01_sub_3)            0.00       8.22 r
+  sub_91/U2_1/CO (ADDFX2)                                 0.54       8.75 r
+  sub_91/U2_2/CO (ADDFHX4)                                0.18       8.94 r
+  sub_91/U2_3/CO (ADDFX2)                                 0.27       9.21 r
+  sub_91/U2_4/S (CMPR32X2)                                0.38       9.60 r
+  sub_91/DIFF[4] (geofence_DW01_sub_2_DW01_sub_3)         0.00       9.60 r
+  mult_94/a[4] (geofence_DW_mult_tc_0)                    0.00       9.60 r
+  mult_94/U303/Y (XNOR2XL)                                0.40      10.00 r
+  mult_94/U259/Y (BUFX4)                                  0.48      10.48 r
+  mult_94/U263/Y (NAND2X2)                                0.54      11.02 f
+  mult_94/U288/Y (OAI32XL)                                0.55      11.57 r
+  mult_94/U56/S (ADDHXL)                                  0.59      12.16 r
+  mult_94/U266/S (ADDFXL)                                 0.73      12.89 r
+  mult_94/U19/S (ADDFXL)                                  0.87      13.76 f
+  mult_94/product[5] (geofence_DW_mult_tc_0)              0.00      13.76 f
+  sub_96/B[5] (geofence_DW01_sub_0_DW01_sub_1)            0.00      13.76 f
+  sub_96/U24/Y (OAI22X1)                                  0.47      14.24 r
+  sub_96/U38/Y (NOR2XL)                                   0.23      14.47 f
+  sub_96/U37/Y (AOI2BB2XL)                                0.46      14.93 f
+  sub_96/U15/Y (AND2X2)                                   0.30      15.23 f
+  sub_96/U10/Y (OR2X1)                                    0.31      15.53 f
+  sub_96/U9/Y (NAND2X1)                                   0.27      15.80 r
+  sub_96/U36/Y (NOR2XL)                                   0.20      16.00 f
+  sub_96/U35/Y (AOI2BB2XL)                                0.46      16.46 f
+  sub_96/U1/Y (CLKAND2X2)                                 0.28      16.74 f
+  sub_96/U28/Y (OAI22XL)                                  0.75      17.49 r
+  sub_96/U34/Y (NOR2XL)                                   0.28      17.77 f
+  sub_96/U33/Y (AOI2BB2XL)                                0.50      18.27 f
+  sub_96/U3/Y (CLKAND2X3)                                 0.27      18.55 f
+  sub_96/U6/Y (OAI22X1)                                   0.41      18.95 r
+  sub_96/U32/Y (NOR2XL)                                   0.23      19.19 f
+  sub_96/U31/Y (AOI2BB2XL)                                0.46      19.65 f
+  sub_96/U16/Y (AND2X2)                                   0.30      19.94 f
+  sub_96/U12/Y (OR2X1)                                    0.31      20.25 f
+  sub_96/U11/Y (NAND2X1)                                  0.28      20.53 r
+  sub_96/U54/Y (NOR2X1)                                   0.17      20.70 f
+  sub_96/U41/Y (AOI2BB2XL)                                0.44      21.14 f
+  sub_96/U7/Y (AND2X2)                                    0.29      21.43 f
+  sub_96/U40/Y (OR2X1)                                    0.31      21.74 f
+  sub_96/U8/Y (NAND2X1)                                   0.40      22.14 r
+  sub_96/U2/Y (NOR2X2)                                    0.21      22.35 f
+  sub_96/U27/Y (AOI2BB2XL)                                0.39      22.74 f
+  sub_96/U19/Y (CLKAND2X8)                                0.20      22.94 f
+  sub_96/U5/Y (NOR2X4)                                    0.10      23.03 r
+  sub_96/U4/Y (OR2X4)                                     0.19      23.22 r
+  sub_96/U20/Y (NOR2X4)                                   0.07      23.30 f
+  sub_96/U21/Y (AOI2BB2XL)                                0.43      23.73 f
+  sub_96/U53/Y (AND2X1)                                   0.34      24.07 f
+  sub_96/U52/Y (OAI22XL)                                  0.50      24.57 r
+  sub_96/U30/Y (XNOR3X1)                                  0.53      25.09 f
+  sub_96/DIFF[20] (geofence_DW01_sub_0_DW01_sub_1)        0.00      25.09 f
+  U1203/Y (NAND3BX2)                                      0.64      25.74 f
+  U907/Y (NAND2X6)                                        0.31      26.04 r
+  U996/Y (NAND3BXL)                                       0.26      26.30 f
+  U995/Y (OAI211XL)                                       0.55      26.84 r
+  U1118/Y (CLKINVX1)                                      0.28      27.12 f
+  U1117/Y (CLKBUFX3)                                      0.90      28.02 f
+  U968/Y (NOR2BX2)                                        0.39      28.40 r
+  U917/Y (NAND2X2)                                        0.35      28.76 f
+  U989/Y (CLKINVX1)                                       0.29      29.05 r
+  U1100/Y (CLKINVX1)                                      0.57      29.62 f
+  U1304/Y (OAI221XL)                                      0.62      30.24 r
+  Buffer_X_reg[2][0]/D (DFFQX1)                           0.00      30.24 r
+  data arrival time                                                 30.24
 
   clock clk (rise edge)                                  30.00      30.00
   clock network delay (ideal)                             0.50      30.50
   clock uncertainty                                      -0.10      30.40
-  Buffer_X_reg[1][1]/CK (DFFX1)                           0.00      30.40 r
+  Buffer_X_reg[2][0]/CK (DFFQX1)                          0.00      30.40 r
   library setup time                                     -0.16      30.24
   data required time                                                30.24
   --------------------------------------------------------------------------
   data required time                                                30.24
-  data arrival time                                                -30.23
+  data arrival time                                                -30.24
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.01
+  slack (MET)                                                        0.00
 
 
 1

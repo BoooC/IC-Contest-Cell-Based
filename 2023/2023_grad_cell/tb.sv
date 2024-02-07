@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 `define CYCLE      8.0  
-//`define SDFFILE    "./LASER_syn.sdf"
+`define SDFFILE    "./LASER_syn.sdf"
 `define MAX_CYCLE_PER_PATTERN  500000
 //`define USECOLOR 
 //`define P2

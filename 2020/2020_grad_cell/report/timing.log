@@ -5,8 +5,8 @@ Report : timing
         -delay max
         -max_paths 1
 Design : SME
-Version: L-2016.03
-Date   : Sat Jan 27 19:28:02 2024
+Version: U-2022.12
+Date   : Wed Feb  7 01:15:16 2024
 ****************************************
 
 Operating Conditions: slow   Library: slow
@@ -27,17 +27,17 @@ Wire Load Model Mode: top
   clock clk (fall edge)                   10.00      10.00
   clock network delay (ideal)              0.50      10.50
   input external delay                     0.00      10.50 f
-  reset (in)                               0.02      10.52 f
-  U583/Y (CLKINVX1)                        0.42      10.94 r
-  U565/Y (INVX3)                           0.56      11.50 f
-  U734/Y (NOR2X1)                          0.30      11.80 r
-  U733/Y (CLKBUFX3)                        0.62      12.42 r
-  U830/Y (NAND3X2)                         0.50      12.91 f
-  U732/Y (AOI2BB1X1)                       0.42      13.33 f
-  U731/Y (CLKBUFX3)                        0.71      14.04 f
-  U1134/Y (OAI2BB2XL)                      0.47      14.51 f
-  String_reg[8][0]/D (DFFQX1)              0.00      14.51 f
-  data arrival time                                  14.51
+  reset (in)                               0.01      10.51 f
+  U1145/Y (INVX3)                          0.49      11.01 r
+  U605/Y (INVX3)                           0.66      11.66 f
+  U724/Y (NOR2X1)                          0.32      11.98 r
+  U723/Y (CLKBUFX3)                        0.62      12.60 r
+  U924/Y (NAND3X2)                         0.50      13.10 f
+  U740/Y (AOI2BB1X1)                       0.42      13.52 f
+  U739/Y (CLKBUFX3)                        0.71      14.23 f
+  U981/Y (OAI2BB2XL)                       0.47      14.70 f
+  String_reg[8][0]/D (DFFQX1)              0.00      14.70 f
+  data arrival time                                  14.70
 
   clock clk (rise edge)                   20.00      20.00
   clock network delay (ideal)              0.50      20.50
@@ -47,9 +47,9 @@ Wire Load Model Mode: top
   data required time                                 20.10
   -----------------------------------------------------------
   data required time                                 20.10
-  data arrival time                                 -14.51
+  data arrival time                                 -14.70
   -----------------------------------------------------------
-  slack (MET)                                         5.59
+  slack (MET)                                         5.40
 
 
 1

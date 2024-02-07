@@ -4,23 +4,13 @@
 // you should also modify the 'is_inside[0:PARALLEL-1]' array accordingly and the bit width of parallel_ptr.
 //
 // The following is simulation result
-//
-// For a scenario with 6 patterns and 8 parallel processes, the simulation results are as follows:
-// # *******************************
-// # **   Finish Simulation       **
-// # **   RUN CYCLE =      56574  **
-// # **   Cover total = 170/170   **
-// # *******************************
-// Area : 23614.2
-// Cycle: 112894
-// 
 // For a scenario with 6 patterns and 4 parallel processes, the simulation results are as follows:
 // # *******************************
 // # **   Finish Simulation       **
-// # **   RUN CYCLE =     112894  **
+// # **   RUN CYCLE =     56574   **
 // # **   Cover total = 170/170   **
 // # *******************************
-// Area : 28246.4
+// Area : 30707.7
 // Cycle: 56574
 // ====================================================================================================== //
 
@@ -48,8 +38,8 @@ parameter RADIUS 			= 4;
 parameter PATTERN_HEIGHT 	= 16;
 parameter PATTERN_WIDTH 	= 16;
 
-parameter START_POINT_X 	= 0;
-parameter START_POINT_Y 	= 0;
+parameter START_POINT_X 	= 4'd0;
+parameter START_POINT_Y 	= 4'd0;
 
 parameter END_POINT_X 		= PATTERN_HEIGHT-1-START_POINT_X;
 parameter END_POINT_Y 		= PATTERN_WIDTH-1-START_POINT_Y;
@@ -84,7 +74,7 @@ reg [3:0] 	C1_opt_addr_Y;
 reg [3:0] 	C2_opt_addr_X;
 reg [3:0] 	C2_opt_addr_Y;
 
-reg [2:0] 	parallel_ptr;	// 8
+reg [4:0] 	parallel_ptr;	// 0~7
 
 reg 		find_c1_done_reg;
 
@@ -92,7 +82,7 @@ reg	[4:0] 	opt_num;
 reg	[4:0] 	opt_num_temp;
 reg	[4:0] 	opt_num_pre;
 	
-reg [1:0] 	converge_times;
+reg [2:0] 	converge_times;
 reg			iterate_reg;
 
 
@@ -135,7 +125,7 @@ generate
 endgenerate
 
 
-wire [4:0]	next_opt_num_temp = opt_num_temp + is_inside[0] + is_inside[1] + is_inside[2] + is_inside[3]
+wire [4:0]	next_opt_num_temp = opt_num_temp + is_inside[0] + is_inside[1] + is_inside[2] + is_inside[3]  
 											 + is_inside[4] + is_inside[5] + is_inside[6] + is_inside[7];
 
 wire iterate 			= next_opt_num_temp >= opt_num;
@@ -149,8 +139,10 @@ wire C_addr_X_done 		= C_addr_X == END_POINT_X;
 wire C_addr_Y_done 		= C_addr_Y == END_POINT_Y;
 
 wire data_in_done 		= parallel_ptr_done & item_addr_done;
-wire find_c1_done 		= C_addr_X_done & C_addr_Y_done & item_addr_done & FIND_C1_wire;
-wire find_c2_done 		= C_addr_X_done & C_addr_Y_done & item_addr_done & FIND_C2_wire;
+
+wire find_c_done 		= C_addr_X_done & C_addr_Y_done & item_addr_done;
+wire find_c1_done 		= find_c_done & FIND_C1_wire;
+wire find_c2_done 		= find_c_done & FIND_C2_wire;
 wire iteration_done 	= converge;
 
 
@@ -189,7 +181,7 @@ end
 integer i, j, k;
 always@(posedge CLK) begin
 	if(RST) begin
-		for(i=0; i<ITEM_NUM; i=i+1) begin
+		for(i=0; i<SUB_ITEM_NUM; i=i+1) begin
 			for(j=0; j<PARALLEL; j=j+1) begin
 				item_X[j][i] <= 4'd0;
 				item_Y[j][i] <= 4'd0;
@@ -204,10 +196,10 @@ end
 
 always@(posedge CLK) begin
 	if(RST) begin
-		parallel_ptr <= 3'd0;
+		parallel_ptr <= 5'd0;
 	end
 	else if(item_addr_done) begin
-		parallel_ptr <= parallel_ptr_done ? 3'd0 : parallel_ptr + 3'd1;
+		parallel_ptr <= parallel_ptr_done ? 5'd0 : parallel_ptr + 5'd1;
 	end
 end
 
@@ -242,7 +234,7 @@ always@(posedge CLK) begin
 	end
 	else if(item_addr_done & (FIND_C1_wire | FIND_C2_wire)) begin
 		C_addr_X <= C_addr_X_done ? START_POINT_X : (C_addr_X + 4'd1);
-		C_addr_Y <= C_addr_X_done ? C_addr_Y_done ? START_POINT_Y : (C_addr_Y + 4'd1) : C_addr_Y;
+		C_addr_Y <= (C_addr_X_done & C_addr_Y_done) ? START_POINT_Y : (C_addr_X_done ? (C_addr_Y + 4'd1) : C_addr_Y);
 	end
 	else if(DONE_wire) begin
 		C_addr_X <= START_POINT_X;
@@ -289,13 +281,13 @@ end
 
 always@(posedge CLK) begin
 	if(RST) begin
-		converge_times <= 2'd0;
+		converge_times <= 3'd0;
 	end
 	else if(find_c1_done | find_c2_done) begin	
-		converge_times <= (opt_num_pre == opt_num) ? converge_times + 2'd1 : 2'd0;
+		converge_times <= (opt_num_pre == opt_num) ? converge_times + 3'd1 : 3'd0;
 	end
 	else if(DONE_wire) begin	
-		converge_times <= 2'd0;
+		converge_times <= 3'd0;
 	end
 end
 
