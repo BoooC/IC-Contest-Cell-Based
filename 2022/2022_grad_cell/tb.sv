@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 `define CYCLE      10.0  
-//`define SDFFILE    "./JAM_syn.sdf"
+`define SDFFILE    "./JAM_syn.sdf"
 `define End_CYCLE  10000000
 `define PAT        "cost_rom"
 `define P3
@@ -40,18 +40,18 @@ JAM u_JAM(.CLK(CLK),
         .MatchCount(MatchCount),
         .MinCost(MinCost),
         .Valid(Valid));
-/*
+
 `ifdef SDF
     initial $sdf_annotate(`SDFFILE, u_JAM);
 `endif
-*/
+
 always begin #(`CYCLE/2) CLK = ~CLK; end
 
-//initial begin
-//    $fsdbDumpfile("JAM.fsdb");
-//    $fsdbDumpvars();
-//    $fsdbDumpMDA;
-//end
+initial begin
+    $fsdbDumpfile("JAM.fsdb");
+    $fsdbDumpvars();
+    $fsdbDumpMDA;
+end
 
 //initial begin
 //    $dumpvars();
