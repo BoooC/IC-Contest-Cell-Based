@@ -69,4 +69,17 @@ The challenge for 2020 was to process a given string and multiple patterns, then
 - [x] All test patterns have successfully passed both gate-level and RTL simulations. Clock period = 20 ns(default).
 - [x] Score = 100
 
+
+## 2019 : Image Convolution Circuit Design (CONV)
+The challenge for 2019 was to design a circuit for a convolution algorithm. The input data consisted of a single channel with 64x64 data points (4096 in total). The first layer involved convolution with two sets of 3x3 kernels and two sets of biases. The second layer implemented max pooling with a stride of 2, and the third layer involved flattening, where the data from max pooling (2x32x32) was interlaced in the output. The input data format was 20-bit, with the 4 most significant bits as a 4-bit integer and the 16 least significant bits as a 16-bit fraction.
+
+- **Circuit Design:**
+  - Area: 41333.4 um²
+  - Run Time: 3563661 ns
+  - All patterns, across all layers, successfully passed in both RTL and gate-level simulations under a clock period of 20 ns.
+
+#### Grade S Standards for 2019:
+- [x] All test patterns across all layers have successfully passed both gate-level and RTL simulations under a clock cycle of 20 ns.
+- [x] Area > 270000 um²
+
 ---
