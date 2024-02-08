@@ -5,4 +5,4 @@ vcs -R -sverilog tb.sv LASER.v +define+P1+USECOLOR +access+r +vcs+fsdbon +fsdb+m
 #vcs -R -sverilog tb.sv LASER.v +define+USECOLOR +access+r +vcs+fsdbon +fsdb+mda +fsdbfile+LASER.fsdb 
 
 #Gate-Level simuation
-#vcs -R -sverilog tb.sv LASER_syn.v +define+USECOLOR+SDF +access+r +vcs+fsdbon +fsdb+mda +fsdbfile+LASER.fsdb -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v +maxdelays
+#vcs -R -sverilog tb.sv LASER_syn.v +define+USECOLOR+SDF +access+r +neg_tchk +vcs+fsdbon +fsdb+mda +fsdbfile+LASER.fsdb -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v +maxdelays

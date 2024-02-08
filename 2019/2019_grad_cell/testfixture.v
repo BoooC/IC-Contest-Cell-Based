@@ -1,14 +1,14 @@
 `timescale 1ns/10ps
-`define CYCLE      4.0          	  
-// `define SDFFILE    "../02_SYN/conv_syn.sdf"	  
+`define CYCLE      20.0          	  
+`define SDFFILE    "CONV_syn.sdf"	  
 `define End_CYCLE  10000000             
 
-`define PAT        	"C:/Users/p8101/Desktop/ic_design/ICDC/2019/2019_grad_cell/dat_grad/cnn_sti.dat"             
-`define L0_EXP0		"C:/Users/p8101/Desktop/ic_design/ICDC/2019/2019_grad_cell/dat_grad/cnn_layer0_exp0.dat"     
-`define L0_EXP1		"C:/Users/p8101/Desktop/ic_design/ICDC/2019/2019_grad_cell/dat_grad/cnn_layer0_exp1.dat"     
-`define L1_EXP0		"C:/Users/p8101/Desktop/ic_design/ICDC/2019/2019_grad_cell/dat_grad/cnn_layer1_exp0.dat"     
-`define L1_EXP1		"C:/Users/p8101/Desktop/ic_design/ICDC/2019/2019_grad_cell/dat_grad/cnn_layer1_exp1.dat"     
-`define L2_EXP		"C:/Users/p8101/Desktop/ic_design/ICDC/2019/2019_grad_cell/dat_grad/cnn_layer2_exp.dat"  
+`define PAT        	"dat_grad/cnn_sti.dat"             
+`define L0_EXP0		"dat_grad/cnn_layer0_exp0.dat"     
+`define L0_EXP1		"dat_grad/cnn_layer0_exp1.dat"     
+`define L1_EXP0		"dat_grad/cnn_layer1_exp0.dat"     
+`define L1_EXP1		"dat_grad/cnn_layer1_exp1.dat"     
+`define L2_EXP		"dat_grad/cnn_layer2_exp.dat"  
 
 module testfixture;
 
@@ -73,13 +73,13 @@ CONV u_CONV(
 
 
 always begin #(`CYCLE/2) clk = ~clk; end
-/*
+
 initial begin
 	$fsdbDumpfile("CONV.fsdb");
 	$fsdbDumpvars;
 	$fsdbDumpMDA;
 end
-*/
+
 initial begin  // global control
 	$display("-----------------------------------------------------\n");
  	$display("START!!! Simulation Start .....\n");

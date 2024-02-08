@@ -16,11 +16,11 @@ set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
 #compile -map_effort high -area_effort high -inc
 compile
 
-write -format ddc     -hierarchy -output "conv_syn.ddc"
-write_sdf -version 1.0  conv_syn.sdf
-write -format verilog -hierarchy -output conv_syn.v
+write -format ddc     -hierarchy -output "CONV_syn.ddc"
+write_sdf -version 1.0  CONV_syn.sdf
+write -format verilog -hierarchy -output CONV_syn.v
 report_area > area.log
 report_timing > timing.log
-report_qor   >  conv_syn.qor
+report_qor   >  CONV_syn.qor
 
 exit

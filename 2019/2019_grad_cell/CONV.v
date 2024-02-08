@@ -7,10 +7,10 @@ module  CONV(
 	input 		signed	[19:0]	idata,	
 	output 	 		 			cwr,
 	output 	reg			[11:0] 	caddr_wr,
-	output 	reg	signed	[19:0] 	cdata_wr,	
-	output 	reg			 		crd,
+	output 		signed	[19:0] 	cdata_wr,	
+	output 				 		crd,
 	output 				[11:0]	caddr_rd,
-	input	reg	signed	[19:0]	cdata_rd,
+	input		signed	[19:0]	cdata_rd,
 	output 	reg			[2:0] 	csel
 );
 
@@ -342,8 +342,8 @@ always@(posedge clk or posedge reset) begin
 	else if(count == 4'd4) begin
 		max_temp <= 20'sd0;
 	end
-	else if(MAX_POOLING_wire) begin
-		max_temp <= (cdata_rd > max_temp) ? cdata_rd : max_temp;
+	else if(MAX_POOLING_wire & ((cdata_rd > max_temp))) begin
+		max_temp <= cdata_rd;
 	end
 end
 
