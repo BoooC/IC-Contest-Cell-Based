@@ -5,7 +5,7 @@ You can find more information about the contest [here](https://moeisoc.web2.ncku
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Level | Project Name | Clock Period | Highest Grade Standards                       | Result                           | Grade |
+| Year | Level | Name | Clock Period | Highest Grade Standards                       | Result                           | Grade |
 |------|-------|--------------|--------------|-----------------------------------------|------------------------------------------|-------|
 | 2023 | Grad  | LASER        | 8 ns         | Area < 37000um²                         | Area : 30707um² <br> Cycle: 56574        |  A    |
 | 2022 | Grad  | JAM          | 10 ns        | Area < 10000um²<br>Cycle < 430000       | Area : 8310um²  <br> Cycle: 362877       |  A    |
