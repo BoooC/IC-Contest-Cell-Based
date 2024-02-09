@@ -80,7 +80,19 @@ The challenge for 2019 was to design a circuit for a convolution algorithm. The 
   - All patterns, across all layers, successfully passed in both RTL and gate-level simulations under a clock period of 20 ns.
 
 #### Grade S Standards for 2019:
-- [x] All test patterns across all layers have successfully passed both gate-level and RTL simulations under a clock cycle of 20 ns.
+- [x] All test patterns across all layers have successfully passed both gate-level and RTL simulations under any clock cycle.
 - [x] Area > 270000 um²
+
+
+
+## 2018 : LCD_CTRL (Image Display Control Circuit)
+The challenge for 2018 was to design an image display control circuit capable of handling an 8x8 grayscale image. The circuit was required to process four pixels surrounding an operation point(op point), supporting functionalities such as op point movement, image rotation, and inversion.
+
+- **Circuit Design:**
+  - Area: 70243.5 um²
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 20 ns.
+
+#### Grade A Standards for 2018:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations under any clock cycle.
 
 ---
