@@ -65,7 +65,7 @@ reg signed [19:0] max_temp;
 
 
 // ====================================================================	//
-// 						 			Wires  								//
+// 							Combination (Wires)  						//
 // ====================================================================	//
 // state wire
 wire IDLE_wire			= state == IDLE;
@@ -124,10 +124,6 @@ wire signed [39:0] psum_bias	= kernel0_done ? (psum_reg + {KERNEL1_BIAS, 16'd0})
 wire signed [19:0] psum_round	= psum_bias[15] ? {psum_bias[35:32], (psum_bias[31:16] + 16'sd1)} : {psum_bias[35:32], psum_bias[31:16]};
 wire signed [19:0] ReLU_out		= psum_round[19] ? 20'sd0 : psum_round;
 
-
-// ====================================================================	//
-// 						 		Combination  							//
-// ====================================================================	//
 // output
 assign cdata_wr = layer_0_flag ? ReLU_out : layer_1_flag ? max_temp : cdata_rd;
 assign caddr_rd = MAX_POOLING_wire ? (addr + pool_address) : addr;
