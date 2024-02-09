@@ -12,6 +12,7 @@ Each folder corresponds to the respective year's competition and includes proble
 | 2021 | Univ  | Geofence     | 30 ns        | Area < 22000um²                         | Area : 16504um² <br> Cycle: 2505         |  A    |
 | 2020 | Grad  | SME          | 20 ns        | Score = 100                             | Area : 17380um² <br> Cycle: 1822         |  A    |
 | 2019 | Grad  | CONV         | 20 ns        | Area > 270000um²                        | Area : 36929um² <br> Time: 3563661 ns    |  S    |
+| 2018 | Univ  | LCD_CTRL     | 20 ns        | All patterns pass in Gate level and RTL simulations | Area : 70244um²                      |  A    |
 
 
 ## 2023 : LASER
