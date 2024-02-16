@@ -5,13 +5,14 @@ You can find more information about the contest [here](https://moeisoc.web2.ncku
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Level | Project Name | Clock Period | A Grade Standards                       | Specifications                           | Grade |
+| Year | Level | Name | Clock Period | Highest Grade Standards                       | Result                           | Grade |
 |------|-------|--------------|--------------|-----------------------------------------|------------------------------------------|-------|
 | 2023 | Grad  | LASER        | 8 ns         | Area < 37000um²                         | Area : 30707um² <br> Cycle: 56574        |  A    |
 | 2022 | Grad  | JAM          | 10 ns        | Area < 10000um²<br>Cycle < 430000       | Area : 8310um²  <br> Cycle: 362877       |  A    |
 | 2021 | Univ  | Geofence     | 30 ns        | Area < 22000um²                         | Area : 16504um² <br> Cycle: 2505         |  A    |
 | 2020 | Grad  | SME          | 20 ns        | Score = 100                             | Area : 17380um² <br> Cycle: 1822         |  A    |
-| 2019 | Grad  | CONV         | 20 ns        | Area > 270000um²                        | Area : 36929um² <br> Time: 3563661 ns    |  S    |
+| 2019 | Grad  | CONV         | 20 ns        | Area > 270000um²                        | Area : 41333um² <br> Time: 3563661 ns    |  S    |
+| 2018 | Univ  | LCD_CTRL     | 20 ns        | --- | Area : 70244um²                      |  A    |
 
 
 ## 2023 : LASER
@@ -70,7 +71,7 @@ The challenge for 2020 was to process a given string and multiple patterns, then
 - [x] Score = 100
 
 
-## 2019 : Image Convolution Circuit Design (CONV)
+## 2019 : CONV (Image Convolution Circuit Design)
 The challenge for 2019 was to design a circuit for a convolution algorithm. The input data consisted of a single channel with 64x64 data points (4096 in total). The first layer involved convolution with two sets of 3x3 kernels and two sets of biases. The second layer implemented max pooling with a stride of 2, and the third layer involved flattening, where the data from max pooling (2x32x32) was interlaced in the output. The input data format was 20-bit, with the 4 most significant bits as a 4-bit integer and the 16 least significant bits as a 16-bit fraction.
 
 - **Circuit Design:**
@@ -79,7 +80,19 @@ The challenge for 2019 was to design a circuit for a convolution algorithm. The 
   - All patterns, across all layers, successfully passed in both RTL and gate-level simulations under a clock period of 20 ns.
 
 #### Grade S Standards for 2019:
-- [x] All test patterns across all layers have successfully passed both gate-level and RTL simulations under a clock cycle of 20 ns.
+- [x] All test patterns across all layers have successfully passed both gate-level and RTL simulations under any clock cycle.
 - [x] Area > 270000 um²
+
+
+
+## 2018 : LCD_CTRL (Image Display Control Circuit)
+The challenge for 2018 was to design an image display control circuit capable of handling an 8x8 grayscale image. The circuit was required to process four pixels surrounding an operation point(op point), supporting functionalities such as op point movement, image rotation, and inversion.
+
+- **Circuit Design:**
+  - Area: 70243.5 um²
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 20 ns.
+
+#### Grade A Standards for 2018:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations under any clock cycle.
 
 ---
