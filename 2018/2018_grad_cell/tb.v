@@ -2,23 +2,23 @@
 // version 0.91% move the section of initial $sdf_annotate
 `timescale 1ns/10ps
 `define CLK_period 10                // CLK period. DO NOT modify period
-`define SDFFILE "./huffman_syn.sdf"  // Modify your sdf file name
+`define SDFFILE "huffman_syn.sdf"  // Modify your sdf file name
 
-`define tb1
+`define tb3
 
 `ifdef tb1
-  `define PAT "./pattern1.dat"
-  `define EXP "./golden1.dat"
+  `define PAT "pattern1.dat"
+  `define EXP "golden1.dat"
 `endif
 
 `ifdef tb2
-  `define PAT "./pattern2.dat"
-  `define EXP "./golden2.dat"
+  `define PAT "pattern2.dat"
+  `define EXP "golden2.dat"
 `endif
 
 `ifdef tb3
-  `define PAT "./pattern3.dat"
-  `define EXP "./golden3.dat"
+  `define PAT "pattern3.dat"
+  `define EXP "golden3.dat"
 `endif
 
 //`ifdef tb4
@@ -62,10 +62,10 @@ wire [47:0] M_G, M_EXP;
   initial $sdf_annotate(`SDFFILE, u_huffman);
 `endif
 
-//initial begin
-//$fsdbDumpfile("huffman.fsdb");
-//$fsdbDumpvars;
-//end
+initial begin
+$fsdbDumpfile("huffman.fsdb");
+$fsdbDumpvars;
+end
 
 
 huffman u_huffman(.clk(CLK), .reset(reset), .gray_valid(gray_valid), .gray_data(gray_data),
@@ -138,7 +138,7 @@ always@(negedge CLK) begin
         flag1 <= 1'b1;
       end else begin
         $display("Check CNT : ERROR. Please fixed it first!");
-        $display("Simulation stop here.");
+        $display("Simulation finish here.");
         $finish;
       end
       done1 <= 1'b1;
@@ -150,19 +150,19 @@ always@(negedge CLK) begin
         2'b00: begin                             // (M_G == M_EXP) true means M PASS
                  $display("Check HC : ERROR");
                  $display("Check M : ERROR");
-                 $display("Simulation stop here.");
+                 $display("Simulation finish here.");
                  $finish;
                end
         2'b01: begin
                  $display("Check HC : ERROR");
                  $display("Check M : PASS");
-                 $display("Simulation stop here.");
+                 $display("Simulation finish here.");
                  $finish;
                end
         2'b10: begin
                  $display("Check HC : PASS");
                  $display("Check M : ERRPR");
-                 $display("Simulation stop here.");
+                 $display("Simulation finish here.");
                  $finish;
                end
         2'b11: begin
@@ -173,7 +173,7 @@ always@(negedge CLK) begin
                  else
                    $display("Where are those CNT output?");
                  $finish;
-                 //$stop;
+                 //$finish;
                end
         endcase
     end
