@@ -95,4 +95,16 @@ The challenge for 2018 was to design an image display control circuit capable of
 #### Grade A Standards for 2018:
 - [x] All test patterns have successfully passed both gate-level and RTL simulations under any clock cycle.
 
+
+## 2018 : Huffman Coding Circuit
+The challenge for 2018 was to design a circuit for Huffman coding. The input consisted of 100 pieces of data, each representing a grayscale value with six levels. The circuit was required to implement the Huffman coding algorithm based on these data points.
+
+- **Circuit Design:**
+  - Area: 17583.4 um²
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 10 ns.
+
+#### Grade A Standards for 2018:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations under a clock cycle of 10 ns.
+
+
 ---
