@@ -5,15 +5,15 @@ You can find more information about the contest [here](https://moeisoc.web2.ncku
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Level | Name | Clock Period | Highest Grade Standards                       | Result                           | Grade |
+| Year | Level | Name         | Clock Period | Highest Grade Standards                  | Result                                   | Grade |
 |------|-------|--------------|--------------|-----------------------------------------|------------------------------------------|-------|
 | 2023 | Grad  | LASER        | 8 ns         | Area < 37000um²                         | Area : 30707um² <br> Cycle: 56574        |  A    |
 | 2022 | Grad  | JAM          | 10 ns        | Area < 10000um²<br>Cycle < 430000       | Area : 8310um²  <br> Cycle: 362877       |  A    |
 | 2021 | Univ  | Geofence     | 30 ns        | Area < 22000um²                         | Area : 16504um² <br> Cycle: 2505         |  A    |
 | 2020 | Grad  | SME          | 20 ns        | Score = 100                             | Area : 17380um² <br> Cycle: 1822         |  A    |
 | 2019 | Grad  | CONV         | 20 ns        | Area > 270000um²                        | Area : 41333um² <br> Time: 3563661 ns    |  S    |
-| 2018 | Univ  | LCD_CTRL     | 20 ns        | --- | Area : 70244um²                      |  A    |
-
+| 2018 | Univ  | LCD_CTRL     | 20 ns        | ---                                     | Area : 70244um²                          |  A    |
+| 2018 | Grad  | Huffman Coding | 10 ns      | ---                                     | Area : 17584um² <br> Clock: 256          |  A    |
 
 ## 2023 : LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
