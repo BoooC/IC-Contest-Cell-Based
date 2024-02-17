@@ -1,7 +1,8 @@
 # IC Design Contest
 
 This repository contains my design for the IC Design Contest. 
-You can find more information about the contest [here]([https://proj.moe.edu.tw/moeisoc/cl.aspx?n=4495]). 
+You can find more information about the contest [here](https://proj.moe.edu.tw/moeisoc/cl.aspx?n=4495).
+
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
