@@ -13,7 +13,7 @@ Each folder corresponds to the respective year's competition and includes proble
 | 2020 | Grad  | SME          | 20 ns        | Score = 100                             | Area : 17380um² <br> Cycle: 1822         |  A    |
 | 2019 | Grad  | CONV         | 20 ns        | Area > 270000um²                        | Area : 41333um² <br> Time: 3563661 ns    |  S    |
 | 2018 | Univ  | LCD_CTRL     | 20 ns        | ---                                     | Area : 70244um²                          |  A    |
-| 2018 | Grad  | Huffman Coding | 10 ns      | ---                                     | Area : 17584um² <br> Cycle: 256          |  A    |
+| 2018 | Grad  | Huffman Coding | 10 ns      | ---                                     | Area : 17584um² <br> Cycle: 156          |  A    |
 
 ## 2023 : LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
