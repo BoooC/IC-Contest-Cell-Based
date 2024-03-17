@@ -1,19 +1,20 @@
 # IC Design Contest
 
 This repository contains my design for the IC Design Contest. 
-You can find more information about the contest [here](https://moeisoc.web2.ncku.edu.tw/p/406-1166-211155,r11.php?Lang=zh-tw). 
+You can find more information about the contest [here](https://proj.moe.edu.tw/moeisoc/cl.aspx?n=4495).
+
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Level | Name | Clock Period | Highest Grade Standards                       | Result                           | Grade |
+| Year | Level | Name         | Clock Period | Highest Grade Standards                  | Result                                   | Grade |
 |------|-------|--------------|--------------|-----------------------------------------|------------------------------------------|-------|
 | 2023 | Grad  | LASER        | 8 ns         | Area < 37000um²                         | Area : 30707um² <br> Cycle: 56574        |  A    |
 | 2022 | Grad  | JAM          | 10 ns        | Area < 10000um²<br>Cycle < 430000       | Area : 8310um²  <br> Cycle: 362877       |  A    |
 | 2021 | Univ  | Geofence     | 30 ns        | Area < 22000um²                         | Area : 16504um² <br> Cycle: 2505         |  A    |
 | 2020 | Grad  | SME          | 20 ns        | Score = 100                             | Area : 17380um² <br> Cycle: 1822         |  A    |
 | 2019 | Grad  | CONV         | 20 ns        | Area > 270000um²                        | Area : 41333um² <br> Time: 3563661 ns    |  S    |
-| 2018 | Univ  | LCD_CTRL     | 20 ns        | --- | Area : 70244um²                      |  A    |
-
+| 2018 | Univ  | LCD_CTRL     | 20 ns        | ---                                     | Area : 70244um²                          |  A    |
+| 2018 | Grad  | Huffman Coding | 10 ns      | ---                                     | Area : 17584um² <br> Cycle: 156          |  A    |
 
 ## 2023 : LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
@@ -94,5 +95,17 @@ The challenge for 2018 was to design an image display control circuit capable of
 
 #### Grade A Standards for 2018:
 - [x] All test patterns have successfully passed both gate-level and RTL simulations under any clock cycle.
+
+
+## 2018 : Huffman Coding Circuit
+The challenge for 2018 was to design a circuit for Huffman coding. The input consisted of 100 pieces of data, each representing a grayscale value with six levels. The circuit was required to implement the Huffman coding algorithm based on these data points.
+
+- **Circuit Design:**
+  - Area: 17583.4 um²
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 10 ns.
+
+#### Grade A Standards for 2018:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations under a clock cycle of 10 ns.
+
 
 ---
