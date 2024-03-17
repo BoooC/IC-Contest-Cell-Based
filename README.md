@@ -110,4 +110,18 @@ The challenge for 2018 was to design a circuit for Huffman coding. The input con
 - [x] All test patterns have successfully passed both gate-level and RTL simulations under a clock cycle of 10 ns.
 
 
+## 2017 : Distance Transform Circuit
+The challenge for 2017 was to design a circuit for Distance Transform. The circuit was to read 128x128 binary values from a testbench's ROM, implement the Distance Transform algorithm including a forward pass and a backward pass, and finally, return the results to the testbench's RAM.
+
+- **Circuit Design:**
+  - Area: 4678.0 um²
+  - Time: 1,529,640,798 ps for TB1, 1,459,440,789 ps for TB2
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 10 ns.
+
+#### Grade A Standards for 2017:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations under a clock cycle of 10 ns.
+- [x] Area < 12500 um²
+- [x] Time < 1,920,000 ns
+
+
 ---
