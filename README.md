@@ -110,7 +110,7 @@ The challenge for 2018 was to design a circuit for Huffman coding. The input con
 - [x] All test patterns have successfully passed both gate-level and RTL simulations under a clock cycle of 10 ns.
 
 
-## 2017 : Distance Transform Circuit
+## 2017 : DT (Distance Transform Circuit)
 The challenge for 2017 was to design a circuit for Distance Transform. The circuit was to read 128x128 binary values from a testbench's ROM, implement the Distance Transform algorithm including a forward pass and a backward pass, and finally, return the results to the testbench's RAM.
 
 - **Circuit Design:**
