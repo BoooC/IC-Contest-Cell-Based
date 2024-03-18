@@ -1,0 +1,61 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : LBP
+Version: U-2022.12
+Date   : Mon Mar 18 23:39:14 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: reset (input port clocked by clk)
+  Endpoint: X_reg[6] (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LBP                tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  reset (in)                                              0.09       5.59 f
+  U700/Y (CLKINVX1)                                       0.42       6.01 r
+  U261/Y (NAND2X1)                                        0.62       6.63 f
+  U442/Y (CLKBUFX3)                                       0.71       7.34 f
+  U441/Y (CLKBUFX3)                                       0.77       8.11 f
+  U282/Y (NOR2BX2)                                        0.65       8.76 r
+  U339/Y (AND2XL)                                         0.56       9.32 r
+  add_120_aco/A[0] (LBP_DW01_inc_2_DW01_inc_3)            0.00       9.32 r
+  add_120_aco/U1_1_1/CO (ADDHXL)                          0.37       9.69 r
+  add_120_aco/U1_1_2/CO (ADDHXL)                          0.35      10.04 r
+  add_120_aco/U1_1_3/CO (ADDHXL)                          0.35      10.40 r
+  add_120_aco/U1_1_4/CO (ADDHXL)                          0.35      10.75 r
+  add_120_aco/U1_1_5/CO (ADDHXL)                          0.35      11.09 r
+  add_120_aco/U1/Y (XOR2X1)                               0.28      11.37 f
+  add_120_aco/SUM[6] (LBP_DW01_inc_2_DW01_inc_3)          0.00      11.37 f
+  U352/Y (MX2XL)                                          0.38      11.75 f
+  X_reg[6]/D (DFFX1)                                      0.00      11.75 f
+  data arrival time                                                 11.75
+
+  clock clk (rise edge)                                  12.00      12.00
+  clock network delay (ideal)                             0.50      12.50
+  clock uncertainty                                      -0.10      12.40
+  X_reg[6]/CK (DFFX1)                                     0.00      12.40 r
+  library setup time                                     -0.31      12.09
+  data required time                                                12.09
+  --------------------------------------------------------------------------
+  data required time                                                12.09
+  data arrival time                                                -11.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.34
+
+
+1
