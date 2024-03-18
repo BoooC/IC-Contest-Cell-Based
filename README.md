@@ -6,16 +6,18 @@ You can find more information about the contest [here](https://proj.moe.edu.tw/m
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Level | Name            | Clock Period | Highest Grade Standards                 | Result                                   | Grade |
-|------|-------|-----------------|--------------|-----------------------------------------|------------------------------------------|-------|
-| 2023 | Grad  | LASER           | 8 ns         | Area < 37000um²                         | Area : 30707um² <br> Cycle: 56574        |  A    |
-| 2022 | Grad  | JAM             | 10 ns        | Area < 10000um²<br>Cycle < 430000       | Area : 8310um²  <br> Cycle: 362877       |  A    |
-| 2021 | Univ  | Geofence        | 30 ns        | Area < 22000um²                         | Area : 16504um² <br> Cycle: 2505         |  A    |
-| 2020 | Grad  | SME             | 20 ns        | Score = 100                             | Area : 17380um² <br> Cycle: 1822         |  A    |
-| 2019 | Grad  | CONV            | 20 ns        | Area > 270000um²                        | Area : 41333um² <br> Time: 3563661 ns    |  S    |
-| 2018 | Univ  | LCD_CTRL        | 20 ns        | ---                                     | Area : 70244um²                          |  A    |
-| 2018 | Grad  | Huffman Coding  | 10 ns        | ---                                     | Area : 17584um² <br> Cycle: 156          |  A    |
-| 2017 | Grad  | Distance Transform | 10 ns     | Area < 12500um²<br>Time < 1920000 ns    | Area : 4678um² <br> Time: 1459441 ns     |  A    |
+| Year | Level | Name                | Clock Period | Highest Grade Standards                | Result                                               | Grade |
+|------|-------|---------------------|--------------|----------------------------------------|------------------------------------------------------|-------|
+| 2023 | Grad  | LASER               | 8 ns         | Area < 37000um²                        | Area : 30707um² <br> Cycle: 56574                    |  A    |
+| 2022 | Grad  | JAM                 | 10 ns        | Area < 10000um²<br>Cycle < 430000      | Area : 8310um²  <br> Cycle: 362877                   |  A    |
+| 2021 | Univ  | Geofence            | 30 ns        | Area < 22000um²                        | Area : 16504um² <br> Cycle: 2505                     |  A    |
+| 2020 | Grad  | SME                 | 20 ns        | Score = 100                            | Area : 17380um² <br> Cycle: 1822                     |  A    |
+| 2019 | Grad  | CONV                | 20 ns        | Area > 270000um²                       | Area : 41333um² <br> Time: 3563661 ns                |  S    |
+| 2018 | Univ  | LCD_CTRL            | 20 ns        | ---                                    | Area : 70244um²                                      |  A    |
+| 2018 | Grad  | Huffman Coding      | 10 ns        | ---                                    | Area : 17584um² <br> Cycle: 156                      |  A    |
+| 2017 | Grad  | Distance Transform  | 10 ns        | Area < 12500um²<br>Time < 1920000 ns   | Area : 4678um² <br> Time: 1459441 ns                 |  A    |
+| 2016 | Grad  | Local Binary Patterns | 12 ns      | Area(um²) * Time(ns) < 12,000,000,000  | Area : 7070um² <br> Time: 1771180 ns <br> Product: 5,452,242,600 | A |
+
 
 
 ## 2023 : LASER
@@ -122,6 +124,21 @@ The challenge for 2017 was to design a circuit for Distance Transform. The circu
 - [x] All test patterns have successfully passed both gate-level and RTL simulations under a clock cycle of 10 ns.
 - [x] Area < 12500 um²
 - [x] Time < 1,920,000 ns
+
+
+## 2016 : Local Binary Patterns Circuit
+The challenge for 2016 was to design a circuit for Local Binary Patterns (LBP). The circuit was required to implement the LBP algorithm on a 128x128 grayscale image, focusing on processing the center pixel and its surrounding 3x3 area, and then producing an output. In the designed circuit, a line buffer of width 9 was used to reuse the data on the left side of the 3x3 area, thereby reducing the cycle count.
+
+- **Circuit Design:**
+  - Area: 7069.7 um²
+  - Time: 1,771,180 ns
+  - Product of Area and Time: 5,452,242,600
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 12 ns.
+
+#### Grade A Standards for 2016:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations.
+- [x] Product of Area(um²) and Time(ns) < 12,000,000,000
+
 
 
 ---
