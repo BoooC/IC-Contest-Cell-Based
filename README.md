@@ -126,4 +126,17 @@ The challenge for 2017 was to design a circuit for Distance Transform. The circu
 - [x] Time < 1,920,000 ns
 
 
+## 2016 : (LBP) Local Binary Patterns Circuit
+The challenge for 2016 was to design a circuit for Local Binary Patterns (LBP). The circuit was required to implement the LBP algorithm for processing a 128x128 grayscale image. The focus was on the central pixel and its surrounding 3x3 area, with the output based on this processing. In the designed circuit, a line buffer of width 9 was used to reuse the data from the left side of the 3x3 area, thereby reducing the number of cycles needed.
+
+- **Circuit Design:**
+  - Area: 7069.7 um²
+  - Time: 1,771,180 ns
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 12 ns.
+
+#### Grade A Standards for 2016:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations.
+- [x] The product of Area (um²) and Time (ns) < 12,000,000,000.
+
+
 ---
