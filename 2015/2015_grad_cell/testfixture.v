@@ -1,17 +1,17 @@
 `timescale 1ns/10ps
 `define SDFFILE    "./SET_syn.sdf"    	// Modify your sdf file name here
-`define cycle 15.0
+`define cycle 10.0
 `define terminate_cycle 200000 			// Modify your terminate ycle here
-
+`define MD4
 
 module testfixture1;
 
-`define central_pattern "./dat/Central_pattern.dat"
-`define radius_pattern "./dat/Radius_pattern.dat"
-`define  candidate_result_Length "./dat/candidate_result_Length.dat"
-`define  candidate_united_result_Length "./dat/candidate_united_result_Length.dat"
-`define  candidate_diff_result_Length "./dat/candidate_diff_result_Length.dat"
-`define  candidate_intersect_result_Length "./dat/candidate_intersect_result_Length.dat"
+`define	central_pattern 					"dat/Central_pattern.dat"
+`define radius_pattern 						"dat/Radius_pattern.dat"
+`define candidate_result_Length 			"dat/candidate_result_Length.dat"
+`define candidate_united_result_Length 		"dat/candidate_united_result_Length.dat"
+`define candidate_diff_result_Length 		"dat/candidate_diff_result_Length.dat"
+`define candidate_intersect_result_Length 	"dat/candidate_intersect_result_Length.dat"
 
 reg clk = 0;
 reg rst;

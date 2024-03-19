@@ -1,0 +1,73 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SET
+Version: U-2022.12
+Date   : Wed Mar 20 01:07:58 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: central[17]
+              (input port clocked by clk)
+  Endpoint: candidate_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SET                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     5.00       5.50 r
+  central[17] (in)                         0.04       5.54 r
+  U459/Y (XOR3X1)                          0.55       6.10 f
+  U251/Y (CLKBUFX3)                        0.31       6.40 f
+  U189/Y (NAND2X6)                         0.12       6.52 r
+  U381/Y (NAND2X4)                         0.11       6.63 f
+  U411/Y (XOR2X4)                          0.14       6.77 r
+  U398/Y (NAND2X6)                         0.09       6.86 f
+  U413/Y (XOR2X4)                          0.19       7.05 f
+  add_79/B[3] (SET_DW01_add_2)             0.00       7.05 f
+  add_79/U1_3/CO (ADDFHX4)                 0.27       7.32 f
+  add_79/U1_4/CO (ADDFHX4)                 0.20       7.52 f
+  add_79/U1_5/S (ADDFHX2)                  0.36       7.88 r
+  add_79/SUM[5] (SET_DW01_add_2)           0.00       7.88 r
+  U372/Y (INVX4)                           0.10       7.98 f
+  U225/Y (NAND2X6)                         0.09       8.07 r
+  U267/Y (INVX4)                           0.06       8.13 f
+  U415/Y (AOI21X4)                         0.12       8.26 r
+  U193/Y (OAI21X4)                         0.11       8.36 f
+  U419/Y (AOI32X2)                         0.24       8.61 r
+  U441/CON (ACHCONX4)                      0.21       8.82 f
+  U205/Y (AND2X8)                          0.23       9.05 f
+  U657/Y (AOI33X2)                         0.24       9.29 r
+  U625/Y (NAND4BX4)                        0.17       9.46 f
+  U227/Y (BUFX16)                          0.18       9.63 f
+  U274/Y (AOI32X1)                         0.32       9.96 r
+  U173/Y (INVX1)                           0.15      10.11 f
+  candidate_reg[0]/D (DFFQX1)              0.00      10.11 f
+  data arrival time                                  10.11
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  candidate_reg[0]/CK (DFFQX1)             0.00      10.40 r
+  library setup time                      -0.27      10.13
+  data required time                                 10.13
+  -----------------------------------------------------------
+  data required time                                 10.13
+  data arrival time                                 -10.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+1
