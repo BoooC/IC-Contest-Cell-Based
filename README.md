@@ -143,4 +143,18 @@ The challenge for 2016 was to design a circuit for Local Binary Patterns (LBP). 
 
 
 
+## 2015 : SET (Counting the Number of Vertex Covers by Set-Theoretic Operations of Multiple Circle Graph)
+The challenge for 2015 was to design a circuit for counting the number of elements covered within a specified set. The circuit's input consisted of 1 to 3 sets of circle coordinates and their radii, and it was tasked with calculating how many points fell within the circumference of the circles on an 8x8 two-dimensional plane. Depending on the mode, the circuit would perform a series of set operations such as intersections and unions on the three circles.
+
+- **Circuit Design:**
+  - Area: 7621.3 um²
+  - Time: 43570 cycles
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 10 ns.
+
+#### Grade A Standards for 2015:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations.
+- [x] Area < 9000 um²
+
+
+
 ---
