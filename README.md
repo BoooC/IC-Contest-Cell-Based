@@ -6,17 +6,19 @@ You can find more information about the contest [here](https://proj.moe.edu.tw/m
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Level | Name                | Clock Period | Highest Grade Standards                | Result                                               | Grade |
-|------|-------|---------------------|--------------|----------------------------------------|------------------------------------------------------|-------|
-| 2023 | Grad  | LASER               | 8 ns         | Area < 37000um²                        | Area : 30707um² <br> Cycle: 56574                    |  A    |
-| 2022 | Grad  | JAM                 | 10 ns        | Area < 10000um²<br>Cycle < 430000      | Area : 8310um²  <br> Cycle: 362877                   |  A    |
-| 2021 | Univ  | Geofence            | 30 ns        | Area < 22000um²                        | Area : 16504um² <br> Cycle: 2505                     |  A    |
-| 2020 | Grad  | SME                 | 20 ns        | Score = 100                            | Area : 17380um² <br> Cycle: 1822                     |  A    |
-| 2019 | Grad  | CONV                | 20 ns        | Area > 270000um²                       | Area : 41333um² <br> Time: 3563661 ns                |  S    |
-| 2018 | Univ  | LCD_CTRL            | 20 ns        | ---                                    | Area : 70244um²                                      |  A    |
-| 2018 | Grad  | Huffman Coding      | 10 ns        | ---                                    | Area : 17584um² <br> Cycle: 156                      |  A    |
-| 2017 | Grad  | Distance Transform  | 10 ns        | Area < 12500um²<br>Time < 1920000 ns   | Area : 4678um² <br> Time: 1459441 ns                 |  A    |
-| 2016 | Grad  | Local Binary Patterns | 12 ns      | Area(um²) * Time(ns) < 12,000,000,000  | Area : 7070um² <br> Time: 1771180 ns <br> Product: 5,452,242,600 | A |
+| Year | Level | Name                                                        | Clock Period | Highest Grade Standards               | Result                                         | Grade |
+|------|-------|-------------------------------------------------------------|--------------|---------------------------------------|------------------------------------------------|-------|
+| 2023 | Grad  | LASER                                                       | 8 ns         | Area < 37000um²                       | Area : 30707um² <br> Cycle: 56574              |  A    |
+| 2022 | Grad  | JAM                                                         | 10 ns        | Area < 10000um²<br>Cycle < 430000     | Area : 8310um²  <br> Cycle: 362877             |  A    |
+| 2021 | Univ  | Geofence                                                    | 30 ns        | Area < 22000um²                       | Area : 16504um² <br> Cycle: 2505               |  A    |
+| 2020 | Grad  | SME                                                         | 20 ns        | Score = 100                           | Area : 17380um² <br> Cycle: 1822               |  A    |
+| 2019 | Grad  | CONV                                                        | 20 ns        | Area > 270000um²                      | Area : 41333um² <br> Time: 3563661 ns          |  S    |
+| 2018 | Univ  | LCD_CTRL                                                    | 20 ns        | ---                                   | Area : 70244um²                                |  A    |
+| 2018 | Grad  | Huffman Coding                                              | 10 ns        | ---                                   | Area : 17584um² <br> Cycle: 156                |  A    |
+| 2017 | Grad  | Distance Transform                                          | 10 ns        | Area < 12500um²<br>Time < 1920000 ns  | Area : 4678um² <br> Time: 1459441 ns           |  A    |
+| 2016 | Grad  | Local Binary Patterns                                       | 12 ns        | Area(um²) * Time(ns) < 12,000,000,000 | Area : 7070um² <br> Time: 1771180 ns <br> Product: 5,452,242,600 | A |
+| 2015 | Grad  | SET                                                         | 10 ns        | Area < 9000um²                        | Area : 7621um² <br> Cycle: 43570               |  A    |
+
 
 
 
@@ -138,6 +140,20 @@ The challenge for 2016 was to design a circuit for Local Binary Patterns (LBP). 
 #### Grade A Standards for 2016:
 - [x] All test patterns have successfully passed both gate-level and RTL simulations.
 - [x] Product of Area(um²) and Time(ns) < 12,000,000,000
+
+
+
+## 2015 : SET (Counting the Number of Vertex Covers by Set-Theoretic Operations of Multiple Circle Graph)
+The challenge for 2015 was to design a circuit for counting the number of elements covered within a specified set. The circuit's input consisted of 1 to 3 sets of circle coordinates and their radii, and it was tasked with calculating how many points fell within the circumference of the circles on an 8x8 two-dimensional plane. Depending on the mode, the circuit would perform a series of set operations such as intersections and unions on the three circles.
+
+- **Circuit Design:**
+  - Area: 7621.3 um²
+  - Time: 43570 cycles
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 10 ns.
+
+#### Grade A Standards for 2015:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations.
+- [x] Area < 9000 um²
 
 
 
