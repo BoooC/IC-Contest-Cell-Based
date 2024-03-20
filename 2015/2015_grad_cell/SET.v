@@ -125,7 +125,7 @@ end
 // 						 		Sequential  							//
 // ====================================================================	//
 // FSM
-always@(posedge clk) begin
+always@(posedge clk or posedge reset) begin
 	if(rst) begin
 		state <= IDLE;
 	end
@@ -134,7 +134,7 @@ always@(posedge clk) begin
 	end
 end
 
-always@(posedge clk) begin
+always@(posedge clk or posedge reset) begin
 	if(rst) begin
 		ptr_X <= 4'd1;
 	end
@@ -143,7 +143,7 @@ always@(posedge clk) begin
 	end
 end
 
-always@(posedge clk) begin
+always@(posedge clk or posedge reset) begin
 	if(rst) begin
 		ptr_Y <= 4'd1;
 	end
@@ -152,7 +152,7 @@ always@(posedge clk) begin
 	end
 end
 
-always@(posedge clk) begin
+always@(posedge clk or posedge reset) begin
 	if(rst) begin
 		candidate <= 8'd0;
 	end
@@ -164,7 +164,7 @@ always@(posedge clk) begin
 	end
 end
 
-always@(posedge clk) begin
+always@(posedge clk or posedge reset) begin
 	if(rst) begin
 		valid <= 1'b0;
 	end
