@@ -158,4 +158,18 @@ The challenge for 2015 was to design a circuit for counting the number of elemen
 
 
 
+## 2014 : STI_DAC (Serial Transmitter and Data Arrange Controller)
+The challenge for 2014 was to design a circuit comprising two parts: the Serial Transmitter (Data Arrange Controller) Interface (STI) and the Data Arrange Controller (DAC). The STI module was required to convert input data based on control signals and transmit the converted data 1-bit per cycle. The DAC module was tasked with storing the data following the specified patterns.
+
+- **Circuit Design:**
+  - Area: 4720.5 um²
+  - Time: 2153 cycles
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 10 ns.
+
+#### Grade A Standards for 2014:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations.
+- [x] Area < 20000 um²
+
+
+
 ---
