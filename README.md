@@ -18,7 +18,7 @@ Each folder corresponds to the respective year's competition and includes proble
 | 2017 | Grad  | Distance Transform | 10 ns        | Area < 12500um²<br>Time < 1920000 ns | Area : 4678um² <br> Time: 1459441 ns        |  A    |
 | 2016 | Grad  | Local Binary Patterns | 12 ns     | Area(um²) * Time(ns) < 12,000,000,000 | Area : 7070um² <br> Time: 1771180 ns <br> Product: 5,452,242,600 | A |
 | 2015 | Grad  | SET                | 10 ns        | Area < 9000um²                       | Area : 7621um² <br> Cycle: 43570            |  A    |
-| 2014 | Grad  | STI_DAC            | 10 ns        | Area < 20000um² at clock rate < 100ns | Area : 4720um² <br> Cycle: 2153            |  A    |
+| 2014 | Grad  | STI_DAC            | 10 ns        | Area < 20000um²                      | Area : 4720um² <br> Cycle: 2153             |  A    |
 
 
 
