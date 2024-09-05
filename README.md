@@ -16,7 +16,7 @@ Each folder corresponds to the respective year's competition and includes proble
 | 2019 | Grad  | CONV               | 20 ns        | Area > 270000um²                     | Area : 41333um² <br> Time: 3563661 ns       |  S    |
 | 2018 | Univ  | LCD_CTRL           | 20 ns        | ---                                  | Area : 70244um²                             |  A    |
 | 2018 | Grad  | Huffman            | 10 ns        | ---                                  | Area : 17584um² <br> Cycle: 156             |  A    |
-| 2017 | Grad  | DT                 | 10 ns        | Area < 12500um²<br>Time < 1920000 ns | Area : 7306um² <br> Time: 205530 ns         |  A    |
+| 2017 | Grad  | DT                 | 10 ns        | Area < 12500um²<br>Time < 1920000 ns | Area : 7850um² <br> Time: 205530 ns         |  A    |
 | 2016 | Grad  | LBP                | 12 ns        | Area * Time < 12x10⁹                 | Area : 7070um² <br> Time: 1771180 ns        |  A    |
 | 2015 | Grad  | SET                | 10 ns        | Area < 9000um²                       | Area : 7621um² <br> Cycle: 43570            |  A    |
 | 2014 | Grad  | STI_DAC            | 10 ns        | Area < 20000um²                      | Area : 4720um² <br> Cycle: 2153             |  A    |
