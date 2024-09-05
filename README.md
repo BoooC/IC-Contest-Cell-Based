@@ -6,21 +6,34 @@ You can find more information about the contest [here](https://proj.moe.edu.tw/m
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Level | Name                                                        | Clock Period | Highest Grade Standards               | Result                                         | Grade |
-|------|-------|-------------------------------------------------------------|--------------|---------------------------------------|------------------------------------------------|-------|
-| 2023 | Grad  | LASER                                                       | 8 ns         | Area < 37000um²                       | Area : 30707um² <br> Cycle: 56574              |  A    |
-| 2022 | Grad  | JAM                                                         | 10 ns        | Area < 10000um²<br>Cycle < 430000     | Area : 8310um²  <br> Cycle: 362877             |  A    |
-| 2021 | Univ  | Geofence                                                    | 30 ns        | Area < 22000um²                       | Area : 16504um² <br> Cycle: 2505               |  A    |
-| 2020 | Grad  | SME                                                         | 20 ns        | Score = 100                           | Area : 17380um² <br> Cycle: 1822               |  A    |
-| 2019 | Grad  | CONV                                                        | 20 ns        | Area > 270000um²                      | Area : 41333um² <br> Time: 3563661 ns          |  S    |
-| 2018 | Univ  | LCD_CTRL                                                    | 20 ns        | ---                                   | Area : 70244um²                                |  A    |
-| 2018 | Grad  | Huffman Coding                                              | 10 ns        | ---                                   | Area : 17584um² <br> Cycle: 156                |  A    |
-| 2017 | Grad  | Distance Transform                                          | 10 ns        | Area < 12500um²<br>Time < 1920000 ns  | Area : 4678um² <br> Time: 1459441 ns           |  A    |
-| 2016 | Grad  | Local Binary Patterns                                       | 12 ns        | Area(um²) * Time(ns) < 12,000,000,000 | Area : 7070um² <br> Time: 1771180 ns <br> Product: 5,452,242,600 | A |
-| 2015 | Grad  | SET                                                         | 10 ns        | Area < 9000um²                        | Area : 7621um² <br> Cycle: 43570               |  A    |
+| Year | Level | Name               | Clock        | Grade Standards                      | Result                                      | Grade |
+|------|-------|--------------------|--------------|--------------------------------------|---------------------------------------------|-------|
+| 2024 | Grad  | Bicubic            | 18 ns        | ---                                  | Area : 686297um² <br> Time: 738117 ns <br> Power: 3.911e-03 | A     |
+| 2023 | Grad  | LASER              | 8 ns         | Area < 37000um²                      | Area : 30707um² <br> Cycle: 56574           |  A    |
+| 2022 | Grad  | JAM                | 10 ns        | Area < 10000um²<br>Cycle < 430000    | Area : 8310um²  <br> Cycle: 362877          |  A    |
+| 2021 | Univ  | Geofence           | 30 ns        | Area < 22000um²                      | Area : 16504um² <br> Cycle: 2505            |  A    |
+| 2020 | Grad  | SME                | 20 ns        | Score = 100                          | Area : 17380um² <br> Cycle: 1822            |  A    |
+| 2019 | Grad  | CONV               | 20 ns        | Area > 270000um²                     | Area : 41333um² <br> Time: 3563661 ns       |  S    |
+| 2018 | Univ  | LCD_CTRL           | 20 ns        | ---                                  | Area : 70244um²                             |  A    |
+| 2018 | Grad  | Huffman            | 10 ns        | ---                                  | Area : 17584um² <br> Cycle: 156             |  A    |
+| 2017 | Grad  | DT                 | 10 ns        | Area < 12500um²<br>Time < 1920000 ns | Area : 7850um² <br> Time: 205530 ns         |  A    |
+| 2016 | Grad  | LBP                | 12 ns        | Area * Time < 12x10⁹                 | Area : 7070um² <br> Time: 1771180 ns        |  A    |
+| 2015 | Grad  | SET                | 10 ns        | Area < 9000um²                       | Area : 7621um² <br> Cycle: 43570            |  A    |
+| 2014 | Grad  | STI_DAC            | 10 ns        | Area < 20000um²                      | Area : 4720um² <br> Cycle: 2153             |  A    |
 
 
 
+## 2024 : Bicubic
+The key objective for 2024 was to implement the Bicubic interpolation algorithm, which allows enlarging a selected 2D matrix image to a specified size.
+
+- **Circuit Design:**
+  - **Area:** 686297 um² (including Macro/Black Box area: 556726 um²)
+  - **Simulation Time:** 738117 ns
+  - **Total Power:** 3.911e-03 W
+  - All patterns passed successfully.
+
+#### Grade A Standards for 2024:
+- [x] All test patterns across all layers have successfully passed both gate-level and RTL simulations under any clock cycle.
 
 ## 2023 : LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
@@ -154,6 +167,20 @@ The challenge for 2015 was to design a circuit for counting the number of elemen
 #### Grade A Standards for 2015:
 - [x] All test patterns have successfully passed both gate-level and RTL simulations.
 - [x] Area < 9000 um²
+
+
+
+## 2014 : STI_DAC (Serial Transmitter and Data Arrange Controller)
+The challenge for 2014 was to design a circuit comprising two parts: the Serial Transmitter (Data Arrange Controller) Interface (STI) and the Data Arrange Controller (DAC). The STI module was required to convert input data based on control signals and transmit the converted data 1-bit per cycle. The DAC module was tasked with storing the data following the specified patterns.
+
+- **Circuit Design:**
+  - Area: 4720.5 um²
+  - Time: 2153 cycles
+  - All patterns successfully passed in both RTL and gate-level simulations under a clock period of 10 ns.
+
+#### Grade A Standards for 2014:
+- [x] All test patterns have successfully passed both gate-level and RTL simulations.
+- [x] Area < 20000 um²
 
 
 
