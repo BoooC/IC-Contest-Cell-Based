@@ -6,7 +6,7 @@ You can find more information about the contest [here](https://proj.moe.edu.tw/m
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Level | Name               | Clock Period | Grade Standards                      | Result                                      | Grade |
+| Year | Level | Name               | Clock        | Grade Standards                      | Result                                      | Grade |
 |------|-------|--------------------|--------------|--------------------------------------|---------------------------------------------|-------|
 | 2024 | Grad  | Bicubic            | 18 ns        | ---                                  | Area : 686297um² <br> Time: 738117 ns <br> Power: 3.911e-03 | A     |
 | 2023 | Grad  | LASER              | 8 ns         | Area < 37000um²                      | Area : 30707um² <br> Cycle: 56574           |  A    |
