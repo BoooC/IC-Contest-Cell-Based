@@ -1,7 +1,7 @@
 `timescale 1ns/10ps
-`define CYCLE     10                 // Modify your clock period here
-`define SDFFILE    ""    // Modify your sdf file name
-`define End_CYCLE  100000          // Modify cycle times once your design need more cycle times!
+`define CYCLE     10                // Modify your clock period here
+`define SDFFILE    "FAS_syn.sdf"   	// Modify your sdf file name
+`define End_CYCLE  100000          	// Modify cycle times once your design need more cycle times!
 
 `define fir_fail_limit 48
 `define fft_fail_limit 48
@@ -27,15 +27,15 @@ wire [3:0] freq;
 reg en;
 
 reg [15:0] data_mem [0:1023];
-initial $readmemh("./dat/Pattern1.dat", data_mem);
+initial $readmemh("dat/Pattern1.dat", data_mem);
 
 reg [15:0] fir_mem [0:1023];
-initial $readmemh("./dat/Golden1_FIR.dat", fir_mem);
+initial $readmemh("dat/Golden1_FIR.dat", fir_mem);
 
 reg [15:0] fftr_mem [0:1023];
-initial $readmemh("./dat/Golden1_FFT_real.dat", fftr_mem);
+initial $readmemh("dat/Golden1_FFT_real.dat", fftr_mem);
 reg [15:0] ffti_mem [0:1023];
-initial $readmemh("./dat/Golden1_FFT_imag.dat", ffti_mem);
+initial $readmemh("dat/Golden1_FFT_imag.dat", ffti_mem);
 
 integer i, j ,k, l;
 integer fir_fail, fft_fail;
@@ -152,11 +152,11 @@ always@(posedge clk) begin
 			fft_cmp = fft_rec[l];
 			fftr_ver_= fftr_mem[k]; fftr_ver = fftr_ver_;
 			ffti_ver_= ffti_mem[k]; ffti_ver = ffti_ver_;
-			
+
 			fft_cmp_r = fft_cmp[31:16]; 
 			fft_cmp_r1 = fft_cmp_r-1; fft_cmp_r2 = fft_cmp_r; fft_cmp_r3 = fft_cmp_r+1;
 			fft_cmp_r4 = fft_cmp_r-2; fft_cmp_r5 = fft_cmp_r+2; fft_cmp_r6 = fft_cmp_r-3; fft_cmp_r7 = fft_cmp_r+3;
-			
+
 			fft_cmp_i = fft_cmp[15:0];
 			fft_cmp_i1 = fft_cmp_i-1; fft_cmp_i2 = fft_cmp_i; fft_cmp_i3 = fft_cmp_i+1;
 			fft_cmp_i4 = fft_cmp_i-2; fft_cmp_i5 = fft_cmp_i+2; fft_cmp_i6 = fft_cmp_i-3; fft_cmp_i7 = fft_cmp_i+3;			

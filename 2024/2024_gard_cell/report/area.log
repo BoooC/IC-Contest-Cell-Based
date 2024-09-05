@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : Bicubic
+Version: U-2022.12
+Date   : Mon Sep  2 19:57:30 2024
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+    ResultSRAM (File: /home/M13/m0bochun/ICDC/2024_univ_cell/ResultSRAM_slow.db)
+    ImgROM (File: /home/M13/m0bochun/ICDC/2024_univ_cell/ImgROM_slow.db)
+
+Number of ports:                           39
+Number of nets:                         10801
+Number of cells:                         9481
+Number of combinational cells:           9318
+Number of sequential cells:               161
+Number of macros/black boxes:               2
+Number of buf/inv:                       1530
+Number of references:                     154
+
+Combinational area:             123752.343051
+Buf/Inv area:                    10544.248756
+Noncombinational area:            5818.687061
+Macro/Black Box area:           556725.953125
+Net Interconnect area:         1000771.641693
+
+Total cell area:                686296.983237
+Total area:                    1687068.624930
+1
