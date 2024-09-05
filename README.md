@@ -6,8 +6,9 @@ You can find more information about the contest [here](https://proj.moe.edu.tw/m
 Each folder corresponds to the respective year's competition and includes problem statements, RTL code, testbench, synthesis reports, and other relevant files.
 
 
-| Year | Level | Name               | Clock Period | Highest Grade Standards              | Result                                      | Grade |
+| Year | Level | Name               | Clock Period | Grade Standards                      | Result                                      | Grade |
 |------|-------|--------------------|--------------|--------------------------------------|---------------------------------------------|-------|
+| 2024 | Grad  | Bicubic            | 18 ns        | ---                                  | Area : 686297um² <br> Time: 738117 ns <br> Power: 3.911e-03 | A     |
 | 2023 | Grad  | LASER              | 8 ns         | Area < 37000um²                      | Area : 30707um² <br> Cycle: 56574           |  A    |
 | 2022 | Grad  | JAM                | 10 ns        | Area < 10000um²<br>Cycle < 430000    | Area : 8310um²  <br> Cycle: 362877          |  A    |
 | 2021 | Univ  | Geofence           | 30 ns        | Area < 22000um²                      | Area : 16504um² <br> Cycle: 2505            |  A    |
@@ -19,6 +20,7 @@ Each folder corresponds to the respective year's competition and includes proble
 | 2016 | Grad  | Local Binary Patterns | 12 ns     | Area(um²) * Time(ns) < 12,000,000,000 | Area : 7070um² <br> Time: 1771180 ns <br> Product: 5,452,242,600 | A |
 | 2015 | Grad  | SET                | 10 ns        | Area < 9000um²                       | Area : 7621um² <br> Cycle: 43570            |  A    |
 | 2014 | Grad  | STI_DAC            | 10 ns        | Area < 20000um²                      | Area : 4720um² <br> Cycle: 2153             |  A    |
+
 
 
 
