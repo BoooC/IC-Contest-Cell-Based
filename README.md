@@ -33,7 +33,7 @@ The key objective for 2024 was to implement the Bicubic interpolation algorithm,
   - All patterns passed successfully.
 
 #### Grade A Standards for 2024:
-- [x] All test patterns across all layers have successfully passed both gate-level and RTL simulations under any clock cycle.
+- [x] All test patterns have successfully passed both gate-level and RTL simulations under any clock cycle.
 
 ## 2023 : LASER
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
