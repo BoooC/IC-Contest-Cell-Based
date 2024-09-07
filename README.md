@@ -23,7 +23,7 @@ Each folder corresponds to the respective year's competition and includes proble
 
 
 
-## 2024 : Bicubic
+## 2024 : Bicubic Resize Engine
 The key objective for 2024 was to implement the Bicubic interpolation algorithm, which allows enlarging a selected 2D matrix image to a specified size.
 
 - **Circuit Design:**
@@ -35,7 +35,7 @@ The key objective for 2024 was to implement the Bicubic interpolation algorithm,
 #### Grade A Standards for 2024:
 - [x] All test patterns have successfully passed both gate-level and RTL simulations under any clock cycle.
 
-## 2023 : LASER
+## 2023 : Laser Treatment
 The key objective for 2023 was to use iterative methods to find two circles that could cover the maximum number of target points.
 
 - **Circuit Design:**
