@@ -1,0 +1,25 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Fri Jan 31 07:41:09 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+
+Nets                                                                6
+    Unloaded nets (LINT-2)                                          6
+--------------------------------------------------------------------------------
+
+Warning: In design 'det_inside_single', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'det_inside_single', cell 'B_3' does not drive any nets. (LINT-1)
+Warning: In design 'LASER', net 'net1057' driven by pin 'C1063/Z' has no loads. (LINT-2)
+Warning: In design 'LASER', net 'net1056' driven by pin 'C993/Z' has no loads. (LINT-2)
+Warning: In design 'LASER', net 'net1055' driven by pin 'C988/Z' has no loads. (LINT-2)
+Warning: In design 'LASER', net 'net1054' driven by pin 'C974/Z' has no loads. (LINT-2)
+Warning: In design 'LASER', net 'net1053' driven by pin 'C957/Z' has no loads. (LINT-2)
+Warning: In design 'LASER', net 'net1052' driven by pin 'C941/Z' has no loads. (LINT-2)
+1

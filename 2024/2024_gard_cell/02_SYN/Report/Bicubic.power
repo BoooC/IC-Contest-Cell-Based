@@ -1,0 +1,60 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : Bicubic
+Version: U-2022.12
+Date   : Sat Feb  1 09:03:48 2025
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+    ResultSRAM (File: /home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ResultSRAM_slow.db)
+    ImgROM (File: /home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ImgROM_slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+Bicubic                tsmc13_wl10       slow
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  21.8587 mW   (92%)
+  Net Switching Power  =   1.9074 mW    (8%)
+                         ---------
+Total Dynamic Power    =  23.7661 mW  (100%)
+
+Cell Leakage Power     = 352.5871 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             6.9969            0.0000        9.8000e+07            7.0949  (  29.42%)
+black_box         11.6202        2.9726e-03        1.0100e+08           11.7241  (  48.61%)
+clock_network      2.2739            0.0000            0.0000            2.2739  (   9.43%)  i
+register           0.1071            0.1261        1.6242e+07            0.2495  (   1.03%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.8607            1.7784        1.3735e+08            2.7763  (  11.51%)
+--------------------------------------------------------------------------------------------------
+Total             21.8587 mW         1.9074 mW     3.5259e+08 pW        24.1187 mW
+1

@@ -1,0 +1,918 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "Bicubic"
+Bicubic
+set CYCLE 6.0
+6.0
+set INPUT_DLY [expr 0.5*$CYCLE]
+3.0
+set OUTPUT_DLY [expr 0.5*$CYCLE]
+3.0
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ./Bicubic.v
+Presto compilation completed successfully.
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ImgROM_slow.db'
+Loading db file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ResultSRAM_slow.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'ImgROM'
+  Loading link library 'ResultSRAM'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./Bicubic.v:90: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./Bicubic.v:91: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./Bicubic.v:92: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./Bicubic.v:93: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./Bicubic.v:95: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./Bicubic.v:96: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./Bicubic.v:97: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./Bicubic.v:98: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./Bicubic.v:101: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./Bicubic.v:121: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./Bicubic.v:122: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./Bicubic.v:366: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./Bicubic.v:397: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 151 in file
+        './Bicubic.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           152            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine Bicubic line 61 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ver_num_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     hor_num_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 72 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      y_mod_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      x_int_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      y_int_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      x_mod_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 162 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 172 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rom_reg_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 187 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   y_ratio_den_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   x_ratio_num_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   x_ratio_den_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   y_ratio_num_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 203 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rom_addr_x_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 223 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rom_addr_y_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 241 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 256 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     count_x_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 265 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     count_y_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 280 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   div_den_reg_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   div_num_reg_reg   | Flip-flop |  21   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 295 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_frac_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 304 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        d_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        a_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        b_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        c_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 319 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      var1_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      var3_reg       | Flip-flop |  48   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      var2_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 332 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      d_x_0_reg      | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      a_x_3_reg      | Flip-flop |  58   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      b_x_2_reg      | Flip-flop |  43   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      c_x_1_reg      | Flip-flop |  27   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 347 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| p_frac_msb_reg_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|    p_int_reg_reg    | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 358 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   hor_result_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Bicubic line 383 in file
+                './Bicubic.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    sram_addr_reg    | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (Bicubic)
+Elaborated 1 design.
+Current design is now 'Bicubic'.
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'Bicubic'.
+{Bicubic}
+link
+
+  Linking design 'Bicubic'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  Bicubic                     /home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/02_SYN/Bicubic.db
+  slow (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db
+  ImgROM (library)            /home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ImgROM_slow.db
+  ResultSRAM (library)        /home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ResultSRAM_slow.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_operating_conditions -max_library slow -max slow
+Using operating conditions 'slow' found in library 'slow'.
+1
+set_wire_load_model -name tsmc13_wl10 -library slow       
+1
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name CLK -period $CYCLE [get_ports CLK] 
+1
+set_dont_touch_network      [all_clocks]
+1
+set_clock_uncertainty  0.1  [all_clocks]
+1
+set_clock_latency      0.5  [all_clocks]
+1
+set_ideal_network           [get_ports CLK]
+1
+# (D-2) Setting in/out Constraints
+set_input_delay  1   -clock CLK [remove_from_collection [all_inputs] [get_ports CLK]] 
+1
+set_output_delay 1    -clock CLK [all_outputs]  
+1
+# (D-3) Setting Design Environment
+set_load         1   [all_outputs]
+1
+set_drive        0.1   [all_inputs]
+1
+# (D-4) Setting DRC Constraint
+#set_max_fanout 20 [all_inputs]
+# (D-5) Report Clock skew
+report_clock -skew CLK
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+  Allocating blocks in 'DW_div_uns_a_width10_b_width6'
+  Allocating blocks in 'DW_div_a_width10_b_width6_tc_mode0_rem_mode1'
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Warning: Design 'DW_div_uns_a_width10_b_width6' inherited license information from design 'DW_div_a_width10_b_width6_tc_mode0_rem_mode1'. (DDB-74)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+  Allocating blocks in 'DW_div_uns_a_width21_b_width6'
+  Allocating blocks in 'DW_div_a_width21_b_width6_tc_mode0_rem_mode1'
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Warning: Design 'DW_div_uns_a_width21_b_width6' inherited license information from design 'DW_div_a_width21_b_width6_tc_mode0_rem_mode1'. (DDB-74)
+Warning: The trip points for the library named ResultSRAM differ from those in the library named slow. (TIM-164)
+Warning: The trip points for the library named ImgROM differ from those in the library named slow. (TIM-164)
+Information: Updating design information... (UID-85)
+Warning: Design 'Bicubic' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clock_skew
+Design : Bicubic
+Version: U-2022.12
+Date   : Sat Feb  1 09:01:50 2025
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+CLK              0.50      0.50      0.50      0.50      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.0 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 936                                    |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 510                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 98                                     |
+| Number of Dont Touch Nets                               | 1                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 77 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'Bicubic'
+
+  Loading target library 'ImgROM'
+  Loading target library 'ResultSRAM'
+Loaded alib file './alib-52/slow.db.alib'
+Loaded alib file './alib-52/ImgROM_slow.db.alib' (placeholder)
+Loaded alib file './alib-52/ResultSRAM_slow.db.alib' (placeholder)
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Bicubic'
+Information: The register 'd_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'd_x_0_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'd_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'd_x_0_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'd_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'd_x_0_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'div_num_reg_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: In design 'Bicubic', the register 'c_reg[9]' is removed because it is merged to 'c_reg[10]'. (OPT-1215)
+ Implement Synthetic for 'Bicubic'.
+  Processing 'Bicubic_DW_div_uns_J1_0'
+  Processing 'Bicubic_DW_div_uns_J1_1'
+  Processing 'Bicubic_DW_div_uns_J1_2'
+  Processing 'Bicubic_DW_div_uns_J1_3'
+  Processing 'Bicubic_DW_div_uns_J1_4'
+Information: The register 'var2_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: Added key list 'DesignWare' to design 'Bicubic'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: In design 'Bicubic', the register 'c_reg[8]' is removed because it is merged to 'c_reg[10]'. (OPT-1215)
+Information: In design 'Bicubic', the register 'c_x_1_reg[26]' is removed because it is merged to 'c_x_1_reg[25]'. (OPT-1215)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+  Mapping Optimization (Phase 9)
+  Mapping Optimization (Phase 10)
+  Mapping Optimization (Phase 11)
+  Mapping Optimization (Phase 12)
+  Mapping Optimization (Phase 13)
+  Mapping Optimization (Phase 14)
+  Mapping Optimization (Phase 15)
+  Mapping Optimization (Phase 16)
+  Mapping Optimization (Phase 17)
+  Mapping Optimization (Phase 18)
+  Mapping Optimization (Phase 19)
+  Mapping Optimization (Phase 20)
+  Mapping Optimization (Phase 21)
+  Mapping Optimization (Phase 22)
+  Mapping Optimization (Phase 23)
+  Mapping Optimization (Phase 24)
+Warning: In design Bicubic, there are sequential cells not driving any load. (OPT-109)
+Information: Use the 'check_design' command for 
+         more information about warnings. (LINT-98)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:06  834654.8      0.76      34.6     884.0                           472351840.0000      0.00  
+    0:01:06  829221.5      1.57      69.7     918.3                           467725696.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+Information: In design 'Bicubic', the register 'c_x_1_reg[24]' is removed because it is merged to 'c_x_1_reg[25]'. (OPT-1215)
+    0:01:06  829301.2      1.57      69.7     918.3                           467846432.0000      0.00  
+    0:01:07  828691.9      1.56      69.7     942.7                           467367936.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'Bicubic_DP_OP_138J1_124_7614_3'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:01:12  712464.1      1.30     104.4     516.5                           346419712.0000      0.00  
+    0:01:15  717629.3      0.59      54.5     583.1                           351972480.0000      0.00  
+    0:01:15  717629.3      0.59      54.5     583.1                           351972480.0000      0.00  
+    0:01:15  718678.3      0.57      53.4     621.0                           353853152.0000      0.00  
+    0:01:17  717408.6      1.09      76.6     621.0                           352643168.0000      0.00  
+    0:01:18  717303.4      1.10      77.5     621.0                           352553696.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:01:21  715303.9      1.10      73.4     619.5                           350792544.0000      0.00  
+    0:01:21  715802.9      0.69      54.6     619.5                           351375008.0000      0.00  
+    0:01:21  715802.9      0.69      54.6     619.5                           351375008.0000      0.00  
+    0:01:22  717746.4      0.69      49.2     619.5                           353489024.0000      0.00  
+    0:01:22  717746.4      0.69      49.2     619.5                           353489024.0000      0.00  
+    0:01:28  725933.0      0.51      29.8     798.8                           361402176.0000      0.00  
+    0:01:28  725933.0      0.51      29.8     798.8                           361402176.0000      0.00  
+    0:01:28  726250.4      0.47      28.0     809.1                           361876544.0000      0.00  
+    0:01:28  726250.4      0.47      28.0     809.1                           361876544.0000      0.00  
+    0:01:31  727457.2      0.44      27.2     809.1                           363080704.0000      0.00  
+    0:01:31  727457.2      0.44      27.2     809.1                           363080704.0000      0.00  
+    0:01:35  730573.7      0.20      12.8     722.7                           366806784.0000      0.00  
+    0:01:35  730573.7      0.20      12.8     722.7                           366806784.0000      0.00  
+    0:01:35  730597.4      0.20      12.8     722.7                           366836160.0000      0.00  
+    0:01:35  730597.4      0.20      12.8     722.7                           366836160.0000      0.00  
+    0:01:36  730651.7      0.20      12.6     722.7                           366886656.0000      0.00  
+    0:01:36  730651.7      0.20      12.6     722.7                           366886656.0000      0.00  
+    0:01:36  730651.7      0.20      12.6     722.7                           366886656.0000      0.00  
+    0:01:36  730651.7      0.20      12.6     722.7                           366886656.0000      0.00  
+    0:01:36  730651.7      0.20      12.6     722.7                           366886656.0000      0.00  
+    0:01:36  730651.7      0.20      12.6     722.7                           366886656.0000      0.00  
+    0:01:36  730651.7      0.20      12.6     722.7                           366886656.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:36  730651.7      0.20      12.6     722.7                           366886656.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:01:38  730967.5      0.17       9.7      46.1 var3_reg[37]/D            367364672.0000      0.00  
+    0:01:39  731245.8      0.12       6.6      29.0 var3_reg[37]/D            367773728.0000      0.00  
+    0:01:41  731641.3      0.07       2.4       0.0 var3_reg[37]/D            368128896.0000      0.00  
+    0:01:42  731648.1      0.06       2.3       0.0 var3_reg[37]/D            368132384.0000      0.00  
+    0:01:43  731670.2      0.06       2.1       0.0                           368223904.0000      0.00  
+    0:01:46  734479.4      0.04       0.5      28.1                           370772416.0000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:46  734479.4      0.04       0.5      28.1                           370772416.0000      0.00  
+    0:01:47  734409.8      0.00       0.0      12.5                           370647456.0000      0.00  
+    0:01:47  734409.8      0.00       0.0      12.5                           370647456.0000      0.00  
+    0:01:47  734409.8      0.00       0.0      12.5                           370647456.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:48  729521.3      0.00       0.0       0.0                           364952000.0000      0.00  
+    0:01:50  725899.0      0.00       0.0       0.0                           361108768.0000      0.00  
+    0:01:50  725924.5      0.00       0.0       0.0                           361142336.0000      0.00  
+    0:01:50  725924.5      0.00       0.0       0.0                           361142336.0000      0.00  
+    0:01:51  725612.2      0.00       0.0       0.0                           360640096.0000      0.00  
+    0:01:52  723982.7      0.00       0.0       0.0                           358698208.0000      0.00  
+    0:01:52  723982.7      0.00       0.0       0.0                           358698208.0000      0.00  
+    0:01:52  723982.7      0.00       0.0       0.0                           358698208.0000      0.00  
+    0:01:52  723982.7      0.00       0.0       0.0                           358698208.0000      0.00  
+    0:01:52  723982.7      0.00       0.0       0.0                           358698208.0000      0.00  
+    0:01:52  723982.7      0.00       0.0       0.0                           358698208.0000      0.00  
+    0:01:54  718493.3      0.00       0.0       0.0                           352587136.0000      0.00  
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ImgROM_slow.db'
+Loading db file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ResultSRAM_slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'ImgROM'
+  Loading target library 'ResultSRAM'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated black box outputs. (PWR-428)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/02_SYN/Netlist/Bicubic_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'Bicubic_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/02_SYN/Netlist/Bicubic_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : Bicubic
+Version: U-2022.12
+Date   : Sat Feb  1 09:03:49 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+    ResultSRAM (File: /home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ResultSRAM_slow.db)
+    ImgROM (File: /home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ImgROM_slow.db)
+
+Number of ports:                           39
+Number of nets:                         11433
+Number of cells:                        10460
+Number of combinational cells:           9989
+Number of sequential cells:               467
+Number of macros/black boxes:               2
+Number of buf/inv:                       1703
+Number of references:                     183
+
+Combinational area:             144161.879416
+Buf/Inv area:                    13482.448256
+Noncombinational area:           17605.432499
+Macro/Black Box area:           556725.953125
+Net Interconnect area:         1148659.081665
+
+Total cell area:                718493.265040
+Total area:                    1867152.346705
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Bicubic
+Version: U-2022.12
+Date   : Sat Feb  1 09:03:49 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: var3_reg_32_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: a_x_3_reg_53_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Bicubic            tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  var3_reg_32_/CK (DFFRHQX4)               0.00       0.50 r
+  var3_reg_32_/Q (DFFRHQX4)                0.25       0.75 r
+  U2154/Y (BUFX12)                         0.23       0.98 r
+  U5764/Y (XNOR2X4)                        0.24       1.22 f
+  U5767/Y (NOR2BX4)                        0.18       1.40 f
+  U1419/Y (BUFX4)                          0.29       1.70 f
+  U7417/Y (OA21X2)                         0.38       2.08 f
+  U7418/Y (AOI21X1)                        0.24       2.31 r
+  U7419/Y (OAI21X1)                        0.19       2.51 f
+  U7420/Y (XNOR2X1)                        0.27       2.77 r
+  mult_x_12_U708/S (CMPR42X2)              0.69       3.46 f
+  mult_x_12_U707/CO (CMPR42X1)             0.82       4.28 f
+  U6006/Y (NAND2X1)                        0.31       4.59 r
+  U6007/Y (OAI21X1)                        0.20       4.79 f
+  U1492/Y (AOI21X1)                        0.26       5.06 r
+  U2954/Y (OA21X4)                         0.25       5.31 r
+  U1980/Y (INVX12)                         0.10       5.40 f
+  U2952/Y (AOI21X4)                        0.18       5.58 r
+  U6474/Y (CLKINVX1)                       0.15       5.73 f
+  U459/Y (AOI21X1)                         0.26       5.99 r
+  U6489/Y (XOR2X2)                         0.24       6.23 f
+  a_x_3_reg_53_/D (DFFRHQX4)               0.00       6.23 f
+  data arrival time                                   6.23
+
+  clock CLK (rise edge)                    6.00       6.00
+  clock network delay (ideal)              0.50       6.50
+  clock uncertainty                       -0.10       6.40
+  a_x_3_reg_53_/CK (DFFRHQX4)              0.00       6.40 r
+  library setup time                      -0.17       6.23
+  data required time                                  6.23
+  -----------------------------------------------------------
+  data required time                                  6.23
+  data arrival time                                  -6.23
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+exit
+
+Memory usage for this session 347 Mbytes.
+Memory usage for this session including child processes 740 Mbytes.
+CPU usage for this session 426 seconds ( 0.12 hours ).
+Elapsed time for this session 127 seconds ( 0.04 hours ).
+
+Thank you...
+

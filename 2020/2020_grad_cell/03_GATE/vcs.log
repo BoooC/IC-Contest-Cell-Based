@@ -1,0 +1,1560 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Wed Jan 29 02:57:40 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'tb_term.sv'
+Parsing included file 'SME_SYN.v'.
+Back to file 'tb_term.sv'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       testfixture
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 225
+SME, "DFFRX2 STRING_reg_1__0_( .D (n1192),  .CK (clk),  .RN (n2831),  .Q (STRING[246]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 229
+SME, "DFFRX2 STRING_reg_11__0_( .D (n1112),  .CK (clk),  .RN (n2832),  .Q (STRING[174]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 235
+SME, "DFFRX2 STRING_reg_17__0_( .D (n1064),  .CK (clk),  .RN (n2830),  .Q (STRING[128]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 237
+SME, "DFFRX2 STRING_reg_25__0_( .D (n1000),  .CK (clk),  .RN (n2830),  .Q (STRING[64]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 239
+SME, "DFFRX2 STRING_reg_1__7_( .D (n1191),  .CK (clk),  .RN (n2044),  .Q (STRING[253]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 245
+SME, "DFFRX2 STRING_reg_10__7_( .D (n1119),  .CK (clk),  .RN (n2826),  .Q (STRING[189]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 247
+SME, "DFFRX2 STRING_reg_11__7_( .D (n1111),  .CK (clk),  .RN (n2826),  .Q (STRING[181]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 249
+SME, "DFFRX2 STRING_reg_17__7_( .D (n1063),  .CK (clk),  .RN (n2827),  .Q (STRING[135]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 257
+SME, "DFFRX2 STRING_reg_25__7_( .D (n999),  .CK (clk),  .RN (n2044),  .Q (STRING[71]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 264
+SME, "DFFRX2 STRING_reg_8__6_( .D (n1134),  .CK (clk),  .RN (n2832),  .Q (STRING[204]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 266
+SME, "DFFRX2 STRING_reg_9__6_( .D (n1126),  .CK (clk),  .RN (n2830),  .Q (STRING[196]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 268
+SME, "DFFRX2 STRING_reg_10__6_( .D (n1118),  .CK (clk),  .RN (n2831),  .Q (STRING[188]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 270
+SME, "DFFRX2 STRING_reg_11__6_( .D (n1110),  .CK (clk),  .RN (n2822),  .Q (STRING[180]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 272
+SME, "DFFRX2 STRING_reg_19__6_( .D (n1046),  .CK (clk),  .RN (n2829),  .Q (STRING[118]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 274
+SME, "DFFRX2 STRING_reg_24__6_( .D (n1006),  .CK (clk),  .RN (n2826),  .Q (STRING[78]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 276
+SME, "DFFRX2 STRING_reg_25__6_( .D (n998),  .CK (clk),  .RN (n2831),  .Q (STRING[70]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 277
+SME, "DFFRX2 STRING_reg_26__6_( .D (n990),  .CK (clk),  .RN (n2827),  .Q (STRING[62]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 286
+SME, "DFFRX2 STRING_reg_8__4_( .D (n1132),  .CK (clk),  .RN (n2829),  .Q (STRING[202]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 288
+SME, "DFFRX2 STRING_reg_9__4_( .D (n1124),  .CK (clk),  .RN (n2829),  .Q (STRING[194]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 290
+SME, "DFFRX2 STRING_reg_11__4_( .D (n1108),  .CK (clk),  .RN (n2829),  .Q (STRING[178]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 292
+SME, "DFFRX2 STRING_reg_16__4_( .D (n1068),  .CK (clk),  .RN (n2827),  .Q (STRING[140]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 294
+SME, "DFFRX2 STRING_reg_19__4_( .D (n1044),  .CK (clk),  .RN (n2827),  .Q (STRING[116]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 298
+SME, "DFFRX2 STRING_reg_26__4_( .D (n988),  .CK (clk),  .RN (n2828),  .Q (STRING[60]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 305
+SME, "DFFRX2 STRING_reg_1__3_( .D (n1187),  .CK (clk),  .RN (n1222),  .Q (STRING[249]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 311
+SME, "DFFRX2 STRING_reg_17__3_( .D (n1059),  .CK (clk),  .RN (n2044),  .Q (STRING[131]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 313
+SME, "DFFRX2 STRING_reg_25__3_( .D (n995),  .CK (clk),  .RN (n2829),  .Q (STRING[67]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 314
+SME, "DFFRX2 STRING_reg_26__3_( .D (n987),  .CK (clk),  .RN (n2827),  .Q (STRING[59]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 315
+SME, "DFFRX2 STRING_reg_1__2_( .D (n1186),  .CK (clk),  .RN (n1222),  .Q (STRING[248]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 327
+SME, "DFFRX2 STRING_reg_17__2_( .D (n1058),  .CK (clk),  .RN (n2829),  .Q (STRING[130]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 329
+SME, "DFFRX2 STRING_reg_25__2_( .D (n994),  .CK (clk),  .RN (n2044),  .Q (STRING[66]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 330
+SME, "DFFRX2 STRING_reg_1__1_( .D (n1185),  .CK (clk),  .RN (n2822),  .Q (STRING[247]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 340
+SME, "DFFRX2 STRING_reg_8__1_( .D (n1129),  .CK (clk),  .RN (n2823),  .Q (STRING[199]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 342
+SME, "DFFRX2 STRING_reg_9__1_( .D (n1121),  .CK (clk),  .RN (n2823),  .Q (STRING[191]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 344
+SME, "DFFRX2 STRING_reg_11__1_( .D (n1105),  .CK (clk),  .RN (n2823),  .Q (STRING[175]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 350
+SME, "DFFRX2 STRING_reg_19__1_( .D (n1041),  .CK (clk),  .RN (n1222),  .Q (STRING[113]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 356
+SME, "DFFRX2 STRING_reg_26__1_( .D (n985),  .CK (clk),  .RN (n2822),  .Q (STRING[57]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 369
+SME, "DFFRX1 PATTERN_reg_7__0_( .D (n923),  .CK (clk),  .RN (n1222),  .Q (PATTERN[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 372
+SME, "DFFRX1 PATTERN_reg_7__6_( .D (n921),  .CK (clk),  .RN (n2828),  .Q (PATTERN[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 373
+SME, "DFFRX1 PATTERN_reg_7__5_( .D (n920),  .CK (clk),  .RN (n2824),  .Q (PATTERN[5]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 374
+SME, "DFFRX1 PATTERN_reg_7__4_( .D (n919),  .CK (clk),  .RN (n2827),  .Q (PATTERN[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 375
+SME, "DFFRX1 PATTERN_reg_7__3_( .D (n918),  .CK (clk),  .RN (n2829),  .Q (PATTERN[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 376
+SME, "DFFRX1 PATTERN_reg_7__2_( .D (n917),  .CK (clk),  .RN (n1222),  .Q (PATTERN[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 377
+SME, "DFFRX1 PATTERN_reg_7__1_( .D (n916),  .CK (clk),  .RN (n2824),  .Q (PATTERN[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 378
+SME, "DFFRX2 PATTERN_reg_6__6_( .D (n913),  .CK (clk),  .RN (n1222),  .Q (PATTERN[14]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 380
+SME, "DFFRX2 PATTERN_reg_6__4_( .D (n911),  .CK (clk),  .RN (n2044),  .Q (PATTERN[12]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 384
+SME, "DFFRX1 PATTERN_reg_3__0_( .D (n891),  .CK (clk),  .RN (n1222),  .Q (PATTERN[32]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 388
+SME, "DFFRX1 PATTERN_reg_3__6_( .D (n889),  .CK (clk),  .RN (n2829),  .Q (PATTERN[38]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 390
+SME, "DFFRX1 PATTERN_reg_3__5_( .D (n888),  .CK (clk),  .RN (n2827),  .Q (PATTERN[37]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 392
+SME, "DFFRX1 PATTERN_reg_3__4_( .D (n887),  .CK (clk),  .RN (n2827),  .Q (PATTERN[36]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 394
+SME, "DFFRX1 PATTERN_reg_3__3_( .D (n886),  .CK (clk),  .RN (n2827),  .Q (PATTERN[35]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 396
+SME, "DFFRX1 PATTERN_reg_3__2_( .D (n885),  .CK (clk),  .RN (n1222),  .Q (PATTERN[34]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 398
+SME, "DFFRX1 PATTERN_reg_3__1_( .D (n884),  .CK (clk),  .RN (n2824),  .Q (PATTERN[33]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 402
+SME, "DFFRX1 PATTERN_reg_2__6_( .D (n881),  .CK (clk),  .RN (n2828),  .Q (PATTERN[46]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 404
+SME, "DFFRX1 PATTERN_reg_2__5_( .D (n880),  .CK (clk),  .RN (n2824),  .Q (PATTERN[45]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 406
+SME, "DFFRX1 PATTERN_reg_2__4_( .D (n879),  .CK (clk),  .RN (n2828),  .Q (PATTERN[44]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 408
+SME, "DFFRX1 PATTERN_reg_2__3_( .D (n878),  .CK (clk),  .RN (n2829),  .Q (PATTERN[43]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 410
+SME, "DFFRX1 PATTERN_reg_2__1_( .D (n876),  .CK (clk),  .RN (n2828),  .Q (PATTERN[41]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 420
+SME, "DFFRX2 PATTERN_reg_4__7_( .D (n898),  .CK (clk),  .RN (n2044),  .Q (PATTERN[31]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 422
+SME, "DFFRX2 PATTERN_reg_4__4_( .D (n895),  .CK (clk),  .RN (n2044),  .Q (PATTERN[28]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 426
+SME, "DFFRX2 PATTERN_reg_0__0_( .D (n867),  .CK (clk),  .RN (n1222),  .Q (PATTERN[56]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 428
+SME, "DFFRX2 PATTERN_reg_0__7_( .D (n866),  .CK (clk),  .RN (n2829),  .Q (PATTERN[59]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 430
+SME, "DFFRX2 PATTERN_reg_0__4_( .D (n863),  .CK (clk),  .RN (n2044),  .Q (PATTERN[58]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 432
+SME, "DFFRX2 PATTERN_reg_0__2_( .D (n861),  .CK (clk),  .RN (n2829),  .Q (PATTERN[57]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 442
+SME, "DFFRX1 star_exit_reg( .D (n850),  .CK (clk),  .RN (n2825),  .Q (star_exit));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 447
+SME, "DFFRX1 star_exit_start_idx_reg_2_( .D (n847),  .CK (clk),  .RN (n2825),  .QN (n2778));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 481
+SME, "DFFRX1 match_index_reg_0_( .D (N772),  .CK (clk),  .RN (n2825),  .Q (n2838));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 500
+SME, "DFFRX1 str_count_reg_3_( .D (n1203),  .CK (clk),  .RN (n2828),  .QN (n2787));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 501
+SME, "DFFRX1 STRING_reg_1__5_( .D (n1189),  .CK (clk),  .RN (n2829),  .Q (STRING[251]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 509
+SME, "DFFRX1 STRING_reg_10__5_( .D (n1117),  .CK (clk),  .RN (n2828),  .Q (STRING[187]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 517
+SME, "DFFRX1 STRING_reg_25__5_( .D (n997),  .CK (clk),  .RN (n2825),  .Q (STRING[69]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 536
+SME, "DFFRX1 STRING_reg_26__5_( .D (n989),  .CK (clk),  .RN (n2829),  .Q (STRING[61]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 541
+SME, "DFFRX1 STRING_reg_27__5_( .D (n981),  .CK (clk),  .RN (n1222),  .Q (STRING[53]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 544
+SME, "DFFRX1 STRING_reg_24__5_( .D (n1005),  .CK (clk),  .RN (n2824),  .Q (STRING[77]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 556
+SME, "DFFRX1 STRING_reg_11__5_( .D (n1109),  .CK (clk),  .RN (n2829),  .Q (STRING[179]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 560
+SME, "DFFRX1 STRING_reg_8__5_( .D (n1133),  .CK (clk),  .RN (n2827),  .Q (STRING[203]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 566
+SME, "DFFRX1 STRING_reg_9__5_( .D (n1125),  .CK (clk),  .RN (n1222),  .Q (STRING[195]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 570
+SME, "DFFRX1 STRING_reg_14__7_( .D (n1087),  .CK (clk),  .RN (n2826),  .QN (n2591));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 579
+SME, "DFFRX1 PATTERN_reg_0__6_( .D (n865),  .CK (clk),  .RN (n2827),  .QN (n2716));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 626
+SME, "DFFRX1 STRING_reg_4__3_( .D (n1163),  .CK (clk),  .RN (n2829),  .QN (n2724));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 627
+SME, "DFFRX1 STRING_reg_4__0_( .D (n1168),  .CK (clk),  .RN (n2831),  .QN (n2632));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 632
+SME, "DFFRX1 STRING_reg_5__3_( .D (n1155),  .CK (clk),  .RN (n2829),  .QN (n2629));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 639
+SME, "DFFRX1 STRING_reg_5__0_( .D (n1160),  .CK (clk),  .RN (n2831),  .QN (n2720));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 650
+SME, "DFFRX1 PATTERN_reg_0__1_( .D (n860),  .CK (clk),  .RN (n2824),  .QN (n2719));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 651
+SME, "DFFRX1 STRING_reg_7__3_( .D (n1139),  .CK (clk),  .RN (n2829),  .QN (n2718));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 652
+SME, "DFFRX1 STRING_reg_7__0_( .D (n1144),  .CK (clk),  .RN (n2832),  .QN (n2628));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 655
+SME, "DFFRX1 STRING_reg_24__1_( .D (n1001),  .CK (clk),  .RN (n1222),  .Q (STRING[73]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 657
+SME, "DFFRX1 STRING_reg_24__3_( .D (n1003),  .CK (clk),  .RN (n2829),  .Q (STRING[75]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 661
+SME, "DFFRX1 STRING_reg_6__0_( .D (n1152),  .CK (clk),  .RN (n2831),  .QN (n2725));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 692
+SME, "DFFRX2 match_index_reg_2_( .D (N774),  .CK (clk),  .RN (n2825),  .Q (n2836));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 695
+SME, "DFFRX2 state_reg_0_( .D (next_state[0]),  .CK (clk),  .RN (n2825),  .Q (state[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 703
+SME, "DFFRX2 match_index_reg_1_( .D (N773),  .CK (clk),  .RN (n2825),  .Q (n2837));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 704
+SME, "DFFRX2 match_index_reg_4_( .D (N776),  .CK (clk),  .RN (n2827),  .Q (n2834));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 707
+SME, "DFFSX1 valid_reg( .D (n2586),  .CK (clk),  .SN (n2827),  .QN (n2839));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 708
+SME, "DFFRX1 STRING_reg_16__6_( .D (n1070),  .CK (clk),  .RN (n2827),  .Q (STRING[142]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 721
+SME, "DFFRX1 STRING_reg_8__0_( .D (n1136),  .CK (clk),  .RN (n2832),  .Q (STRING[198]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 723
+SME, "DFFRX1 STRING_reg_18__7_( .D (n1055),  .CK (clk),  .RN (n2822),  .Q (STRING[127]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 725
+SME, "DFFRX1 STRING_reg_27__6_( .D (n982),  .CK (clk),  .RN (n2829),  .Q (STRING[54]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 730
+SME, "DFFRX1 STRING_reg_10__1_( .D (n1113),  .CK (clk),  .RN (n2823),  .Q (STRING[183]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 732
+SME, "DFFRX1 STRING_reg_27__1_( .D (n977),  .CK (clk),  .RN (n2822),  .Q (STRING[49]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 733
+SME, "DFFRX1 PATTERN_reg_6__5_( .D (n912),  .CK (clk),  .RN (n2824),  .Q (PATTERN[13]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 737
+SME, "DFFRX1 PATTERN_reg_0__5_( .D (n864),  .CK (clk),  .RN (n2822),  .QN (n2715));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 770
+SME, "DFFRX1 PATTERN_reg_4__0_( .D (n899),  .CK (clk),  .RN (n1222),  .Q (PATTERN[24]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 778
+SME, "DFFRX1 PATTERN_reg_4__2_( .D (n893),  .CK (clk),  .RN (n2044),  .Q (PATTERN[26]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 782
+SME, "DFFRX1 STRING_reg_17__6_( .D (n1062),  .CK (clk),  .RN (n2831),  .Q (STRING[134]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 784
+SME, "DFFRX1 STRING_reg_25__1_( .D (n993),  .CK (clk),  .RN (n2822),  .Q (STRING[65]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 787
+SME, "DFFRX1 STRING_reg_9__0_( .D (n1128),  .CK (clk),  .RN (n2832),  .Q (STRING[190]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 789
+SME, "DFFRX1 STRING_reg_9__7_( .D (n1127),  .CK (clk),  .RN (n2826),  .Q (STRING[197]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 793
+SME, "DFFRX1 STRING_reg_18__6_( .D (n1054),  .CK (clk),  .RN (n2832),  .Q (STRING[126]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 795
+SME, "DFFRX1 STRING_reg_19__0_( .D (n1048),  .CK (clk),  .RN (n2830),  .Q (STRING[112]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 797
+SME, "DFFRX1 STRING_reg_19__7_( .D (n1047),  .CK (clk),  .RN (n2825),  .Q (STRING[119]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 799
+SME, "DFFRX1 STRING_reg_11__2_( .D (n1106),  .CK (clk),  .RN (n2831),  .Q (STRING[176]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 801
+SME, "DFFRX1 STRING_reg_16__0_( .D (n1072),  .CK (clk),  .RN (n2830),  .Q (STRING[136]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 803
+SME, "DFFRX1 STRING_reg_16__7_( .D (n1071),  .CK (clk),  .RN (n2823),  .Q (STRING[143]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 805
+SME, "DFFRX1 STRING_reg_18__0_( .D (n1056),  .CK (clk),  .RN (n2830),  .Q (STRING[120]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 807
+SME, "DFFRX1 STRING_reg_24__0_( .D (n1008),  .CK (clk),  .RN (n2830),  .Q (STRING[72]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 809
+SME, "DFFRX1 STRING_reg_26__0_( .D (n992),  .CK (clk),  .RN (n2830),  .Q (STRING[56]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 810
+SME, "DFFRX1 STRING_reg_27__0_( .D (n984),  .CK (clk),  .RN (n2831),  .Q (STRING[48]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 811
+SME, "DFFRX1 STRING_reg_8__7_( .D (n1135),  .CK (clk),  .RN (n2826),  .Q (STRING[205]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 825
+SME, "DFFRX1 STRING_reg_27__4_( .D (n980),  .CK (clk),  .RN (n2828),  .Q (STRING[52]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 826
+SME, "DFFRX1 STRING_reg_17__1_( .D (n1057),  .CK (clk),  .RN (n1222),  .Q (STRING[129]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 828
+SME, "DFFRX1 STRING_reg_18__1_( .D (n1049),  .CK (clk),  .RN (n1222),  .Q (STRING[121]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 834
+SME, "DFFRX1 STRING_reg_25__4_( .D (n996),  .CK (clk),  .RN (n2828),  .Q (STRING[68]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 835
+SME, "DFFRX1 STRING_reg_17__4_( .D (n1060),  .CK (clk),  .RN (n2827),  .Q (STRING[132]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 837
+SME, "DFFRX1 STRING_reg_10__2_( .D (n1114),  .CK (clk),  .RN (n1222),  .Q (STRING[184]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 839
+SME, "DFFRX1 STRING_reg_9__2_( .D (n1122),  .CK (clk),  .RN (n2827),  .Q (STRING[192]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 841
+SME, "DFFRX1 STRING_reg_16__1_( .D (n1065),  .CK (clk),  .RN (n1222),  .Q (STRING[137]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 847
+SME, "DFFRX1 STRING_reg_24__4_( .D (n1004),  .CK (clk),  .RN (n2827),  .Q (STRING[76]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 851
+SME, "DFFRX1 STRING_reg_16__3_( .D (n1067),  .CK (clk),  .RN (n2044),  .Q (STRING[139]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 853
+SME, "DFFRX1 STRING_reg_18__3_( .D (n1051),  .CK (clk),  .RN (n2044),  .Q (STRING[123]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 855
+SME, "DFFRX1 STRING_reg_10__4_( .D (n1116),  .CK (clk),  .RN (n2829),  .Q (STRING[186]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 857
+SME, "DFFRX1 STRING_reg_24__7_( .D (n1007),  .CK (clk),  .RN (n2044),  .Q (STRING[79]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 859
+SME, "DFFRX1 STRING_reg_26__7_( .D (n991),  .CK (clk),  .RN (n2044),  .Q (STRING[63]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 860
+SME, "DFFRX1 STRING_reg_27__7_( .D (n983),  .CK (clk),  .RN (n2044),  .Q (STRING[55]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 861
+SME, "DFFRX1 STRING_reg_24__2_( .D (n1002),  .CK (clk),  .RN (n2044),  .Q (STRING[74]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 863
+SME, "DFFRX1 STRING_reg_26__2_( .D (n986),  .CK (clk),  .RN (n2044),  .Q (STRING[58]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 864
+SME, "DFFRX1 STRING_reg_27__2_( .D (n978),  .CK (clk),  .RN (n2044),  .Q (STRING[50]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 865
+SME, "DFFRX1 STRING_reg_19__3_( .D (n1043),  .CK (clk),  .RN (n2044),  .Q (STRING[115]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 873
+SME, "DFFRX1 STRING_reg_1__6_( .D (n1190),  .CK (clk),  .RN (n2829),  .Q (STRING[252]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 875
+SME, "DFFRX1 STRING_reg_8__3_( .D (n1131),  .CK (clk),  .RN (n2829),  .Q (STRING[201]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 877
+SME, "DFFRX1 STRING_reg_9__3_( .D (n1123),  .CK (clk),  .RN (n2829),  .Q (STRING[193]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 879
+SME, "DFFRX1 STRING_reg_18__2_( .D (n1050),  .CK (clk),  .RN (n2829),  .Q (STRING[122]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 881
+SME, "DFFRX1 STRING_reg_19__2_( .D (n1042),  .CK (clk),  .RN (n2829),  .Q (STRING[114]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 883
+SME, "DFFRX1 STRING_reg_11__3_( .D (n1107),  .CK (clk),  .RN (n2829),  .Q (STRING[177]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 885
+SME, "DFFRX1 STRING_reg_10__3_( .D (n1115),  .CK (clk),  .RN (n2829),  .Q (STRING[185]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 891
+SME, "DFFRX1 match_reg( .D (N699),  .CK (clk),  .RN (n2827),  .Q (n2833));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 894
+SME, "DFFRX1 STRING_reg_16__2_( .D (n1066),  .CK (clk),  .RN (n2829),  .Q (STRING[138]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 896
+SME, "DFFRX1 STRING_reg_27__3_( .D (n979),  .CK (clk),  .RN (n2829),  .Q (STRING[51]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 897
+SME, "DFFRX1 STRING_reg_8__2_( .D (n1130),  .CK (clk),  .RN (n2829),  .Q (STRING[200]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 899
+SME, "DFFRX1 STRING_reg_6__3_( .D (n1147),  .CK (clk),  .RN (n2829),  .QN (n1368));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 900
+SME, "DFFRX1 STRING_reg_14__2_( .D (n1082),  .CK (clk),  .RN (n2044),  .QN (n2633));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SME_SYN.v, 907
+SME, "DFFRX1 PATTERN_reg_0__3_( .D (n862),  .CK (clk),  .RN (n2044),  .QN (n2714));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "SME_SYN.sdf"
+   ***    Annotation scope: testfixture.u_SME
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Wed Jan 29 02:57:41 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Wed Jan 29 02:57:41 2025
+
+
+
+Warning-[DRTZ] Detect delay value roundoff to 0
+  Delay from design or SDF file roundoff to 0 based on timescale
+  Please use switch -diag timescale to dump detailed information.
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+128 modules and 2 UDPs read.
+recompiling module SME
+recompiling module testfixture
+recompiling module DFFRX1
+recompiling module DFFRX2
+recompiling module DFFRX4
+recompiling module DFFSX1
+recompiling module DFFSX4
+recompiling module DFFRHQX2
+recompiling module AOI22XL
+recompiling module AOI22X1
+recompiling module AOI22X2
+recompiling module AOI22X4
+recompiling module AOI2BB2X1
+recompiling module AOI2BB2X4
+recompiling module AO22X2
+recompiling module NAND4BBX4
+recompiling module OAI22XL
+recompiling module OAI22X1
+recompiling module OAI22X2
+recompiling module OAI22X4
+recompiling module OA22X4
+recompiling module CLKXOR2X2
+recompiling module XOR2XL
+recompiling module XOR2X1
+recompiling module XOR2X2
+recompiling module XOR2X4
+recompiling module XNOR2XL
+recompiling module XNOR2X1
+recompiling module XNOR2X4
+recompiling module AOI211X1
+recompiling module MXI2X1
+recompiling module MXI2X4
+recompiling module NAND4BX1
+recompiling module NAND4BX2
+recompiling module NAND4BX4
+recompiling module AND4X4
+recompiling module AOI21XL
+recompiling module AOI21X1
+recompiling module AOI21X2
+recompiling module AOI21X4
+recompiling module AOI2BB1X2
+recompiling module AND3X1
+recompiling module BUFX2
+recompiling module BUFX3
+recompiling module BUFX4
+recompiling module BUFX6
+recompiling module BUFX8
+recompiling module BUFX12
+recompiling module BUFX16
+recompiling module BUFX20
+recompiling module INVXL
+recompiling module INVX1
+recompiling module INVX2
+recompiling module INVX3
+recompiling module INVX4
+recompiling module INVX6
+recompiling module INVX8
+recompiling module INVX12
+recompiling module INVX16
+recompiling module INVX20
+recompiling module CLKBUFX3
+recompiling module CLKBUFX8
+recompiling module CLKINVX1
+recompiling module CLKINVX2
+recompiling module CLKINVX3
+recompiling module CLKINVX6
+recompiling module AOI2BB1X4
+recompiling module MX2X1
+recompiling module MX2X4
+recompiling module NAND4XL
+recompiling module NAND4X1
+recompiling module NAND4X2
+recompiling module NAND4X4
+recompiling module NAND4X6
+recompiling module NAND4X8
+recompiling module NAND3BX2
+recompiling module NAND3BX4
+recompiling module NOR4XL
+recompiling module NOR4X1
+recompiling module OAI21XL
+recompiling module OAI21X1
+recompiling module OAI21X2
+recompiling module OAI21X4
+recompiling module OAI2BB1X1
+recompiling module OAI2BB1X2
+recompiling module OAI2BB1X4
+recompiling module OA21X4
+recompiling module AND3X4
+recompiling module NAND3XL
+recompiling module NAND3X1
+recompiling module NAND3X2
+recompiling module NAND3X4
+recompiling module NAND3X6
+recompiling module NAND3X8
+recompiling module NAND2BX1
+recompiling module NAND2BX2
+recompiling module NAND2BX4
+recompiling module NOR3XL
+recompiling module NOR3X1
+recompiling module NOR3X2
+recompiling module NOR3X4
+recompiling module NOR3X6
+recompiling module NOR2BX1
+recompiling module NOR2BX2
+recompiling module NOR2BX4
+recompiling module AND2X1
+recompiling module AND2X2
+recompiling module AND2X4
+recompiling module AND2X8
+recompiling module NAND2XL
+recompiling module NAND2X1
+recompiling module NAND2X2
+recompiling module NAND2X4
+recompiling module NAND2X6
+recompiling module NAND2X8
+recompiling module NOR2XL
+recompiling module NOR2X1
+recompiling module NOR2X2
+recompiling module NOR2X4
+recompiling module NOR2X6
+recompiling module NOR2X8
+recompiling module OR2X1
+recompiling module OR2X2
+recompiling module OR2X4
+recompiling module OR2X6
+recompiling module OR2X8
+recompiling module CLKAND2X3
+recompiling module CLKAND2X8
+All of 128 modules done
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2020/2020_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _27764_archive_1.so \
+_27786_archive_1.so _27787_archive_1.so _prev_archive_1.so objs/udps/U7Vwg.o objs/udps/exIG1.o \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2020/2020_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2020/2020_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 29 02:57 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'SME_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+----------------------
+-- Simulation Start --
+----------------------
+  __________________________________________________________
+  == String 1  "abcdijk lmnop q rstuv"
+  -- Pattern 1  "1234"
+       cycle 36, expect(0,00) , get(0,16) >> Pass
+  -- Pattern 2  "abcd"
+       cycle 41, expect(1,00) , get(1,00) >> Pass
+  -- Pattern 3  "dijk"
+       cycle 4f, expect(1,03) , get(1,03) >> Pass
+  -- Pattern 4  "pqrst"
+       cycle 6e, expect(0,00) , get(0,16) >> Pass
+  -- Pattern 5  "pqr.t"
+       cycle 8d, expect(0,00) , get(0,16) >> Pass
+  -- Pattern 6  "c...k"
+       cycle 9c, expect(1,02) , get(1,02) >> Pass
+  -- Pattern 7  "^lmno"
+       cycle b1, expect(1,08) , get(1,08) >> Pass
+  -- Pattern 8  "rstuv$"
+       cycle d0, expect(1,10) , get(1,10) >> Pass
+  -- Pattern 9  "^rmn"
+       cycle f2, expect(0,00) , get(0,16) >> Pass
+  -- Pattern a  "ijk l$"
+       cycle 116, expect(0,00) , get(0,16) >> Pass
+  -- Pattern b  "v"
+       cycle 12f, expect(1,14) , get(1,14) >> Pass
+  -- Pattern c  "lmnoprst"
+       cycle 155, expect(0,00) , get(0,16) >> Pass
+  -- Pattern d  "^ijk$"
+       cycle 177, expect(0,00) , get(0,16) >> Pass
+  -- Pattern e  "^q$"
+       cycle 18f, expect(1,0e) , get(1,0e) >> Pass
+  __________________________________________________________
+  == String 2  "2x1=2 2x2=4 2x3=6"
+  -- Pattern 1  "^2.2.2"
+       cycle 1c6, expect(0,00) , get(0,12) >> Pass
+  -- Pattern 2  "2.2.2"
+       cycle 1d9, expect(1,04) , get(1,04) >> Pass
+  -- Pattern 3  "^2.2.4$"
+       cycle 1f2, expect(1,06) , get(1,06) >> Pass
+  -- Pattern 4  "."
+       cycle 1f6, expect(1,00) , get(1,00) >> Pass
+  -- Pattern 5  "^.."
+       cycle 1fe, expect(1,00) , get(1,00) >> Pass
+  -- Pattern 6  "^.$"
+       cycle 21c, expect(0,00) , get(0,12) >> Pass
+  -- Pattern 7  "2.$"
+       cycle 23e, expect(0,00) , get(0,12) >> Pass
+  -- Pattern 8  "2x4=7"
+       cycle 260, expect(0,00) , get(0,12) >> Pass
+  -- Pattern 9  "3=6-3"
+       cycle 27a, expect(0,00) , get(0,0f) >> Pass
+  -- Pattern a  "1.2=2"
+       cycle 297, expect(0,00) , get(0,12) >> Pass
+  -- Pattern b  "2*2=4"
+       cycle 2ac, expect(1,00) , get(1,00) >> Pass
+  __________________________________________________________
+  == String 3  "She sees cheese"
+  -- Pattern 1  "ees."
+       cycle 2cc, expect(1,05) , get(1,05) >> Pass
+  -- Pattern 2  "ees.$"
+       cycle 2ea, expect(1,0b) , get(1,0b) >> Pass
+  -- Pattern 3  "e..se"
+       cycle 30e, expect(0,00) , get(0,0d) >> Pass
+  -- Pattern 4  "e..ee$"
+       cycle 332, expect(0,00) , get(0,0c) >> Pass
+  -- Pattern 5  "^ees*"
+       cycle 34d, expect(0,00) , get(0,10) >> Pass
+  -- Pattern 6  "hee*se"
+       cycle 366, expect(1,0a) , get(1,0a) >> Pass
+  -- Pattern 7  "he.s"
+       cycle 372, expect(1,01) , get(1,01) >> Pass
+  -- Pattern 8  "*see$"
+       cycle 38e, expect(0,00) , get(0,1f) >> Pass
+  -- Pattern 9  "se*ce"
+       cycle 3a7, expect(0,00) , get(0,04) >> Pass
+  __________________________________________________________
+  == String 4  "But she said the butter's bitter"
+  -- Pattern 1  "sa*said"
+       cycle 3f4, expect(0,00) , get(0,08) >> Pass
+  -- Pattern 2  "b*tter"
+       cycle 414, expect(1,11) , get(1,11) >> Pass
+  -- Pattern 3  "b*tter$"
+       cycle 444, expect(1,11) , get(1,11) >> Pass
+  -- Pattern 4  "ut*r"
+       cycle 462, expect(1,01) , get(1,01) >> Pass
+  -- Pattern 5  "ut*tted"
+       cycle 496, expect(0,00) , get(0,01) >> Pass
+  -- Pattern 6  "^ut*tter"
+       cycle 4c8, expect(0,00) , get(0,01) >> Pass
+  -- Pattern 7  "*tered"
+       cycle 4f9, expect(0,00) , get(0,1f) >> Pass
+  __________________________________________________________
+  == String 5  "He threw three free throws"
+  -- Pattern 1  "thr*the$"
+       cycle 53d, expect(0,00) , get(0,03) >> Pass
+  -- Pattern 2  "^thro*th"
+       cycle 56d, expect(0,00) , get(0,13) >> Pass
+  -- Pattern 3  ".ree th"
+       cycle 5a3, expect(1,0f) , get(1,0f) >> Pass
+  -- Pattern 4  ".ree  fr"
+       cycle 5ee, expect(0,00) , get(0,1b) >> Pass
+  -- Pattern 5  ".ree *re"
+       cycle 618, expect(1,0a) , get(1,0a) >> Pass
+  -- Pattern 6  "re. thr"
+       cycle 62e, expect(1,05) , get(1,05) >> Pass
+  -- Pattern 7  "ee*ee fr"
+       cycle 65a, expect(0,00) , get(0,0c) >> Pass
+  -- Pattern 8  "ee*ee th"
+       cycle 67d, expect(1,0c) , get(1,0c) >> Pass
+  -- Pattern 9  "re*ee.$"
+       cycle 6aa, expect(0,00) , get(0,05) >> Pass
+  -- Pattern a  "^...$"
+       cycle 6e1, expect(0,00) , get(0,1b) >> Pass
+  -- Pattern b  "^....$"
+       cycle 70d, expect(1,0f) , get(1,0f) >> Pass
+----------------------------------
+-- Simulation finish, ALL PASS  --
+-- cycle =1806 , Score =100       --
+----------------------------------
+$finish called from file "tb_term.sv", line 207.
+$finish at simulation time              6321000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 6321000 ps
+CPU Time:      0.740 seconds;       Data structure size:   0.6Mb
+Wed Jan 29 02:57:45 2025
+CPU time: 2.328 seconds to compile + .526 seconds to elab + .863 seconds to link + .795 seconds in simulation

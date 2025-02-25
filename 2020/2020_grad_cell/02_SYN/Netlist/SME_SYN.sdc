@@ -1,0 +1,62 @@
+###################################################################
+
+# Created by write_sdc on Wed Jan 29 02:57:22 2025
+
+###################################################################
+set sdc_version 2.1
+
+set_units -time ns -resistance kOhm -capacitance pF -voltage V -current mA
+set_operating_conditions slow -library slow
+set_wire_load_model -name tsmc13_wl10 -library slow
+set_load -pin_load 1 [get_ports match]
+set_load -pin_load 1 [get_ports {match_index[4]}]
+set_load -pin_load 1 [get_ports {match_index[3]}]
+set_load -pin_load 1 [get_ports {match_index[2]}]
+set_load -pin_load 1 [get_ports {match_index[1]}]
+set_load -pin_load 1 [get_ports {match_index[0]}]
+set_load -pin_load 1 [get_ports valid]
+set_max_fanout 20 [get_ports clk]
+set_max_fanout 20 [get_ports reset]
+set_max_fanout 20 [get_ports {chardata[7]}]
+set_max_fanout 20 [get_ports {chardata[6]}]
+set_max_fanout 20 [get_ports {chardata[5]}]
+set_max_fanout 20 [get_ports {chardata[4]}]
+set_max_fanout 20 [get_ports {chardata[3]}]
+set_max_fanout 20 [get_ports {chardata[2]}]
+set_max_fanout 20 [get_ports {chardata[1]}]
+set_max_fanout 20 [get_ports {chardata[0]}]
+set_max_fanout 20 [get_ports isstring]
+set_max_fanout 20 [get_ports ispattern]
+create_clock [get_ports clk]  -period 3.5  -waveform {0 1.75}
+set_clock_latency 0.5  [get_clocks clk]
+set_clock_uncertainty 0.1  [get_clocks clk]
+set_input_delay -clock clk  -clock_fall  0  [get_ports reset]
+set_input_delay -clock clk  -clock_fall  0  [get_ports {chardata[7]}]
+set_input_delay -clock clk  -clock_fall  0  [get_ports {chardata[6]}]
+set_input_delay -clock clk  -clock_fall  0  [get_ports {chardata[5]}]
+set_input_delay -clock clk  -clock_fall  0  [get_ports {chardata[4]}]
+set_input_delay -clock clk  -clock_fall  0  [get_ports {chardata[3]}]
+set_input_delay -clock clk  -clock_fall  0  [get_ports {chardata[2]}]
+set_input_delay -clock clk  -clock_fall  0  [get_ports {chardata[1]}]
+set_input_delay -clock clk  -clock_fall  0  [get_ports {chardata[0]}]
+set_input_delay -clock clk  -clock_fall  0  [get_ports isstring]
+set_input_delay -clock clk  -clock_fall  0  [get_ports ispattern]
+set_output_delay -clock clk  -clock_fall  0  [get_ports match]
+set_output_delay -clock clk  -clock_fall  0  [get_ports {match_index[4]}]
+set_output_delay -clock clk  -clock_fall  0  [get_ports {match_index[3]}]
+set_output_delay -clock clk  -clock_fall  0  [get_ports {match_index[2]}]
+set_output_delay -clock clk  -clock_fall  0  [get_ports {match_index[1]}]
+set_output_delay -clock clk  -clock_fall  0  [get_ports {match_index[0]}]
+set_output_delay -clock clk  -clock_fall  0  [get_ports valid]
+set_drive 0.1  [get_ports clk]
+set_drive 0.1  [get_ports reset]
+set_drive 0.1  [get_ports {chardata[7]}]
+set_drive 0.1  [get_ports {chardata[6]}]
+set_drive 0.1  [get_ports {chardata[5]}]
+set_drive 0.1  [get_ports {chardata[4]}]
+set_drive 0.1  [get_ports {chardata[3]}]
+set_drive 0.1  [get_ports {chardata[2]}]
+set_drive 0.1  [get_ports {chardata[1]}]
+set_drive 0.1  [get_ports {chardata[0]}]
+set_drive 0.1  [get_ports isstring]
+set_drive 0.1  [get_ports ispattern]

@@ -1,0 +1,111 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v -f filelist.f -o simv -l \
+vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
++define+RTL +notimingchecks
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Fri Jan 31 07:42:05 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'tb.sv'
+Parsing included file 'LASER.v'.
+Back to file 'tb.sv'.
+Top Level Modules:
+       testfixture
+TimeScale is 1 ns / 10 ps
+Starting vcs inline pass...
+
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+2 modules and 0 UDP read.
+recompiling module testfixture
+recompiling module det_inside
+Both modules done.
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2023/2023_grad_cell/01_RTL/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _31088_archive_1.so \
+_31110_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o \
+rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc \
+-lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a    -lvcsnew -lsimprofile \
+-luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o \
+/usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a -ldl -lm  -lc -lpthread \
+-ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2023/2023_grad_cell/01_RTL/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2023/2023_grad_cell/01_RTL/./simv +v2k +libext+.v -a vcs.log +define+RTL +notimingchecks
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 31 07:42 2025
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'LASER.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+*******************************
+** Simulation Start          **
+*******************************
+== PATTERN ../00_TESTBED/img1.pattern
+---- Used Cycle:        738
+---- Get Return: C1(11,12),C2( 4,10)
+---- cover =  30, optimum =  30
+== PATTERN ../00_TESTBED/img2.pattern
+---- Used Cycle:        738
+---- Get Return: C1(11, 6),C2( 5,11)
+---- cover =  28, optimum =  28
+== PATTERN ../00_TESTBED/img3.pattern
+---- Used Cycle:        738
+---- Get Return: C1(10, 5),C2( 5,10)
+---- cover =  29, optimum =  29
+== PATTERN ../00_TESTBED/img4.pattern
+---- Used Cycle:        538
+---- Get Return: C1( 9, 6),C2( 3, 7)
+---- cover =  30, optimum =  30
+== PATTERN ../00_TESTBED/img5.pattern
+---- Used Cycle:        738
+---- Get Return: C1( 4,10),C2(10,11)
+---- cover =  23, optimum =  23
+== PATTERN ../00_TESTBED/img6.pattern
+---- Used Cycle:       1138
+---- Get Return: C1( 8, 9),C2(12, 3)
+---- cover =  30, optimum =  30
+
+*******************************
+**   Finish Simulation       **
+**   RUN CYCLE =       4883  **
+**   Cover total = 170/170   **
+*******************************
+$finish called from file "tb.sv", line 263.
+$finish at simulation time              3906000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 39060000 ps
+CPU Time:      0.820 seconds;       Data structure size:   0.2Mb
+Fri Jan 31 07:42:09 2025
+CPU time: .896 seconds to compile + .535 seconds to elab + .482 seconds to link + .870 seconds in simulation

@@ -1,0 +1,892 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "geofence"
+geofence
+set CYCLE 50.0
+50.0
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ./geofence.v
+Presto compilation completed successfully.
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./geofence.v:55: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./geofence.v:56: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./geofence.v:59: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./geofence.v:60: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./geofence.v:80: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./geofence.v:81: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./geofence.v:83: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./geofence.v:91: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./geofence.v:337: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 106 in file
+        './geofence.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           107            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 211 in file
+        './geofence.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           212            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine geofence line 117 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 128 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      R_reg_reg      | Flip-flop |  66   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   receiver_x_reg    | Flip-flop |  60   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   receiver_y_reg    | Flip-flop |  60   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 157 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 175 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_limit_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  current_limit_reg  | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 187 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   area_count_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 199 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    hex_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 268 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   product_reg_reg   | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 278 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        a_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 287 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        b_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 296 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        c_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 305 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  sqrt_out_reg_reg   | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 314 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  tri_area_reg_reg   | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 326 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  hex_area_reg_reg   | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 341 in file
+                './geofence.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| compute_hex_flag_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+        in routine geofence line 357 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   first_done_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 367 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 379 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    is_inside_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (geofence)
+Elaborated 1 design.
+Current design is now 'geofence'.
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'geofence'.
+{geofence}
+link
+
+  Linking design 'geofence'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  geofence                    /home/M13/m0bochun/IC_Contest/2021/2021_grad_cell/02_SYN/geofence.db
+  slow (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_operating_conditions -max_library slow -max slow
+Using operating conditions 'slow' found in library 'slow'.
+1
+set_wire_load_model -name tsmc13_wl10 -library slow     
+1
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name clk -period $CYCLE [get_ports clk] 
+1
+set_dont_touch_network             [get_clocks clk]
+1
+set_fix_hold                       [get_clocks clk]
+1
+set_clock_uncertainty       0.1    [get_clocks clk]
+1
+set_clock_latency           0.5    [get_clocks clk] 
+1
+set_ideal_network                  [get_ports clk]
+1
+# (D-2) Setting in/out Constraints
+set_input_delay  0   -clock clk [remove_from_collection [all_inputs] [get_ports clk]] -clock_fall
+1
+set_output_delay 0    -clock clk [all_outputs]  -clock_fall
+1
+# (D-3) Setting Design Environment
+set_load         1   [all_outputs]
+1
+set_drive        0.1   [all_inputs]
+1
+# (D-4) Setting DRC Constraint
+set_max_fanout 20 [all_inputs]
+1
+# (D-5) Report Clock skew
+report_clock -skew clk
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+  Allocating blocks in 'DW_sqrt_width20_tc_mode0'
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'pparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Updating design information... (UID-85)
+Warning: Design 'geofence' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clock_skew
+Design : geofence
+Version: U-2022.12
+Date   : Thu Jan 30 23:06:43 2025
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+clk              0.50      0.50      0.50      0.50      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.0 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 1405                                   |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 317                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 243                                    |
+| Number of Dont Touch Nets                               | 1                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 17 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'geofence'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'geofence'
+Information: Added key list 'DesignWare' to design 'geofence'. (DDB-72)
+Information: The register 'area_count_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'area_count_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'a_reg[10]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'geofence'.
+  Processing 'geofence_DW_sqrt_J1_0'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: In design 'geofence', the register 'valid_reg' is removed because it is merged to 'state_reg[2]'. (OPT-1215)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: The register 'tri_area_reg_reg[22]' will be removed. (OPT-1207)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:20   67549.7      0.00       0.0    2205.9                           60157736.0000      0.00  
+    0:00:20   67488.6      0.00       0.0    2205.9                           60113256.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:20   67517.5      0.00       0.0    2205.9                           60152764.0000      0.00  
+    0:00:20   67517.5      0.00       0.0    2205.9                           60152764.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:22   47598.5     21.74     305.5   11608.8                           38662816.0000      0.00  
+    0:00:23   49584.4      0.00       0.0   10547.1                           40988652.0000      0.00  
+    0:00:23   49584.4      0.00       0.0   10547.1                           40988652.0000      0.00  
+    0:00:23   49447.0      0.00       0.0   10547.1                           40888292.0000      0.00  
+    0:00:23   49377.4      0.00       0.0   10547.7                           40791972.0000      0.00  
+    0:00:23   49377.4      0.00       0.0   10547.7                           40791972.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:25   47907.4      0.00       0.0    7698.0                           39397976.0000      0.00  
+    0:00:25   47907.4      0.00       0.0    7698.0                           39397976.0000      0.00  
+    0:00:25   47907.4      0.00       0.0    7698.0                           39397976.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:25   47605.3      0.00       0.0    7197.0                           39201084.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:26   47503.4      0.00       0.0       0.0                           39209616.0000      0.00  
+    0:00:26   47503.4      0.00       0.0       0.0                           39209616.0000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:26   47503.4      0.00       0.0       0.0                           39209616.0000      0.00  
+    0:00:26   47503.4      0.00       0.0       0.0                           39209616.0000      0.00  
+    0:00:26   47503.4      0.00       0.0       0.0                           39209616.0000      0.00  
+    0:00:26   47503.4      0.00       0.0       0.0                           39209616.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:27   47496.6      0.00       0.0       0.0                           38670144.0000      0.00  
+    0:00:28   45249.3      0.00       0.0       0.0                           35667532.0000      0.00  
+    0:00:28   45249.3      0.00       0.0       0.0                           35667532.0000      0.00  
+    0:00:28   45249.3      0.00       0.0       0.0                           35667532.0000      0.00  
+    0:00:28   45245.9      0.00       0.0       0.0                           35620796.0000      0.00  
+    0:00:28   45067.7      0.00       0.0       0.0                           35433964.0000      0.00  
+    0:00:28   45067.7      0.00       0.0       0.0                           35433964.0000      0.00  
+    0:00:28   45067.7      0.00       0.0       0.0                           35433964.0000      0.00  
+    0:00:28   45067.7      0.00       0.0       0.0                           35433964.0000      0.00  
+    0:00:28   45067.7      0.00       0.0       0.0                           35433964.0000      0.00  
+    0:00:28   45067.7      0.00       0.0       0.0                           35433964.0000      0.00  
+    0:00:29   44079.8      0.00       0.0       0.0                           34702224.0000      0.00  
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/home/M13/m0bochun/IC_Contest/2021/2021_grad_cell/02_SYN/Netlist/geofence_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'geofence_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/home/M13/m0bochun/IC_Contest/2021/2021_grad_cell/02_SYN/Netlist/geofence_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : geofence
+Version: U-2022.12
+Date   : Thu Jan 30 23:07:15 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+
+Number of ports:                           35
+Number of nets:                          3755
+Number of cells:                         3169
+Number of combinational cells:           2857
+Number of sequential cells:               312
+Number of macros/black boxes:               0
+Number of buf/inv:                        290
+Number of references:                     129
+
+Combinational area:              33807.116052
+Buf/Inv area:                     1510.685986
+Noncombinational area:           10272.664474
+Macro/Black Box area:                0.000000
+Net Interconnect area:          459808.979309
+
+Total cell area:                 44079.780526
+Total area:                     503888.759835
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : geofence
+Version: U-2022.12
+Date   : Thu Jan 30 23:07:15 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: count_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: is_inside_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  geofence           tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  count_reg_0_/CK (DFFRX4)                                0.00       0.50 r
+  count_reg_0_/Q (DFFRX4)                                 0.55       1.05 f
+  U1593/Y (NAND2X6)                                       0.61       1.66 r
+  U2473/Y (NOR2X2)                                        0.36       2.02 f
+  U1879/Y (INVX8)                                         0.45       2.47 r
+  U2494/Y (NOR2XL)                                        0.23       2.70 f
+  U2496/Y (AOI211XL)                                      0.88       3.58 r
+  U1860/Y (OAI211X1)                                      0.57       4.15 f
+  U2264/Y (NOR2BX1)                                       0.56       4.71 f
+  U2276/Y (OAI2BB1X1)                                     0.35       5.06 f
+  U3425/Y (OAI21XL)                                       0.32       5.38 r
+  U2233/S (ADDFX2)                                        0.70       6.08 r
+  U2094/Y (INVX2)                                         0.34       6.43 f
+  U3390/Y (NOR2XL)                                        0.54       6.96 r
+  U2338/CO (CMPR42X1)                                     0.93       7.89 r
+  DP_OP_450J1_127_4345_U80/ICO (CMPR42X1)                 0.31       8.20 r
+  DP_OP_450J1_127_4345_U77/S (CMPR42X1)                   0.93       9.13 f
+  U2058/Y (NAND2X1)                                       0.31       9.44 r
+  U2493/Y (INVXL)                                         0.19       9.63 f
+  U2041/Y (OA22X1)                                        0.39      10.02 f
+  U1832/CO (ADDFX2)                                       0.46      10.48 f
+  U2017/Y (OA22X1)                                        0.41      10.89 f
+  U1719/CO (ADDFX1)                                       0.38      11.27 f
+  U2013/CO (ADDFX1)                                       0.37      11.63 f
+  U2009/CO (ADDFX1)                                       0.37      12.00 f
+  U1711/CO (ADDFX1)                                       0.36      12.36 f
+  U4179/CO (ADDFXL)                                       0.51      12.87 f
+  U1703/CO (ADDFX2)                                       0.40      13.27 f
+  U1702/CO (ADDFX2)                                       0.36      13.63 f
+  U1700/CO (ADDFHX1)                                      0.32      13.95 f
+  U1698/CO (ADDFX2)                                       0.46      14.41 f
+  U2001/Y (INVX3)                                         0.12      14.53 r
+  U2000/Y (OAI21X2)                                       0.14      14.67 f
+  U1999/Y (NAND2X1)                                       0.18      14.85 r
+  U2195/Y (OAI211X1)                                      0.30      15.15 f
+  U2197/Y (OAI21X2)                                       0.40      15.55 r
+  U1986/Y (INVX3)                                         0.18      15.73 f
+  U1982/Y (NOR2X2)                                        0.20      15.92 r
+  U1810/Y (BUFX12)                                        0.30      16.22 r
+  U1807/Y (INVX6)                                         0.27      16.49 f
+  U2455/Y (OA21X4)                                        0.28      16.76 f
+  U2456/Y (OA21X4)                                        0.26      17.03 f
+  U1688/Y (INVX12)                                        0.27      17.30 r
+  U1804/Y (OAI2BB2X2)                                     0.28      17.58 r
+  U1970/Y (NOR2X2)                                        0.19      17.76 f
+  U1967/Y (OAI21X2)                                       0.32      18.08 r
+  U1966/Y (OAI2BB1X2)                                     0.22      18.31 r
+  U2463/Y (OAI211X4)                                      0.30      18.61 f
+  U1661/Y (BUFX8)                                         0.24      18.84 f
+  U2273/Y (OAI222X4)                                      0.62      19.47 r
+  U1684/Y (OAI21X4)                                       0.14      19.61 f
+  U2469/Y (NAND2X2)                                       0.18      19.78 r
+  U2470/Y (OAI21X4)                                       0.14      19.92 f
+  U1958/Y (OAI2BB1X2)                                     0.21      20.13 f
+  U2472/Y (OAI211X4)                                      0.30      20.43 r
+  U1683/Y (INVX12)                                        0.15      20.58 f
+  U1797/Y (OAI21X1)                                       0.30      20.89 r
+  U1955/Y (OAI31X2)                                       0.27      21.16 f
+  U2528/Y (OAI21X2)                                       0.32      21.47 r
+  U2532/Y (NAND2X1)                                       0.26      21.73 f
+  U1796/Y (OAI21X2)                                       0.27      22.00 r
+  U1952/CO (ACHCINX2)                                     0.28      22.28 f
+  U2534/Y (OAI211X4)                                      0.65      22.94 r
+  U2543/Y (INVX12)                                        0.18      23.12 f
+  U2201/Y (OAI32X1)                                       0.42      23.55 r
+  U1543/Y (NAND2X1)                                       0.35      23.90 f
+  U1794/Y (OAI21X2)                                       0.27      24.16 r
+  U2545/Y (NOR2X2)                                        0.21      24.38 f
+  U2546/Y (OAI21X4)                                       0.20      24.58 r
+  U2549/Y (NAND2X2)                                       0.17      24.75 f
+  U2550/Y (OAI21X4)                                       0.14      24.89 r
+  U2551/Y (NOR2X2)                                        0.16      25.05 f
+  U2553/Y (OA21X4)                                        0.27      25.31 f
+  U2555/Y (NAND2X2)                                       0.15      25.46 r
+  U2558/Y (OAI211X4)                                      0.57      26.03 f
+  U1793/Y (INVX12)                                        0.32      26.35 r
+  U2208/Y (OAI32X1)                                       0.28      26.63 f
+  U2564/Y (NOR2X1)                                        0.47      27.10 r
+  U2567/Y (OAI21X2)                                       0.23      27.33 f
+  U2568/Y (NOR2X2)                                        0.29      27.62 r
+  U1680/Y (OAI21X4)                                       0.15      27.77 f
+  U2572/Y (NOR2X2)                                        0.27      28.05 r
+  U1789/Y (OAI21X4)                                       0.16      28.21 f
+  U1787/Y (NAND2X2)                                       0.22      28.42 r
+  U2575/Y (OAI21X4)                                       0.17      28.60 f
+  U2576/Y (AOI222X2)                                      0.43      29.03 r
+  U2577/Y (NOR2X2)                                        0.18      29.22 f
+  U2582/Y (OAI211X4)                                      0.63      29.85 r
+  U1786/Y (NAND2X1)                                       0.28      30.13 f
+  U1679/Y (AOI2BB2X2)                                     0.38      30.50 f
+  U1534/Y (OAI21X2)                                       0.39      30.90 r
+  U1678/Y (INVX3)                                         0.13      31.03 f
+  U2600/CO (ACHCINX2)                                     0.29      31.32 f
+  U2601/Y (NOR2X2)                                        0.31      31.63 r
+  U1677/Y (OAI21X4)                                       0.15      31.78 f
+  U2605/Y (NOR2X2)                                        0.28      32.06 r
+  U2606/Y (AOI21X4)                                       0.15      32.21 f
+  U2609/Y (NAND2X2)                                       0.21      32.42 r
+  U2610/Y (OAI21X4)                                       0.15      32.57 f
+  U1783/CO (ACHCINX2)                                     0.28      32.85 r
+  U2611/Y (NOR2X2)                                        0.21      33.05 f
+  U1782/Y (OAI211X4)                                      0.71      33.76 r
+  U1781/Y (INVX8)                                         0.23      33.99 f
+  U2210/Y (OAI21XL)                                       0.45      34.44 r
+  U2637/Y (OAI211XL)                                      0.32      34.76 f
+  U2638/Y (OAI2BB1X1)                                     0.28      35.04 r
+  U1935/CO (ACHCINX2)                                     0.20      35.24 f
+  U2643/Y (OAI2BB1X1)                                     0.27      35.51 f
+  U1934/Y (OAI211X1)                                      0.21      35.72 r
+  U1931/Y (NOR2BX2)                                       0.25      35.96 r
+  U1930/Y (OAI21X2)                                       0.15      36.11 f
+  U1774/Y (AO21X2)                                        0.32      36.43 f
+  U1928/Y (OAI2BB1X2)                                     0.13      36.56 r
+  U1927/Y (OAI21X4)                                       0.18      36.74 f
+  U1675/Y (INVX6)                                         0.15      36.89 r
+  U1521/Y (NAND2X2)                                       0.32      37.20 f
+  U2243/Y (OAI21XL)                                       0.86      38.06 r
+  U1919/CO (ADDFX2)                                       0.46      38.52 r
+  U2746/Y (NAND2X1)                                       0.19      38.71 f
+  U2267/Y (AO22X1)                                        0.53      39.24 f
+  U2749/Y (OA21X2)                                        0.34      39.58 f
+  U3496/CO (ADDFX2)                                       0.47      40.05 f
+  U2271/Y (NAND2X1)                                       0.20      40.26 r
+  U2270/Y (OAI2BB2X1)                                     0.48      40.73 r
+  U1911/Y (OAI22X2)                                       0.33      41.06 f
+  U1508/Y (OAI2BB2X1)                                     0.71      41.77 r
+  U1767/Y (AOI222X4)                                      0.49      42.26 f
+  U1505/Y (OAI2BB2X1)                                     0.68      42.94 r
+  U1504/Y (AOI222X1)                                      0.54      43.48 f
+  U1642/Y (OAI2BB2X1)                                     0.77      44.25 r
+  U2767/Y (AOI2BB2X1)                                     0.37      44.62 f
+  U2768/Y (AOI2BB2X1)                                     0.85      45.47 r
+  U2259/Y (NAND2BX1)                                      0.23      45.70 f
+  U2258/Y (OAI21X1)                                       0.41      46.12 r
+  U1759/Y (NOR2X1)                                        0.23      46.35 f
+  U1758/Y (AO21X2)                                        0.37      46.72 f
+  U1901/Y (NAND2BX1)                                      0.28      47.00 f
+  U2792/Y (OAI21X2)                                       0.25      47.25 r
+  U1756/Y (CLKMX2X4)                                      0.29      47.54 r
+  U1668/Y (NAND2X2)                                       0.10      47.64 f
+  U1899/Y (OAI21X2)                                       0.19      47.83 r
+  U1755/Y (INVX3)                                         0.14      47.97 f
+  U2803/Y (OAI2BB2X1)                                     0.38      48.35 f
+  U2831/Y (OAI22XL)                                       0.47      48.82 r
+  U2832/Y (AOI2BB1X1)                                     0.24      49.06 f
+  U1894/Y (OAI22X1)                                       0.27      49.33 r
+  U1892/Y (OAI22X1)                                       0.31      49.64 f
+  U1890/Y (OA21X2)                                        0.36      50.00 f
+  U1752/Y (NOR2X1)                                        0.20      50.20 r
+  is_inside_reg/D (DFFRX2)                                0.00      50.20 r
+  data arrival time                                                 50.20
+
+  clock clk (rise edge)                                  50.00      50.00
+  clock network delay (ideal)                             0.50      50.50
+  clock uncertainty                                      -0.10      50.40
+  is_inside_reg/CK (DFFRX2)                               0.00      50.40 r
+  library setup time                                     -0.19      50.21
+  data required time                                                50.21
+  --------------------------------------------------------------------------
+  data required time                                                50.21
+  data arrival time                                                -50.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1
+exit
+
+Memory usage for this session 279 Mbytes.
+Memory usage for this session including child processes 440 Mbytes.
+CPU usage for this session 73 seconds ( 0.02 hours ).
+Elapsed time for this session 39 seconds ( 0.01 hours ).
+
+Thank you...
+

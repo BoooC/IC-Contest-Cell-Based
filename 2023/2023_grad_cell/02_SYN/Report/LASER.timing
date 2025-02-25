@@ -1,0 +1,197 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : LASER
+Version: U-2022.12
+Date   : Fri Jan 31 07:41:29 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: state_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: opt_count_reg[3]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LASER              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  state_reg[0]/CK (DFFQX2)                 0.00       0.50 r
+  state_reg[0]/Q (DFFQX2)                  0.48       0.98 r
+  U3096/Y (NAND2X6)                        0.12       1.10 f
+  U3097/Y (INVX8)                          0.08       1.18 r
+  U1785/Y (INVX6)                          0.11       1.30 f
+  U1803/Y (CLKMX2X2)                       0.44       1.74 f
+  U1816/Y (INVX20)                         0.40       2.14 r
+  U2633/Y (OAI21X1)                        0.19       2.33 f
+  U2834/Y (OAI2BB1X1)                      0.34       2.67 r
+  U2634/Y (OAI21X1)                        0.20       2.86 f
+  U3038/Y (OAI2BB1X1)                      0.33       3.19 r
+  U1656/Y (OAI21XL)                        0.28       3.46 f
+  U3666/Y (NAND2X2)                        0.25       3.71 r
+  U3667/Y (INVX3)                          0.11       3.83 f
+  U3684/Y (XOR2X1)                         0.20       4.02 f
+  U3686/Y (NAND4X1)                        0.23       4.25 r
+  U1996/Y (AOI33X1)                        0.26       4.51 f
+  U2602/Y (OAI33X1)                        0.42       4.93 r
+  U2592/S (ADDFX2)                         0.49       5.42 r
+  U1879/S (ADDFHX2)                        0.30       5.72 f
+  U1985/CO (ADDFHX2)                       0.25       5.97 f
+  U4522/S (ADDFHX4)                        0.36       6.33 r
+  U1980/Y (NOR2X4)                         0.11       6.43 f
+  U1807/Y (OAI21X2)                        0.26       6.70 r
+  U1831/Y (INVX3)                          0.14       6.83 f
+  U1786/Y (OAI21XL)                        0.46       7.29 r
+  U1867/Y (XNOR2X1)                        0.43       7.72 f
+  U4652/Y (AO22X1)                         0.47       8.19 f
+  opt_count_reg[3]/D (DFFHQX2)             0.00       8.19 f
+  data arrival time                                   8.19
+
+  clock CLK (rise edge)                    8.00       8.00
+  clock network delay (ideal)              0.50       8.50
+  clock uncertainty                       -0.10       8.40
+  opt_count_reg[3]/CK (DFFHQX2)            0.00       8.40 r
+  library setup time                      -0.20       8.20
+  data required time                                  8.20
+  -----------------------------------------------------------
+  data required time                                  8.20
+  data arrival time                                  -8.19
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: state_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: c_update_flag_reg
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LASER              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  state_reg[0]/CK (DFFQX2)                 0.00       0.50 r
+  state_reg[0]/Q (DFFQX2)                  0.48       0.98 r
+  U3096/Y (NAND2X6)                        0.12       1.10 f
+  U3097/Y (INVX8)                          0.08       1.18 r
+  U1785/Y (INVX6)                          0.11       1.30 f
+  U1817/Y (INVX3)                          0.12       1.42 r
+  U1853/Y (NAND2X2)                        0.11       1.52 f
+  U1709/Y (NAND2X4)                        0.12       1.64 r
+  U1847/Y (INVX8)                          0.11       1.74 f
+  U1845/Y (INVX12)                         0.16       1.90 r
+  U3908/Y (NAND2X2)                        0.17       2.07 f
+  U2637/Y (OAI21XL)                        0.29       2.36 r
+  U3005/Y (OAI2BB1X1)                      0.29       2.64 f
+  U2909/Y (OAI21XL)                        0.32       2.96 r
+  U2908/Y (OAI2BB1X1)                      0.29       3.26 f
+  U1644/Y (OAI21X1)                        0.25       3.51 r
+  U2122/Y (NAND2X2)                        0.20       3.71 f
+  U3910/Y (NOR2X2)                         0.16       3.86 r
+  U2031/Y (XOR2X1)                         0.29       4.16 f
+  U3915/Y (NAND2X1)                        0.24       4.40 r
+  U1999/Y (AOI33X1)                        0.20       4.60 f
+  U1987/Y (OAI33X1)                        0.56       5.16 r
+  U2621/S (ADDFHX2)                        0.48       5.65 f
+  U4460/S (ADDFHX4)                        0.31       5.96 f
+  U1983/CO (ADDFHX2)                       0.25       6.21 f
+  U4548/S (ADDFHX4)                        0.30       6.51 r
+  U4549/Y (XNOR2X4)                        0.16       6.67 f
+  U3076/Y (NOR2X1)                         0.22       6.88 r
+  U3083/Y (NAND2X1)                        0.15       7.03 f
+  U2995/Y (OR2X1)                          0.30       7.33 f
+  U1866/Y (CLKAND2X3)                      0.18       7.51 f
+  U1788/Y (AOI21XL)                        0.37       7.89 r
+  U1797/Y (NOR2XL)                         0.21       8.10 f
+  c_update_flag_reg/D (DFFQX1)             0.00       8.10 f
+  data arrival time                                   8.10
+
+  clock CLK (rise edge)                    8.00       8.00
+  clock network delay (ideal)              0.50       8.50
+  clock uncertainty                       -0.10       8.40
+  c_update_flag_reg/CK (DFFQX1)            0.00       8.40 r
+  library setup time                      -0.29       8.11
+  data required time                                  8.11
+  -----------------------------------------------------------
+  data required time                                  8.11
+  data arrival time                                  -8.10
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: state_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: inside_count_reg[3]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LASER              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  state_reg[0]/CK (DFFQX2)                 0.00       0.50 r
+  state_reg[0]/Q (DFFQX2)                  0.48       0.98 r
+  U3096/Y (NAND2X6)                        0.12       1.10 f
+  U3097/Y (INVX8)                          0.08       1.18 r
+  U1785/Y (INVX6)                          0.11       1.30 f
+  U1803/Y (CLKMX2X2)                       0.44       1.74 f
+  U1816/Y (INVX20)                         0.40       2.14 r
+  U2633/Y (OAI21X1)                        0.19       2.33 f
+  U2834/Y (OAI2BB1X1)                      0.34       2.67 r
+  U2634/Y (OAI21X1)                        0.20       2.86 f
+  U3038/Y (OAI2BB1X1)                      0.33       3.19 r
+  U1656/Y (OAI21XL)                        0.28       3.46 f
+  U3666/Y (NAND2X2)                        0.25       3.71 r
+  U3667/Y (INVX3)                          0.11       3.83 f
+  U3684/Y (XOR2X1)                         0.20       4.02 f
+  U3686/Y (NAND4X1)                        0.23       4.25 r
+  U1996/Y (AOI33X1)                        0.26       4.51 f
+  U2602/Y (OAI33X1)                        0.42       4.93 r
+  U2592/S (ADDFX2)                         0.49       5.42 r
+  U1879/S (ADDFHX2)                        0.30       5.72 f
+  U1985/CO (ADDFHX2)                       0.25       5.97 f
+  U4522/S (ADDFHX4)                        0.36       6.33 r
+  U1980/Y (NOR2X4)                         0.11       6.43 f
+  U1807/Y (OAI21X2)                        0.26       6.70 r
+  U1831/Y (INVX3)                          0.14       6.83 f
+  U1786/Y (OAI21XL)                        0.46       7.29 r
+  U1867/Y (XNOR2X1)                        0.43       7.72 f
+  U4525/Y (AO22X1)                         0.40       8.11 f
+  inside_count_reg[3]/D (DFFQX1)           0.00       8.11 f
+  data arrival time                                   8.11
+
+  clock CLK (rise edge)                    8.00       8.00
+  clock network delay (ideal)              0.50       8.50
+  clock uncertainty                       -0.10       8.40
+  inside_count_reg[3]/CK (DFFQX1)          0.00       8.40 r
+  library setup time                      -0.27       8.13
+  data required time                                  8.13
+  -----------------------------------------------------------
+  data required time                                  8.13
+  data arrival time                                  -8.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1

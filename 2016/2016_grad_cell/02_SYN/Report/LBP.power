@@ -1,0 +1,58 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : LBP
+Version: U-2022.12
+Date   : Sun Jan 26 14:49:07 2025
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+LBP                    tsmc13_wl10       slow
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 740.9954 uW   (67%)
+  Net Switching Power  = 369.1229 uW   (33%)
+                         ---------
+Total Dynamic Power    =   1.1101 mW  (100%)
+
+Cell Leakage Power     =   7.5049 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.6742            0.0000            0.0000            0.6742  (  60.32%)  i
+register       2.4704e-02        3.7543e-02        3.6264e+06        6.5874e-02  (   5.89%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  4.2125e-02            0.3316        3.8785e+06            0.3776  (  33.78%)
+--------------------------------------------------------------------------------------------------
+Total              0.7410 mW         0.3691 mW     7.5049e+06 pW         1.1176 mW
+1

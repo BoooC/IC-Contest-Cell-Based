@@ -1,0 +1,19 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Fri Jan 31 01:27:22 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+
+Nets                                                                1
+    Unloaded nets (LINT-2)                                          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'find_next_perm', cell 'B_62' does not drive any nets. (LINT-1)
+Warning: In design 'JAM', net 'net222' driven by pin 'C387/Z' has no loads. (LINT-2)
+1

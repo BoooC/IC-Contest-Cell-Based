@@ -1,0 +1,58 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : geofence
+Version: U-2022.12
+Date   : Thu Jan 30 23:07:15 2025
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+geofence               tsmc13_wl10       slow
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 159.7677 uW   (67%)
+  Net Switching Power  =  77.6696 uW   (33%)
+                         ---------
+Total Dynamic Power    = 237.4373 uW  (100%)
+
+Cell Leakage Power     =  34.7022 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.1299            0.0000            0.0000            0.1299  (  47.73%)  i
+register       5.1325e-03        9.6258e-03        9.3805e+06        2.4139e-02  (   8.87%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.4741e-02        6.8044e-02        2.5322e+07            0.1181  (  43.40%)
+--------------------------------------------------------------------------------------------------
+Total              0.1598 mW     7.7670e-02 mW     3.4702e+07 pW         0.2721 mW
+1

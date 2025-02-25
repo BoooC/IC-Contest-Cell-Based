@@ -1,0 +1,18 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Sun Jan 26 14:34:55 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Nets                                                                4
+    Unloaded nets (LINT-2)                                          4
+--------------------------------------------------------------------------------
+
+Warning: In design 'STI_DAC', net 'STI_inst/net64' driven by pin 'STI_inst/C589/Z' has no loads. (LINT-2)
+Warning: In design 'STI_DAC', net 'DAC_inst/net127' driven by pin 'DAC_inst/C292/Z' has no loads. (LINT-2)
+Warning: In design 'STI_DAC', net 'DAC_inst/net126' driven by pin 'DAC_inst/C282/Z' has no loads. (LINT-2)
+Warning: In design 'STI_DAC', net 'DAC_inst/net125' driven by pin 'DAC_inst/C275/Z' has no loads. (LINT-2)
+1

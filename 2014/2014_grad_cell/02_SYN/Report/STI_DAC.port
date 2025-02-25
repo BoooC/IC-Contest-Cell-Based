@@ -1,0 +1,67 @@
+ 
+****************************************
+Report : port
+Design : STI_DAC
+Version: U-2022.12
+Date   : Sun Jan 26 14:35:05 2025
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000   --      --      --         d
+load           in      0.0000   0.0000   --      --      --         
+pi_data[0]     in      0.0000   0.0000   --      --      --         
+pi_data[1]     in      0.0000   0.0000   --      --      --         
+pi_data[2]     in      0.0000   0.0000   --      --      --         
+pi_data[3]     in      0.0000   0.0000   --      --      --         
+pi_data[4]     in      0.0000   0.0000   --      --      --         
+pi_data[5]     in      0.0000   0.0000   --      --      --         
+pi_data[6]     in      0.0000   0.0000   --      --      --         
+pi_data[7]     in      0.0000   0.0000   --      --      --         
+pi_data[8]     in      0.0000   0.0000   --      --      --         
+pi_data[9]     in      0.0000   0.0000   --      --      --         
+pi_data[10]    in      0.0000   0.0000   --      --      --         
+pi_data[11]    in      0.0000   0.0000   --      --      --         
+pi_data[12]    in      0.0000   0.0000   --      --      --         
+pi_data[13]    in      0.0000   0.0000   --      --      --         
+pi_data[14]    in      0.0000   0.0000   --      --      --         
+pi_data[15]    in      0.0000   0.0000   --      --      --         
+pi_end         in      0.0000   0.0000   --      --      --         
+pi_fill        in      0.0000   0.0000   --      --      --         
+pi_length[0]   in      0.0000   0.0000   --      --      --         
+pi_length[1]   in      0.0000   0.0000   --      --      --         
+pi_low         in      0.0000   0.0000   --      --      --         
+pi_msb         in      0.0000   0.0000   --      --      --         
+reset          in      0.0000   0.0000   --      --      --         
+even1_wr       out     1.0000   0.0000   --      --      --         
+even2_wr       out     1.0000   0.0000   --      --      --         
+even3_wr       out     1.0000   0.0000   --      --      --         
+even4_wr       out     1.0000   0.0000   --      --      --         
+odd1_wr        out     1.0000   0.0000   --      --      --         
+odd2_wr        out     1.0000   0.0000   --      --      --         
+odd3_wr        out     1.0000   0.0000   --      --      --         
+odd4_wr        out     1.0000   0.0000   --      --      --         
+oem_addr[0]    out     1.0000   0.0000   --      --      --         
+oem_addr[1]    out     1.0000   0.0000   --      --      --         
+oem_addr[2]    out     1.0000   0.0000   --      --      --         
+oem_addr[3]    out     1.0000   0.0000   --      --      --         
+oem_addr[4]    out     1.0000   0.0000   --      --      --         
+oem_dataout[0] out     1.0000   0.0000   --      --      --         
+oem_dataout[1] out     1.0000   0.0000   --      --      --         
+oem_dataout[2] out     1.0000   0.0000   --      --      --         
+oem_dataout[3] out     1.0000   0.0000   --      --      --         
+oem_dataout[4] out     1.0000   0.0000   --      --      --         
+oem_dataout[5] out     1.0000   0.0000   --      --      --         
+oem_dataout[6] out     1.0000   0.0000   --      --      --         
+oem_dataout[7] out     1.0000   0.0000   --      --      --         
+oem_finish     out     1.0000   0.0000   --      --      --         
+so_data        out     1.0000   0.0000   --      --      --         
+so_valid       out     1.0000   0.0000   --      --      --         
+
+1

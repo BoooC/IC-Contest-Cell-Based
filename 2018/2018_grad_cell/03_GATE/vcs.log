@@ -1,0 +1,1296 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Mon Jan 27 23:53:50 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'tb.v'
+Parsing included file 'huffman_SYN.v'.
+Back to file 'tb.v'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       tb
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 323
+huffman, "DFFRX1 split_count_reg_0_( .D (n994),  .CK (clk),  .RN (n2761),  .Q (split_count[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 343
+huffman, "DFFRX1 symbol_S_reg_6__20_( .D (n929),  .CK (clk),  .RN (n2760),  .Q (symbol_S[12]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 344
+huffman, "DFFRX1 symbol_S_reg_6__21_( .D (n928),  .CK (clk),  .RN (n2761),  .Q (symbol_S[13]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 345
+huffman, "DFFRX1 symbol_S_reg_6__22_( .D (n927),  .CK (clk),  .RN (n2757),  .Q (symbol_S[14]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 351
+huffman, "DFFRX1 symbol_S_reg_5__20_( .D (n905),  .CK (clk),  .RN (n2760),  .Q (symbol_S[30]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 352
+huffman, "DFFRX1 symbol_S_reg_5__21_( .D (n904),  .CK (clk),  .RN (n2760),  .Q (symbol_S[31]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 353
+huffman, "DFFRX1 symbol_S_reg_5__22_( .D (n903),  .CK (clk),  .RN (n2760),  .Q (symbol_S[32]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 354
+huffman, "DFFRX1 symbol_S_reg_4__0_( .D (n901),  .CK (clk),  .RN (n542),  .Q (symbol_S[33]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 356
+huffman, "DFFRX1 symbol_S_reg_4__1_( .D (n900),  .CK (clk),  .RN (n542),  .Q (symbol_S[34]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 358
+huffman, "DFFRX1 symbol_S_reg_4__4_( .D (n897),  .CK (clk),  .RN (n542),  .Q (symbol_S[36]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 360
+huffman, "DFFRX1 symbol_S_reg_4__5_( .D (n896),  .CK (clk),  .RN (n542),  .Q (symbol_S[37]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 362
+huffman, "DFFRX1 symbol_S_reg_4__6_( .D (n895),  .CK (clk),  .RN (n542),  .Q (symbol_S[38]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 364
+huffman, "DFFRX1 symbol_S_reg_4__8_( .D (n893),  .CK (clk),  .RN (n542),  .Q (symbol_S[39]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 366
+huffman, "DFFRX1 symbol_S_reg_4__9_( .D (n892),  .CK (clk),  .RN (n542),  .Q (symbol_S[40]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 368
+huffman, "DFFRX1 symbol_S_reg_4__10_( .D (n891),  .CK (clk),  .RN (n542),  .Q (symbol_S[41]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 370
+huffman, "DFFRX1 symbol_S_reg_4__12_( .D (n889),  .CK (clk),  .RN (n542),  .Q (symbol_S[42]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 372
+huffman, "DFFRX1 symbol_S_reg_4__13_( .D (n888),  .CK (clk),  .RN (n542),  .Q (symbol_S[43]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 374
+huffman, "DFFRX1 symbol_S_reg_4__14_( .D (n887),  .CK (clk),  .RN (n542),  .Q (symbol_S[44]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 376
+huffman, "DFFRX1 symbol_S_reg_4__16_( .D (n885),  .CK (clk),  .RN (n542),  .Q (symbol_S[45]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 378
+huffman, "DFFRX1 symbol_S_reg_4__17_( .D (n884),  .CK (clk),  .RN (n2759),  .Q (symbol_S[46]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 379
+huffman, "DFFRX1 symbol_S_reg_4__18_( .D (n883),  .CK (clk),  .RN (n542),  .Q (symbol_S[47]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 381
+huffman, "DFFRX1 symbol_S_reg_4__20_( .D (n881),  .CK (clk),  .RN (n2760),  .Q (symbol_S[48]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 382
+huffman, "DFFRX1 symbol_S_reg_4__21_( .D (n880),  .CK (clk),  .RN (n2756),  .Q (symbol_S[49]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 383
+huffman, "DFFRX1 symbol_S_reg_4__22_( .D (n879),  .CK (clk),  .RN (n2763),  .Q (symbol_S[50]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 386
+huffman, "DFFRX1 symbol_S_reg_3__4_( .D (n873),  .CK (clk),  .RN (n2762),  .Q (symbol_S[54]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 388
+huffman, "DFFRX1 symbol_S_reg_3__5_( .D (n872),  .CK (clk),  .RN (n2761),  .Q (symbol_S[55]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 390
+huffman, "DFFRX1 symbol_S_reg_3__6_( .D (n871),  .CK (clk),  .RN (n542),  .Q (symbol_S[56]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 392
+huffman, "DFFRX1 symbol_S_reg_3__8_( .D (n869),  .CK (clk),  .RN (n542),  .Q (symbol_S[57]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 394
+huffman, "DFFRX1 symbol_S_reg_3__9_( .D (n868),  .CK (clk),  .RN (n2760),  .Q (symbol_S[58]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 396
+huffman, "DFFRX1 symbol_S_reg_3__10_( .D (n867),  .CK (clk),  .RN (n2763),  .Q (symbol_S[59]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 397
+huffman, "DFFRX1 symbol_S_reg_3__12_( .D (n865),  .CK (clk),  .RN (n2759),  .Q (symbol_S[60]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 398
+huffman, "DFFRX1 symbol_S_reg_3__13_( .D (n864),  .CK (clk),  .RN (n2758),  .Q (symbol_S[61]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 399
+huffman, "DFFRX1 symbol_S_reg_3__14_( .D (n863),  .CK (clk),  .RN (n2763),  .Q (symbol_S[62]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 400
+huffman, "DFFRX1 symbol_S_reg_3__16_( .D (n861),  .CK (clk),  .RN (n2756),  .Q (symbol_S[63]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 401
+huffman, "DFFRX1 symbol_S_reg_3__17_( .D (n860),  .CK (clk),  .RN (n2756),  .Q (symbol_S[64]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 402
+huffman, "DFFRX1 symbol_S_reg_3__18_( .D (n859),  .CK (clk),  .RN (n2761),  .Q (symbol_S[65]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 403
+huffman, "DFFRX1 symbol_S_reg_3__20_( .D (n857),  .CK (clk),  .RN (n2758),  .Q (symbol_S[66]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 404
+huffman, "DFFRX1 symbol_S_reg_3__21_( .D (n856),  .CK (clk),  .RN (n2763),  .Q (symbol_S[67]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 405
+huffman, "DFFRX1 symbol_S_reg_3__22_( .D (n855),  .CK (clk),  .RN (n2758),  .Q (symbol_S[68]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 406
+huffman, "DFFRX1 symbol_S_reg_2__0_( .D (n853),  .CK (clk),  .RN (n2756),  .Q (symbol_S[69]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 408
+huffman, "DFFRX1 symbol_S_reg_2__2_( .D (n851),  .CK (clk),  .RN (n2762),  .Q (symbol_S[71]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 410
+huffman, "DFFRX1 symbol_S_reg_2__4_( .D (n849),  .CK (clk),  .RN (n2762),  .Q (symbol_S[72]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 412
+huffman, "DFFRX1 symbol_S_reg_2__5_( .D (n848),  .CK (clk),  .RN (n2762),  .Q (symbol_S[73]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 414
+huffman, "DFFRX1 symbol_S_reg_2__6_( .D (n847),  .CK (clk),  .RN (n2762),  .Q (symbol_S[74]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 416
+huffman, "DFFRX1 symbol_S_reg_2__8_( .D (n845),  .CK (clk),  .RN (n2762),  .Q (symbol_S[75]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 418
+huffman, "DFFRX1 symbol_S_reg_2__9_( .D (n844),  .CK (clk),  .RN (n2762),  .Q (symbol_S[76]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 420
+huffman, "DFFRX1 symbol_S_reg_2__10_( .D (n843),  .CK (clk),  .RN (n2762),  .Q (symbol_S[77]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 421
+huffman, "DFFRX1 symbol_S_reg_2__12_( .D (n841),  .CK (clk),  .RN (n2762),  .Q (symbol_S[78]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 422
+huffman, "DFFRX1 symbol_S_reg_2__13_( .D (n840),  .CK (clk),  .RN (n2762),  .Q (symbol_S[79]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 423
+huffman, "DFFRX1 symbol_S_reg_2__14_( .D (n839),  .CK (clk),  .RN (n2762),  .Q (symbol_S[80]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 424
+huffman, "DFFRX1 symbol_S_reg_2__16_( .D (n837),  .CK (clk),  .RN (n2759),  .Q (symbol_S[81]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 425
+huffman, "DFFRX1 symbol_S_reg_2__17_( .D (n836),  .CK (clk),  .RN (n2762),  .Q (symbol_S[82]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 426
+huffman, "DFFRX1 symbol_S_reg_2__18_( .D (n835),  .CK (clk),  .RN (n2756),  .Q (symbol_S[83]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 427
+huffman, "DFFRX1 symbol_S_reg_2__20_( .D (n833),  .CK (clk),  .RN (n2758),  .Q (symbol_S[84]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 428
+huffman, "DFFRX1 symbol_S_reg_2__21_( .D (n832),  .CK (clk),  .RN (n2761),  .Q (symbol_S[85]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 429
+huffman, "DFFRX1 symbol_S_reg_2__22_( .D (n831),  .CK (clk),  .RN (n2760),  .Q (symbol_S[86]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 432
+huffman, "DFFRX1 symbol_S_reg_1__2_( .D (n827),  .CK (clk),  .RN (n2757),  .Q (symbol_S[89]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 434
+huffman, "DFFRX1 symbol_S_reg_1__4_( .D (n825),  .CK (clk),  .RN (n2756),  .Q (symbol_S[90]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 436
+huffman, "DFFRX1 symbol_S_reg_1__5_( .D (n824),  .CK (clk),  .RN (n2758),  .Q (symbol_S[91]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 438
+huffman, "DFFRX1 symbol_S_reg_1__6_( .D (n823),  .CK (clk),  .RN (n2761),  .Q (symbol_S[92]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 440
+huffman, "DFFRX1 symbol_S_reg_1__8_( .D (n821),  .CK (clk),  .RN (n2757),  .Q (symbol_S[93]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 442
+huffman, "DFFRX1 symbol_S_reg_1__9_( .D (n820),  .CK (clk),  .RN (n2763),  .Q (symbol_S[94]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 444
+huffman, "DFFRX1 symbol_S_reg_1__10_( .D (n819),  .CK (clk),  .RN (n2756),  .Q (symbol_S[95]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 445
+huffman, "DFFRX1 symbol_S_reg_1__12_( .D (n817),  .CK (clk),  .RN (n2763),  .Q (symbol_S[96]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 446
+huffman, "DFFRX1 symbol_S_reg_1__13_( .D (n816),  .CK (clk),  .RN (n2761),  .Q (symbol_S[97]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 447
+huffman, "DFFRX1 symbol_S_reg_1__14_( .D (n815),  .CK (clk),  .RN (n2756),  .Q (symbol_S[98]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 448
+huffman, "DFFRX1 symbol_S_reg_1__16_( .D (n813),  .CK (clk),  .RN (n2758),  .Q (symbol_S[99]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 449
+huffman, "DFFRX1 symbol_S_reg_1__17_( .D (n812),  .CK (clk),  .RN (n2761),  .Q (symbol_S[100]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 451
+huffman, "DFFRX1 symbol_S_reg_1__18_( .D (n811),  .CK (clk),  .RN (n2759),  .Q (symbol_S[101]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 453
+huffman, "DFFRX1 symbol_S_reg_1__20_( .D (n809),  .CK (clk),  .RN (n2762),  .Q (symbol_S[102]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 455
+huffman, "DFFRX1 symbol_S_reg_1__21_( .D (n808),  .CK (clk),  .RN (n542),  .Q (symbol_S[103]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 456
+huffman, "DFFRX1 symbol_S_reg_1__22_( .D (n807),  .CK (clk),  .RN (n2761),  .Q (symbol_S[104]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 608
+huffman, "DFFSX1 symbol_S_reg_3__0_( .D (n877),  .CK (clk),  .SN (n2756),  .Q (symbol_S[51]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 614
+huffman, "DFFSX1 symbol_S_reg_1__0_( .D (n829),  .CK (clk),  .SN (n2757),  .Q (symbol_S[87]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 938
+huffman, "DFFRX1 encode_reg_reg_1__4_( .D (n733),  .CK (clk),  .RN (n542),  .Q (n2764));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 939
+huffman, "DFFRX1 encode_reg_reg_2__4_( .D (n738),  .CK (clk),  .RN (n542),  .Q (n2766));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 940
+huffman, "DFFRX1 encode_reg_reg_3__4_( .D (n743),  .CK (clk),  .RN (n2759),  .Q (n2768));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 941
+huffman, "DFFRX1 encode_reg_reg_6__4_( .D (n758),  .CK (clk),  .RN (n2763),  .Q (n2774));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 942
+huffman, "DFFRX1 encode_len_reg_1__4_( .D (n703),  .CK (clk),  .RN (n2758),  .Q (n2777));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 943
+huffman, "DFFRX1 encode_len_reg_4__4_( .D (n718),  .CK (clk),  .RN (n2757),  .Q (n2782));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 944
+huffman, "DFFRX1 encode_len_reg_5__4_( .D (n723),  .CK (clk),  .RN (n2756),  .Q (n2783));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 945
+huffman, "DFFRX1 encode_reg_reg_1__1_( .D (n736),  .CK (clk),  .RN (n2756),  .Q (n2765));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 946
+huffman, "DFFRX1 encode_reg_reg_2__2_( .D (n740),  .CK (clk),  .RN (n542),  .Q (n2767));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 947
+huffman, "DFFRX1 encode_reg_reg_3__1_( .D (n746),  .CK (clk),  .RN (n542),  .Q (n2770));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 948
+huffman, "DFFRX1 encode_reg_reg_3__2_( .D (n745),  .CK (clk),  .RN (n542),  .Q (n2769));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 949
+huffman, "DFFRX1 encode_reg_reg_4__1_( .D (n751),  .CK (clk),  .RN (n2763),  .Q (n2771));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 950
+huffman, "DFFRX1 encode_reg_reg_5__1_( .D (n756),  .CK (clk),  .RN (n2760),  .Q (n2773));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 951
+huffman, "DFFRX1 encode_reg_reg_5__2_( .D (n755),  .CK (clk),  .RN (n2758),  .Q (n2772));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 952
+huffman, "DFFRX1 encode_reg_reg_6__1_( .D (n761),  .CK (clk),  .RN (n2761),  .Q (n2776));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 953
+huffman, "DFFRX1 encode_reg_reg_6__2_( .D (n760),  .CK (clk),  .RN (n2761),  .Q (n2775));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 954
+huffman, "DFFRX1 encode_len_reg_1__1_( .D (n706),  .CK (clk),  .RN (n2758),  .Q (n2779));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 955
+huffman, "DFFRX1 encode_len_reg_1__2_( .D (n705),  .CK (clk),  .RN (n2761),  .Q (n2778));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 956
+huffman, "DFFRX1 encode_len_reg_2__1_( .D (n711),  .CK (clk),  .RN (n2758),  .Q (n2781));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 957
+huffman, "DFFRX1 encode_len_reg_2__2_( .D (n710),  .CK (clk),  .RN (n2756),  .Q (n2780));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 958
+huffman, "DFFRX1 encode_len_reg_5__1_( .D (n726),  .CK (clk),  .RN (n2758),  .Q (n2785));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 959
+huffman, "DFFRX1 encode_len_reg_5__2_( .D (n725),  .CK (clk),  .RN (n2757),  .Q (n2784));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 960
+huffman, "DFFRX1 encode_len_reg_6__1_( .D (n731),  .CK (clk),  .RN (n2761),  .Q (n2787));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 961
+huffman, "DFFRX1 encode_len_reg_6__2_( .D (n730),  .CK (clk),  .RN (n2763),  .Q (n2786));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 995
+huffman, "DFFRX1 SORT_inst_count_reg_1_( .D (SORT_inst_n1532),  .CK (clk),  .RN (n2762),  .Q (SORT_inst_count[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 997
+huffman, "DFFRX1 state_reg_0_( .D (next_state[0]),  .CK (clk),  .RN (n2759),  .Q (state[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1011
+huffman, "DFFRX2 encode_reg_reg_6__0_( .D (n762),  .CK (clk),  .RN (n542),  .Q (HC6[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1012
+huffman, "DFFRX2 encode_reg_reg_5__0_( .D (n757),  .CK (clk),  .RN (n542),  .Q (HC5[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1013
+huffman, "DFFRX2 encode_reg_reg_4__0_( .D (n752),  .CK (clk),  .RN (n2758),  .Q (HC4[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1014
+huffman, "DFFRX2 encode_reg_reg_3__0_( .D (n747),  .CK (clk),  .RN (n542),  .Q (HC3[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1015
+huffman, "DFFRX2 encode_reg_reg_2__0_( .D (n742),  .CK (clk),  .RN (n542),  .Q (HC2[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1016
+huffman, "DFFRX2 encode_reg_reg_1__0_( .D (n737),  .CK (clk),  .RN (n2761),  .Q (HC1[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1017
+huffman, "DFFRX2 encode_len_reg_6__0_( .D (n732),  .CK (clk),  .RN (n2761),  .Q (M6[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1018
+huffman, "DFFRX2 encode_len_reg_5__0_( .D (n727),  .CK (clk),  .RN (n2761),  .Q (M5[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1019
+huffman, "DFFRX2 encode_len_reg_4__0_( .D (n722),  .CK (clk),  .RN (n2757),  .Q (M4[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1020
+huffman, "DFFRX2 encode_len_reg_3__0_( .D (n717),  .CK (clk),  .RN (n2757),  .Q (M3[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1021
+huffman, "DFFRX2 encode_len_reg_2__0_( .D (n712),  .CK (clk),  .RN (n2761),  .Q (M2[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1022
+huffman, "DFFRX2 encode_len_reg_1__0_( .D (n707),  .CK (clk),  .RN (n2756),  .Q (M1[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1023
+huffman, "DFFRX2 encode_len_reg_6__3_( .D (n729),  .CK (clk),  .RN (n2756),  .Q (M6[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1024
+huffman, "DFFRX2 encode_len_reg_5__3_( .D (n724),  .CK (clk),  .RN (n2761),  .Q (M5[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1025
+huffman, "DFFRX2 encode_len_reg_4__3_( .D (n719),  .CK (clk),  .RN (n2757),  .Q (M4[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1026
+huffman, "DFFRX2 encode_len_reg_3__3_( .D (n714),  .CK (clk),  .RN (n2757),  .Q (M3[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1027
+huffman, "DFFRX2 encode_len_reg_2__3_( .D (n709),  .CK (clk),  .RN (n2757),  .Q (M2[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1028
+huffman, "DFFRX2 encode_len_reg_1__3_( .D (n704),  .CK (clk),  .RN (n2761),  .Q (M1[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1029
+huffman, "DFFRX2 encode_reg_reg_6__3_( .D (n759),  .CK (clk),  .RN (n2761),  .Q (HC6[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1030
+huffman, "DFFRX2 encode_reg_reg_5__3_( .D (n754),  .CK (clk),  .RN (n2763),  .Q (HC5[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1031
+huffman, "DFFRX2 encode_reg_reg_4__3_( .D (n749),  .CK (clk),  .RN (n2760),  .Q (HC4[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1032
+huffman, "DFFRX2 encode_reg_reg_3__3_( .D (n744),  .CK (clk),  .RN (n2758),  .Q (HC3[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1033
+huffman, "DFFRX2 encode_reg_reg_2__3_( .D (n739),  .CK (clk),  .RN (n542),  .Q (HC2[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1034
+huffman, "DFFRX2 encode_reg_reg_1__3_( .D (n734),  .CK (clk),  .RN (n542),  .Q (HC1[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1051
+huffman, "DFFRX2 encode_reg_reg_1__2_( .D (n735),  .CK (clk),  .RN (n542),  .Q (HC1[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1052
+huffman, "DFFRX2 encode_reg_reg_2__1_( .D (n741),  .CK (clk),  .RN (n542),  .Q (HC2[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1053
+huffman, "DFFRX2 encode_reg_reg_4__2_( .D (n750),  .CK (clk),  .RN (n2757),  .Q (HC4[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1054
+huffman, "DFFRX2 encode_len_reg_3__1_( .D (n716),  .CK (clk),  .RN (n2757),  .Q (M3[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1055
+huffman, "DFFRX2 encode_len_reg_3__2_( .D (n715),  .CK (clk),  .RN (n2757),  .Q (M3[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1056
+huffman, "DFFRX2 encode_len_reg_4__1_( .D (n721),  .CK (clk),  .RN (n2757),  .Q (M4[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1057
+huffman, "DFFRX2 encode_len_reg_4__2_( .D (n720),  .CK (clk),  .RN (n2757),  .Q (M4[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1062
+huffman, "DFFRX2 encode_reg_reg_4__4_( .D (n748),  .CK (clk),  .RN (n2756),  .Q (HC4[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1063
+huffman, "DFFRX2 encode_reg_reg_5__4_( .D (n753),  .CK (clk),  .RN (n2757),  .Q (HC5[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1064
+huffman, "DFFRX2 encode_len_reg_2__4_( .D (n708),  .CK (clk),  .RN (n2757),  .Q (M2[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1065
+huffman, "DFFRX2 encode_len_reg_3__4_( .D (n713),  .CK (clk),  .RN (n2757),  .Q (M3[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+huffman_SYN.v, 1066
+huffman, "DFFRX2 encode_len_reg_6__4_( .D (n728),  .CK (clk),  .RN (n2761),  .Q (M6[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "huffman_SYN.sdf"
+   ***    Annotation scope: tb.u_huffman
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Mon Jan 27 23:53:51 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Mon Jan 27 23:53:51 2025
+
+
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+105 modules and 1 UDP read.
+recompiling module huffman
+recompiling module tb
+recompiling module DFFRX1
+recompiling module DFFRX2
+recompiling module DFFSX1
+recompiling module DFFSX2
+recompiling module AOI222XL
+recompiling module AOI222X1
+recompiling module OAI222XL
+recompiling module OAI222X1
+recompiling module AOI221XL
+recompiling module AOI32X1
+recompiling module OAI221XL
+recompiling module OAI32XL
+recompiling module OAI32X1
+recompiling module DFFQX1
+recompiling module DFFQX2
+recompiling module DFFQX4
+recompiling module AOI22XL
+recompiling module AOI22X1
+recompiling module AOI2BB2X1
+recompiling module AO22X1
+recompiling module OAI22XL
+recompiling module OAI2BB2XL
+recompiling module OAI2BB2X1
+recompiling module OA22X1
+recompiling module AOI211XL
+recompiling module AOI211X1
+recompiling module AOI211X4
+recompiling module AOI31XL
+recompiling module AOI31X1
+recompiling module NOR4BX1
+recompiling module OAI211XL
+recompiling module OAI211X1
+recompiling module OAI211X2
+recompiling module OAI211X4
+recompiling module OAI31XL
+recompiling module OAI31X1
+recompiling module AND4X1
+recompiling module AOI21XL
+recompiling module AOI21X1
+recompiling module AOI21X2
+recompiling module AOI2BB1X1
+recompiling module AOI2BB1X2
+recompiling module AO21X1
+recompiling module NAND4XL
+recompiling module NAND4X1
+recompiling module NAND4X2
+recompiling module NAND3BX1
+recompiling module AND3X4
+recompiling module BUFX2
+recompiling module BUFX12
+recompiling module INVXL
+recompiling module INVX1
+recompiling module INVX2
+recompiling module INVX3
+recompiling module INVX4
+recompiling module INVX6
+recompiling module INVX8
+recompiling module CLKBUFX3
+recompiling module CLKBUFX8
+recompiling module CLKINVX1
+recompiling module CLKINVX2
+recompiling module NOR4XL
+recompiling module NOR4X1
+recompiling module NOR4X6
+recompiling module NOR3BX1
+recompiling module OR4X2
+recompiling module OAI21XL
+recompiling module OAI21X1
+recompiling module OAI21X2
+recompiling module OAI2BB1XL
+recompiling module OAI2BB1X1
+recompiling module OA21XL
+recompiling module OA21X2
+recompiling module OA21X4
+recompiling module NAND3XL
+recompiling module NAND3X1
+recompiling module NAND3X2
+recompiling module NAND2BX1
+recompiling module NAND2BX2
+recompiling module NAND2BX4
+recompiling module NOR3XL
+recompiling module NOR3X1
+recompiling module NOR3X2
+recompiling module NOR3X4
+recompiling module NOR2BX1
+recompiling module NOR2BX2
+recompiling module NOR2BX4
+recompiling module AND2X1
+recompiling module AND2X2
+recompiling module NAND2XL
+recompiling module NAND2X1
+recompiling module NAND2X2
+recompiling module NAND2X4
+recompiling module NOR2XL
+recompiling module NOR2X1
+recompiling module NOR2X2
+recompiling module NOR2X4
+recompiling module NOR2X6
+recompiling module NOR2X8
+recompiling module OR2X1
+recompiling module OR2X2
+recompiling module OR2X6
+	However, due to incremental compilation, only 104 modules need to be compiled. 
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2018/2018_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _30920_archive_1.so \
+_30942_archive_1.so _30943_archive_1.so _prev_archive_1.so objs/udps/exIG1.o  SIM_l.o \
+rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o        \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2018/2018_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2018/2018_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 27 23:53 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'huffman_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+../00_TESTBED/pattern3.dat and ../00_TESTBED/golden3.dat were used for this simulation.
+Check CNT : PASS
+Check HC : PASS
+Check M : PASS
+You PASS the contest now.
+$finish called from file "tb.v", line 195.
+$finish at simulation time              1176000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1176000 ps
+CPU Time:      0.540 seconds;       Data structure size:   0.8Mb
+Mon Jan 27 23:53:54 2025
+CPU time: 2.043 seconds to compile + .567 seconds to elab + .776 seconds to link + .584 seconds in simulation

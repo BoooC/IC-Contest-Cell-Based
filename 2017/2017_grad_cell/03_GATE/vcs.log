@@ -1,0 +1,258 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Sun Jan 26 14:54:59 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'testfixture.v'
+Parsing included file 'DT_SYN.v'.
+Back to file 'testfixture.v'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       testfixture
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+DT_SYN.v, 103
+DT, "DFFRX4 res_addr_reg_8_( .D (n141),  .CK (clk),  .RN (reset),  .QN (n744));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+DT_SYN.v, 108
+DT, "DFFRX2 res_addr_reg_0_( .D (n148),  .CK (clk),  .RN (reset),  .QN (n747));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+DT_SYN.v, 159
+DT, "DFFRX1 rom_buffer_reg_1_( .D (n154),  .CK (clk),  .RN (n797),  .Q (rom_buffer[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "DT_SYN.sdf"
+   ***    Annotation scope: testfixture.u_dut
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Sun Jan 26 14:54:59 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Sun Jan 26 14:54:59 2025
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+88 modules and 2 UDPs read.
+recompiling module DT
+recompiling module testfixture
+recompiling module DFFRX1
+recompiling module DFFRX2
+recompiling module DFFRX4
+recompiling module AOI222X1
+recompiling module OAI222X1
+recompiling module ADDHX1
+recompiling module CMPR22X4
+recompiling module AOI22XL
+recompiling module AOI22X1
+recompiling module AOI22X2
+recompiling module AOI2BB2X1
+recompiling module AO22X1
+recompiling module AO22X4
+recompiling module OAI22X1
+recompiling module XOR2X1
+recompiling module XNOR2XL
+recompiling module XNOR2X1
+recompiling module XNOR2X4
+recompiling module AOI211XL
+recompiling module AOI211X1
+recompiling module AOI211X2
+recompiling module MXI2X1
+recompiling module MXI2X2
+recompiling module MXI2X4
+recompiling module NAND4BX2
+recompiling module OAI211X1
+recompiling module AOI21XL
+recompiling module AOI21X1
+recompiling module AOI21X2
+recompiling module AOI21X4
+recompiling module AOI2BB1X1
+recompiling module AOI2BB1X2
+recompiling module NAND4XL
+recompiling module NAND4X1
+recompiling module NAND4X2
+recompiling module NOR4XL
+recompiling module NOR4X1
+recompiling module OAI21XL
+recompiling module OAI21X1
+recompiling module OAI21X2
+recompiling module OAI21X4
+recompiling module OAI2BB1X1
+recompiling module OAI2BB1X2
+recompiling module CLKMX2X2
+recompiling module NAND3XL
+recompiling module NAND3X1
+recompiling module NAND3X2
+recompiling module NAND2BX1
+recompiling module NOR3XL
+recompiling module NOR3X1
+recompiling module NOR3X4
+recompiling module NOR3X8
+recompiling module NOR2BX1
+recompiling module AND2X2
+recompiling module AND2X4
+recompiling module BUFX4
+recompiling module INVXL
+recompiling module INVX1
+recompiling module INVX3
+recompiling module INVX4
+recompiling module INVX6
+recompiling module INVX8
+recompiling module INVX12
+recompiling module INVX16
+recompiling module CLKBUFX3
+recompiling module CLKBUFX8
+recompiling module CLKINVX1
+recompiling module CLKINVX2
+recompiling module AND2X8
+recompiling module NAND2XL
+recompiling module NAND2X1
+recompiling module NAND2X2
+recompiling module NAND2X4
+recompiling module NAND2X6
+recompiling module NOR2XL
+recompiling module NOR2X1
+recompiling module NOR2X2
+recompiling module NOR2X4
+recompiling module NOR2X6
+recompiling module NOR2X8
+recompiling module OR2X1
+recompiling module OR2X4
+recompiling module OR2X8
+recompiling module CLKAND2X3
+	However, due to incremental compilation, only 86 modules need to be compiled. 
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2017/2017_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _22916_archive_1.so \
+_22937_archive_1.so _22938_archive_1.so _prev_archive_1.so objs/udps/U7Vwg.o objs/udps/exIG1.o \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2017/2017_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2017/2017_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 26 14:55 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'DT_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+-----------------------------------------------------
+
+START!!! Simulation Start .....
+
+-----------------------------------------------------
+
+ Output pixel: 0 ~           0 are correct!
+
+ Output pixel: 0 ~        1000 are correct!
+
+ Output pixel: 0 ~        2000 are correct!
+
+ Output pixel: 0 ~        3000 are correct!
+
+ Output pixel: 0 ~        4000 are correct!
+
+ Output pixel: 0 ~        5000 are correct!
+
+ Output pixel: 0 ~        6000 are correct!
+
+ Output pixel: 0 ~        7000 are correct!
+
+ Output pixel: 0 ~        8000 are correct!
+
+ Output pixel: 0 ~        9000 are correct!
+
+ Output pixel: 0 ~       10000 are correct!
+
+ Output pixel: 0 ~       11000 are correct!
+
+ Output pixel: 0 ~       12000 are correct!
+
+ Output pixel: 0 ~       13000 are correct!
+
+ Output pixel: 0 ~       14000 are correct!
+
+ Output pixel: 0 ~       15000 are correct!
+
+ Output pixel: 0 ~       16000 are correct!
+
+-------------------------------------------------------------
+
+Congratulations!!! All data have been generated successfully!
+
+---------- The test result is ..... PASS --------------------
+
+                                                     
+
+-----------------------------------------------------
+
+$finish called from file "testfixture.v", line 181.
+$finish at simulation time            276942488
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 276942488 ps
+CPU Time:      5.090 seconds;       Data structure size:   0.2Mb
+Sun Jan 26 14:55:06 2025
+CPU time: 1.533 seconds to compile + .425 seconds to elab + .768 seconds to link + 5.152 seconds in simulation

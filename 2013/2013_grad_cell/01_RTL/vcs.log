@@ -1,0 +1,165 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v -f filelist.f -o simv -l \
+vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
++define+RTL +notimingchecks
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Sun Jan 26 01:07:38 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'testfixture1.v'
+Parsing included file 'FAS.v'.
+Back to file 'testfixture1.v'.
+Top Level Modules:
+       testfixture1
+TimeScale is 1 ns / 10 ps
+Starting vcs inline pass...
+
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+2 modules and 0 UDP read.
+recompiling module testfixture1
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2013/2013_grad_cell/01_RTL/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _19862_archive_1.so \
+_19884_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o \
+rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc \
+-lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a    -lvcsnew -lsimprofile \
+-luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o \
+/usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a -ldl -lm  -lc -lpthread \
+-ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2013/2013_grad_cell/01_RTL/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2013/2013_grad_cell/01_RTL/./simv +v2k +libext+.v -a vcs.log +define+RTL +notimingchecks
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 26 01:07 2025
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'FAS.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+FFT dataout on pattern           0 ~          15, PASS!!
+FFT dataout on pattern          16 ~          31, PASS!!
+FFT dataout on pattern          32 ~          47, PASS!!
+FFT dataout on pattern          48 ~          63, PASS!!
+FFT dataout on pattern          64 ~          79, PASS!!
+FIR dataout on pattern           0 ~         100 !!, PASS !!
+-----------------------------------------------------
+FFT dataout on pattern          80 ~          95, PASS!!
+FFT dataout on pattern          96 ~         111, PASS!!
+FFT dataout on pattern         112 ~         127, PASS!!
+FFT dataout on pattern         128 ~         143, PASS!!
+FFT dataout on pattern         144 ~         159, PASS!!
+FFT dataout on pattern         160 ~         175, PASS!!
+FFT dataout on pattern         176 ~         191, PASS!!
+FIR dataout on pattern         100 ~         200 !!, PASS !!
+-----------------------------------------------------
+FFT dataout on pattern         192 ~         207, PASS!!
+FFT dataout on pattern         208 ~         223, PASS!!
+FFT dataout on pattern         224 ~         239, PASS!!
+FFT dataout on pattern         240 ~         255, PASS!!
+FFT dataout on pattern         256 ~         271, PASS!!
+FFT dataout on pattern         272 ~         287, PASS!!
+FIR dataout on pattern         200 ~         300 !!, PASS !!
+-----------------------------------------------------
+FFT dataout on pattern         288 ~         303, PASS!!
+FFT dataout on pattern         304 ~         319, PASS!!
+FFT dataout on pattern         320 ~         335, PASS!!
+FFT dataout on pattern         336 ~         351, PASS!!
+FFT dataout on pattern         352 ~         367, PASS!!
+FFT dataout on pattern         368 ~         383, PASS!!
+FIR dataout on pattern         300 ~         400 !!, PASS !!
+-----------------------------------------------------
+FFT dataout on pattern         384 ~         399, PASS!!
+FFT dataout on pattern         400 ~         415, PASS!!
+FFT dataout on pattern         416 ~         431, PASS!!
+FFT dataout on pattern         432 ~         447, PASS!!
+FFT dataout on pattern         448 ~         463, PASS!!
+FFT dataout on pattern         464 ~         479, PASS!!
+FIR dataout on pattern         400 ~         500 !!, PASS !!
+-----------------------------------------------------
+FFT dataout on pattern         480 ~         495, PASS!!
+FFT dataout on pattern         496 ~         511, PASS!!
+FFT dataout on pattern         512 ~         527, PASS!!
+FFT dataout on pattern         528 ~         543, PASS!!
+FFT dataout on pattern         544 ~         559, PASS!!
+FFT dataout on pattern         560 ~         575, PASS!!
+FFT dataout on pattern         576 ~         591, PASS!!
+FIR dataout on pattern         500 ~         600 !!, PASS !!
+-----------------------------------------------------
+FFT dataout on pattern         592 ~         607, PASS!!
+FFT dataout on pattern         608 ~         623, PASS!!
+FFT dataout on pattern         624 ~         639, PASS!!
+FFT dataout on pattern         640 ~         655, PASS!!
+FFT dataout on pattern         656 ~         671, PASS!!
+FFT dataout on pattern         672 ~         687, PASS!!
+FFT dataout on pattern         688 ~         703, PASS!!
+FFT dataout on pattern         704 ~         719, PASS!!
+FFT dataout on pattern         720 ~         735, PASS!!
+FFT dataout on pattern         736 ~         751, PASS!!
+FFT dataout on pattern         752 ~         767, PASS!!
+FFT dataout on pattern         768 ~         783, PASS!!
+FIR dataout on pattern         700 ~         800 !!, PASS !!
+-----------------------------------------------------
+FFT dataout on pattern         784 ~         799, PASS!!
+FFT dataout on pattern         800 ~         815, PASS!!
+FFT dataout on pattern         816 ~         831, PASS!!
+FFT dataout on pattern         832 ~         847, PASS!!
+FFT dataout on pattern         848 ~         863, PASS!!
+FFT dataout on pattern         864 ~         879, PASS!!
+FIR dataout on pattern         800 ~         900 !!, PASS !!
+-----------------------------------------------------
+FFT dataout on pattern         880 ~         895, PASS!!
+FFT dataout on pattern         896 ~         911, PASS!!
+FFT dataout on pattern         912 ~         927, PASS!!
+FFT dataout on pattern         928 ~         943, PASS!!
+FFT dataout on pattern         944 ~         959, PASS!!
+FFT dataout on pattern         960 ~         975, PASS!!
+FFT dataout on pattern         976 ~         991, PASS!!
+FFT dataout on pattern         992 ~        1007, PASS!!
+FFT dataout on pattern        1008 ~        1023, PASS!!
+-----------------------------------------------------
+
+Congratulations! All data have been generated successfully!
+
+-------------------------PASS------------------------
+
+$finish called from file "testfixture1.v", line 250.
+$finish at simulation time              1280400
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 12804000 ps
+CPU Time:      0.660 seconds;       Data structure size:   0.1Mb
+Sun Jan 26 01:07:43 2025
+CPU time: .931 seconds to compile + .559 seconds to elab + .485 seconds to link + .714 seconds in simulation

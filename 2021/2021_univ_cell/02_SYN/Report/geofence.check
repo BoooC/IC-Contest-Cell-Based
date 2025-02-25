@@ -1,0 +1,45 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Wed Jan 29 21:38:31 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+
+Nets                                                               27
+    Unloaded nets (LINT-2)                                         27
+--------------------------------------------------------------------------------
+
+Warning: In design 'geofence', cell 'B_110' does not drive any nets. (LINT-1)
+Warning: In design 'geofence', net 'net367' driven by pin 'sub_48/Z_0' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net366' driven by pin 'sub_48/Z_1' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net365' driven by pin 'sub_48/Z_2' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net364' driven by pin 'sub_48/Z_3' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net363' driven by pin 'sub_48/Z_4' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net362' driven by pin 'sub_48/Z_5' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net361' driven by pin 'sub_48/Z_6' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net360' driven by pin 'sub_48/Z_7' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net359' driven by pin 'sub_48/Z_8' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net358' driven by pin 'sub_48/Z_9' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net357' driven by pin 'sub_48/Z_10' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net356' driven by pin 'sub_48/Z_11' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net355' driven by pin 'sub_48/Z_12' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net354' driven by pin 'sub_48/Z_13' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net353' driven by pin 'sub_48/Z_14' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net352' driven by pin 'sub_48/Z_15' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net351' driven by pin 'sub_48/Z_16' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net350' driven by pin 'sub_48/Z_17' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net349' driven by pin 'sub_48/Z_18' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net348' driven by pin 'sub_48/Z_19' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net347' driven by pin 'sub_48/Z_20' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net346' driven by pin 'sub_48/Z_21' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net345' driven by pin 'C2068/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net344' driven by pin 'C2059/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net343' driven by pin 'C2054/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net342' driven by pin 'C2049/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net341' driven by pin 'C2006/Z' has no loads. (LINT-2)
+1

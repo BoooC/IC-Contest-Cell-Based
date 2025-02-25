@@ -1,0 +1,1660 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Thu Jan 30 23:07:33 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'tb.sv'
+Parsing included file 'geofence_SYN.v'.
+Back to file 'tb.sv'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       testfixture
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 735
+geofence, "DFFRX1 product_reg_reg_21_( .D (n3379),  .CK (clk),  .RN (n3565),  .Q (product_reg_21_));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 760
+geofence, "DFFRX1 current_limit_reg_2_( .D (n1309),  .CK (clk),  .RN (n3566),  .Q (current_limit[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 784
+geofence, "DFFRX1 compute_hex_flag_reg( .D (n1307),  .CK (clk),  .RN (n3563),  .Q (compute_hex_flag));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 794
+geofence, "DFFRX1 hex_area_reg_reg_0_( .D (n1093),  .CK (clk),  .RN (n1384),  .Q (hex_area_reg_0_));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 797
+geofence, "DFFRX1 hex_area_reg_reg_2_( .D (n1091),  .CK (clk),  .RN (n1384),  .Q (hex_area[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 800
+geofence, "DFFRX1 hex_area_reg_reg_5_( .D (n1088),  .CK (clk),  .RN (n1384),  .Q (hex_area[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 802
+geofence, "DFFRX1 hex_area_reg_reg_7_( .D (n1086),  .CK (clk),  .RN (n1384),  .Q (hex_area[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 819
+geofence, "DFFRX1 hex_area_reg_reg_17_( .D (n1076),  .CK (clk),  .RN (n3563),  .Q (hex_area[16]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 835
+geofence, "DFFRX1 R_reg_reg_5__0_( .D (n1301),  .CK (clk),  .RN (n3563),  .Q (R_reg[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 840
+geofence, "DFFRX1 R_reg_reg_5__1_( .D (n1300),  .CK (clk),  .RN (n3564),  .Q (R_reg[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 845
+geofence, "DFFRX1 R_reg_reg_5__2_( .D (n1299),  .CK (clk),  .RN (n3564),  .Q (R_reg[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 850
+geofence, "DFFRX1 R_reg_reg_5__3_( .D (n1298),  .CK (clk),  .RN (n3566),  .Q (R_reg[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 855
+geofence, "DFFRX1 R_reg_reg_5__4_( .D (n1297),  .CK (clk),  .RN (n3563),  .Q (R_reg[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 860
+geofence, "DFFRX1 R_reg_reg_5__5_( .D (n1296),  .CK (clk),  .RN (n3564),  .Q (R_reg[5]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 865
+geofence, "DFFRX1 R_reg_reg_5__6_( .D (n1295),  .CK (clk),  .RN (n3564),  .Q (R_reg[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 870
+geofence, "DFFRX1 R_reg_reg_5__7_( .D (n1294),  .CK (clk),  .RN (n3566),  .Q (R_reg[7]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 875
+geofence, "DFFRX1 R_reg_reg_5__8_( .D (n1293),  .CK (clk),  .RN (n1384),  .Q (R_reg[8]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 880
+geofence, "DFFRX1 R_reg_reg_5__9_( .D (n1292),  .CK (clk),  .RN (n1384),  .Q (R_reg[9]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 885
+geofence, "DFFRX1 R_reg_reg_5__10_( .D (n1291),  .CK (clk),  .RN (n1384),  .Q (R_reg[10]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 890
+geofence, "DFFRX1 receiver_y_reg_4__0_( .D (n1225),  .CK (clk),  .RN (n3563),  .QN (n1399));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 897
+geofence, "DFFRX1 receiver_y_reg_4__1_( .D (n1224),  .CK (clk),  .RN (n3563),  .QN (n1425));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 962
+geofence, "DFFRX1 receiver_x_reg_2__0_( .D (n1145),  .CK (clk),  .RN (n3565),  .QN (n1445));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 967
+geofence, "DFFRX1 receiver_x_reg_5__0_( .D (n1175),  .CK (clk),  .RN (n3564),  .QN (n1449));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 968
+geofence, "DFFRX1 receiver_x_reg_2__1_( .D (n1144),  .CK (clk),  .RN (n3564),  .QN (n1452));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 973
+geofence, "DFFRX1 receiver_x_reg_5__1_( .D (n1174),  .CK (clk),  .RN (n3564),  .QN (n1455));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 974
+geofence, "DFFRX1 receiver_x_reg_2__2_( .D (n1143),  .CK (clk),  .RN (n3565),  .QN (n1458));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 979
+geofence, "DFFRX1 receiver_x_reg_2__3_( .D (n1142),  .CK (clk),  .RN (n3564),  .QN (n1462));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 984
+geofence, "DFFRX1 receiver_x_reg_2__4_( .D (n1141),  .CK (clk),  .RN (n3565),  .QN (n1403));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 989
+geofence, "DFFRX1 receiver_x_reg_2__5_( .D (n1140),  .CK (clk),  .RN (n1384),  .QN (n1407));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 994
+geofence, "DFFRX1 receiver_x_reg_2__6_( .D (n1139),  .CK (clk),  .RN (n1384),  .QN (n1413));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 999
+geofence, "DFFRX1 receiver_x_reg_2__7_( .D (n1138),  .CK (clk),  .RN (n1384),  .QN (n1416));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1004
+geofence, "DFFRX1 receiver_x_reg_2__8_( .D (n1137),  .CK (clk),  .RN (n3564),  .QN (n1422));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1009
+geofence, "DFFRX1 receiver_x_reg_2__9_( .D (n1136),  .CK (clk),  .RN (n3564),  .QN (n1428));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1014
+geofence, "DFFRX1 tri_area_reg_reg_0_( .D (n1116),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1016
+geofence, "DFFRX1 tri_area_reg_reg_1_( .D (n1115),  .CK (clk),  .RN (n1384),  .Q (tri_area_reg[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1018
+geofence, "DFFRX1 tri_area_reg_reg_2_( .D (n1114),  .CK (clk),  .RN (n3564),  .Q (tri_area_reg[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1020
+geofence, "DFFRX1 tri_area_reg_reg_3_( .D (n1113),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1022
+geofence, "DFFRX1 tri_area_reg_reg_4_( .D (n1112),  .CK (clk),  .RN (n1384),  .Q (tri_area_reg[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1024
+geofence, "DFFRX1 tri_area_reg_reg_5_( .D (n1111),  .CK (clk),  .RN (n3564),  .Q (tri_area_reg[5]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1026
+geofence, "DFFRX1 tri_area_reg_reg_6_( .D (n1110),  .CK (clk),  .RN (n1384),  .Q (tri_area_reg[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1028
+geofence, "DFFRX1 tri_area_reg_reg_7_( .D (n1109),  .CK (clk),  .RN (n3564),  .Q (tri_area_reg[7]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1030
+geofence, "DFFRX1 tri_area_reg_reg_8_( .D (n1108),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[8]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1032
+geofence, "DFFRX1 tri_area_reg_reg_9_( .D (n1107),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[9]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1034
+geofence, "DFFRX1 tri_area_reg_reg_10_( .D (n1106),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[10]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1036
+geofence, "DFFRX1 tri_area_reg_reg_11_( .D (n1105),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[11]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1038
+geofence, "DFFRX1 tri_area_reg_reg_12_( .D (n1104),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[12]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1040
+geofence, "DFFRX1 tri_area_reg_reg_13_( .D (n1103),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[13]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1042
+geofence, "DFFRX1 tri_area_reg_reg_14_( .D (n1102),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[14]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1044
+geofence, "DFFRX1 tri_area_reg_reg_15_( .D (n1101),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[15]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1048
+geofence, "DFFRX1 tri_area_reg_reg_17_( .D (n1099),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[17]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1050
+geofence, "DFFRX1 tri_area_reg_reg_18_( .D (n1098),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[18]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1052
+geofence, "DFFRX1 tri_area_reg_reg_19_( .D (n1097),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[19]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1054
+geofence, "DFFRX1 tri_area_reg_reg_20_( .D (n1096),  .CK (clk),  .RN (n3566),  .Q (tri_area_reg[20]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1056
+geofence, "DFFRX1 a_reg_9_( .D (n1068),  .CK (clk),  .RN (n3566),  .Q (a[9]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1057
+geofence, "DFFRX1 a_reg_8_( .D (n1067),  .CK (clk),  .RN (n3566),  .Q (a[8]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1058
+geofence, "DFFRX1 a_reg_7_( .D (n1066),  .CK (clk),  .RN (n3566),  .Q (a[7]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1059
+geofence, "DFFRX1 a_reg_6_( .D (n1065),  .CK (clk),  .RN (n3566),  .Q (a[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1060
+geofence, "DFFRX1 a_reg_5_( .D (n1064),  .CK (clk),  .RN (n3566),  .Q (a[5]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1065
+geofence, "DFFRX1 b_reg_4_( .D (n1051),  .CK (clk),  .RN (n3565),  .Q (b[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1066
+geofence, "DFFRX1 b_reg_5_( .D (n1049),  .CK (clk),  .RN (n3563),  .Q (b[5]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1067
+geofence, "DFFRX1 b_reg_7_( .D (n1045),  .CK (clk),  .RN (n3563),  .Q (b[7]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1068
+geofence, "DFFRX1 b_reg_8_( .D (n1043),  .CK (clk),  .RN (n3563),  .Q (b[8]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1069
+geofence, "DFFRX1 b_reg_9_( .D (n1041),  .CK (clk),  .RN (n3563),  .Q (b[9]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1070
+geofence, "DFFRX1 b_reg_10_( .D (n1039),  .CK (clk),  .RN (n3563),  .Q (b[10]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1071
+geofence, "DFFSX1 current_limit_reg_0_( .D (n1310),  .CK (clk),  .SN (n3563),  .Q (current_limit[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1625
+geofence, "DFFRX1 first_done_reg( .D (n1315),  .CK (clk),  .RN (n3566),  .QN (n3432));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1626
+geofence, "DFFRX1 product_reg_reg_0_( .D (n3382),  .CK (clk),  .RN (n3564),  .QN (n3478));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1627
+geofence, "DFFRX1 product_reg_reg_1_( .D (product_wire[1]),  .CK (clk),  .RN (n3564),  .QN (n3484));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1629
+geofence, "DFFRX1 product_reg_reg_2_( .D (product_wire[2]),  .CK (clk),  .RN (n3564),  .QN (n3488));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1631
+geofence, "DFFRX1 product_reg_reg_3_( .D (product_wire[3]),  .CK (clk),  .RN (n3564),  .QN (n3492));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1633
+geofence, "DFFRX1 product_reg_reg_4_( .D (product_wire[4]),  .CK (clk),  .RN (n3564),  .QN (n3495));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1635
+geofence, "DFFRX1 product_reg_reg_5_( .D (product_wire[5]),  .CK (clk),  .RN (n3564),  .QN (n3498));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1637
+geofence, "DFFRX1 product_reg_reg_6_( .D (product_wire[6]),  .CK (clk),  .RN (n3564),  .QN (n3499));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1639
+geofence, "DFFRX1 product_reg_reg_7_( .D (product_wire[7]),  .CK (clk),  .RN (n3564),  .QN (n3500));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1641
+geofence, "DFFRX1 product_reg_reg_8_( .D (product_wire[8]),  .CK (clk),  .RN (n3564),  .QN (n3502));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1643
+geofence, "DFFRX1 product_reg_reg_9_( .D (product_wire[9]),  .CK (clk),  .RN (n3564),  .QN (n3504));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1645
+geofence, "DFFRX1 product_reg_reg_10_( .D (product_wire[10]),  .CK (clk),  .RN (n3564),  .QN (n3505));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1647
+geofence, "DFFRX1 product_reg_reg_11_( .D (product_wire[11]),  .CK (clk),  .RN (n3565),  .QN (n3506));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1649
+geofence, "DFFRX1 product_reg_reg_12_( .D (product_wire[12]),  .CK (clk),  .RN (n3565),  .QN (n3508));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1651
+geofence, "DFFRX1 product_reg_reg_13_( .D (product_wire[13]),  .CK (clk),  .RN (n3565),  .QN (n3509));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1653
+geofence, "DFFRX1 product_reg_reg_14_( .D (product_wire[14]),  .CK (clk),  .RN (n3565),  .QN (n3511));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1655
+geofence, "DFFRX1 product_reg_reg_15_( .D (product_wire[15]),  .CK (clk),  .RN (n3565),  .QN (n3512));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1657
+geofence, "DFFRX1 product_reg_reg_16_( .D (product_wire[16]),  .CK (clk),  .RN (n3565),  .QN (n3514));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1659
+geofence, "DFFRX1 product_reg_reg_17_( .D (product_wire[17]),  .CK (clk),  .RN (n3565),  .QN (n3515));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1661
+geofence, "DFFRX1 product_reg_reg_18_( .D (product_wire[18]),  .CK (clk),  .RN (n3565),  .QN (n3517));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1663
+geofence, "DFFRX1 product_reg_reg_19_( .D (product_wire[19]),  .CK (clk),  .RN (n3565),  .QN (n3518));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1665
+geofence, "DFFRX1 product_reg_reg_20_( .D (product_wire[20]),  .CK (clk),  .RN (n3565),  .QN (n3520));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1667
+geofence, "DFFRX1 receiver_x_reg_0__4_( .D (n1122),  .CK (clk),  .RN (n3565),  .QN (n3461));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1668
+geofence, "DFFRX1 receiver_x_reg_0__9_( .D (n1117),  .CK (clk),  .RN (n3564),  .QN (n3487));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1669
+geofence, "DFFRX1 receiver_x_reg_0__8_( .D (n1118),  .CK (clk),  .RN (n3564),  .QN (n3480));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1670
+geofence, "DFFRX1 receiver_x_reg_0__7_( .D (n1119),  .CK (clk),  .RN (n3564),  .QN (n3474));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1671
+geofence, "DFFRX1 receiver_x_reg_0__6_( .D (n1120),  .CK (clk),  .RN (n1384),  .QN (n3470));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1672
+geofence, "DFFRX1 receiver_x_reg_0__5_( .D (n1121),  .CK (clk),  .RN (n1384),  .QN (n3465));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1673
+geofence, "DFFRX1 receiver_x_reg_0__3_( .D (n1123),  .CK (clk),  .RN (n3564),  .QN (n3456));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1674
+geofence, "DFFRX1 receiver_x_reg_0__2_( .D (n1124),  .CK (clk),  .RN (n3565),  .QN (n3452));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1675
+geofence, "DFFRX1 R_reg_reg_3__3_( .D (n1276),  .CK (clk),  .RN (n3563),  .QN (n3391));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1676
+geofence, "DFFRX1 R_reg_reg_3__2_( .D (n1277),  .CK (clk),  .RN (n3564),  .QN (n3390));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1677
+geofence, "DFFRX1 R_reg_reg_2__3_( .D (n1265),  .CK (clk),  .RN (n3564),  .QN (n3412));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1678
+geofence, "DFFRX1 R_reg_reg_3__1_( .D (n1278),  .CK (clk),  .RN (n3564),  .QN (n3389));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1679
+geofence, "DFFRX1 R_reg_reg_3__0_( .D (n1279),  .CK (clk),  .RN (n3563),  .QN (n3388));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1680
+geofence, "DFFRX1 R_reg_reg_3__8_( .D (n1271),  .CK (clk),  .RN (n1384),  .QN (n3396));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1681
+geofence, "DFFRX1 R_reg_reg_3__5_( .D (n1274),  .CK (clk),  .RN (n3566),  .QN (n3393));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1682
+geofence, "DFFRX1 R_reg_reg_2__9_( .D (n1259),  .CK (clk),  .RN (n1384),  .QN (n3418));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1683
+geofence, "DFFRX1 R_reg_reg_2__7_( .D (n1261),  .CK (clk),  .RN (n3566),  .QN (n3416));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1684
+geofence, "DFFRX1 R_reg_reg_2__5_( .D (n1263),  .CK (clk),  .RN (n3565),  .QN (n3414));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1685
+geofence, "DFFRX1 R_reg_reg_2__1_( .D (n1267),  .CK (clk),  .RN (n3564),  .QN (n3411));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1686
+geofence, "DFFRX1 R_reg_reg_2__2_( .D (n1266),  .CK (clk),  .RN (n3564),  .QN (n3420));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1687
+geofence, "DFFRX1 R_reg_reg_2__10_( .D (n1258),  .CK (clk),  .RN (n3565),  .QN (n3419));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1688
+geofence, "DFFRX1 R_reg_reg_2__8_( .D (n1260),  .CK (clk),  .RN (n3565),  .QN (n3417));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1689
+geofence, "DFFRX1 R_reg_reg_2__6_( .D (n1262),  .CK (clk),  .RN (n3566),  .QN (n3415));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1690
+geofence, "DFFRX1 R_reg_reg_2__4_( .D (n1264),  .CK (clk),  .RN (n3565),  .QN (n3413));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1691
+geofence, "DFFRX1 R_reg_reg_2__0_( .D (n1268),  .CK (clk),  .RN (n3563),  .QN (n3410));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1692
+geofence, "DFFRX1 R_reg_reg_3__10_( .D (n1269),  .CK (clk),  .RN (n1384),  .QN (n3398));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1693
+geofence, "DFFRX1 R_reg_reg_3__9_( .D (n1270),  .CK (clk),  .RN (n3565),  .QN (n3397));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1694
+geofence, "DFFRX1 R_reg_reg_3__7_( .D (n1272),  .CK (clk),  .RN (n3566),  .QN (n3395));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1695
+geofence, "DFFRX1 R_reg_reg_3__6_( .D (n1273),  .CK (clk),  .RN (n3566),  .QN (n3394));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1696
+geofence, "DFFRX1 R_reg_reg_3__4_( .D (n1275),  .CK (clk),  .RN (n3564),  .QN (n3392));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1697
+geofence, "DFFRX1 tri_area_reg_reg_21_( .D (n1095),  .CK (clk),  .RN (n3566),  .QN (n3547));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1698
+geofence, "DFFRX1 b_reg_3_( .D (n1053),  .CK (clk),  .RN (n3564),  .Q (b[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1701
+geofence, "DFFRX1 b_reg_6_( .D (n1047),  .CK (clk),  .RN (n3563),  .Q (b[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1704
+geofence, "DFFRX2 is_inside_reg( .D (N1497),  .CK (clk),  .RN (n3566),  .QN (n1395));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+geofence_SYN.v, 1721
+geofence, "DFFRX1 b_reg_2_( .D (n1055),  .CK (clk),  .RN (n3565),  .Q (b[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "geofence_SYN.sdf"
+   ***    Annotation scope: testfixture.u_geofence
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Thu Jan 30 23:07:34 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Thu Jan 30 23:07:34 2025
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+131 modules and 2 UDPs read.
+recompiling module geofence
+recompiling module testfixture
+recompiling module CMPR42X1
+recompiling module CMPR42X2
+recompiling module ADDFXL
+recompiling module ADDFX1
+recompiling module ADDFX2
+recompiling module ADDFX4
+recompiling module ADDFHX1
+recompiling module ADDFHX2
+recompiling module DFFRX1
+recompiling module DFFRX2
+recompiling module DFFRX4
+recompiling module DFFSX1
+recompiling module ACHCINX2
+recompiling module ACHCONX2
+recompiling module AOI222XL
+recompiling module AOI222X1
+recompiling module AOI222X2
+recompiling module AOI222X4
+recompiling module OAI222XL
+recompiling module AOI21XL
+recompiling module BUFX2
+recompiling module BUFX4
+recompiling module BUFX8
+recompiling module BUFX12
+recompiling module INVXL
+recompiling module INVX1
+recompiling module INVX2
+recompiling module INVX3
+recompiling module INVX4
+recompiling module INVX6
+recompiling module INVX8
+recompiling module INVX12
+recompiling module INVX16
+recompiling module CLKBUFX3
+recompiling module CLKBUFX8
+recompiling module CLKINVX1
+recompiling module CLKINVX2
+recompiling module CLKINVX6
+recompiling module OAI222X4
+recompiling module ADDHXL
+recompiling module AOI221XL
+recompiling module AOI221X1
+recompiling module AOI32XL
+recompiling module OAI221XL
+recompiling module OAI221X4
+recompiling module OAI32X1
+recompiling module AOI22XL
+recompiling module AOI22X1
+recompiling module AOI22X2
+recompiling module AOI2BB2X1
+recompiling module AOI2BB2X2
+recompiling module AO22X1
+recompiling module AO22X2
+recompiling module AO22X4
+recompiling module OAI22XL
+recompiling module OAI22X1
+recompiling module OAI22X2
+recompiling module OAI2BB2XL
+recompiling module OAI2BB2X1
+recompiling module OAI2BB2X2
+recompiling module OAI2BB2X4
+recompiling module OA22X1
+recompiling module OA22X2
+recompiling module XOR2X1
+recompiling module XOR2X2
+recompiling module XNOR2X1
+recompiling module XNOR2X2
+recompiling module AOI211XL
+recompiling module AOI211X1
+recompiling module AOI211X2
+recompiling module AOI211X4
+recompiling module AOI31X1
+recompiling module OAI211XL
+recompiling module OAI211X1
+recompiling module OAI211X4
+recompiling module OAI31XL
+recompiling module OAI31X1
+recompiling module OAI31X2
+recompiling module OAI31X4
+recompiling module AOI21X1
+recompiling module AOI21X2
+recompiling module AOI21X4
+recompiling module AOI2BB1X1
+recompiling module AO21X1
+recompiling module AO21X2
+recompiling module AO21X4
+recompiling module NAND4XL
+recompiling module NAND3BX1
+recompiling module NOR3BX1
+recompiling module OAI21XL
+recompiling module OAI21X1
+recompiling module OAI21X2
+recompiling module OAI21X4
+recompiling module OAI2BB1XL
+recompiling module OAI2BB1X1
+recompiling module OAI2BB1X2
+recompiling module OA21XL
+recompiling module OA21X1
+recompiling module OA21X2
+recompiling module OA21X4
+recompiling module CLKMX2X4
+recompiling module NAND3XL
+recompiling module NAND3X1
+recompiling module NAND3X2
+recompiling module NAND3X4
+recompiling module NAND2BX1
+recompiling module NOR3XL
+recompiling module NOR3X1
+recompiling module NOR3X2
+recompiling module NOR2BX1
+recompiling module NOR2BX2
+recompiling module OR3X2
+recompiling module AND2X1
+recompiling module AND2X2
+recompiling module AND2X4
+recompiling module NAND2XL
+recompiling module NAND2X1
+recompiling module NAND2X2
+recompiling module NAND2X4
+recompiling module NAND2X6
+recompiling module NOR2XL
+recompiling module NOR2X1
+recompiling module NOR2X2
+recompiling module NOR2X4
+recompiling module NOR2X6
+recompiling module OR2X1
+recompiling module OR2X2
+recompiling module OR2X4
+recompiling module OR2X6
+All of 131 modules done
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2021/2021_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _2066_archive_1.so \
+_2088_archive_1.so _2089_archive_1.so objs/udps/U7Vwg.o objs/udps/exIG1.o  SIM_l.o \
+rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o        \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2021/2021_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2021/2021_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 30 23:07 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'geofence_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+----------------------
+-- Simulation Start --
+----------------------
+Object1(in):   X     Y     R
+          1:  103,  340,  118
+          2:  755,  510,  567
+          3:  103,   50,  294
+          4:  982,  280,  763
+          5:  298,  560,  252
+          6:  710,   50,  559
+Object1: Golde/Return => 1/1, PASS
+
+Object2(out):  X     Y     R
+          1:  298,  560,  178
+          2:  103,   50,  680
+          3:  103,  340,  397
+          4:  710,   50,  830
+          5:  755,  510,  574
+          6:  982,  280,  879
+Object2: Golde/Return => 0/0, PASS
+
+Object3(out):  X     Y     R
+          1:  400,   80,  272
+          2:  300,  800,  659
+          3:  980,  120,  840
+          4:  710,  620,  732
+          5:  103,  500,  342
+          6:  130,  210,   50
+Object3: Golde/Return => 0/0, PASS
+
+Object4(in):   X     Y     R
+          1:  298,  560,  430
+          2:  755,  510,  707
+          3:  103,   50,  116
+          4:  710,   50,  580
+          5:  982,  280,  850
+          6:  103,  340,  183
+Object4: Golde/Return => 1/1, PASS
+
+Object5(in):   X     Y     R
+          1:  755,  510,  345
+          2:  982,  280,  616
+          3:  298,  560,  122
+          4:  710,   50,  549
+          5:  103,   50,  553
+          6:  103,  340,  350
+Object5: Golde/Return => 1/1, PASS
+
+Object6(out):  X     Y     R
+          1:  755,  510,  743
+          2:  103,  340,  296
+          3:  710,   50,  898
+          4:  982,  280, 1021
+          5:  298,  560,  285
+          6:  103,   50,  580
+Object6: Golde/Return => 0/0, PASS
+
+Object7(out):  X     Y     R
+          1:  103,   50,  748
+          2:  710,   50,  148
+          3:  298,  560,  718
+          4:  755,  510,  420
+          5:  982,  280,  223
+          6:  103,  340,  784
+Object7: Golde/Return => 0/0, PASS
+
+Object8(out):  X     Y     R
+          1:  300,  800,  330
+          2:  710,  620,  690
+          3:  400,   80,  664
+          4:  103,  500,  150
+          5:  130,  210,  429
+          6:  980,  120, 1084
+Object8: Golde/Return => 0/0, PASS
+
+Object9(in):   X     Y     R
+          1:  302,  423,  574
+          2:  503,  521,  501
+          3:  694,  768,  420
+          4:   10,  664,  468
+          5:   43, 1003,  298
+          6:  694, 1023,  354
+Object9: Golde/Return => 1/1, PASS
+
+Object10(out):  X     Y     R
+          1:  710,  620,  316
+          2:  980,  120,  561
+          3:  130,  210, 1007
+          4:  400,   80,  863
+          5:  103,  500,  935
+          6:  300,  800,  730
+Object10: Golde/Return => 0/0, PASS
+
+Object11(in):   X     Y     R
+          1:  302,  423,  315
+          2:  694,  768,  546
+          3:  694, 1023,  630
+          4:  503,  521,  394
+          5:   43, 1003,  322
+          6:   10,  664,  146
+Object11: Golde/Return => 1/1, PASS
+
+Object12(in):   X     Y     R
+          1:  980,  120,  733
+          2:  710,  620,  217
+          3:  103,  500,  433
+          4:  130,  210,  594
+          5:  300,  800,  235
+          6:  400,   80,  603
+Object12: Golde/Return => 1/1, PASS
+
+Object13(out):  X     Y     R
+          1:  694, 1023,  392
+          2:   10,  664,  622
+          3:  503,  521,  172
+          4:  694,  768,  146
+          5:  302,  423,  392
+          6:   43, 1003,  694
+Object13: Golde/Return => 0/0, PASS
+
+Object14(in):   X     Y     R
+          1:  321,  870,  378
+          2: 1010,  643,  690
+          3:  321,  127,  365
+          4:  432,  123,  381
+          5:  567, 1003,  560
+          6:  970,  280,  668
+Object14: Golde/Return => 1/1, PASS
+
+Object15(out):  X     Y     R
+          1:  755,  510,  390
+          2:  103,   50,  732
+          3:  103,  340,  487
+          4:  298,  560,  193
+          5:  982,  280,  707
+          6:  710,   50,  720
+Object15: Golde/Return => 0/0, PASS
+
+Object16(out):  X     Y     R
+          1:  300,  800,  628
+          2:  980,  120,  875
+          3:  130,  210, 1096
+          4:  400,   80, 1039
+          5:  103,  500,  934
+          6:  710,  620,  416
+Object16: Golde/Return => 0/0, PASS
+
+Object17(out):  X     Y     R
+          1:  103,  500,  784
+          2:  130,  210,  753
+          3:  400,   80,  540
+          4:  710,  620,  320
+          5:  980,  120,  247
+          6:  300,  800,  732
+Object17: Golde/Return => 0/0, PASS
+
+Object18(in):   X     Y     R
+          1:  503,  521,  154
+          2:  694,  768,  215
+          3:  694, 1023,  398
+          4:   43, 1003,  562
+          5:   10,  664,  490
+          6:  302,  423,  320
+Object18: Golde/Return => 1/1, PASS
+
+Object19(in):   X     Y     R
+          1:   43, 1003,  595
+          2:  302,  423,  550
+          3:   10,  664,  646
+          4:  694, 1023,  168
+          5:  694,  768,  124
+          6:  503,  521,  369
+Object19: Golde/Return => 1/1, PASS
+
+Object20(in):   X     Y     R
+          1:  980,  120,  785
+          2:  103,  500,  214
+          3:  710,  620,  574
+          4:  130,  210,  142
+          5:  300,  800,  486
+          6:  400,   80,  300
+Object20: Golde/Return => 1/1, PASS
+
+Object21(out):  X     Y     R
+          1:  432,  123,  834
+          2:  321,  127,  833
+          3:  567, 1003,  173
+          4:  321,  870,  117
+          5:  970,  280,  885
+          6: 1010,  643,  686
+Object21: Golde/Return => 0/0, PASS
+
+Object22(in):   X     Y     R
+          1:  710,   50,  238
+          2:  103,  340,  777
+          3:  982,  280,  122
+          4:  755,  510,  308
+          5:  298,  560,  664
+          6:  103,   50,  788
+Object22: Golde/Return => 1/1, PASS
+
+Object23(in):   X     Y     R
+          1:  982,  280,  586
+          2:  103,   50,  337
+          3:  755,  510,  464
+          4:  710,   50,  348
+          5:  103,  340,  324
+          6:  298,  560,  364
+Object23: Golde/Return => 1/1, PASS
+
+Object24(in):   X     Y     R
+          1:  503,  521,  205
+          2:   43, 1003,  571
+          3:  302,  423,   69
+          4:   10,  664,  337
+          5:  694, 1023,  661
+          6:  694,  768,  481
+Object24: Golde/Return => 1/1, PASS
+
+Object25(out):  X     Y     R
+          1:  321,  127,  922
+          2:  567, 1003,  228
+          3:  970,  280,  672
+          4: 1010,  643,  363
+          5:  432,  123,  875
+          6:  321,  870,  464
+Object25: Golde/Return => 0/0, PASS
+
+Object26(in):   X     Y     R
+          1:  970,  280,  684
+          2:  432,  123,  771
+          3: 1010,  643,  448
+          4:  321,  127,  802
+          5:  321,  870,  302
+          6:  567, 1003,  144
+Object26: Golde/Return => 1/1, PASS
+
+Object27(out):  X     Y     R
+          1:  755,  510,  386
+          2:  103,   50,  848
+          3:  982,  280,  709
+          4:  710,   50,  778
+          5:  103,  340,  607
+          6:  298,  560,  313
+Object27: Golde/Return => 0/0, PASS
+
+Object28(out):  X     Y     R
+          1:  503,  521,  494
+          2:  302,  423,  346
+          3:  694, 1023,  782
+          4:   10,  664,   40
+          5:   43, 1003,  378
+          6:  694,  768,  689
+Object28: Golde/Return => 0/0, PASS
+
+Object29(out):  X     Y     R
+          1:  567, 1003,  516
+          2:  970,  280,  823
+          3:  321,  870,  269
+          4:  432,  123,  540
+          5: 1010,  643,  790
+          6:  321,  127,  503
+Object29: Golde/Return => 0/0, PASS
+
+Object30(in):   X     Y     R
+          1:  103,  340,  769
+          2:  710,   50,  334
+          3:  103,   50,  822
+          4:  298,  560,  613
+          5:  755,  510,  203
+          6:  982,  280,  126
+Object30: Golde/Return => 1/1, PASS
+
+Object31(out):  X     Y     R
+          1:  503,  521,  582
+          2:  694, 1023, 1097
+          3:   10,  664,  571
+          4:   43, 1003,  904
+          5:  694,  768,  893
+          6:  302,  423,  380
+Object31: Golde/Return => 0/0, PASS
+
+Object32(out):  X     Y     R
+          1:  694, 1023,  377
+          2:   10,  664,  968
+          3:  503,  521,  530
+          4:   43, 1003,  959
+          5:  302,  423,  754
+          6:  694,  768,  279
+Object32: Golde/Return => 0/0, PASS
+
+Object33(in):   X     Y     R
+          1:  321,  870,  389
+          2: 1010,  643,  378
+          3:  567, 1003,  373
+          4:  970,  280,  490
+          5:  321,  127,  595
+          6:  432,  123,  549
+Object33: Golde/Return => 1/1, PASS
+
+Object34(in):   X     Y     R
+          1:  103,  500,  307
+          2:  400,   80,  430
+          3:  130,  210,  410
+          4:  710,  620,  319
+          5:  980,  120,  690
+          6:  300,  800,  310
+Object34: Golde/Return => 1/1, PASS
+
+Object35(in):   X     Y     R
+          1:  503,  521,  299
+          2:   43, 1003,  421
+          3:  694, 1023,  622
+          4:   10,  664,  214
+          5:  694,  768,  496
+          6:  302,  423,  213
+Object35: Golde/Return => 1/1, PASS
+
+Object36(out):  X     Y     R
+          1:  103,   50,  918
+          2:  298,  560,  884
+          3:  710,   50,  311
+          4:  103,  340,  962
+          5:  982,  280,  233
+          6:  755,  510,  531
+Object36: Golde/Return => 0/0, PASS
+
+Object37(out):  X     Y     R
+          1:   10,  664,  815
+          2:  694,  768,  180
+          3:   43, 1003,  743
+          4:  694, 1023,  130
+          5:  302,  423,  695
+          6:  503,  521,  491
+Object37: Golde/Return => 0/0, PASS
+
+Object38(out):  X     Y     R
+          1:  400,   80,  836
+          2:  300,  800,  110
+          3:  103,  500,  454
+          4:  980,  120, 1042
+          5:  130,  210,  720
+          6:  710,  620,  502
+Object38: Golde/Return => 0/0, PASS
+
+Object39(in):   X     Y     R
+          1:  321,  870,  724
+          2:  567, 1003,  786
+          3:  321,  127,  333
+          4:  432,  123,  230
+          5:  970,  280,  334
+          6: 1010,  643,  561
+Object39: Golde/Return => 1/1, PASS
+
+Object40(in):   X     Y     R
+          1:  400,   80,  493
+          2:  103,  500,  816
+          3:  710,  620,  426
+          4:  130,  210,  742
+          5:  300,  800,  811
+          6:  980,  120,  150
+Object40: Golde/Return => 1/1, PASS
+
+Object41(out):  X     Y     R
+          1:  970,  280,  344
+          2:  321,  870,  774
+          3:  432,  123,  217
+          4:  321,  127,  326
+          5: 1010,  643,  600
+          6:  567, 1003,  840
+Object41: Golde/Return => 0/0, PASS
+
+Object42(out):  X     Y     R
+          1:  321,  127,  936
+          2:  321,  870,  655
+          3:  970,  280,  519
+          4:  567, 1003,  454
+          5:  432,  123,  865
+          6: 1010,  643,  160
+Object42: Golde/Return => 0/0, PASS
+
+Object43(in):   X     Y     R
+          1:  567, 1003,  551
+          2:  321,  127,  600
+          3: 1010,  643,  261
+          4:  321,  870,  599
+          5:  432,  123,  520
+          6:  970,  280,  282
+Object43: Golde/Return => 1/1, PASS
+
+Object44(in):   X     Y     R
+          1:  710,  620,  514
+          2:  130,  210,  270
+          3:  300,  800,  598
+          4:  103,  500,  415
+          5:  400,   80,  130
+          6:  980,  120,  586
+Object44: Golde/Return => 1/1, PASS
+
+Object45(out):  X     Y     R
+          1:   10,  664,  849
+          2:  694, 1023,  924
+          3:  503,  521,  444
+          4:  694,  768,  669
+          5:  302,  423,  471
+          6:   43, 1003, 1085
+Object45: Golde/Return => 0/0, PASS
+
+Object46(out):  X     Y     R
+          1:  980,  120,  968
+          2:  710,  620,  500
+          3:  300,  800,  113
+          4:  103,  500,  249
+          5:  130,  210,  517
+          6:  400,   80,  664
+Object46: Golde/Return => 0/0, PASS
+
+Object47(out):  X     Y     R
+          1:  103,  500,  420
+          2:  300,  800,  739
+          3:  400,   80,  270
+          4:  130,  210,  130
+          5:  710,  620,  792
+          6:  980,  120,  850
+Object47: Golde/Return => 0/0, PASS
+
+Object48(in):   X     Y     R
+          1:  321,  870,  264
+          2: 1010,  643,  511
+          3:  321,  127,  576
+          4:  567, 1003,  334
+          5:  432,  123,  556
+          6:  970,  280,  613
+Object48: Golde/Return => 1/1, PASS
+
+Object49(out):  X     Y     R
+          1:  567, 1003, 1016
+          2: 1010,  643, 1059
+          3:  321,  127,  222
+          4:  432,  123,  332
+          5:  321,  870,  801
+          6:  970,  280,  888
+Object49: Golde/Return => 0/0, PASS
+
+Object50(out):  X     Y     R
+          1:  321,  870,  130
+          2:  432,  123,  883
+          3:  970,  280,  969
+          4:  567, 1003,  246
+          5:  321,  127,  873
+          6: 1010,  643,  775
+Object50: Golde/Return => 0/0, PASS
+
+-------------------------------------------------
+--    Simulation finish,  ALL PASS             --
+-------------------------------------------------
+$finish called from file "tb.sv", line 156.
+$finish at simulation time            112750000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 112750000 ps
+CPU Time:      6.190 seconds;       Data structure size:   0.9Mb
+Thu Jan 30 23:07:43 2025
+CPU time: 2.310 seconds to compile + .559 seconds to elab + .820 seconds to link + 6.258 seconds in simulation

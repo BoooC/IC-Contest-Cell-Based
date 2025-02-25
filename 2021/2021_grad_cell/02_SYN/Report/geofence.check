@@ -1,0 +1,34 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Thu Jan 30 23:06:43 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+
+Nets                                                               15
+    Unloaded nets (LINT-2)                                         15
+--------------------------------------------------------------------------------
+
+Warning: In design 'geofence', cell 'B_157' does not drive any nets. (LINT-1)
+Warning: In design 'geofence', cell 'B_178' does not drive any nets. (LINT-1)
+Warning: In design 'geofence', net 'net544' driven by pin 'mult_82/Z_20' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net543' driven by pin 'mult_82/Z_21' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net542' driven by pin 'mult_82/Z_22' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net541' driven by pin 'add_75_2/Z_0' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net540' driven by pin 'C3537/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net539' driven by pin 'C3493/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net538' driven by pin 'C3519/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net537' driven by pin 'C3480/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net536' driven by pin 'C3421/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net535' driven by pin 'C3412/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net534' driven by pin 'C3403/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net533' driven by pin 'C3394/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net532' driven by pin 'C3393/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net531' driven by pin 'C3388/Z' has no loads. (LINT-2)
+Warning: In design 'geofence', net 'net530' driven by pin 'C3329/Z' has no loads. (LINT-2)
+1

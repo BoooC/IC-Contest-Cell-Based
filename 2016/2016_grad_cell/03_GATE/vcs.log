@@ -1,0 +1,491 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Sun Jan 26 14:49:09 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'testfixture.v'
+Parsing included file 'LBP_SYN.v'.
+Back to file 'testfixture.v'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       testfixture
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 83
+LBP, "DFFRX4 addr_x_reg_3_( .D (n746),  .CK (clk),  .RN (n307),  .Q (addr_x[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 84
+LBP, "DFFRX1 gray_buffer_reg_0__6_( .D (n2440),  .CK (clk),  .RN (n307),  .Q (gray_buffer[61]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 90
+LBP, "DFFRX1 gray_buffer_reg_0__3_( .D (n2470),  .CK (clk),  .RN (n307),  .Q (gray_buffer[58]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 92
+LBP, "DFFRX1 gray_buffer_reg_0__2_( .D (n2480),  .CK (clk),  .RN (n307),  .Q (gray_buffer[57]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 94
+LBP, "DFFRX1 gray_buffer_reg_0__1_( .D (n2490),  .CK (clk),  .RN (n307),  .Q (gray_buffer[56]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 100
+LBP, "DFFRX1 gray_buffer_reg_1__6_( .D (n2520),  .CK (clk),  .RN (n307),  .Q (gray_buffer[53]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 104
+LBP, "DFFRX1 gray_buffer_reg_1__3_( .D (n255),  .CK (clk),  .RN (n307),  .Q (gray_buffer[50]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 106
+LBP, "DFFRX1 gray_buffer_reg_1__2_( .D (n256),  .CK (clk),  .RN (n307),  .Q (gray_buffer[49]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 108
+LBP, "DFFRX1 gray_buffer_reg_1__1_( .D (n257),  .CK (clk),  .RN (n310),  .Q (gray_buffer[48]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 116
+LBP, "DFFRX1 gray_buffer_reg_2__3_( .D (n263),  .CK (clk),  .RN (n307),  .Q (gray_buffer[42]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 118
+LBP, "DFFRX1 gray_buffer_reg_2__2_( .D (n264),  .CK (clk),  .RN (n307),  .Q (gray_buffer[41]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 120
+LBP, "DFFRX1 gray_buffer_reg_2__1_( .D (n265),  .CK (clk),  .RN (n310),  .Q (gray_buffer[40]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 124
+LBP, "DFFRX1 gray_buffer_reg_3__7_( .D (n267),  .CK (clk),  .RN (n307),  .Q (gray_buffer[38]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 126
+LBP, "DFFRX1 gray_buffer_reg_3__6_( .D (n268),  .CK (clk),  .RN (n307),  .Q (gray_buffer[37]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 128
+LBP, "DFFRX1 gray_buffer_reg_3__3_( .D (n271),  .CK (clk),  .RN (n307),  .Q (gray_buffer[34]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 130
+LBP, "DFFRX1 gray_buffer_reg_3__2_( .D (n272),  .CK (clk),  .RN (n307),  .Q (gray_buffer[33]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 132
+LBP, "DFFRX1 gray_buffer_reg_4__3_( .D (n279),  .CK (clk),  .RN (n310),  .Q (gray_buffer[26]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 134
+LBP, "DFFRX1 gray_buffer_reg_4__2_( .D (n280),  .CK (clk),  .RN (n310),  .Q (gray_buffer[25]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 136
+LBP, "DFFRX1 gray_buffer_reg_4__1_( .D (n281),  .CK (clk),  .RN (n310),  .Q (gray_buffer[24]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 148
+LBP, "DFFRX1 gray_buffer_reg_5__3_( .D (n287),  .CK (clk),  .RN (n310),  .Q (gray_buffer[18]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 150
+LBP, "DFFRX1 gray_buffer_reg_5__2_( .D (n288),  .CK (clk),  .RN (n310),  .Q (gray_buffer[17]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 152
+LBP, "DFFRX1 gray_buffer_reg_5__1_( .D (n289),  .CK (clk),  .RN (n310),  .Q (gray_buffer[16]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 160
+LBP, "DFFRX1 gray_buffer_reg_6__3_( .D (n295),  .CK (clk),  .RN (n310),  .Q (gray_buffer[10]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 162
+LBP, "DFFRX1 gray_buffer_reg_6__2_( .D (n296),  .CK (clk),  .RN (n310),  .Q (gray_buffer[9]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 164
+LBP, "DFFRX1 gray_buffer_reg_6__1_( .D (n297),  .CK (clk),  .RN (n310),  .Q (gray_buffer[8]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 168
+LBP, "DFFRX1 gray_buffer_reg_7__7_( .D (n2420),  .CK (clk),  .RN (n307),  .Q (gray_buffer[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 170
+LBP, "DFFRX1 gray_buffer_reg_7__6_( .D (n2410),  .CK (clk),  .RN (n307),  .QN (n770));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 171
+LBP, "DFFRX1 gray_buffer_reg_7__3_( .D (n238),  .CK (clk),  .RN (n307),  .Q (gray_buffer[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 173
+LBP, "DFFRX1 gray_buffer_reg_7__2_( .D (n237),  .CK (clk),  .RN (n307),  .Q (gray_buffer[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 175
+LBP, "DFFRX1 gray_buffer_reg_7__1_( .D (n236),  .CK (clk),  .RN (n307),  .Q (gray_buffer[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 221
+LBP, "DFFRX2 gray_buffer_reg_3__4_( .D (n270),  .CK (clk),  .RN (n310),  .Q (gray_buffer[35]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+LBP_SYN.v, 276
+LBP, "DFFRX1 lbp_valid_reg( .D (n734),  .CK (clk),  .RN (n307),  .QN (n328));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "LBP_SYN.sdf"
+   ***    Annotation scope: testfixture.LBP
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Sun Jan 26 14:49:09 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Sun Jan 26 14:49:09 2025
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+90 modules and 2 UDPs read.
+recompiling module LBP
+recompiling module testfixture
+recompiling module DFFSRX2
+recompiling module DFFRX1
+recompiling module DFFRX2
+recompiling module DFFRX4
+recompiling module DFFSX1
+recompiling module AOI222X1
+recompiling module ADDHXL
+recompiling module ADDHX1
+recompiling module ADDHX2
+recompiling module CMPR22X4
+recompiling module DFFSHQX1
+recompiling module DFFQX1
+recompiling module DFFHQX4
+recompiling module AOI22X1
+recompiling module AOI2BB2X1
+recompiling module AOI2BB2X2
+recompiling module AOI2BB2X4
+recompiling module AO22X1
+recompiling module AO22X2
+recompiling module OAI22XL
+recompiling module OAI22X1
+recompiling module OAI2BB2XL
+recompiling module XOR2X1
+recompiling module XOR2X2
+recompiling module XNOR2X1
+recompiling module AOI211X1
+recompiling module MXI2XL
+recompiling module MXI2X1
+recompiling module MXI2X2
+recompiling module MXI2X4
+recompiling module OAI211X1
+recompiling module AOI21X1
+recompiling module AOI21X2
+recompiling module AOI21X4
+recompiling module AOI2BB1X1
+recompiling module AO21X1
+recompiling module MX2X1
+recompiling module NAND4XL
+recompiling module OAI21XL
+recompiling module OAI21X1
+recompiling module OAI21X2
+recompiling module OAI21X4
+recompiling module OAI2BB1X1
+recompiling module OAI2BB1X2
+recompiling module OAI2BB1X4
+recompiling module OA21X2
+recompiling module BUFX6
+recompiling module BUFX12
+recompiling module BUFX20
+recompiling module INVXL
+recompiling module INVX1
+recompiling module INVX2
+recompiling module INVX3
+recompiling module INVX4
+recompiling module INVX6
+recompiling module INVX8
+recompiling module INVX12
+recompiling module CLKBUFX3
+recompiling module CLKBUFX8
+recompiling module CLKINVX1
+recompiling module CLKINVX2
+recompiling module CLKINVX6
+recompiling module CLKMX2X2
+recompiling module CLKMX2X6
+recompiling module NAND3X1
+recompiling module NAND2BX1
+recompiling module NAND2BX4
+recompiling module NOR3X1
+recompiling module NOR3X2
+recompiling module NOR3X4
+recompiling module NOR3X6
+recompiling module NOR2BX1
+recompiling module AND2X1
+recompiling module AND2X2
+recompiling module AND2X4
+recompiling module NAND2XL
+recompiling module NAND2X1
+recompiling module NAND2X2
+recompiling module NAND2X4
+recompiling module NAND2X6
+recompiling module NAND2X8
+recompiling module NOR2XL
+recompiling module NOR2X1
+recompiling module NOR2X2
+recompiling module NOR2X4
+recompiling module NOR2X6
+recompiling module OR2X6
+	However, due to incremental compilation, only 89 modules need to be compiled. 
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2016/2016_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _18105_archive_1.so \
+_18125_archive_1.so _18126_archive_1.so _prev_archive_1.so objs/udps/U7Vwg.o objs/udps/exIG1.o \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2016/2016_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2016/2016_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 26 14:49 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'LBP_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+-----------------------------------------------------
+
+START!!! Simulation Start .....
+
+-----------------------------------------------------
+
+Output pixel: 0 ~           0 are correct!
+
+Output pixel: 0 ~        1000 are correct!
+
+Output pixel: 0 ~        2000 are correct!
+
+Output pixel: 0 ~        3000 are correct!
+
+Output pixel: 0 ~        4000 are correct!
+
+Output pixel: 0 ~        5000 are correct!
+
+Output pixel: 0 ~        6000 are correct!
+
+Output pixel: 0 ~        7000 are correct!
+
+Output pixel: 0 ~        8000 are correct!
+
+Output pixel: 0 ~        9000 are correct!
+
+Output pixel: 0 ~       10000 are correct!
+
+Output pixel: 0 ~       11000 are correct!
+
+Output pixel: 0 ~       12000 are correct!
+
+Output pixel: 0 ~       13000 are correct!
+
+Output pixel: 0 ~       14000 are correct!
+
+Output pixel: 0 ~       15000 are correct!
+
+Output pixel: 0 ~       16000 are correct!
+
+Output pixel: 0 ~       16383 are correct!
+
+-----------------------------------------------------
+
+Congratulations! All data have been generated successfully!
+
+-------------------------PASS------------------------
+
+$finish called from file "testfixture.v", line 138.
+$finish at simulation time            193564000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 193564000 ps
+CPU Time:      5.800 seconds;       Data structure size:   0.2Mb
+Sun Jan 26 14:49:17 2025
+CPU time: 1.583 seconds to compile + .432 seconds to elab + .748 seconds to link + 5.853 seconds in simulation

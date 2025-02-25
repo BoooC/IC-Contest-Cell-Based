@@ -1,0 +1,315 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Sun Jan 26 14:43:25 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'testfixture.v'
+Parsing included file 'SET_SYN.v'.
+Back to file 'testfixture.v'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       testfixture1
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+SET_SYN.v, 147
+SET, "DFFRX1 state_reg_1_( .D (next_state_1_),  .CK (clk),  .RN (n505),  .Q (state[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SET_SYN.v, 217
+SET, "DFFRX1 valid_reg( .D (n663),  .CK (clk),  .RN (n505),  .QN (n206));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SET_SYN.v, 218
+SET, "DFFRX1 candidate_reg_1_( .D (N78),  .CK (clk),  .RN (n505),  .QN (n204));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SET_SYN.v, 219
+SET, "DFFRX1 candidate_reg_2_( .D (N79),  .CK (clk),  .RN (n505),  .QN (n202));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SET_SYN.v, 220
+SET, "DFFRX1 candidate_reg_3_( .D (N80),  .CK (clk),  .RN (n505),  .QN (n200));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SET_SYN.v, 221
+SET, "DFFRX1 candidate_reg_4_( .D (N81),  .CK (clk),  .RN (n505),  .QN (n198));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+SET_SYN.v, 222
+SET, "DFFRX1 candidate_reg_5_( .D (N82),  .CK (clk),  .RN (n505),  .QN (n196));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "SET_SYN.sdf"
+   ***    Annotation scope: testfixture1.u_set
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Sun Jan 26 14:43:26 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Sun Jan 26 14:43:26 2025
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+90 modules and 3 UDPs read.
+recompiling module SET
+recompiling module testfixture1
+recompiling module CMPR42X1
+recompiling module ADDFXL
+recompiling module ADDFX1
+recompiling module ADDFX2
+recompiling module ADDFHX2
+recompiling module DFFRX1
+recompiling module DFFRX2
+recompiling module DFFRX4
+recompiling module DFFSX4
+recompiling module EDFFXL
+recompiling module ACHCINX2
+recompiling module ACHCONX2
+recompiling module AOI222X1
+recompiling module ADDHXL
+recompiling module DFFRHQX1
+recompiling module DFFQX1
+recompiling module DFFQX2
+recompiling module DFFQX4
+recompiling module AOI22X1
+recompiling module AOI22X2
+recompiling module AOI22X4
+recompiling module AOI2BB2X1
+recompiling module AOI2BB2X2
+recompiling module AO22X1
+recompiling module OAI22XL
+recompiling module OAI22X1
+recompiling module OAI22X2
+recompiling module OAI22X4
+recompiling module OAI2BB2XL
+recompiling module OAI2BB2X1
+recompiling module OAI2BB2X2
+recompiling module BUFX4
+recompiling module BUFX12
+recompiling module INVXL
+recompiling module INVX1
+recompiling module INVX3
+recompiling module INVX8
+recompiling module INVX12
+recompiling module CLKINVX1
+recompiling module CLKINVX2
+recompiling module CLKINVX6
+recompiling module OA22X1
+recompiling module CLKXOR2X2
+recompiling module XOR2X1
+recompiling module XOR2X2
+recompiling module XOR2X4
+recompiling module XNOR2X1
+recompiling module XNOR2X2
+recompiling module AOI211X2
+recompiling module MXI2X1
+recompiling module OAI211X1
+recompiling module OAI31XL
+recompiling module AOI21XL
+recompiling module AOI21X1
+recompiling module AOI21X4
+recompiling module AOI2BB1X2
+recompiling module AO21X1
+recompiling module MX2X1
+recompiling module NAND3BX2
+recompiling module OAI21XL
+recompiling module OAI21X1
+recompiling module OAI21X2
+recompiling module OAI21X4
+recompiling module OAI2BB1X1
+recompiling module OAI2BB1X2
+recompiling module OAI2BB1X4
+recompiling module OA21X4
+recompiling module AND3X1
+recompiling module NAND3XL
+recompiling module NAND3X1
+recompiling module NAND3X8
+recompiling module NAND2BX1
+recompiling module NAND2BX2
+recompiling module NOR3X1
+recompiling module NOR3X2
+recompiling module NOR2BX1
+recompiling module AND2X1
+recompiling module AND2X2
+recompiling module NAND2XL
+recompiling module NAND2X1
+recompiling module NAND2X2
+recompiling module NAND2X4
+recompiling module NOR2XL
+recompiling module NOR2X1
+recompiling module NOR2X2
+recompiling module NOR2X4
+recompiling module OR2X1
+recompiling module OR2X4
+All of 90 modules done
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2015/2015_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _13227_archive_1.so \
+_13248_archive_1.so _13249_archive_1.so _prev_archive_1.so objs/udps/U7Vwg.o objs/udps/exIG1.o \
+objs/udps/Cpxa2.o  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2015/2015_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2015/2015_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 26 14:43 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'SET_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+--------------------------- [ Function 4. Simulation START !! ] ---------------------------
+ Pattern           0 at Mode 3 is PASS !
+ Pattern           1 at Mode 3 is PASS !
+ Pattern           2 at Mode 3 is PASS !
+ Pattern           3 at Mode 3 is PASS !
+ Pattern           4 at Mode 3 is PASS !
+ Pattern           5 at Mode 3 is PASS !
+ Pattern           6 at Mode 3 is PASS !
+ Pattern           7 at Mode 3 is PASS !
+ Pattern           8 at Mode 3 is PASS !
+ Pattern           9 at Mode 3 is PASS !
+ Pattern          10 at Mode 3 is PASS !
+ Pattern          11 at Mode 3 is PASS !
+ Pattern          12 at Mode 3 is PASS !
+ Pattern          13 at Mode 3 is PASS !
+ Pattern          14 at Mode 3 is PASS !
+ Pattern          15 at Mode 3 is PASS !
+ Pattern          16 at Mode 3 is PASS !
+ Pattern          17 at Mode 3 is PASS !
+ Pattern          18 at Mode 3 is PASS !
+ Pattern          19 at Mode 3 is PASS !
+ Pattern          20 at Mode 3 is PASS !
+ Pattern          21 at Mode 3 is PASS !
+ Pattern          22 at Mode 3 is PASS !
+ Pattern          23 at Mode 3 is PASS !
+ Pattern          24 at Mode 3 is PASS !
+ Pattern          25 at Mode 3 is PASS !
+ Pattern          26 at Mode 3 is PASS !
+ Pattern          27 at Mode 3 is PASS !
+ Pattern          28 at Mode 3 is PASS !
+ Pattern          29 at Mode 3 is PASS !
+ Pattern          30 at Mode 3 is PASS !
+ Pattern          31 at Mode 3 is PASS !
+ Pattern          32 at Mode 3 is PASS !
+ Pattern          33 at Mode 3 is PASS !
+ Pattern          34 at Mode 3 is PASS !
+ Pattern          35 at Mode 3 is PASS !
+ Pattern          36 at Mode 3 is PASS !
+ Pattern          37 at Mode 3 is PASS !
+ Pattern          38 at Mode 3 is PASS !
+ Pattern          39 at Mode 3 is PASS !
+ Pattern          40 at Mode 3 is PASS !
+ Pattern          41 at Mode 3 is PASS !
+ Pattern          42 at Mode 3 is PASS !
+ Pattern          43 at Mode 3 is PASS !
+ Pattern          44 at Mode 3 is PASS !
+ Pattern          45 at Mode 3 is PASS !
+ Pattern          46 at Mode 3 is PASS !
+ Pattern          47 at Mode 3 is PASS !
+ Pattern          48 at Mode 3 is PASS !
+ Pattern          49 at Mode 3 is PASS !
+ Pattern          50 at Mode 3 is PASS !
+ Pattern          51 at Mode 3 is PASS !
+ Pattern          52 at Mode 3 is PASS !
+ Pattern          53 at Mode 3 is PASS !
+ Pattern          54 at Mode 3 is PASS !
+ Pattern          55 at Mode 3 is PASS !
+ Pattern          56 at Mode 3 is PASS !
+ Pattern          57 at Mode 3 is PASS !
+ Pattern          58 at Mode 3 is PASS !
+ Pattern          59 at Mode 3 is PASS !
+ Pattern          60 at Mode 3 is PASS !
+ Pattern          61 at Mode 3 is PASS !
+ Pattern          62 at Mode 3 is PASS !
+ Pattern          63 at Mode 3 is PASS !
+--------------------------- Simulation FINISH !!---------------------------
+============================================================================
+
+ \(^o^)/ CONGRATULATIONS!!  The simulation result is PASS!!!
+
+============================================================================
+$finish called from file "testfixture.v", line 144.
+$finish at simulation time 34344.0 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 34344000 ps
+CPU Time:      0.850 seconds;       Data structure size:   0.2Mb
+Sun Jan 26 14:43:29 2025
+CPU time: 1.694 seconds to compile + .425 seconds to elab + .753 seconds to link + .903 seconds in simulation

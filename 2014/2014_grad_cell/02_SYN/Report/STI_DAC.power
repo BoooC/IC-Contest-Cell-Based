@@ -1,0 +1,58 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : STI_DAC
+Version: U-2022.12
+Date   : Sun Jan 26 14:35:05 2025
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+STI_DAC                tsmc13_wl10       slow
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  91.5160 uW   (57%)
+  Net Switching Power  =  67.6875 uW   (43%)
+                         ---------
+Total Dynamic Power    = 159.2035 uW  (100%)
+
+Cell Leakage Power     =   2.8004 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  8.2534e-02            0.0000            0.0000        8.2534e-02  (  50.95%)  i
+register       4.3439e-03        7.7525e-03        1.6031e+06        1.3699e-02  (   8.46%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  4.6381e-03        5.9935e-02        1.1974e+06        6.5770e-02  (  40.60%)
+--------------------------------------------------------------------------------------------------
+Total          9.1516e-02 mW     6.7688e-02 mW     2.8004e+06 pW         0.1620 mW
+1

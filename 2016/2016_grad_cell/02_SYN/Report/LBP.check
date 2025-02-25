@@ -1,0 +1,30 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Sun Jan 26 14:48:55 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Constant outputs (LINT-52)                                      1
+
+Nets                                                               12
+    Unloaded nets (LINT-2)                                         12
+--------------------------------------------------------------------------------
+
+Warning: In design 'LBP', net 'net101' driven by pin 'C920/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net100' driven by pin 'C919/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net99' driven by pin 'C918/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net98' driven by pin 'C902/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net97' driven by pin 'C901/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net96' driven by pin 'C900/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net95' driven by pin 'C899/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net94' driven by pin 'C898/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net93' driven by pin 'C933/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net92' driven by pin 'C932/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net91' driven by pin 'C850/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net90' driven by pin 'C845/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', output port 'gray_req' is connected directly to 'logic 1'. (LINT-52)
+1

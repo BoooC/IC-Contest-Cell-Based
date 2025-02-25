@@ -1,0 +1,31 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Wed Jan 29 02:56:58 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+
+Nets                                                               12
+    Unloaded nets (LINT-2)                                         12
+--------------------------------------------------------------------------------
+
+Warning: In design 'SME', cell 'B_118' does not drive any nets. (LINT-1)
+Warning: In design 'SME', cell 'B_119' does not drive any nets. (LINT-1)
+Warning: In design 'SME', net 'net408' driven by pin 'C2842/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net407' driven by pin 'C2845/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net406' driven by pin 'C2840/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net405' driven by pin 'C2832/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net404' driven by pin 'C2831/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net403' driven by pin 'C2812/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net402' driven by pin 'C2806/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net401' driven by pin 'C2799/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net400' driven by pin 'C2786/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net399' driven by pin 'C2779/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net398' driven by pin 'C2767/Z' has no loads. (LINT-2)
+Warning: In design 'SME', net 'net397' driven by pin 'C2763/Z' has no loads. (LINT-2)
+1

@@ -1,0 +1,22 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Sun Jan 26 14:43:13 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+
+Nets                                                                3
+    Unloaded nets (LINT-2)                                          3
+--------------------------------------------------------------------------------
+
+Warning: In design 'det_inside', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'det_inside', cell 'B_3' does not drive any nets. (LINT-1)
+Warning: In design 'SET', net 'net100' driven by pin 'C433/Z' has no loads. (LINT-2)
+Warning: In design 'SET', net 'net99' driven by pin 'C470/Z' has no loads. (LINT-2)
+Warning: In design 'SET', net 'net98' driven by pin 'C467/Z' has no loads. (LINT-2)
+1

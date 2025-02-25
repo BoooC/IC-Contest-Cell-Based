@@ -1,0 +1,289 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Sun Jan 26 14:35:07 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'testfixture1.v'
+Parsing included file 'STI_DAC_SYN.v'.
+Back to file 'testfixture1.v'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       testfixture1
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 122
+STI_DAC, "DFFRX1 STI_inst_count_done_reg_reg( .D (n466),  .CK (clk),  .RN (n185),  .Q (STI_inst_count_done_reg));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 136
+STI_DAC, "DFFRX1 DAC_inst_so_end_toggle_reg( .D (n198),  .CK (clk),  .RN (n185),  .Q (DAC_inst_so_end_toggle));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 138
+STI_DAC, "DFFRX1 DAC_inst_count_reg_0_( .D (n197),  .CK (clk),  .RN (n185),  .Q (DAC_inst_count[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 142
+STI_DAC, "DFFRX1 DAC_inst_count_reg_2_( .D (n195),  .CK (clk),  .RN (n185),  .Q (DAC_inst_count[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 148
+STI_DAC, "DFFRX1 DAC_inst_data_buffer_reg_7_( .D (n238),  .CK (clk),  .RN (n185),  .QN (n249));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 149
+STI_DAC, "DFFRX1 STI_inst_so_data_reg( .D (STI_inst_N245),  .CK (clk),  .RN (n185),  .QN (n258));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 151
+STI_DAC, "DFFRX1 DAC_inst_data_buffer_reg_0_( .D (n244),  .CK (clk),  .RN (n185),  .QN (n248));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 152
+STI_DAC, "DFFRX1 DAC_inst_data_buffer_reg_1_( .D (n243),  .CK (clk),  .RN (n185),  .QN (n253));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 153
+STI_DAC, "DFFRX1 DAC_inst_data_buffer_reg_2_( .D (n242),  .CK (clk),  .RN (n185),  .QN (n257));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 154
+STI_DAC, "DFFRX1 DAC_inst_data_buffer_reg_3_( .D (n241),  .CK (clk),  .RN (n185),  .QN (n250));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 155
+STI_DAC, "DFFRX1 DAC_inst_data_buffer_reg_4_( .D (n240),  .CK (clk),  .RN (n185),  .QN (n254));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 156
+STI_DAC, "DFFRX1 DAC_inst_data_buffer_reg_5_( .D (n239),  .CK (clk),  .RN (n185),  .QN (n255));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 157
+STI_DAC, "DFFRX1 DAC_inst_data_buffer_reg_6_( .D (n245),  .CK (clk),  .RN (n185),  .QN (n256));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 158
+STI_DAC, "DFFRX1 DAC_inst_mem_addr_reg_1_( .D (n189),  .CK (clk),  .RN (n185),  .QN (n469));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 160
+STI_DAC, "DFFRX1 DAC_inst_mem_addr_reg_3_( .D (n191),  .CK (clk),  .RN (n185),  .QN (n471));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 162
+STI_DAC, "DFFRX1 DAC_inst_mem_addr_reg_4_( .D (n192),  .CK (clk),  .RN (n185),  .QN (n252));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 166
+STI_DAC, "DFFRX1 DAC_inst_wr_flag_reg( .D (DAC_inst_N23),  .CK (clk),  .RN (n185),  .Q (DAC_inst_wr_flag));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 170
+STI_DAC, "DFFRX1 DAC_inst_even_col_flag_reg( .D (n194),  .CK (clk),  .RN (n185),  .Q (DAC_inst_even_col_flag));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 172
+STI_DAC, "DFFRX1 DAC_inst_even_row_flag_reg( .D (n188),  .CK (clk),  .RN (n185),  .Q (DAC_inst_even_row_flag));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+STI_DAC_SYN.v, 178
+STI_DAC, "DFFRX1 DAC_inst_mem_addr_reg_2_( .D (n190),  .CK (clk),  .RN (n185),  .QN (n251));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "STI_DAC_SYN.sdf"
+   ***    Annotation scope: testfixture1.u_rtl
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Sun Jan 26 14:35:07 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Sun Jan 26 14:35:07 2025
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+53 modules and 1 UDP read.
+recompiling module STI_DAC
+recompiling module testfixture1
+recompiling module DFFRX1
+recompiling module NAND4XL
+recompiling module OA21XL
+recompiling module NAND3XL
+recompiling module NAND2BX1
+recompiling module NOR3XL
+recompiling module AND2X1
+recompiling module NAND2XL
+recompiling module NOR2XL
+recompiling module BUFX12
+recompiling module INVXL
+recompiling module INVX1
+recompiling module INVX16
+	However, due to incremental compilation, only 15 modules need to be compiled. 
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2014/2014_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _8301_archive_1.so \
+_8322_archive_1.so _8323_archive_1.so _prev_archive_1.so objs/udps/exIG1.o  SIM_l.o \
+rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o        \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2014/2014_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2014/2014_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 26 14:35 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'STI_DAC_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+--------------------------- Simulation Pattern is ready !!---------------------------
+--------------------------- [ testfuxture1.v ] Simulation START !!---------------------------
+--------------------------- Simulation at parallel data input stage !!---------------------------
+--------------------------- Simulation at serial data output and result verify !! ---------------------------
+--------------------------- so_data simulation FINISH !!---------------------------
+============================================================================
+
+ \(^o^)/  The simulation result of so_data is PASS!!!
+
+============================================================================
+--------------------------- OM-memory and EM-memory simulation FINISH !!---------------------------
+============================================================================
+
+ \(^o^)/  The simulation result of OM-memory and EM-memory is PASS!!!
+
+============================================================================
+$finish called from file "testfixture1.v", line 211.
+$finish at simulation time 33267.4 ns
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 33267366 ps
+CPU Time:      0.560 seconds;       Data structure size:   0.1Mb
+Sun Jan 26 14:35:10 2025
+CPU time: 1.083 seconds to compile + .401 seconds to elab + .706 seconds to link + .611 seconds in simulation

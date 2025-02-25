@@ -1,0 +1,535 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-y /usr/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v -f filelist.f -o simv -l \
+vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
++define+RTL +notimingchecks
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Thu Jan 30 23:06:12 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'tb.sv'
+Parsing included file 'geofence.v'.
+Back to file 'tb.sv'.
+Parsing library directory file '/usr/cad/synopsys/synthesis/cur/dw/sim_ver/DW_sqrt.v'
+Parsing included file 'DW_sqrt_function.inc'.
+Back to file '/usr/cad/synopsys/synthesis/cur/dw/sim_ver/DW_sqrt.v'.
+Top Level Modules:
+       testfixture
+TimeScale is 1 ns / 10 ps
+Starting vcs inline pass...
+
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+1 module and 0 UDP read.
+recompiling module testfixture
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2021/2021_grad_cell/01_RTL/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _837_archive_1.so \
+_858_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o \
+rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc \
+-lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a    -lvcsnew -lsimprofile \
+-luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o \
+/usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a -ldl -lm  -lc -lpthread \
+-ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2021/2021_grad_cell/01_RTL/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2021/2021_grad_cell/01_RTL/./simv +v2k +libext+.v -a vcs.log +define+RTL +notimingchecks
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 30 23:06 2025
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'geofence.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+----------------------
+-- Simulation Start --
+----------------------
+Object1(in):   X     Y     R
+          1:  103,  340,  118
+          2:  755,  510,  567
+          3:  103,   50,  294
+          4:  982,  280,  763
+          5:  298,  560,  252
+          6:  710,   50,  559
+Object1: Golde/Return => 1/1, PASS
+
+Object2(out):  X     Y     R
+          1:  298,  560,  178
+          2:  103,   50,  680
+          3:  103,  340,  397
+          4:  710,   50,  830
+          5:  755,  510,  574
+          6:  982,  280,  879
+Object2: Golde/Return => 0/0, PASS
+
+Object3(out):  X     Y     R
+          1:  400,   80,  272
+          2:  300,  800,  659
+          3:  980,  120,  840
+          4:  710,  620,  732
+          5:  103,  500,  342
+          6:  130,  210,   50
+Object3: Golde/Return => 0/0, PASS
+
+Object4(in):   X     Y     R
+          1:  298,  560,  430
+          2:  755,  510,  707
+          3:  103,   50,  116
+          4:  710,   50,  580
+          5:  982,  280,  850
+          6:  103,  340,  183
+Object4: Golde/Return => 1/1, PASS
+
+Object5(in):   X     Y     R
+          1:  755,  510,  345
+          2:  982,  280,  616
+          3:  298,  560,  122
+          4:  710,   50,  549
+          5:  103,   50,  553
+          6:  103,  340,  350
+Object5: Golde/Return => 1/1, PASS
+
+Object6(out):  X     Y     R
+          1:  755,  510,  743
+          2:  103,  340,  296
+          3:  710,   50,  898
+          4:  982,  280, 1021
+          5:  298,  560,  285
+          6:  103,   50,  580
+Object6: Golde/Return => 0/0, PASS
+
+Object7(out):  X     Y     R
+          1:  103,   50,  748
+          2:  710,   50,  148
+          3:  298,  560,  718
+          4:  755,  510,  420
+          5:  982,  280,  223
+          6:  103,  340,  784
+Object7: Golde/Return => 0/0, PASS
+
+Object8(out):  X     Y     R
+          1:  300,  800,  330
+          2:  710,  620,  690
+          3:  400,   80,  664
+          4:  103,  500,  150
+          5:  130,  210,  429
+          6:  980,  120, 1084
+Object8: Golde/Return => 0/0, PASS
+
+Object9(in):   X     Y     R
+          1:  302,  423,  574
+          2:  503,  521,  501
+          3:  694,  768,  420
+          4:   10,  664,  468
+          5:   43, 1003,  298
+          6:  694, 1023,  354
+Object9: Golde/Return => 1/1, PASS
+
+Object10(out):  X     Y     R
+          1:  710,  620,  316
+          2:  980,  120,  561
+          3:  130,  210, 1007
+          4:  400,   80,  863
+          5:  103,  500,  935
+          6:  300,  800,  730
+Object10: Golde/Return => 0/0, PASS
+
+Object11(in):   X     Y     R
+          1:  302,  423,  315
+          2:  694,  768,  546
+          3:  694, 1023,  630
+          4:  503,  521,  394
+          5:   43, 1003,  322
+          6:   10,  664,  146
+Object11: Golde/Return => 1/1, PASS
+
+Object12(in):   X     Y     R
+          1:  980,  120,  733
+          2:  710,  620,  217
+          3:  103,  500,  433
+          4:  130,  210,  594
+          5:  300,  800,  235
+          6:  400,   80,  603
+Object12: Golde/Return => 1/1, PASS
+
+Object13(out):  X     Y     R
+          1:  694, 1023,  392
+          2:   10,  664,  622
+          3:  503,  521,  172
+          4:  694,  768,  146
+          5:  302,  423,  392
+          6:   43, 1003,  694
+Object13: Golde/Return => 0/0, PASS
+
+Object14(in):   X     Y     R
+          1:  321,  870,  378
+          2: 1010,  643,  690
+          3:  321,  127,  365
+          4:  432,  123,  381
+          5:  567, 1003,  560
+          6:  970,  280,  668
+Object14: Golde/Return => 1/1, PASS
+
+Object15(out):  X     Y     R
+          1:  755,  510,  390
+          2:  103,   50,  732
+          3:  103,  340,  487
+          4:  298,  560,  193
+          5:  982,  280,  707
+          6:  710,   50,  720
+Object15: Golde/Return => 0/0, PASS
+
+Object16(out):  X     Y     R
+          1:  300,  800,  628
+          2:  980,  120,  875
+          3:  130,  210, 1096
+          4:  400,   80, 1039
+          5:  103,  500,  934
+          6:  710,  620,  416
+Object16: Golde/Return => 0/0, PASS
+
+Object17(out):  X     Y     R
+          1:  103,  500,  784
+          2:  130,  210,  753
+          3:  400,   80,  540
+          4:  710,  620,  320
+          5:  980,  120,  247
+          6:  300,  800,  732
+Object17: Golde/Return => 0/0, PASS
+
+Object18(in):   X     Y     R
+          1:  503,  521,  154
+          2:  694,  768,  215
+          3:  694, 1023,  398
+          4:   43, 1003,  562
+          5:   10,  664,  490
+          6:  302,  423,  320
+Object18: Golde/Return => 1/1, PASS
+
+Object19(in):   X     Y     R
+          1:   43, 1003,  595
+          2:  302,  423,  550
+          3:   10,  664,  646
+          4:  694, 1023,  168
+          5:  694,  768,  124
+          6:  503,  521,  369
+Object19: Golde/Return => 1/1, PASS
+
+Object20(in):   X     Y     R
+          1:  980,  120,  785
+          2:  103,  500,  214
+          3:  710,  620,  574
+          4:  130,  210,  142
+          5:  300,  800,  486
+          6:  400,   80,  300
+Object20: Golde/Return => 1/1, PASS
+
+Object21(out):  X     Y     R
+          1:  432,  123,  834
+          2:  321,  127,  833
+          3:  567, 1003,  173
+          4:  321,  870,  117
+          5:  970,  280,  885
+          6: 1010,  643,  686
+Object21: Golde/Return => 0/0, PASS
+
+Object22(in):   X     Y     R
+          1:  710,   50,  238
+          2:  103,  340,  777
+          3:  982,  280,  122
+          4:  755,  510,  308
+          5:  298,  560,  664
+          6:  103,   50,  788
+Object22: Golde/Return => 1/1, PASS
+
+Object23(in):   X     Y     R
+          1:  982,  280,  586
+          2:  103,   50,  337
+          3:  755,  510,  464
+          4:  710,   50,  348
+          5:  103,  340,  324
+          6:  298,  560,  364
+Object23: Golde/Return => 1/1, PASS
+
+Object24(in):   X     Y     R
+          1:  503,  521,  205
+          2:   43, 1003,  571
+          3:  302,  423,   69
+          4:   10,  664,  337
+          5:  694, 1023,  661
+          6:  694,  768,  481
+Object24: Golde/Return => 1/1, PASS
+
+Object25(out):  X     Y     R
+          1:  321,  127,  922
+          2:  567, 1003,  228
+          3:  970,  280,  672
+          4: 1010,  643,  363
+          5:  432,  123,  875
+          6:  321,  870,  464
+Object25: Golde/Return => 0/0, PASS
+
+Object26(in):   X     Y     R
+          1:  970,  280,  684
+          2:  432,  123,  771
+          3: 1010,  643,  448
+          4:  321,  127,  802
+          5:  321,  870,  302
+          6:  567, 1003,  144
+Object26: Golde/Return => 1/1, PASS
+
+Object27(out):  X     Y     R
+          1:  755,  510,  386
+          2:  103,   50,  848
+          3:  982,  280,  709
+          4:  710,   50,  778
+          5:  103,  340,  607
+          6:  298,  560,  313
+Object27: Golde/Return => 0/0, PASS
+
+Object28(out):  X     Y     R
+          1:  503,  521,  494
+          2:  302,  423,  346
+          3:  694, 1023,  782
+          4:   10,  664,   40
+          5:   43, 1003,  378
+          6:  694,  768,  689
+Object28: Golde/Return => 0/0, PASS
+
+Object29(out):  X     Y     R
+          1:  567, 1003,  516
+          2:  970,  280,  823
+          3:  321,  870,  269
+          4:  432,  123,  540
+          5: 1010,  643,  790
+          6:  321,  127,  503
+Object29: Golde/Return => 0/0, PASS
+
+Object30(in):   X     Y     R
+          1:  103,  340,  769
+          2:  710,   50,  334
+          3:  103,   50,  822
+          4:  298,  560,  613
+          5:  755,  510,  203
+          6:  982,  280,  126
+Object30: Golde/Return => 1/1, PASS
+
+Object31(out):  X     Y     R
+          1:  503,  521,  582
+          2:  694, 1023, 1097
+          3:   10,  664,  571
+          4:   43, 1003,  904
+          5:  694,  768,  893
+          6:  302,  423,  380
+Object31: Golde/Return => 0/0, PASS
+
+Object32(out):  X     Y     R
+          1:  694, 1023,  377
+          2:   10,  664,  968
+          3:  503,  521,  530
+          4:   43, 1003,  959
+          5:  302,  423,  754
+          6:  694,  768,  279
+Object32: Golde/Return => 0/0, PASS
+
+Object33(in):   X     Y     R
+          1:  321,  870,  389
+          2: 1010,  643,  378
+          3:  567, 1003,  373
+          4:  970,  280,  490
+          5:  321,  127,  595
+          6:  432,  123,  549
+Object33: Golde/Return => 1/1, PASS
+
+Object34(in):   X     Y     R
+          1:  103,  500,  307
+          2:  400,   80,  430
+          3:  130,  210,  410
+          4:  710,  620,  319
+          5:  980,  120,  690
+          6:  300,  800,  310
+Object34: Golde/Return => 1/1, PASS
+
+Object35(in):   X     Y     R
+          1:  503,  521,  299
+          2:   43, 1003,  421
+          3:  694, 1023,  622
+          4:   10,  664,  214
+          5:  694,  768,  496
+          6:  302,  423,  213
+Object35: Golde/Return => 1/1, PASS
+
+Object36(out):  X     Y     R
+          1:  103,   50,  918
+          2:  298,  560,  884
+          3:  710,   50,  311
+          4:  103,  340,  962
+          5:  982,  280,  233
+          6:  755,  510,  531
+Object36: Golde/Return => 0/0, PASS
+
+Object37(out):  X     Y     R
+          1:   10,  664,  815
+          2:  694,  768,  180
+          3:   43, 1003,  743
+          4:  694, 1023,  130
+          5:  302,  423,  695
+          6:  503,  521,  491
+Object37: Golde/Return => 0/0, PASS
+
+Object38(out):  X     Y     R
+          1:  400,   80,  836
+          2:  300,  800,  110
+          3:  103,  500,  454
+          4:  980,  120, 1042
+          5:  130,  210,  720
+          6:  710,  620,  502
+Object38: Golde/Return => 0/0, PASS
+
+Object39(in):   X     Y     R
+          1:  321,  870,  724
+          2:  567, 1003,  786
+          3:  321,  127,  333
+          4:  432,  123,  230
+          5:  970,  280,  334
+          6: 1010,  643,  561
+Object39: Golde/Return => 1/1, PASS
+
+Object40(in):   X     Y     R
+          1:  400,   80,  493
+          2:  103,  500,  816
+          3:  710,  620,  426
+          4:  130,  210,  742
+          5:  300,  800,  811
+          6:  980,  120,  150
+Object40: Golde/Return => 1/1, PASS
+
+Object41(out):  X     Y     R
+          1:  970,  280,  344
+          2:  321,  870,  774
+          3:  432,  123,  217
+          4:  321,  127,  326
+          5: 1010,  643,  600
+          6:  567, 1003,  840
+Object41: Golde/Return => 0/0, PASS
+
+Object42(out):  X     Y     R
+          1:  321,  127,  936
+          2:  321,  870,  655
+          3:  970,  280,  519
+          4:  567, 1003,  454
+          5:  432,  123,  865
+          6: 1010,  643,  160
+Object42: Golde/Return => 0/0, PASS
+
+Object43(in):   X     Y     R
+          1:  567, 1003,  551
+          2:  321,  127,  600
+          3: 1010,  643,  261
+          4:  321,  870,  599
+          5:  432,  123,  520
+          6:  970,  280,  282
+Object43: Golde/Return => 1/1, PASS
+
+Object44(in):   X     Y     R
+          1:  710,  620,  514
+          2:  130,  210,  270
+          3:  300,  800,  598
+          4:  103,  500,  415
+          5:  400,   80,  130
+          6:  980,  120,  586
+Object44: Golde/Return => 1/1, PASS
+
+Object45(out):  X     Y     R
+          1:   10,  664,  849
+          2:  694, 1023,  924
+          3:  503,  521,  444
+          4:  694,  768,  669
+          5:  302,  423,  471
+          6:   43, 1003, 1085
+Object45: Golde/Return => 0/0, PASS
+
+Object46(out):  X     Y     R
+          1:  980,  120,  968
+          2:  710,  620,  500
+          3:  300,  800,  113
+          4:  103,  500,  249
+          5:  130,  210,  517
+          6:  400,   80,  664
+Object46: Golde/Return => 0/0, PASS
+
+Object47(out):  X     Y     R
+          1:  103,  500,  420
+          2:  300,  800,  739
+          3:  400,   80,  270
+          4:  130,  210,  130
+          5:  710,  620,  792
+          6:  980,  120,  850
+Object47: Golde/Return => 0/0, PASS
+
+Object48(in):   X     Y     R
+          1:  321,  870,  264
+          2: 1010,  643,  511
+          3:  321,  127,  576
+          4:  567, 1003,  334
+          5:  432,  123,  556
+          6:  970,  280,  613
+Object48: Golde/Return => 1/1, PASS
+
+Object49(out):  X     Y     R
+          1:  567, 1003, 1016
+          2: 1010,  643, 1059
+          3:  321,  127,  222
+          4:  432,  123,  332
+          5:  321,  870,  801
+          6:  970,  280,  888
+Object49: Golde/Return => 0/0, PASS
+
+Object50(out):  X     Y     R
+          1:  321,  870,  130
+          2:  432,  123,  883
+          3:  970,  280,  969
+          4:  567, 1003,  246
+          5:  321,  127,  873
+          6: 1010,  643,  775
+Object50: Golde/Return => 0/0, PASS
+
+-------------------------------------------------
+--    Simulation finish,  ALL PASS             --
+-------------------------------------------------
+$finish called from file "tb.sv", line 156.
+$finish at simulation time             11275000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 112750000 ps
+CPU Time:      0.510 seconds;       Data structure size:   0.0Mb
+Thu Jan 30 23:06:15 2025
+CPU time: .777 seconds to compile + .523 seconds to elab + .478 seconds to link + .561 seconds in simulation

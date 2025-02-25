@@ -1,0 +1,220 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Fri Jan 31 07:41:31 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'tb.sv'
+Parsing included file 'LASER_SYN.v'.
+Back to file 'tb.sv'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       testfixture
+TimeScale is 1 ns / 1 ps
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "LASER_SYN.sdf"
+   ***    Annotation scope: testfixture.u_LASER
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Fri Jan 31 07:41:32 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Fri Jan 31 07:41:32 2025
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+96 modules and 2 UDPs read.
+recompiling module LASER
+recompiling module ADDFXL
+recompiling module ADDFX2
+recompiling module ADDFHX2
+recompiling module ADDFHX4
+recompiling module ADDHXL
+recompiling module ADDHX2
+recompiling module AOI33X1
+recompiling module OAI33X1
+recompiling module OAI33X2
+recompiling module OAI33X4
+recompiling module DFFQX1
+recompiling module DFFQX2
+recompiling module DFFHQX2
+recompiling module DFFHQX4
+recompiling module AO22X1
+recompiling module AO22X2
+recompiling module OAI22XL
+recompiling module OAI22X1
+recompiling module XOR2X1
+recompiling module XOR2X2
+recompiling module XOR2X4
+recompiling module XNOR2XL
+recompiling module XNOR2X1
+recompiling module XNOR2X2
+recompiling module XNOR2X4
+recompiling module AOI211XL
+recompiling module AOI211X1
+recompiling module AOI31X4
+recompiling module MXI2X1
+recompiling module MXI2X2
+recompiling module MXI2X4
+recompiling module OAI211XL
+recompiling module OAI31XL
+recompiling module AOI21XL
+recompiling module AOI21X1
+recompiling module AOI21X2
+recompiling module AOI21X4
+recompiling module NAND4XL
+recompiling module NAND4X1
+recompiling module NAND4X2
+recompiling module OAI21XL
+recompiling module OAI21X1
+recompiling module OAI21X2
+recompiling module OAI21X4
+recompiling module OAI2BB1X1
+recompiling module OAI2BB1X2
+recompiling module OA21XL
+recompiling module CLKMX2X2
+recompiling module CLKMX2X4
+recompiling module NAND3XL
+recompiling module NOR3XL
+recompiling module NOR3X1
+recompiling module NOR3X2
+recompiling module NOR3X6
+recompiling module AND2X1
+recompiling module BUFX12
+recompiling module BUFX20
+recompiling module INVXL
+recompiling module INVX1
+recompiling module INVX2
+recompiling module INVX3
+recompiling module INVX4
+recompiling module INVX6
+recompiling module INVX8
+recompiling module INVX12
+recompiling module INVX16
+recompiling module INVX20
+recompiling module CLKBUFX8
+recompiling module CLKINVX1
+recompiling module CLKINVX6
+recompiling module NOR2BXL
+recompiling module NOR2BX1
+recompiling module NOR2BX2
+recompiling module AND2X2
+recompiling module AND2X6
+recompiling module NAND2XL
+recompiling module NAND2X1
+recompiling module NAND2X2
+recompiling module NAND2X4
+recompiling module NAND2X6
+recompiling module NOR2XL
+recompiling module NOR2X1
+recompiling module NOR2X2
+recompiling module NOR2X4
+recompiling module NOR2X6
+recompiling module OR2X1
+recompiling module OR2X2
+recompiling module CLKAND2X3
+	However, due to incremental compilation, only 89 modules need to be compiled. 
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2023/2023_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _30156_archive_1.so \
+_30177_archive_1.so _30179_archive_1.so _prev_archive_1.so objs/udps/U7Vwg.o objs/udps/exIG1.o \
+SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2023/2023_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2023/2023_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 31 07:41 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'LASER_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+*******************************
+** Simulation Start          **
+*******************************
+== PATTERN ../00_TESTBED/img1.pattern
+---- Used Cycle:        738
+---- Get Return: C1(11,12),C2( 4,10)
+---- cover =  30, optimum =  30
+== PATTERN ../00_TESTBED/img2.pattern
+---- Used Cycle:        738
+---- Get Return: C1(11, 6),C2( 5,11)
+---- cover =  28, optimum =  28
+== PATTERN ../00_TESTBED/img3.pattern
+---- Used Cycle:        738
+---- Get Return: C1(10, 5),C2( 5,10)
+---- cover =  29, optimum =  29
+== PATTERN ../00_TESTBED/img4.pattern
+---- Used Cycle:        538
+---- Get Return: C1( 9, 6),C2( 3, 7)
+---- cover =  30, optimum =  30
+== PATTERN ../00_TESTBED/img5.pattern
+---- Used Cycle:        738
+---- Get Return: C1( 4,10),C2(10,11)
+---- cover =  23, optimum =  23
+== PATTERN ../00_TESTBED/img6.pattern
+---- Used Cycle:       1138
+---- Get Return: C1( 8, 9),C2(12, 3)
+---- cover =  30, optimum =  30
+
+*******************************
+**   Finish Simulation       **
+**   RUN CYCLE =       4883  **
+**   Cover total = 170/170   **
+*******************************
+$finish called from file "tb.sv", line 263.
+$finish at simulation time             39060000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 39060000 ps
+CPU Time:      4.970 seconds;       Data structure size:   0.9Mb
+Fri Jan 31 07:41:38 2025
+CPU time: 1.947 seconds to compile + .519 seconds to elab + .768 seconds to link + 5.029 seconds in simulation

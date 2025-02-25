@@ -1,0 +1,36 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Sun Jan 26 15:06:13 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      7
+    Shorted outputs (LINT-31)                                       6
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+
+Nets                                                                7
+    Unloaded nets (LINT-2)                                          7
+--------------------------------------------------------------------------------
+
+Warning: In design 'LCD_CTRL', cell 'B_258' does not drive any nets. (LINT-1)
+Warning: In design 'LCD_CTRL', net 'net550' driven by pin 'add_64_3/Z_0' has no loads. (LINT-2)
+Warning: In design 'LCD_CTRL', net 'net549' driven by pin 'add_64_3/Z_1' has no loads. (LINT-2)
+Warning: In design 'LCD_CTRL', net 'net548' driven by pin 'C4545/Z' has no loads. (LINT-2)
+Warning: In design 'LCD_CTRL', net 'net547' driven by pin 'C4541/Z' has no loads. (LINT-2)
+Warning: In design 'LCD_CTRL', net 'net546' driven by pin 'C4521/Z' has no loads. (LINT-2)
+Warning: In design 'LCD_CTRL', net 'net545' driven by pin 'C4517/Z' has no loads. (LINT-2)
+Warning: In design 'LCD_CTRL', net 'net544' driven by pin 'C4500/Z' has no loads. (LINT-2)
+Warning: In design 'LCD_CTRL', output port 'IROM_A[5]' is connected directly to output port 'IRAM_A[5]'. (LINT-31)
+Warning: In design 'LCD_CTRL', output port 'IROM_A[4]' is connected directly to output port 'IRAM_A[4]'. (LINT-31)
+Warning: In design 'LCD_CTRL', output port 'IROM_A[3]' is connected directly to output port 'IRAM_A[3]'. (LINT-31)
+Warning: In design 'LCD_CTRL', output port 'IROM_A[2]' is connected directly to output port 'IRAM_A[2]'. (LINT-31)
+Warning: In design 'LCD_CTRL', output port 'IROM_A[1]' is connected directly to output port 'IRAM_A[1]'. (LINT-31)
+Warning: In design 'LCD_CTRL', output port 'IROM_A[0]' is connected directly to output port 'IRAM_A[0]'. (LINT-31)
+Warning: In design 'LCD_CTRL', output port 'IROM_rd' is connected directly to 'logic 1'. (LINT-52)
+1

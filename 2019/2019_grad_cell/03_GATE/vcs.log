@@ -1,0 +1,378 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Tue Jan 28 16:58:07 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'testfixture.v'
+Parsing included file 'CONV_SYN.v'.
+Back to file 'testfixture.v'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       testfixture
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 126
+CONV, "CONV_DW_cmp_0 gt_228( .A ({1'b0, pool_reg}),  .B (cdata_rd),  .TC (1'b0),  .GE_LT (1'b0),  .GE_GT_EQ (1'b1),  .GE_LT_GT_LE (N428));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 134
+CONV, "CONV_DW01_add_J2_0 add_53( .A ({psum_reg[39], psum_reg}),  .B ({n625, n625, n625, n625, n625, n625, n625, n625, n625, 1'b0, n625, n625, 1'b1, 1'b0, 1'b0, 1'b1, N99, n625, 1'b0, 1'b0, 1'b1, 1'b0, n625, 1'b0, n625, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b0}),  .CI (1'b0),  .SUM ({psum_bias_40, SYNOPSYS_UNCONNECTED_2, SYNOPSYS_UNCONNECTED_3, SYNOPSYS_UNCONNECTED_4, SYNOPSYS_UNCONNECTED_5, psum_bias, SYNOPSYS_UNCONNECTED_6, SYNOPSYS_UNCONNECTED_7, SYNOPSYS_UNCONNECTED_8, SYNOPSYS_UNCONNECTED_9, SYNOPSYS_UNCONNECTED_10, SYNOPSYS_UNCONNECTED_11, SYNOPSYS_UNCONNECTED_12, SYNOPSYS_UNCONNECTED_13, SYNOPSYS_UNCONNECTED_14, SYNOPSYS_UNCONNECTED_15, SYNOPSYS_UNCONNECTED_16, SYNOPSYS_UNCONNECTED_17, SYNOPSYS_UNCON ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 175
+CONV, "CONV_DW01_add_4 add_210_aco( .A ({N1231, N1230, N1229, N1228, N1227, N1226, N1225, N1224, N1223, N1222, N1221, N1220, N1219, N1218, N1217, N1216, N1215, N1214, N1213, N1212, N1211, N1210, N1209, N1208, N1207, N1206, N1205, N1204, N1203, N1202, N1201, N1200, N1199, N1198, N1197, N1196, N1195, N1194, N1193, N1192}),  .B ({psum_wire_39_, psum_wire_38_, psum_wire_37_, psum_wire_36_, psum_wire_35_, psum_wire_34_, psum_wire_33_, psum_wire_32_, psum_wire_31_, psum_wire_30_, psum_wire_29_, psum_wire_28_, psum_wire_27_, psum_wire_26_, psum_wire_25_, psum_wire_24_, psum_wire_23_, psum_wire_22_, psum_wire_21_, psum_wire_20_, psum_wire_19_, psum_wire_18_, psum_wire_17_, psum_wire_16_, psum_wire_15_, psum_wire_14_, psum_wire_13_, psum_wire_12_, psum_wire_11_, psum_w ... "
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 193
+CONV, "DFFRX1 count_done_reg2_reg( .D (count_done_reg),  .CK (clk),  .RN (n627),  .QN (n291));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 196
+CONV, "DFFRX1 conv_done_reg_reg( .D (conv_done_reg2),  .CK (clk),  .RN (n626),  .Q (conv_done_reg));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 232
+CONV, "DFFRXL pool_reg_reg_0_( .D (n3850),  .CK (clk),  .RN (n627),  .Q (pool_reg[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 235
+CONV, "DFFRX1 pool_reg_reg_11_( .D (n3740),  .CK (clk),  .RN (n627),  .Q (pool_reg[11]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 245
+CONV, "DFFRX1 count_done_reg_reg( .D (n834),  .CK (clk),  .RN (n626),  .Q (count_done_reg));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 246
+CONV, "DFFRX1 conv_done_reg1_reg( .D (n803),  .CK (clk),  .RN (n626),  .Q (conv_done_reg1));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 247
+CONV, "DFFRX1 conv_done_reg2_reg( .D (conv_done_reg1),  .CK (clk),  .RN (n626),  .Q (conv_done_reg2));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 354
+CONV, "DFFTRX1 ifmap_reg_reg_13_( .D (idata[13]),  .RN (n454),  .CK (clk),  .Q (ifmap_reg[13]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+CONV_SYN.v, 356
+CONV, "DFFRX1 caddr_wr_reg_10_( .D (n294),  .CK (clk),  .RN (n804),  .QN (n345));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "CONV_SYN.sdf"
+   ***    Annotation scope: testfixture.u_CONV
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Tue Jan 28 16:58:08 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Tue Jan 28 16:58:08 2025
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+164 modules and 3 UDPs read.
+recompiling module CONV_DW01_add_4
+recompiling module CONV
+recompiling module CONV_DW_mult_tc_2
+recompiling module testfixture
+recompiling module CONV_DW01_add_J2_0
+recompiling module CONV_DW01_inc_4
+recompiling module CONV_DW_mult_uns_0
+recompiling module BUFX3
+recompiling module BUFX4
+recompiling module BUFX6
+recompiling module BUFX8
+recompiling module BUFX12
+recompiling module BUFX16
+recompiling module BUFX20
+recompiling module INVXL
+recompiling module INVX1
+recompiling module INVX2
+recompiling module INVX3
+recompiling module INVX4
+recompiling module INVX6
+recompiling module INVX8
+recompiling module INVX16
+recompiling module CLKBUFX2
+recompiling module CLKBUFX3
+recompiling module CLKBUFX4
+recompiling module CLKBUFX6
+recompiling module CLKINVX1
+recompiling module CLKINVX2
+recompiling module CLKINVX3
+recompiling module CLKINVX6
+recompiling module CLKINVX12
+recompiling module CONV_DW_cmp_0
+recompiling module CMPR42X1
+recompiling module CMPR42X2
+recompiling module CMPR32X2
+recompiling module ADDFX2
+recompiling module ADDFHX1
+recompiling module ADDFHX2
+recompiling module ADDFHX4
+recompiling module DFFTRX1
+recompiling module DFFRXL
+recompiling module DFFRX1
+recompiling module DFFRX2
+recompiling module DFFRX4
+recompiling module CONV_DW01_inc_0_DW01_inc_1
+recompiling module AOI222X1
+recompiling module OAI222XL
+recompiling module OAI222X1
+recompiling module OAI222X2
+recompiling module OAI222X4
+recompiling module ADDHXL
+recompiling module ADDHX1
+recompiling module ADDHX2
+recompiling module ADDHX4
+recompiling module DFFRHQX1
+recompiling module AOI221X1
+recompiling module AOI221X2
+recompiling module OAI221XL
+recompiling module OAI221X1
+recompiling module OAI32X1
+recompiling module DFFQX1
+recompiling module DFFQX2
+recompiling module DFFQX4
+recompiling module DFFQXL
+recompiling module DFFHQX4
+recompiling module AOI22X1
+recompiling module AND2XL
+recompiling module AOI2BB2X1
+recompiling module AO22XL
+recompiling module AO22X1
+recompiling module NOR4BBX1
+recompiling module OAI22XL
+recompiling module OAI22X1
+recompiling module OAI22X2
+recompiling module OAI22X4
+recompiling module OA22X1
+recompiling module CLKXOR2X2
+recompiling module XOR2XL
+recompiling module XOR2X1
+recompiling module XOR2X2
+recompiling module XOR2X4
+recompiling module XNOR2XL
+recompiling module XNOR2X1
+recompiling module XNOR2X2
+recompiling module XNOR2X4
+recompiling module MXI2X1
+recompiling module MXI2X2
+recompiling module MXI2X4
+recompiling module NAND4BX1
+recompiling module OAI211XL
+recompiling module OAI211X1
+recompiling module OAI211X2
+recompiling module AND4X1
+recompiling module AOI21XL
+recompiling module AOI21X1
+recompiling module AOI21X2
+recompiling module AOI21X4
+recompiling module AOI2BB1XL
+recompiling module AOI2BB1X1
+recompiling module AOI2BB1X4
+recompiling module AO21XL
+recompiling module AO21X1
+recompiling module AO21X2
+recompiling module AO21X4
+recompiling module MX2XL
+recompiling module MX2X1
+recompiling module MX2X2
+recompiling module NAND4XL
+recompiling module NAND4X1
+recompiling module NAND3BXL
+recompiling module NAND3BX1
+recompiling module NAND3BX2
+recompiling module NAND3BX4
+recompiling module NOR4X1
+recompiling module OAI21XL
+recompiling module OAI21X1
+recompiling module OAI21X2
+recompiling module OAI21X4
+recompiling module OAI2BB1XL
+recompiling module OAI2BB1X1
+recompiling module OA21XL
+recompiling module OA21X2
+recompiling module OA21X4
+recompiling module CLKMX2X2
+recompiling module AND3X2
+recompiling module AND3X4
+recompiling module NAND3XL
+recompiling module NAND3X1
+recompiling module NAND2BXL
+recompiling module NAND2BX1
+recompiling module NAND2BX2
+recompiling module NAND2BX4
+recompiling module NOR3X1
+recompiling module NOR2BXL
+recompiling module NOR2BX1
+recompiling module AND2X1
+recompiling module AND2X2
+recompiling module AND2X4
+recompiling module AND2X6
+recompiling module NAND2XL
+recompiling module NAND2X1
+recompiling module NAND2X2
+recompiling module NAND2X4
+recompiling module NAND2X6
+recompiling module NAND2X8
+recompiling module NOR2XL
+recompiling module NOR2X1
+recompiling module NOR2X2
+recompiling module NOR2X4
+recompiling module NOR2X6
+recompiling module NOR2X8
+recompiling module OR2XL
+recompiling module OR2X1
+recompiling module OR2X2
+recompiling module OR2X4
+recompiling module OR2X6
+recompiling module OR2X8
+recompiling module CLKAND2X3
+recompiling module CLKAND2X8
+	However, due to incremental compilation, only 159 modules need to be compiled. 
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2019/2019_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _12583_archive_1.so \
+_12604_archive_1.so _12605_archive_1.so _12606_archive_1.so _12607_archive_1.so _12608_archive_1.so \
+_prev_archive_1.so objs/udps/uYEPC.o objs/udps/U7Vwg.o objs/udps/exIG1.o  SIM_l.o \
+rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o        \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2019/2019_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2019/2019_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 28 16:58 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'CONV_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+-----------------------------------------------------
+
+START!!! Simulation Start .....
+
+-----------------------------------------------------
+
+Layer 0 (Convolutional Output) with Kernel 0 is correct !
+Layer 0 (Convolutional Output) with Kernel 1 is correct!
+Layer 1 (Max-pooling Output) with Kernel 0 is correct!
+Layer 1 (Max-pooling Output) with Kernel 1 is correct!
+Layer 2 (Flatten  Output) is correct!
+ 
+-----------------------------------------------------
+
+--------------------- S U M M A R Y -----------------
+
+Congratulations! Layer 0 data have been generated successfully! The result is PASS!!
+
+Congratulations! Layer 1 data have been generated successfully! The result is PASS!!
+
+Congratulations! Layer 2 data have been generated successfully! The result is PASS!!
+
+-----------------------------------------------------
+
+$finish called from file "testfixture.v", line 279.
+$finish at simulation time            704602077
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 704602077 ps
+CPU Time:     76.560 seconds;       Data structure size:   0.7Mb
+Tue Jan 28 16:58:55 2025
+CPU time: 2.289 seconds to compile + .534 seconds to elab + .845 seconds to link + 76.623 seconds in simulation

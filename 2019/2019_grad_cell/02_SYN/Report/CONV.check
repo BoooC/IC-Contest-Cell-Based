@@ -1,0 +1,56 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Tue Jan 28 16:57:42 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               9
+    Cells do not drive (LINT-1)                                     9
+
+Nets                                                               30
+    Unloaded nets (LINT-2)                                         30
+--------------------------------------------------------------------------------
+
+Warning: In design 'CONV', cell 'B_100' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', cell 'B_102' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', cell 'B_103' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', cell 'B_104' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', cell 'B_105' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', cell 'B_106' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', cell 'B_107' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', cell 'B_108' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', cell 'B_109' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', net 'net348' driven by pin 'add_53/Z_0' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net347' driven by pin 'add_53/Z_1' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net346' driven by pin 'add_53/Z_2' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net345' driven by pin 'add_53/Z_3' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net344' driven by pin 'add_53/Z_4' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net343' driven by pin 'add_53/Z_5' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net342' driven by pin 'add_53/Z_6' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net341' driven by pin 'add_53/Z_7' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net340' driven by pin 'add_53/Z_8' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net339' driven by pin 'add_53/Z_9' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net338' driven by pin 'add_53/Z_10' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net337' driven by pin 'add_53/Z_11' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net336' driven by pin 'add_53/Z_12' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net335' driven by pin 'add_53/Z_13' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net334' driven by pin 'add_53/Z_14' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net333' driven by pin 'add_53/Z_36' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net332' driven by pin 'add_53/Z_37' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net331' driven by pin 'add_53/Z_38' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net330' driven by pin 'add_53/Z_39' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net329' driven by pin 'C2363/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net328' driven by pin 'C2362/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net327' driven by pin 'C2361/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net326' driven by pin 'C2314/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net325' driven by pin 'C2208/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net324' driven by pin 'C2364/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net323' driven by pin 'C2078/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net322' driven by pin 'C2068/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net321' driven by pin 'C2063/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net320' driven by pin 'C2048/Z' has no loads. (LINT-2)
+Warning: In design 'CONV', net 'net319' driven by pin 'C2043/Z' has no loads. (LINT-2)
+1

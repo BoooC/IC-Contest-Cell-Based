@@ -1,0 +1,142 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : huffman
+Version: U-2022.12
+Date   : Mon Jan 27 23:53:48 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: gray_data[6]
+              (input port clocked by clk)
+  Endpoint: symbol_P_reg[3][2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  huffman            tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     3.50       4.00 f
+  gray_data[6] (in)                        0.03       4.03 f
+  U1793/Y (NOR4X6)                         0.22       4.25 r
+  U1794/Y (NAND2BX4)                       0.19       4.44 f
+  U1795/Y (NOR3X4)                         0.24       4.68 r
+  U1812/Y (NOR2BX4)                        0.29       4.97 r
+  U1635/Y (CLKINVX1)                       0.57       5.54 f
+  U1897/Y (NOR2X1)                         0.51       6.04 r
+  U1898/Y (NOR2X1)                         0.26       6.30 f
+  U2515/Y (OAI21XL)                        0.32       6.63 r
+  U2516/Y (AOI22X1)                        0.26       6.88 f
+  U2517/Y (OAI31X1)                        0.23       7.11 r
+  symbol_P_reg[3][2]/D (DFFRX1)            0.00       7.11 r
+  data arrival time                                   7.11
+
+  clock clk (rise edge)                    7.00       7.00
+  clock network delay (ideal)              0.50       7.50
+  clock uncertainty                       -0.10       7.40
+  symbol_P_reg[3][2]/CK (DFFRX1)           0.00       7.40 r
+  library setup time                      -0.28       7.12
+  data required time                                  7.12
+  -----------------------------------------------------------
+  data required time                                  7.12
+  data arrival time                                  -7.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: gray_data[6]
+              (input port clocked by clk)
+  Endpoint: symbol_P_reg[4][4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  huffman            tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     3.50       4.00 f
+  gray_data[6] (in)                        0.03       4.03 f
+  U1793/Y (NOR4X6)                         0.22       4.25 r
+  U1794/Y (NAND2BX4)                       0.19       4.44 f
+  U1826/Y (NOR4X6)                         0.29       4.73 r
+  U1827/Y (NAND2X2)                        0.33       5.06 f
+  U1606/Y (CLKINVX1)                       0.48       5.54 r
+  U1828/Y (OAI21X2)                        0.30       5.84 f
+  U1829/Y (AOI2BB1X1)                      0.38       6.22 r
+  U2557/Y (OAI21XL)                        0.28       6.50 f
+  U2558/Y (AOI22X1)                        0.34       6.85 r
+  U1146/Y (OAI31XL)                        0.27       7.11 f
+  symbol_P_reg[4][4]/D (DFFRX1)            0.00       7.11 f
+  data arrival time                                   7.11
+
+  clock clk (rise edge)                    7.00       7.00
+  clock network delay (ideal)              0.50       7.50
+  clock uncertainty                       -0.10       7.40
+  symbol_P_reg[4][4]/CK (DFFRX1)           0.00       7.40 r
+  library setup time                      -0.26       7.14
+  data required time                                  7.14
+  -----------------------------------------------------------
+  data required time                                  7.14
+  data arrival time                                  -7.11
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: gray_valid (input port clocked by clk)
+  Endpoint: symbol_P_reg[5][1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  huffman            tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     3.50       4.00 f
+  gray_valid (in)                          0.12       4.12 f
+  U1811/Y (NAND2X2)                        0.23       4.35 r
+  U1862/Y (NOR3X4)                         0.19       4.54 f
+  U1601/Y (NAND2X1)                        0.67       5.21 r
+  U1885/Y (NAND2X2)                        0.32       5.54 f
+  U1105/Y (OAI21XL)                        0.52       6.06 r
+  U1096/Y (INVXL)                          0.26       6.32 f
+  U1630/Y (OAI21XL)                        0.33       6.65 r
+  U1044/Y (OAI22XL)                        0.31       6.96 f
+  U2914/Y (OAI2BB1X1)                      0.23       7.19 r
+  symbol_P_reg[5][1]/D (DFFRX2)            0.00       7.19 r
+  data arrival time                                   7.19
+
+  clock clk (rise edge)                    7.00       7.00
+  clock network delay (ideal)              0.50       7.50
+  clock uncertainty                       -0.10       7.40
+  symbol_P_reg[5][1]/CK (DFFRX2)           0.00       7.40 r
+  library setup time                      -0.18       7.22
+  data required time                                  7.22
+  -----------------------------------------------------------
+  data required time                                  7.22
+  data arrival time                                  -7.19
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+1

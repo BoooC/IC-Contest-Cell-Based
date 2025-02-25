@@ -1,0 +1,233 @@
+Command: vcs -timescale=1ns/1fs -j8 -sverilog +v2k -full64 -Mupdate -R -debug_access+all \
+-f filelist.f -o simv -l vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab \
+/usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a -v /home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v \
++define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version U-2023.03_Full64 -- Fri Jan 31 01:28:17 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'tb.sv'
+Parsing included file 'JAM_SYN.v'.
+Back to file 'tb.sv'.
+Parsing library file '/home/cell_library/CBDK_IC_Contest_v2.5/Verilog/tsmc13_neg.v'
+Top Level Modules:
+       testfixture
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 71
+JAM, "DFFRX1 min_reg_reg_4_( .D (N10),  .CK (CLK),  .RN (n724),  .Q (min_reg[4]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 72
+JAM, "DFFRX1 min_reg_reg_6_( .D (N12),  .CK (CLK),  .RN (n724),  .Q (min_reg[6]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 77
+JAM, "DFFRX1 min_reg_reg_9_( .D (n887),  .CK (CLK),  .RN (n724),  .QN (n913));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 88
+JAM, "DFFSX1 MinCost_reg_9_( .D (n399),  .CK (CLK),  .SN (n724),  .QN (n889));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 105
+JAM, "DFFRX1 min_reg_reg_5_( .D (N11),  .CK (CLK),  .RN (n724),  .Q (min_reg[5]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 106
+JAM, "DFFRX1 min_reg_reg_0_( .D (N6),  .CK (CLK),  .RN (n724),  .Q (min_reg[0]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 107
+JAM, "DFFRX1 min_reg_reg_3_( .D (N9),  .CK (CLK),  .RN (n724),  .Q (min_reg[3]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 108
+JAM, "DFFRX1 min_reg_reg_2_( .D (N8),  .CK (CLK),  .RN (n724),  .Q (min_reg[2]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 109
+JAM, "DFFRX1 min_reg_reg_1_( .D (N7),  .CK (CLK),  .RN (n724),  .Q (min_reg[1]));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 110
+JAM, "DFFSX1 J_reg_2_( .D (N16),  .CK (CLK),  .SN (n724),  .QN (n924));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 111
+JAM, "DFFSX1 J_reg_1_( .D (N17),  .CK (CLK),  .SN (n724),  .QN (n922));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 112
+JAM, "DFFSX1 J_reg_0_( .D (N18),  .CK (CLK),  .SN (n724),  .QN (n920));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 144
+JAM, "DFFRX1 MatchCount_reg_3_( .D (n374),  .CK (CLK),  .RN (n724),  .QN (n915));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[TFIPC] Too few instance port connections
+JAM_SYN.v, 145
+JAM, "DFFRX1 Valid_reg( .D (n390),  .CK (CLK),  .RN (n724),  .QN (n917));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+   ***   $sdf_annotate() version 1.2R
+   ***    SDF file: "JAM_SYN.sdf"
+   ***    Annotation scope: testfixture.u_JAM
+   ***    No MTM selection argument specified
+   ***    No SCALE FACTORS argument specified
+   ***    No SCALE TYPE argument specified
+   ***    MTM selection defaulted to "TOOL_CONTROL":
+               (+maxdelays compiled, MAXIMUM delays selected)
+   ***    SCALE FACTORS defaulted to "1.0:1.0:1.0":
+   ***    SCALE TYPE defaulted to: "FROM_MTM"
+   ***    Turnoff delay: "FROM_FILE"
+   ***    Approximation (mipd) policy: "MAXIMUM"
+
+   ***    SDF annotation begin: Fri Jan 31 01:28:18 2025
+
+
+SDF Info: +pulse_r/100, +pulse_e/100 in effect
+
+          Total errors: 0
+          Total warnings: 0
+   ***    SDF annotation completed: Fri Jan 31 01:28:18 2025
+
+
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+100 modules and 2 UDPs read.
+recompiling module testfixture
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory `/home/M13/m0bochun/IC_Contest/2022/2022_grad_cell/03_GATE/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _31508_archive_1.so \
+_31530_archive_1.so _prev_archive_1.so objs/udps/U7Vwg.o objs/udps/exIG1.o  SIM_l.o \
+rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o        \
+-lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a \
+-lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   \
+/usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2023.03/share/PLI/VCS/LINUX64/pli.a \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2022/2022_grad_cell/03_GATE/csrc' \
+
+Command: /home/M13/m0bochun/IC_Contest/2022/2022_grad_cell/03_GATE/./simv +v2k -a vcs.log +define+GATE +maxdelays +neg_tchk +nowarnNTCDSN
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 31 01:28 2025
+Doing SDF annotation ...... Done
+*Verdi* Loading libsscore_vcs202303.so
+FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
+(C) 1996 - 2023 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'JAM_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+*******************************
+** Simulation Start          **
+*******************************
+PATTERN:   2
+-------------- Cost Table --------------
+Jobs       0   1   2   3   4   5   6   7
+worker0:  54  59  59  59  32  40  62  40
+worker1:  54  32  32  79  32  38  32  62
+worker2:  54  54  30  38  32  38  59  54
+worker3:  30  59  32  32  62  40  45  79
+worker4:  32  32  38  32  62  38  62  32
+worker5:  79  45  32  62  32  32  32  59
+worker6:  32  38  32  59  54  30  30  45
+worker7:  30  79  32  32  62  30  45  32
+----------------------------------------------------------------------
+Get Valid at cycle:    322557
+receive MinCost/MatchCount=  250/ 6 , golden MinCost/MatchCount= 250/ 6
+----------------------------------------------------------------------
+*************************
+**  FUNCTION  CORRECT  **
+*************************
+
+$finish called from file "tb.sv", line 187.
+$finish at simulation time           3225565000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3225565000 ps
+CPU Time:     23.320 seconds;       Data structure size:   0.2Mb
+Fri Jan 31 01:28:35 2025
+CPU time: 1.232 seconds to compile + .418 seconds to elab + .732 seconds to link + 23.382 seconds in simulation

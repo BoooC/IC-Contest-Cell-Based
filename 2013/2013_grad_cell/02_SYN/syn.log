@@ -1,0 +1,1985 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "FAS"
+FAS
+set CYCLE 12.0
+12.0
+set INPUT_DLY [expr 0.5*$CYCLE]
+6.0
+set OUTPUT_DLY [expr 0.5*$CYCLE]
+6.0
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ./FAS.v
+Presto compilation completed successfully.
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/fast.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'fast'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./FAS.v:35: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:54: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully. (FAS)
+Elaborated 1 design.
+Current design is now 'FAS'.
+Information: Building the design 'FIR'. (HDL-193)
+
+Inferred memory devices in process
+        in routine FIR line 170 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      x_reg_reg      | Flip-flop |  512  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine FIR line 184 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| x_n_valid_reg2_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  x_n_valid_reg_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine FIR line 195 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine FIR line 205 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       y_n_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine FIR line 220 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    y_n_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (FIR)
+Information: Building the design 'S2P'. (HDL-193)
+Warning:  ./FAS.v:245: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:246: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:247: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:248: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:249: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:250: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:251: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:252: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:253: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:254: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:255: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:256: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:257: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:258: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:259: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:260: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./FAS.v:266: Out of bounds bit select x_reg[16], valid bounds are [0:15]. (ELAB-312)
+
+Inferred memory devices in process
+        in routine S2P line 263 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      x_reg_reg      | Flip-flop |  384  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine S2P line 277 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine S2P line 286 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     x_valid_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (S2P)
+Information: Building the design 'FFT'. (HDL-193)
+Warning:  ./FAS.v:349: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:350: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:351: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:352: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:353: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:354: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:355: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:356: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:357: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:358: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:359: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:360: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:361: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:362: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:363: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:364: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine FFT line 403 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  stage34_i_reg_reg  | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+|  stage01_r_reg_reg  | Flip-flop |  384  |  Y  | N  | N  | N  | N  | N  | N  |
+|  stage01_i_reg_reg  | Flip-flop |  384  |  Y  | N  | N  | N  | N  | N  | N  |
+|  stage12_r_reg_reg  | Flip-flop |  384  |  Y  | N  | N  | N  | N  | N  | N  |
+|  stage12_i_reg_reg  | Flip-flop |  384  |  Y  | N  | N  | N  | N  | N  | N  |
+|  stage23_r_reg_reg  | Flip-flop |  384  |  Y  | N  | N  | N  | N  | N  | N  |
+|  stage23_i_reg_reg  | Flip-flop |  384  |  Y  | N  | N  | N  | N  | N  | N  |
+|  stage34_r_reg_reg  | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine FFT line 416 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (FFT)
+Information: Building the design 'Analysis'. (HDL-193)
+Warning:  ./FAS.v:489: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:490: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:491: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:492: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:493: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:494: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:495: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:496: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:497: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:498: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:499: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:500: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:501: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:502: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:503: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./FAS.v:504: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine Analysis line 506 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| square_sum_reg_reg  | Flip-flop |  528  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine Analysis line 527 in file
+                './FAS.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|   sort_stage_1_reg_reg   | Flip-flop |  264  |  Y  | N  | N  | N  | N  | N  | N  |
+| sort_stage_1_idx_reg_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+        in routine Analysis line 546 in file
+                './FAS.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|   sort_stage_2_reg_reg   | Flip-flop |  132  |  Y  | N  | N  | N  | N  | N  | N  |
+| sort_stage_2_idx_reg_reg | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+        in routine Analysis line 557 in file
+                './FAS.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|   sort_stage_3_reg_reg   | Flip-flop |  66   |  Y  | N  | N  | N  | N  | N  | N  |
+| sort_stage_3_idx_reg_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+        in routine Analysis line 564 in file
+                './FAS.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+| sort_stage_4_idx_reg_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+        in routine Analysis line 569 in file
+                './FAS.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (Analysis)
+Information: Building the design 'Butterfly'. (HDL-193)
+Warning:  ./FAS.v:450: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:451: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:453: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./FAS.v:454: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully. (Butterfly)
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'FAS'.
+{FAS}
+link
+
+  Linking design 'FAS'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (6 designs)               /home/M13/m0bochun/IC_Contest/2013/2013_grad_cell/02_SYN/FAS.db, etc
+  slow (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db
+  fast (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/fast.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_wire_load_mode top
+1
+set_operating_conditions  -max slow  -min fast
+Using operating conditions 'slow' found in library 'slow'.
+Using operating conditions 'fast' found in library 'fast'.
+1
+set_wire_load_model -name tsmc13_wl10 -library slow
+1
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name clk -period $CYCLE [get_ports clk] 
+1
+set_dont_touch_network             [get_clocks clk]
+1
+set_fix_hold                       [get_clocks clk]
+1
+set_clock_uncertainty         1    [get_clocks clk]
+1
+# set_clock_latency   -source 0      [get_clocks clk]
+# set_clock_latency           1      [get_clocks clk] 
+set_input_transition        0.5    [all_inputs] 
+1
+set_clock_transition        0.1    [all_clocks] 
+1
+# (D-2) Setting in/out Constraints
+set_input_delay   -max  $INPUT_DLY  -clock clk   [all_inputs] ;  # set_up time check 
+1
+set_input_delay   -min  0           -clock clk   [all_inputs] ;  # hold   time check 
+1
+set_output_delay  -max  $OUTPUT_DLY -clock clk   [all_outputs] ; # set_up time check 
+1
+set_output_delay  -min  0           -clock clk   [all_outputs] ; # hold   time check 
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst
+1
+#set_max_delay $CYCLE -from [all_inputs] -to [all_outputs]
+# (D-3) Setting Design Environment
+# set_driving_cell -library umc18io3v5v_slow -lib_cell P2C    -pin {Y}  [get_ports clk]
+# set_driving_cell -library umc18io3v5v_slow -lib_cell P2C    -pin {Y}  [remove_from_collection [all_inputs] [get_ports clk]]
+# set_load  [load_of "umc18io3v5v_slow/P8C/A"]       [all_outputs] ; # ~= 0.038
+set_load -pin_load 1  [all_outputs]
+1
+set_drive          1  [all_inputs]
+1
+# (D-4) Setting DRC Constraint
+#set_max_delay           0     ; # Optimize delay max effort                 
+#set_max_area            0      ; # Optimize area max effort           
+#set_max_transition      3       [all_inputs]   ; # U18 LUT Max Transition Value  
+#set_max_capacitance     0.15    [all_inputs]   ; # U18 LUT Max Capacitance Value
+set_max_fanout          20      [all_inputs]
+1
+# set_dont_use slow/JKFF*
+#set_dont_touch [get_cells core_reg_macro]
+#set hdlin_ff_always_sync_set_reset true
+# (D-5) Report Clock skew
+report_clock -skew clk
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Updating design information... (UID-85)
+Warning: Design 'FAS' contains 6 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clock_skew
+Design : FAS
+Version: U-2022.12
+Date   : Sun Jan 26 01:14:25 2025
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+clk                 -         -         -         -      1.00      1.00
+
+                 Max Transition      Min Transition
+Object           Rise      Fall      Rise      Fall
+-------------------------------------------------------
+clk              0.10      0.10      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Warning: The following end-points are not constrained for maximum delay.
+
+End point
+---------------
+FFT_inst/stage01_i_reg_reg[8][0]/next_state
+FFT_inst/stage01_i_reg_reg[8][1]/next_state
+FFT_inst/stage01_i_reg_reg[8][2]/next_state
+FFT_inst/stage01_i_reg_reg[8][3]/next_state
+FFT_inst/stage01_i_reg_reg[8][4]/next_state
+FFT_inst/stage01_i_reg_reg[8][5]/next_state
+FFT_inst/stage01_i_reg_reg[8][6]/next_state
+FFT_inst/stage01_i_reg_reg[8][7]/next_state
+FFT_inst/stage01_i_reg_reg[8][8]/next_state
+FFT_inst/stage01_i_reg_reg[8][9]/next_state
+FFT_inst/stage01_i_reg_reg[8][10]/next_state
+FFT_inst/stage01_i_reg_reg[8][11]/next_state
+FFT_inst/stage01_i_reg_reg[8][12]/next_state
+FFT_inst/stage01_i_reg_reg[8][13]/next_state
+FFT_inst/stage01_i_reg_reg[8][14]/next_state
+FFT_inst/stage01_i_reg_reg[8][15]/next_state
+FFT_inst/stage01_i_reg_reg[8][16]/next_state
+FFT_inst/stage01_i_reg_reg[8][17]/next_state
+FFT_inst/stage01_i_reg_reg[8][18]/next_state
+FFT_inst/stage01_i_reg_reg[8][19]/next_state
+FFT_inst/stage01_i_reg_reg[8][20]/next_state
+FFT_inst/stage01_i_reg_reg[8][21]/next_state
+FFT_inst/stage01_i_reg_reg[8][22]/next_state
+FFT_inst/stage01_i_reg_reg[8][23]/next_state
+FFT_inst/stage01_r_reg_reg[12][0]/next_state
+FFT_inst/stage01_r_reg_reg[12][1]/next_state
+FFT_inst/stage01_r_reg_reg[12][2]/next_state
+FFT_inst/stage01_r_reg_reg[12][3]/next_state
+FFT_inst/stage01_r_reg_reg[12][4]/next_state
+FFT_inst/stage01_r_reg_reg[12][5]/next_state
+FFT_inst/stage01_r_reg_reg[12][6]/next_state
+FFT_inst/stage01_r_reg_reg[12][7]/next_state
+FFT_inst/stage01_r_reg_reg[12][8]/next_state
+FFT_inst/stage01_r_reg_reg[12][9]/next_state
+FFT_inst/stage01_r_reg_reg[12][10]/next_state
+FFT_inst/stage01_r_reg_reg[12][11]/next_state
+FFT_inst/stage01_r_reg_reg[12][12]/next_state
+FFT_inst/stage01_r_reg_reg[12][13]/next_state
+FFT_inst/stage01_r_reg_reg[12][14]/next_state
+FFT_inst/stage01_r_reg_reg[12][15]/next_state
+FFT_inst/stage01_r_reg_reg[12][16]/next_state
+FFT_inst/stage01_r_reg_reg[12][17]/next_state
+FFT_inst/stage01_r_reg_reg[12][18]/next_state
+FFT_inst/stage01_r_reg_reg[12][19]/next_state
+FFT_inst/stage01_r_reg_reg[12][20]/next_state
+FFT_inst/stage01_r_reg_reg[12][21]/next_state
+FFT_inst/stage01_r_reg_reg[12][22]/next_state
+FFT_inst/stage01_r_reg_reg[12][23]/next_state
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.0 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 5423                                   |
+| Number of User Hierarchies                              | 36                                     |
+| Sequential Cell Count                                   | 4813                                   |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 73                                     |
+| Number of Dont Touch Nets                               | 5                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 5008 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 32 instances of design 'Butterfly'. (OPT-1056)
+  Simplifying Design 'FAS'
+Information: The register 'FIR_inst/y_n_reg[0]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[1]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[2]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[3]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[4]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[5]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[6]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[7]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[8]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[9]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[10]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[11]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[12]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[13]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[14]' will be removed. (OPT-1207)
+Information: The register 'FIR_inst/y_n_reg[15]' will be removed. (OPT-1207)
+
+  Loading target library 'fast'
+Loaded alib file './alib-52/slow.db.alib'
+Loaded alib file './alib-52/fast.db.alib'
+Warning: Operating condition slow set on design FAS has different process,
+voltage and temperatures parameters than the parameters at which target library 
+fast is characterized. Delays may be inaccurate as a result. (OPT-998)
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy S2P_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy FFT_inst before Pass 1 (OPT-776)
+Information: Ungrouping 2 of 37 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'FAS'
+Information: Added key list 'DesignWare' to design 'FAS'. (DDB-72)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[0][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[1][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[5][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[7][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[15][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[14][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[13][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[12][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[11][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[10][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[9][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[8][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[7][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[6][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[5][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[4][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[3][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[2][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[1][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[0][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[15][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[14][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[13][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[12][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[11][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[10][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[9][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[8][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[7][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[6][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[5][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[4][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[3][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[2][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[1][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[0][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[15][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[14][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[13][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[12][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[11][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[10][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[9][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[8][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[7][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[6][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[5][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[4][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[3][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[2][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[1][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[0][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[15][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[14][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[13][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[12][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[11][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[10][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[9][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[8][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[7][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[6][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[5][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[4][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[3][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[2][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[1][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[0][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[15][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[14][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[13][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[12][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[11][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[10][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[9][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[8][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[7][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[5][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[15][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[14][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[13][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[12][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[11][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[10][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[9][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[8][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[7][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[5][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[15][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[14][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[13][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[12][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[11][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[10][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[9][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[8][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[7][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[5][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[15][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[14][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[13][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[12][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[11][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[10][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[9][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[8][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[7][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[5][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[1][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'S2P_inst/x_reg_reg[0][0]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'FAS'.
+  Processing 'Analysis'
+Information: Added key list 'DesignWare' to design 'Analysis'. (DDB-72)
+Information: The register 'sort_stage_1_idx_reg_reg[7][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[7][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[7][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[5][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[5][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[5][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_1_idx_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_2_idx_reg_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_2_idx_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_2_idx_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_2_idx_reg_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: In design 'Analysis', the register 'sort_stage_2_idx_reg_reg[3][2]' is removed because it is merged to 'sort_stage_2_idx_reg_reg[3][3]'. (OPT-1215)
+ Implement Synthetic for 'Analysis'.
+Information: The register 'sort_stage_2_idx_reg_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_2_idx_reg_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_2_idx_reg_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'sort_stage_3_idx_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+  Processing 'FIR'
+ Implement Synthetic for 'FIR'.
+  Processing 'Butterfly_16'
+ Implement Synthetic for 'Butterfly_16'.
+  Processing 'Butterfly_8'
+ Implement Synthetic for 'Butterfly_8'.
+  Processing 'Butterfly_30'
+ Implement Synthetic for 'Butterfly_30'.
+  Processing 'Butterfly_29'
+ Implement Synthetic for 'Butterfly_29'.
+  Processing 'Butterfly_26'
+ Implement Synthetic for 'Butterfly_26'.
+  Processing 'Butterfly_24'
+ Implement Synthetic for 'Butterfly_24'.
+  Processing 'Butterfly_27'
+ Implement Synthetic for 'Butterfly_27'.
+  Processing 'Butterfly_18'
+ Implement Synthetic for 'Butterfly_18'.
+  Processing 'Butterfly_9'
+ Implement Synthetic for 'Butterfly_9'.
+  Processing 'Butterfly_0'
+ Implement Synthetic for 'Butterfly_0'.
+  Processing 'Butterfly_28'
+ Implement Synthetic for 'Butterfly_28'.
+  Processing 'Butterfly_25'
+ Implement Synthetic for 'Butterfly_25'.
+  Processing 'Butterfly_31'
+ Implement Synthetic for 'Butterfly_31'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: The register 'Analysis_inst/sort_stage_3_idx_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[0][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[0][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[0][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[0][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[0][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[0][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[1][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[1][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[1][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[1][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[1][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[1][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[0][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[2][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[2][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[2][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[2][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[1][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[0][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage34_i_reg_reg[1][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[3][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[3][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[3][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[3][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[4][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[4][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[4][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[4][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[0][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[0][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[0][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[0][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[0][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[4][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[4][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[4][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[4][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[4][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[4][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[4][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[4][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[6][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[6][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[6][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[6][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[5][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[5][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[5][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[5][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[5][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[5][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[5][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[5][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[1][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[1][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[1][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[1][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[1][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[6][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[6][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[6][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[6][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[2][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[2][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[2][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[2][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[0][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[0][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[0][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[0][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[0][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[0][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[0][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[2][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[2][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[2][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[2][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[2][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[2][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[2][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[2][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[4][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[6][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[6][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[6][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[6][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[6][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[4][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[4][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[4][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[4][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[4][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[4][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[4][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[6][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[6][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[6][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[6][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[6][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[6][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[6][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[7][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[7][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[7][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[7][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[7][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[7][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[7][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[7][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[3][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[3][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[3][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[3][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[1][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[1][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[1][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[1][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[1][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[1][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[1][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_r_reg_reg[1][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[3][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[3][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[3][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[3][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[3][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[3][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[3][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage23_i_reg_reg[3][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[8][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[8][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[8][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[8][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[8][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[8][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[8][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[8][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_r_reg_reg[12][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[8][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[8][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[8][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[8][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[8][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[8][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[8][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[8][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[12][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[12][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[12][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[12][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[12][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[12][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[12][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_r_reg_reg[12][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][23]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][22]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][21]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][20]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][19]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][18]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][17]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][16]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][8]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[8][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[12][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[12][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[12][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[12][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[12][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[12][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[12][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage01_i_reg_reg[12][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[8][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[8][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[8][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[8][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[8][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[8][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[8][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[8][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[12][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[12][7]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[12][6]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[12][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[12][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[12][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[12][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'FFT_inst/stage12_i_reg_reg[12][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'Analysis_inst/square_sum_reg_reg[0][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'Analysis_inst/square_sum_reg_reg[8][1]' is a constant and will be removed. (OPT-1206)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][8]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][23]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][23]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][22]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][22]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][21]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][21]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][20]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][20]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][19]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][19]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][18]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][18]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][17]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][17]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][16]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][16]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][15]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][15]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][14]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][14]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][13]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][13]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][12]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][12]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][11]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][11]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][10]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][10]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[8][9]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[12][9]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][8]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][23]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][23]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][22]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][22]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][21]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][21]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][20]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][20]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][19]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][19]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][18]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][18]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][17]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][17]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][16]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][16]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][15]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][15]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][14]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][14]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][13]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][13]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][12]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][12]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][11]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][11]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][10]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][10]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[6][9]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[4][9]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_i_reg_reg[8][8]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[12][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][8]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_i_reg_reg[6][8]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[4][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][23]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][23]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][22]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][22]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][21]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][21]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][20]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][20]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][19]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][19]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][18]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][18]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][17]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][17]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][16]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][16]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][15]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][15]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][14]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][14]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][13]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][13]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][12]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][12]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][11]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][11]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][10]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][10]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[3][9]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[2][9]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][3]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][3]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][2]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][2]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][1]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][1]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][0]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_i_reg_reg[8][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[10][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[14][0]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[12][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[8][0]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[10][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_i_reg_reg[14][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[12][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][4]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][4]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][5]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][5]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][6]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][6]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][7]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][7]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][8]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][9]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][9]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][10]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][10]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][23]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][23]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][22]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][22]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][21]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][21]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][20]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][20]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][19]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][19]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][18]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][18]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][17]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][17]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][16]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][16]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][15]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][15]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][14]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][14]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][13]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][13]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][12]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][12]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[14][11]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[14][11]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_i_reg_reg[3][8]' is removed because it is merged to 'FFT_inst/stage34_i_reg_reg[2][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][0]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][1]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][1]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][2]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][2]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][3]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][3]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][4]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][4]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][5]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][5]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][6]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][6]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][7]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][7]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][8]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][9]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][9]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][10]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][10]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][23]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][23]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][22]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][22]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][21]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][21]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][20]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][20]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][19]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][19]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][18]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][18]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][17]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][17]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][16]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][16]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][15]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][15]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][14]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][14]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][13]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][13]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][12]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][12]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[7][11]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[7][11]'. (OPT-1215)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'FIR'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_24'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_25'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_26'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_27'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_28'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_29'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_30'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_31'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_20'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_21'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_14'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_22'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_23'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_19'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_15'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_13'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_7'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_6'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_0'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_8'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_9'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_16'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_18'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_17'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_12'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_10'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_11'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_5'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_4'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_3'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_2'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'Butterfly_1'. (DDB-72)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_0_1 'Butterfly_30' #insts = 4. (OPT-777)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_0_2 'Butterfly_29' #insts = 4. (OPT-777)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_0_3 'Butterfly_28' #insts = 4. (OPT-777)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_0_5 'Butterfly_26' #insts = 4. (OPT-777)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_0_6 'Butterfly_25' #insts = 4. (OPT-777)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_0_7 'Butterfly_24' #insts = 4. (OPT-777)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_1_1 'Butterfly_22' #insts = 4. (OPT-777)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_1_3 'Butterfly_20' #insts = 4. (OPT-777)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_1_5 'Butterfly_18' #insts = 8. (OPT-777)
+Information: Ungrouping hierarchy FFT_inst/Butterfly_stage_1_7 'Butterfly_16' #insts = 8. (OPT-777)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:45  905955.0      0.00       0.0  412070.6                           918187136.0000      0.00  
+    0:00:46  905489.9      0.00       0.0  412007.6                           917711104.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[4][8]' is removed because it is merged to 'FFT_inst/stage01_i_reg_reg[12][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[1][8]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[3][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[2][8]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[6][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[10][0]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[14][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[14][0]' is removed because it is merged to 'FFT_inst/stage12_i_reg_reg[10][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[11][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[9][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[9][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[11][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[5][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[7][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[7][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[5][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[15][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[13][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[13][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[15][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage01_r_reg_reg[8][8]' is removed because it is merged to 'FFT_inst/stage01_r_reg_reg[0][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage12_r_reg_reg[4][8]' is removed because it is merged to 'FFT_inst/stage12_r_reg_reg[0][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[2][8]' is removed because it is merged to 'FFT_inst/stage23_r_reg_reg[0][8]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage34_r_reg_reg[1][8]' is removed because it is merged to 'FFT_inst/stage34_r_reg_reg[0][8]'. (OPT-1215)
+    0:00:47  904714.2      0.00       0.0  412344.6                           916723136.0000      0.00  
+    0:00:48  904714.2      0.00       0.0  412344.6                           916723136.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:01:06  500950.3      1.84      67.3  371916.5                           457858880.0000      0.00  
+    0:01:07  505293.9      0.00       0.0  371057.3                           463184320.0000      0.00  
+    0:01:07  505293.9      0.00       0.0  371057.3                           463184320.0000      0.00  
+    0:01:07  505293.9      0.00       0.0  371057.3                           463184320.0000      0.00  
+    0:01:11  505204.0      0.00       0.0  371034.1                           463100224.0000      0.00  
+    0:01:12  505180.2      0.00       0.0  371034.1                           463068512.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[10][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[12][0]'. (OPT-1215)
+Information: In design 'FAS', the register 'FFT_inst/stage23_r_reg_reg[12][0]' is removed because it is merged to 'FFT_inst/stage23_i_reg_reg[10][0]'. (OPT-1215)
+    0:01:18  501466.3      0.00       0.0  370501.3                           459123808.0000      0.00  
+    0:01:20  498950.7      0.00       0.0  369930.5                           456154112.0000      0.00  
+    0:01:20  498950.7      0.00       0.0  369930.5                           456154112.0000      0.00  
+    0:01:20  498950.7      0.00       0.0  369930.5                           456154112.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:22  495286.0      0.00       0.0  369171.7                           451832576.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:01:26  502155.4      0.00       0.0     502.2 FFT_inst/Butterfly_stage_2_6/b[8] 457424672.0000      0.00  
+    0:01:27  502306.5      0.00       0.0      55.1                           457512992.0000      0.00  
+    0:01:27  502306.5      0.00       0.0      55.1                           457512992.0000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:27  502306.5      0.00       0.0      55.1                           457512992.0000      0.00  
+    0:01:27  502306.5      0.00       0.0      55.1                           457512992.0000      0.00  
+    0:01:27  502306.5      0.00       0.0      55.1                           457512992.0000      0.00  
+    0:01:27  502306.5      0.00       0.0      55.1                           457512992.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:30  502472.8      0.00       0.0      51.4                           447645984.0000      0.00  
+    0:01:31  502873.4      0.00       0.0      51.4                           448044640.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:32  502873.4      0.00       0.0      51.4                           448044640.0000      0.00  
+    0:01:36  496793.3      0.00       0.0      38.0                           443068064.0000      0.00  
+    0:01:36  496793.3      0.00       0.0      38.0                           443068064.0000      0.00  
+    0:01:36  496793.3      0.00       0.0      38.0                           443068064.0000      0.00  
+    0:01:38  497864.4      0.00       0.0      37.2                           440672096.0000      0.00  
+    0:01:40  495437.1      0.00       0.0      37.2                           438212096.0000      0.00  
+    0:01:43  495014.5      0.00       0.0      33.8                           437195648.0000      0.00  
+    0:01:43  495019.5      0.00       0.0       0.0                           437031200.0000      0.00  
+    0:01:43  495019.5      0.00       0.0       0.0                           437031200.0000      0.00  
+    0:01:43  495019.5      0.00       0.0       0.0                           437031200.0000      0.00  
+    0:01:43  495019.5      0.00       0.0       0.0                           437031200.0000      0.00  
+    0:01:43  495019.5      0.00       0.0       0.0                           437031200.0000      0.00  
+    0:01:43  495019.5      0.00       0.0       0.0                           437031200.0000      0.00  
+    0:01:45  493697.3      0.00       0.0       0.0                           436987584.0000      0.00  
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/fast.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'FAS' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'Analysis_inst/clk': 3777 load(s), 1 driver(s)
+  Loading target library 'fast'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/home/M13/m0bochun/IC_Contest/2013/2013_grad_cell/02_SYN/Netlist/FAS_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'FAS_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/home/M13/m0bochun/IC_Contest/2013/2013_grad_cell/02_SYN/Netlist/FAS_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : FAS
+Version: U-2022.12
+Date   : Sun Jan 26 01:16:27 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+
+Number of ports:                         6758
+Number of nets:                         44034
+Number of cells:                        33118
+Number of combinational cells:          29228
+Number of sequential cells:              3777
+Number of macros/black boxes:               0
+Number of buf/inv:                       5530
+Number of references:                      93
+
+Combinational area:             391607.151706
+Buf/Inv area:                    27908.650723
+Noncombinational area:          102090.123457
+Macro/Black Box area:                0.000000
+Net Interconnect area:         3876433.028229
+
+Total cell area:                493697.275162
+Total area:                    4370130.303391
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FAS
+Version: U-2022.12
+Date   : Sun Jan 26 01:16:27 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: FFT_inst_stage34_r_reg_reg_0__8_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Analysis_inst/square_sum_reg_reg_8__32_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FAS                tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FFT_inst_stage34_r_reg_reg_0__8_/CK (DFFQX1)            0.00 #     0.00 r
+  FFT_inst_stage34_r_reg_reg_0__8_/Q (DFFQX1)             0.86       0.86 r
+  Analysis_inst/x_0[16] (Analysis)                        0.00       0.86 r
+  Analysis_inst/U1954/Y (INVX6)                           0.54       1.39 f
+  Analysis_inst/U4137/Y (NOR2XL)                          0.50       1.89 r
+  Analysis_inst/U4143/S (ADDHXL)                          0.67       2.56 r
+  Analysis_inst/U4139/Y (NAND2XL)                         0.47       3.04 f
+  Analysis_inst/U4140/Y (INVXL)                           0.38       3.42 r
+  Analysis_inst/U4141/Y (NOR2X1)                          0.24       3.65 f
+  Analysis_inst/U4146/Y (OAI21XL)                         0.78       4.43 r
+  Analysis_inst/U4150/Y (AOI21X1)                         0.38       4.81 f
+  Analysis_inst/U4154/Y (OAI21X1)                         0.46       5.27 r
+  Analysis_inst/U4158/Y (AOI21X1)                         0.30       5.56 f
+  Analysis_inst/U4163/Y (OAI21X1)                         0.44       6.00 r
+  Analysis_inst/U2104/Y (AOI21X1)                         0.34       6.34 f
+  Analysis_inst/U4175/Y (OAI21X2)                         0.31       6.65 r
+  Analysis_inst/U1014/Y (AOI21X1)                         0.29       6.94 f
+  Analysis_inst/U4179/Y (OAI21X2)                         0.30       7.24 r
+  Analysis_inst/U180/Y (AOI21X1)                          0.29       7.53 f
+  Analysis_inst/U1006/Y (OAI21X2)                         0.32       7.85 r
+  Analysis_inst/U988/Y (AOI21X2)                          0.21       8.07 f
+  Analysis_inst/U972/Y (OAI21X2)                          0.29       8.36 r
+  Analysis_inst/U923/Y (AOI21X2)                          0.21       8.57 f
+  Analysis_inst/U893/Y (OAI21X2)                          0.27       8.84 r
+  Analysis_inst/U2135/Y (AOI21X1)                         0.27       9.12 f
+  Analysis_inst/U560/Y (OAI21X1)                          0.45       9.57 r
+  Analysis_inst/U4219/Y (AOI21X1)                         0.32       9.89 f
+  Analysis_inst/U7766/Y (AND2X1)                          0.33      10.22 f
+  Analysis_inst/U2161/Y (NAND2X1)                         0.25      10.48 r
+  Analysis_inst/U843/Y (OAI21XL)                          0.24      10.71 f
+  Analysis_inst/square_sum_reg_reg_8__32_/D (DFFQX1)      0.00      10.71 f
+  data arrival time                                                 10.71
+
+  clock clk (rise edge)                                  12.00      12.00
+  clock network delay (ideal)                             0.00      12.00
+  clock uncertainty                                      -1.00      11.00
+  Analysis_inst/square_sum_reg_reg_8__32_/CK (DFFQX1)     0.00      11.00 r
+  library setup time                                     -0.29      10.71
+  data required time                                                10.71
+  --------------------------------------------------------------------------
+  data required time                                                10.71
+  data arrival time                                                -10.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+exit
+
+Memory usage for this session 866 Mbytes.
+Memory usage for this session including child processes 1703 Mbytes.
+CPU usage for this session 282 seconds ( 0.08 hours ).
+Elapsed time for this session 149 seconds ( 0.04 hours ).
+
+Thank you...
+

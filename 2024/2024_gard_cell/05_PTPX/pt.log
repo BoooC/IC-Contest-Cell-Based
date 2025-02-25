@@ -1,0 +1,69 @@
+Information: The max_cores limit for the local (current) process has been modified by 4 to 8. (CMCR-103)
+#PrimeTime Script
+#  pt_shell  -f  ./pt_script.tcl
+set power_enable_analysis TRUE
+Information: Checked out license 'PrimePower' (PT-019)
+TRUE
+set power_analysis_mode time_based
+time_based
+read_file -format verilog  ./Bicubic_SYN.v
+1
+current_design Bicubic
+Information: current_design won't return any data before link (DES-071)
+link
+Loading verilog file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/05_PTPX/Bicubic_SYN.v'
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ImgROM_slow.db'
+Loading db file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/04_MEM/ResultSRAM_slow.db'
+Linking design Bicubic...
+Information: 346 (65.65%) library cells are unused in library slow..... (LNK-045)
+Information: total 346 library cells are unused (LNK-046)
+Design 'Bicubic' was successfully linked.
+Information: There are 10498 leaf cells, ports, hiers and 11448 nets in the design (LNK-047)
+1
+source ./Bicubic_SYN.sdc
+Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
+Warning: Power unit cannot be checked. (DES-064)
+1
+1
+read_parasitics -format SPEF -verbose  ./Bicubic_SYN.spef
+Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+1
+## Measure  power
+#report_switching_activity -list_not_annotated -show_pin
+read_vcd  -strip_path testfixture/u_Bicubic  ./Bicubic.vcd
+
+======================================================================
+Summary:
+Total number of nets = 11448
+Number of annotated nets = 11448 (100.00%)
+Total number of leaf cells = 10458
+Number of fully annotated leaf cells = 10207 (97.60%)
+======================================================================
+
+1
+update_power
+Information: Building multi voltage information for entire design. (MV-022)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/home/M13/m0bochun/IC_Contest/2024/2024_gard_cell/05_PTPX/Bicubic.vcd'
+Information: The waveform options are:
+		File name:	primetime_px.fsdb
+		File format:	fsdb
+		Time interval:	0.001ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 319341ns)
+
+Information: Total simulation time = 319341.000000 ns
+1
+report_power >  power.log
+exit
+Maximum memory usage for this session: 2659.52 MB
+CPU usage for this session: 297 seconds 
+Elapsed time for this session: 296 seconds
+Diagnostics summary: 2 warnings, 10 informationals
+
+Thank you for using pt_shell!

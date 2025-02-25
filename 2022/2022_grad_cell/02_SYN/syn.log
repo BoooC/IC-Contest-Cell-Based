@@ -1,0 +1,602 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "JAM"
+JAM
+set CYCLE 10.0
+10.0
+set INPUT_DLY [expr 0.5*$CYCLE]
+5.0
+set OUTPUT_DLY [expr 0.5*$CYCLE]
+5.0
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ./JAM.v
+Presto compilation completed successfully.
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./JAM.v:54: signed to unsigned assignment occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine JAM line 51 in file
+                './JAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_perm_reg   | Flip-flop |  12   |  Y  | N  | N  | Y  | N  | N  | N  |
+|  current_perm_reg   | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine JAM line 65 in file
+                './JAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     min_reg_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine JAM line 78 in file
+                './JAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        J_reg        | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+|        W_reg        | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine JAM line 89 in file
+                './JAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   MatchCount_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine JAM line 99 in file
+                './JAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     MinCost_reg     | Flip-flop |  10   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine JAM line 108 in file
+                './JAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|      JAM/85      |   8    |    3    |      3       |
+======================================================
+Presto compilation completed successfully. (JAM)
+Elaborated 1 design.
+Current design is now 'JAM'.
+Information: Building the design 'find_next_perm'. (HDL-193)
+Warning:  ./JAM.v:181: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./JAM.v:184: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./JAM.v:195: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./JAM.v:199: signed to unsigned conversion occurs. (VER-318)
+Statistics for MUX_OPs
+========================================================
+|  block name/line   | Inputs | Outputs | # sel inputs |
+========================================================
+| find_next_perm/157 |   8    |    3    |      3       |
+| find_next_perm/182 |   8    |    3    |      3       |
+========================================================
+Presto compilation completed successfully. (find_next_perm)
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'JAM'.
+{JAM}
+link
+
+  Linking design 'JAM'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (2 designs)               /home/M13/m0bochun/IC_Contest/2022/2022_grad_cell/02_SYN/JAM.db, etc
+  slow (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_operating_conditions -max_library slow -max slow
+Using operating conditions 'slow' found in library 'slow'.
+1
+set_wire_load_model -name tsmc13_wl10 -library slow    
+1
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name CLK -period $CYCLE [get_ports CLK] 
+1
+set_dont_touch_network             [get_clocks CLK]
+1
+set_fix_hold                       [get_clocks CLK]
+1
+set_clock_uncertainty       0.1    [get_clocks CLK]
+1
+set_clock_latency           0.5    [get_clocks CLK] 
+1
+# (D-2) Setting in/out Constraints
+set_input_delay  0   -clock CLK [remove_from_collection [all_inputs] [get_ports CLK]] -clock_fall
+1
+set_output_delay 0    -clock CLK [all_outputs]  -clock_fall
+1
+# (D-3) Setting Design Environment
+set_load         1   [all_outputs]
+1
+set_drive        0.1   [all_inputs]
+1
+# (D-4) Setting DRC Constraint
+set_max_fanout 20 [all_inputs]
+1
+# (D-5) Report Clock skew
+report_clock -skew CLK
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : clock_skew
+Design : JAM
+Version: U-2022.12
+Date   : Fri Jan 31 01:27:22 2025
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+CLK              0.50      0.50      0.50      0.50      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.0 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 511                                    |
+| Number of User Hierarchies                              | 1                                      |
+| Sequential Cell Count                                   | 55                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 158                                    |
+| Number of Dont Touch Nets                               | 1                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'JAM'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy find_next_perm_inst before Pass 1 (OPT-776)
+Information: Ungrouping 1 of 2 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'JAM'
+Information: Added key list 'DesignWare' to design 'JAM'. (DDB-72)
+ Implement Synthetic for 'JAM'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:05   10680.0      0.00       0.0   14031.6                           8161895.0000      0.00  
+    0:00:05   10680.0      0.00       0.0   14031.6                           8161895.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:05   10680.0      0.00       0.0   14031.6                           8161895.0000      0.00  
+    0:00:05   10680.0      0.00       0.0   14031.6                           8161895.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:06    6557.1      1.29      19.7   16621.1                           4161172.2500      0.00  
+    0:00:06    6898.2      0.00       0.0   16622.5                           4457640.0000      0.00  
+    0:00:06    6898.2      0.00       0.0   16622.5                           4457640.0000      0.00  
+    0:00:06    6911.8      0.00       0.0   15782.0                           4494581.0000      0.00  
+    0:00:06    6896.5      0.00       0.0   15771.9                           4484450.5000      0.00  
+    0:00:06    6896.5      0.00       0.0   15771.9                           4484450.5000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:07    6796.4      0.00       0.0   15758.0                           4398981.0000      0.00  
+    0:00:07    6796.4      0.00       0.0   15758.0                           4398981.0000      0.00  
+    0:00:07    6796.4      0.00       0.0   15758.0                           4398981.0000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:07    6793.0      0.00       0.0   15754.3                           4395665.5000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:07    6932.2      0.00       0.0       0.0                           4608351.0000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4608351.0000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:07    6932.2      0.00       0.0       0.0                           4608351.0000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4608351.0000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4608351.0000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4608351.0000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:07    6932.2      0.00       0.0       0.0                           4577894.5000      0.00  
+    0:00:07    6601.2      0.00       0.0       0.0                           4217108.5000      0.00  
+    0:00:07    6601.2      0.00       0.0       0.0                           4217108.5000      0.00  
+    0:00:07    6601.2      0.00       0.0       0.0                           4217108.5000      0.00  
+    0:00:07    6602.9      0.00       0.0       0.0                           4213106.5000      0.00  
+    0:00:07    6572.3      0.00       0.0       0.0                           4166649.2500      0.00  
+    0:00:07    6572.3      0.00       0.0       0.0                           4166649.2500      0.00  
+    0:00:07    6572.3      0.00       0.0       0.0                           4166649.2500      0.00  
+    0:00:07    6572.3      0.00       0.0       0.0                           4166649.2500      0.00  
+    0:00:07    6572.3      0.00       0.0       0.0                           4166649.2500      0.00  
+    0:00:07    6572.3      0.00       0.0       0.0                           4166649.2500      0.00  
+    0:00:08    6392.4      0.00       0.0       0.0                           4017085.7500      0.00  
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/home/M13/m0bochun/IC_Contest/2022/2022_grad_cell/02_SYN/Netlist/JAM_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'JAM_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/home/M13/m0bochun/IC_Contest/2022/2022_grad_cell/02_SYN/Netlist/JAM_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : JAM
+Version: U-2022.12
+Date   : Fri Jan 31 01:27:32 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+
+Number of ports:                           30
+Number of nets:                           631
+Number of cells:                          582
+Number of combinational cells:            527
+Number of sequential cells:                55
+Number of macros/black boxes:               0
+Number of buf/inv:                         93
+Number of references:                      98
+
+Combinational area:               4493.017806
+Buf/Inv area:                      609.366592
+Noncombinational area:            1899.390583
+Macro/Black Box area:                0.000000
+Net Interconnect area:           75320.377167
+
+Total cell area:                  6392.408389
+Total area:                      81712.785556
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : JAM
+Version: U-2022.12
+Date   : Fri Jan 31 01:27:32 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: current_perm_reg_4__1_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: current_perm_reg_4__2_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  JAM                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  current_perm_reg_4__1_/CK (DFFSX2)       0.00       0.50 r
+  current_perm_reg_4__1_/QN (DFFSX2)       0.73       1.23 r
+  U662/Y (OAI22X1)                         0.28       1.51 f
+  U457/Y (OAI21XL)                         0.36       1.87 r
+  U664/Y (OAI22X2)                         0.28       2.15 f
+  U667/Y (OAI21X1)                         0.29       2.44 r
+  U668/Y (OAI221X4)                        0.39       2.84 f
+  U677/Y (NOR2X4)                          0.21       3.04 r
+  U678/Y (NAND2X2)                         0.15       3.19 f
+  U679/Y (OAI22XL)                         0.49       3.69 r
+  U680/Y (AOI211X4)                        0.34       4.03 f
+  U681/Y (OA21X2)                          0.23       4.26 f
+  U682/Y (OAI21XL)                         0.32       4.57 r
+  U523/Y (BUFX6)                           0.37       4.94 r
+  U453/Y (INVX4)                           0.22       5.16 f
+  U704/Y (OAI21X1)                         0.43       5.59 r
+  U629/Y (AO21X2)                          0.28       5.87 r
+  U515/Y (INVX2)                           0.09       5.96 f
+  U708/Y (OAI21XL)                         0.41       6.37 r
+  U716/Y (AOI211X4)                        0.37       6.74 f
+  U719/Y (NOR2X8)                          0.21       6.95 r
+  U514/Y (INVX6)                           0.18       7.12 f
+  U727/Y (NAND2X2)                         0.34       7.46 r
+  U809/Y (OAI22X2)                         0.21       7.67 f
+  U437/Y (NOR4X2)                          0.91       8.57 r
+  U436/Y (OAI21X1)                         0.39       8.97 f
+  U922/Y (AOI222XL)                        0.68       9.64 r
+  U923/Y (AOI2BB2X1)                       0.29       9.94 r
+  U924/Y (OAI22XL)                         0.27      10.21 f
+  current_perm_reg_4__2_/D (DFFRX2)        0.00      10.21 f
+  data arrival time                                  10.21
+
+  clock CLK (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  current_perm_reg_4__2_/CK (DFFRX2)       0.00      10.40 r
+  library setup time                      -0.17      10.23
+  data required time                                 10.23
+  -----------------------------------------------------------
+  data required time                                 10.23
+  data arrival time                                 -10.21
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+1
+exit
+
+Memory usage for this session 266 Mbytes.
+Memory usage for this session including child processes 394 Mbytes.
+CPU usage for this session 18 seconds ( 0.01 hours ).
+Elapsed time for this session 16 seconds ( 0.00 hours ).
+
+Thank you...
+

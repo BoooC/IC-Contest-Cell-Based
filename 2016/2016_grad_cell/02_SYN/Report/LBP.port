@@ -1,0 +1,68 @@
+ 
+****************************************
+Report : port
+Design : LBP
+Version: U-2022.12
+Date   : Sun Jan 26 14:49:07 2025
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000   --      --      --         d
+gray_data[0]   in      0.0000   0.0000   --      --      --         
+gray_data[1]   in      0.0000   0.0000   --      --      --         
+gray_data[2]   in      0.0000   0.0000   --      --      --         
+gray_data[3]   in      0.0000   0.0000   --      --      --         
+gray_data[4]   in      0.0000   0.0000   --      --      --         
+gray_data[5]   in      0.0000   0.0000   --      --      --         
+gray_data[6]   in      0.0000   0.0000   --      --      --         
+gray_data[7]   in      0.0000   0.0000   --      --      --         
+gray_ready     in      0.0000   0.0000   --      --      --         
+reset          in      0.0000   0.0000   --      --      --         
+finish         out     1.0000   0.0000   --      --      --         
+gray_addr[0]   out     1.0000   0.0000   --      --      --         
+gray_addr[1]   out     1.0000   0.0000   --      --      --         
+gray_addr[2]   out     1.0000   0.0000   --      --      --         
+gray_addr[3]   out     1.0000   0.0000   --      --      --         
+gray_addr[4]   out     1.0000   0.0000   --      --      --         
+gray_addr[5]   out     1.0000   0.0000   --      --      --         
+gray_addr[6]   out     1.0000   0.0000   --      --      --         
+gray_addr[7]   out     1.0000   0.0000   --      --      --         
+gray_addr[8]   out     1.0000   0.0000   --      --      --         
+gray_addr[9]   out     1.0000   0.0000   --      --      --         
+gray_addr[10]  out     1.0000   0.0000   --      --      --         
+gray_addr[11]  out     1.0000   0.0000   --      --      --         
+gray_addr[12]  out     1.0000   0.0000   --      --      --         
+gray_addr[13]  out     1.0000   0.0000   --      --      --         
+gray_req       out     1.0000   0.0000   --      --      --         
+lbp_addr[0]    out     1.0000   0.0000   --      --      --         
+lbp_addr[1]    out     1.0000   0.0000   --      --      --         
+lbp_addr[2]    out     1.0000   0.0000   --      --      --         
+lbp_addr[3]    out     1.0000   0.0000   --      --      --         
+lbp_addr[4]    out     1.0000   0.0000   --      --      --         
+lbp_addr[5]    out     1.0000   0.0000   --      --      --         
+lbp_addr[6]    out     1.0000   0.0000   --      --      --         
+lbp_addr[7]    out     1.0000   0.0000   --      --      --         
+lbp_addr[8]    out     1.0000   0.0000   --      --      --         
+lbp_addr[9]    out     1.0000   0.0000   --      --      --         
+lbp_addr[10]   out     1.0000   0.0000   --      --      --         
+lbp_addr[11]   out     1.0000   0.0000   --      --      --         
+lbp_addr[12]   out     1.0000   0.0000   --      --      --         
+lbp_addr[13]   out     1.0000   0.0000   --      --      --         
+lbp_data[0]    out     1.0000   0.0000   --      --      --         
+lbp_data[1]    out     1.0000   0.0000   --      --      --         
+lbp_data[2]    out     1.0000   0.0000   --      --      --         
+lbp_data[3]    out     1.0000   0.0000   --      --      --         
+lbp_data[4]    out     1.0000   0.0000   --      --      --         
+lbp_data[5]    out     1.0000   0.0000   --      --      --         
+lbp_data[6]    out     1.0000   0.0000   --      --      --         
+lbp_data[7]    out     1.0000   0.0000   --      --      --         
+lbp_valid      out     1.0000   0.0000   --      --      --         
+
+1

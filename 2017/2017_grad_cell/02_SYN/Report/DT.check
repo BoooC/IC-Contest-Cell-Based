@@ -1,0 +1,37 @@
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12
+Date:        Sun Jan 26 14:54:43 2025
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Constant outputs (LINT-52)                                      1
+
+Nets                                                               19
+    Unloaded nets (LINT-2)                                         19
+--------------------------------------------------------------------------------
+
+Warning: In design 'DT', net 'net105' driven by pin 'C944/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net104' driven by pin 'C940/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net103' driven by pin 'C927/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net102' driven by pin 'C926/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net101' driven by pin 'C925/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net100' driven by pin 'C924/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net99' driven by pin 'C903/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net98' driven by pin 'C902/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net97' driven by pin 'C901/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net96' driven by pin 'C900/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net95' driven by pin 'C899/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net94' driven by pin 'C898/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net93' driven by pin 'C875/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net92' driven by pin 'C874/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net91' driven by pin 'C863/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net90' driven by pin 'C862/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net89' driven by pin 'C853/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net88' driven by pin 'C852/Z' has no loads. (LINT-2)
+Warning: In design 'DT', net 'net87' driven by pin 'C845/Z' has no loads. (LINT-2)
+Warning: In design 'DT', output port 'sti_rd' is connected directly to 'logic 1'. (LINT-52)
+1

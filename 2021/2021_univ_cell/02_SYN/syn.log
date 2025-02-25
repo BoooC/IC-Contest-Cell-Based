@@ -1,0 +1,659 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "geofence"
+geofence
+set CYCLE 30.0
+30.0
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ./geofence.v
+Presto compilation completed successfully.
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./geofence.v:45: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./geofence.v:46: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 62 in file
+        './geofence.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            63            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine geofence line 72 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 82 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    object_y_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    object_x_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 94 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   receiver_y_reg    | Flip-flop |  60   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   receiver_x_reg    | Flip-flop |  60   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 118 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 133 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_limit_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  current_limit_reg  | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 145 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   product_reg_reg   | Flip-flop |  22   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 154 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   first_done_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 163 in file
+                './geofence.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| exchange_flag_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+        in routine geofence line 172 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  is_inside_reg_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 185 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      valid_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine geofence line 197 in file
+                './geofence.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    is_inside_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (geofence)
+Elaborated 1 design.
+Current design is now 'geofence'.
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'geofence'.
+{geofence}
+link
+
+  Linking design 'geofence'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  geofence                    /home/M13/m0bochun/IC_Contest/2021/2021_univ_cell/02_SYN/geofence.db
+  slow (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_operating_conditions -max_library slow -max slow
+Using operating conditions 'slow' found in library 'slow'.
+1
+set_wire_load_model -name tsmc13_wl10 -library slow     
+1
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name clk -period $CYCLE [get_ports clk] 
+1
+set_dont_touch_network             [get_clocks clk]
+1
+set_fix_hold                       [get_clocks clk]
+1
+set_clock_uncertainty       0.1    [get_clocks clk]
+1
+set_clock_latency           0.5    [get_clocks clk] 
+1
+set_ideal_network                  [get_ports clk]
+1
+# (D-2) Setting in/out Constraints
+set_input_delay  0   -clock clk [remove_from_collection [all_inputs] [get_ports clk]] -clock_fall
+1
+set_output_delay 0    -clock clk [all_outputs]  -clock_fall
+1
+# (D-3) Setting Design Environment
+set_load         1   [all_outputs]
+1
+set_drive        0.1   [all_inputs]
+1
+# (D-4) Setting DRC Constraint
+set_max_fanout 20 [all_inputs]
+1
+# (D-5) Report Clock skew
+report_clock -skew clk
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Updating design information... (UID-85)
+Warning: Design 'geofence' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clock_skew
+Design : geofence
+Version: U-2022.12
+Date   : Wed Jan 29 21:38:31 2025
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+clk              0.50      0.50      0.50      0.50      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.0 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 849                                    |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 175                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 146                                    |
+| Number of Dont Touch Nets                               | 1                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 28 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'geofence'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'geofence'
+Information: Added key list 'DesignWare' to design 'geofence'. (DDB-72)
+ Implement Synthetic for 'geofence'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06   21682.6      0.00       0.0    2047.8                           17917580.0000      0.00  
+    0:00:06   21619.8      0.00       0.0    2039.2                           17872784.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:06   21619.8      0.00       0.0    2039.2                           17872784.0000      0.00  
+    0:00:06   21619.8      0.00       0.0    2039.2                           17872784.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:07   15833.3      0.00       0.0    2660.3                           11958487.0000      0.00  
+    0:00:07   15833.3      0.00       0.0    2660.3                           11958487.0000      0.00  
+    0:00:07   15833.3      0.00       0.0    2660.3                           11958487.0000      0.00  
+    0:00:07   15833.3      0.00       0.0    2660.3                           11958487.0000      0.00  
+    0:00:07   15830.0      0.00       0.0    2660.3                           11957806.0000      0.00  
+    0:00:07   15830.0      0.00       0.0    2660.3                           11957806.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:08   15680.6      0.00       0.0    2657.9                           11812910.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:08   15729.8      0.00       0.0       0.0                           11863856.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11863856.0000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:08   15729.8      0.00       0.0       0.0                           11863856.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11863856.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11863856.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11863856.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:08   15729.8      0.00       0.0       0.0                           11800071.0000      0.00  
+    0:00:09   15556.7      0.00       0.0       0.0                           11446660.0000      0.00  
+    0:00:09   15556.7      0.00       0.0       0.0                           11446660.0000      0.00  
+    0:00:09   15556.7      0.00       0.0       0.0                           11446660.0000      0.00  
+    0:00:09   15556.7      0.00       0.0       0.0                           11446660.0000      0.00  
+    0:00:09   15551.6      0.00       0.0       0.0                           11379214.0000      0.00  
+    0:00:09   15551.6      0.00       0.0       0.0                           11379214.0000      0.00  
+    0:00:09   15551.6      0.00       0.0       0.0                           11379214.0000      0.00  
+    0:00:09   15551.6      0.00       0.0       0.0                           11379214.0000      0.00  
+    0:00:09   15551.6      0.00       0.0       0.0                           11379214.0000      0.00  
+    0:00:09   15551.6      0.00       0.0       0.0                           11379214.0000      0.00  
+    0:00:09   15527.8      0.00       0.0       0.0                           11348073.0000      0.00  
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/home/M13/m0bochun/IC_Contest/2021/2021_univ_cell/02_SYN/Netlist/geofence_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'geofence_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/home/M13/m0bochun/IC_Contest/2021/2021_univ_cell/02_SYN/Netlist/geofence_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : geofence
+Version: U-2022.12
+Date   : Wed Jan 29 21:38:43 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+
+Number of ports:                           24
+Number of nets:                          1283
+Number of cells:                         1137
+Number of combinational cells:            962
+Number of sequential cells:               175
+Number of macros/black boxes:               0
+Number of buf/inv:                        102
+Number of references:                      80
+
+Combinational area:               9889.052549
+Buf/Inv area:                      516.009593
+Noncombinational area:            5638.762611
+Macro/Black Box area:                0.000000
+Net Interconnect area:          172154.197937
+
+Total cell area:                 15527.815160
+Total area:                     187682.013097
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : geofence
+Version: U-2022.12
+Date   : Wed Jan 29 21:38:43 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: count_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: receiver_y_reg_2__1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  geofence           tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  count_reg_2_/CK (DFFRX1)                 0.00       0.50 r
+  count_reg_2_/Q (DFFRX1)                  1.06       1.56 r
+  U1066/Y (CLKINVX2)                       0.97       2.53 f
+  U1081/Y (NAND2X4)                        0.89       3.42 r
+  U1045/Y (OAI22XL)                        0.50       3.91 f
+  U1099/Y (OAI22XL)                        0.58       4.49 r
+  U913/Y (BUFX2)                           0.64       5.14 r
+  U1100/Y (OAI22XL)                        0.32       5.46 f
+  U909/Y (AOI211XL)                        0.53       5.99 r
+  U1062/Y (OAI21XL)                        0.45       6.44 f
+  U1102/Y (NOR2X1)                         0.47       6.91 r
+  U1760/CO (ADDFX2)                        0.50       7.40 r
+  intadd_1_U9/S (ADDFXL)                   0.88       8.28 r
+  U867/Y (INVXL)                           0.39       8.68 f
+  U1108/Y (OAI22XL)                        0.56       9.24 r
+  U908/Y (BUFX2)                           0.68       9.92 r
+  U997/Y (OAI221X4)                        0.55      10.47 f
+  U1607/Y (OA22X1)                         0.58      11.05 f
+  U1608/Y (NOR2X1)                         0.38      11.43 r
+  U905/Y (AOI21XL)                         0.22      11.65 f
+  intadd_0_U19/S (ADDFXL)                  0.94      12.59 f
+  U983/Y (OAI2BB1XL)                       0.43      13.02 f
+  U1155/Y (OAI21XL)                        0.47      13.49 r
+  U853/Y (AOI222XL)                        0.58      14.08 f
+  U975/Y (OAI2BB1XL)                       0.44      14.51 f
+  U973/Y (OAI21XL)                         0.51      15.03 r
+  U1156/Y (AOI222X1)                       0.52      15.55 f
+  U1053/Y (OAI21XL)                        0.80      16.35 r
+  U1054/Y (AOI222XL)                       0.58      16.93 f
+  U1055/Y (OAI21XL)                        0.89      17.82 r
+  U883/Y (AOI222X1)                        0.52      18.34 f
+  U1056/Y (OAI21XL)                        0.87      19.21 r
+  U969/Y (AOI222X1)                        0.52      19.73 f
+  U849/Y (OAI21XL)                         0.87      20.60 r
+  U968/Y (AOI222X1)                        0.52      21.12 f
+  U848/Y (OAI21XL)                         0.80      21.92 r
+  U859/Y (AOI222XL)                        0.58      22.50 f
+  U847/Y (OAI21XL)                         0.89      23.39 r
+  U897/Y (AOI222X1)                        0.52      23.91 f
+  U846/Y (OAI21XL)                         0.87      24.78 r
+  U967/Y (AOI222X1)                        0.55      25.33 f
+  U872/Y (AOI222X1)                        1.05      26.38 r
+  U882/Y (NOR2X4)                          0.47      26.85 f
+  U964/Y (INVX3)                           0.23      27.08 r
+  U1330/Y (OAI31X4)                        0.55      27.63 f
+  U1061/Y (NAND3X1)                        0.81      28.43 r
+  U892/Y (BUFX6)                           0.65      29.09 r
+  U1458/Y (OAI22XL)                        0.33      29.41 f
+  U944/Y (AOI21XL)                         0.45      29.87 r
+  U1459/Y (OAI21XL)                        0.27      30.13 f
+  receiver_y_reg_2__1_/D (DFFRX1)          0.00      30.13 f
+  data arrival time                                  30.13
+
+  clock clk (rise edge)                   30.00      30.00
+  clock network delay (ideal)              0.50      30.50
+  clock uncertainty                       -0.10      30.40
+  receiver_y_reg_2__1_/CK (DFFRX1)         0.00      30.40 r
+  library setup time                      -0.27      30.13
+  data required time                                 30.13
+  -----------------------------------------------------------
+  data required time                                 30.13
+  data arrival time                                 -30.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+exit
+
+Memory usage for this session 269 Mbytes.
+Memory usage for this session including child processes 408 Mbytes.
+CPU usage for this session 20 seconds ( 0.01 hours ).
+Elapsed time for this session 18 seconds ( 0.00 hours ).
+
+Thank you...
+

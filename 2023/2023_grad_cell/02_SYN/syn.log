@@ -1,0 +1,711 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "LASER"
+LASER
+set CYCLE 8.0
+8.0
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ./LASER.v
+Presto compilation completed successfully.
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 84 in file
+        './LASER.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            85            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine LASER line 94 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 105 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Y_reg_reg      | Flip-flop |  160  |  Y  | N  | N  | N  | N  | N  | N  |
+|      X_reg_reg      | Flip-flop |  160  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 125 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   jump_value_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 140 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   current_cx_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 155 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   current_cy_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 172 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 190 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  inside_count_reg   | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 205 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     opt_C1Y_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|     opt_C1X_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 224 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     opt_C2Y_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|     opt_C2X_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 243 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    opt_count_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 255 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  c_update_flag_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine LASER line 267 in file
+                './LASER.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| unchange_count_reg  | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (LASER)
+Elaborated 1 design.
+Current design is now 'LASER'.
+Information: Building the design 'det_inside'. (HDL-193)
+Presto compilation completed successfully. (det_inside)
+Information: Building the design 'det_inside_single'. (HDL-193)
+Warning:  ./LASER.v:319: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./LASER.v:320: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./LASER.v:322: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./LASER.v:323: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully. (det_inside_single)
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'LASER'.
+{LASER}
+link
+
+  Linking design 'LASER'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/M13/m0bochun/IC_Contest/2023/2023_grad_cell/02_SYN/LASER.db, etc
+  slow (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_operating_conditions -max_library slow -max slow
+Using operating conditions 'slow' found in library 'slow'.
+1
+set_wire_load_model -name tsmc13_wl10 -library slow      
+1
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name CLK -period $CYCLE [get_ports CLK] 
+1
+set_dont_touch_network              [get_clocks CLK]
+1
+set_fix_hold                        [get_clocks CLK]
+1
+set_clock_uncertainty       0.1     [get_clocks CLK]
+1
+set_clock_latency           0.5     [get_clocks CLK] 
+1
+set_ideal_network                   [get_ports CLK]
+1
+# (D-2) Setting in/out Constraints
+set_input_delay  1      -clock CLK [remove_from_collection [all_inputs] [get_ports CLK]] 
+1
+set_output_delay 1      -clock CLK [all_outputs] 
+1
+# (D-3) Setting Design Environment
+set_load         1      [all_outputs]
+1
+set_drive        0.1    [all_inputs]
+1
+# (D-4) Setting DRC Constraint
+#set_max_fanout 20 [all_inputs]
+# (D-5) Report Clock skew
+report_clock -skew CLK
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Updating design information... (UID-85)
+Warning: Design 'LASER' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clock_skew
+Design : LASER
+Version: U-2022.12
+Date   : Fri Jan 31 07:41:09 2025
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+CLK              0.50      0.50      0.50      0.50      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.0 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 2941                                   |
+| Number of User Hierarchies                              | 60                                     |
+| Sequential Cell Count                                   | 368                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 359                                    |
+| Number of Dont Touch Nets                               | 1                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 20 instances of design 'det_inside'. (OPT-1056)
+Information: Uniquified 40 instances of design 'det_inside_single'. (OPT-1056)
+  Simplifying Design 'LASER'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy genblk1[0].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[19].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[18].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[17].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[16].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[15].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[14].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[13].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[12].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[11].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[10].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[9].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[8].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[7].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[6].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[5].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[4].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[3].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[2].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[1].det_inside_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[0].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[19].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[19].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[18].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[18].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[17].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[17].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[16].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[16].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[15].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[15].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[14].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[14].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[13].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[13].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[12].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[12].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[11].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[11].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[10].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[10].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[9].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[9].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[8].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[8].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[7].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[7].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[6].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[6].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[5].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[5].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[4].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[4].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[3].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[3].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[2].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[2].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[1].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[1].det_inside_inst/det_inside_1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1[0].det_inside_inst/det_inside_2 before Pass 1 (OPT-776)
+Information: Ungrouping 60 of 61 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'LASER'
+Information: Added key list 'DesignWare' to design 'LASER'. (DDB-72)
+ Implement Synthetic for 'LASER'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:10   88940.4      0.00       0.0    7180.2                           94576040.0000      0.00  
+    0:00:11   88940.4      0.00       0.0    7180.2                           94576040.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:11   88940.4      0.00       0.0    7180.2                           94576040.0000      0.00  
+    0:00:11   88940.4      0.00       0.0    7180.2                           94576040.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Mapping 'LASER_DP_OP_839J1_122_8998_2'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:13   44293.7      0.01       0.1    7925.9                           38456968.0000      0.00  
+    0:00:13   44297.0      0.00       0.0    7943.1                           38457344.0000      0.00  
+    0:00:13   44297.0      0.00       0.0    7943.1                           38457344.0000      0.00  
+    0:00:13   44297.0      0.00       0.0    7943.1                           38457344.0000      0.00  
+    0:00:13   44280.1      0.00       0.0    7943.1                           38441132.0000      0.00  
+    0:00:13   44280.1      0.00       0.0    7943.1                           38441132.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:14   42895.0      0.00       0.0    7778.1                           36898648.0000      0.00  
+    0:00:14   42895.0      0.00       0.0    7778.1                           36898648.0000      0.00  
+    0:00:14   42895.0      0.00       0.0    7778.1                           36898648.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:15   41403.0      0.00       0.0    7203.6                           35373480.0000      0.00  
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:00:15   40221.6      0.00       0.0       0.0                           34410084.0000      0.00  
+    0:00:15   40221.6      0.00       0.0       0.0                           34410084.0000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:15   40221.6      0.00       0.0       0.0                           34410084.0000      0.00  
+    0:00:15   40221.6      0.00       0.0       0.0                           34410084.0000      0.00  
+    0:00:15   40221.6      0.00       0.0       0.0                           34410084.0000      0.00  
+    0:00:15   40221.6      0.00       0.0       0.0                           34410084.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:16   39827.8      0.00       0.0       0.0                           33924112.0000      0.00  
+    0:00:16   37220.6      0.00       0.0       0.0                           30090014.0000      0.00  
+    0:00:16   37220.6      0.00       0.0       0.0                           30090014.0000      0.00  
+    0:00:16   37220.6      0.00       0.0       0.0                           30090014.0000      0.00  
+    0:00:17   37220.6      0.00       0.0       0.0                           30063036.0000      0.00  
+    0:00:17   36945.6      0.00       0.0       0.0                           29713524.0000      0.00  
+    0:00:17   36945.6      0.00       0.0       0.0                           29713524.0000      0.00  
+    0:00:17   36945.6      0.00       0.0       0.0                           29713524.0000      0.00  
+    0:00:17   36945.6      0.00       0.0       0.0                           29713524.0000      0.00  
+    0:00:17   36945.6      0.00       0.0       0.0                           29713524.0000      0.00  
+    0:00:17   36945.6      0.00       0.0       0.0                           29713524.0000      0.00  
+    0:00:17   36366.8      0.00       0.0       0.0                           29258294.0000      0.00  
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/home/M13/m0bochun/IC_Contest/2023/2023_grad_cell/02_SYN/Netlist/LASER_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'LASER_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/home/M13/m0bochun/IC_Contest/2023/2023_grad_cell/02_SYN/Netlist/LASER_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : LASER
+Version: U-2022.12
+Date   : Fri Jan 31 07:41:29 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+
+Number of ports:                           27
+Number of nets:                          3511
+Number of cells:                         3477
+Number of combinational cells:           3109
+Number of sequential cells:               368
+Number of macros/black boxes:               0
+Number of buf/inv:                        430
+Number of references:                      94
+
+Combinational area:              26834.196357
+Buf/Inv area:                     2299.976992
+Noncombinational area:            9532.598513
+Macro/Black Box area:                0.000000
+Net Interconnect area:          364421.872620
+
+Total cell area:                 36366.794870
+Total area:                     400788.667489
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : LASER
+Version: U-2022.12
+Date   : Fri Jan 31 07:41:29 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: state_reg_0_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: opt_count_reg_3_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LASER              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  state_reg_0_/CK (DFFQX2)                 0.00       0.50 r
+  state_reg_0_/Q (DFFQX2)                  0.48       0.98 r
+  U3096/Y (NAND2X6)                        0.12       1.10 f
+  U3097/Y (INVX8)                          0.08       1.18 r
+  U1785/Y (INVX6)                          0.11       1.30 f
+  U1803/Y (CLKMX2X2)                       0.44       1.74 f
+  U1816/Y (INVX20)                         0.40       2.14 r
+  U2633/Y (OAI21X1)                        0.19       2.33 f
+  U2834/Y (OAI2BB1X1)                      0.34       2.67 r
+  U2634/Y (OAI21X1)                        0.20       2.86 f
+  U3038/Y (OAI2BB1X1)                      0.33       3.19 r
+  U1656/Y (OAI21XL)                        0.28       3.46 f
+  U3666/Y (NAND2X2)                        0.25       3.71 r
+  U3667/Y (INVX3)                          0.11       3.83 f
+  U3684/Y (XOR2X1)                         0.20       4.02 f
+  U3686/Y (NAND4X1)                        0.23       4.25 r
+  U1996/Y (AOI33X1)                        0.26       4.51 f
+  U2602/Y (OAI33X1)                        0.42       4.93 r
+  U2592/S (ADDFX2)                         0.49       5.42 r
+  U1879/S (ADDFHX2)                        0.30       5.72 f
+  U1985/CO (ADDFHX2)                       0.25       5.97 f
+  U4522/S (ADDFHX4)                        0.36       6.33 r
+  U1980/Y (NOR2X4)                         0.11       6.43 f
+  U1807/Y (OAI21X2)                        0.26       6.70 r
+  U1831/Y (INVX3)                          0.14       6.83 f
+  U1786/Y (OAI21XL)                        0.46       7.29 r
+  U1867/Y (XNOR2X1)                        0.43       7.72 f
+  U4652/Y (AO22X1)                         0.47       8.19 f
+  opt_count_reg_3_/D (DFFHQX2)             0.00       8.19 f
+  data arrival time                                   8.19
+
+  clock CLK (rise edge)                    8.00       8.00
+  clock network delay (ideal)              0.50       8.50
+  clock uncertainty                       -0.10       8.40
+  opt_count_reg_3_/CK (DFFHQX2)            0.00       8.40 r
+  library setup time                      -0.20       8.20
+  data required time                                  8.20
+  -----------------------------------------------------------
+  data required time                                  8.20
+  data arrival time                                  -8.19
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1
+exit
+
+Memory usage for this session 276 Mbytes.
+Memory usage for this session including child processes 433 Mbytes.
+CPU usage for this session 39 seconds ( 0.01 hours ).
+Elapsed time for this session 26 seconds ( 0.01 hours ).
+
+Thank you...
+

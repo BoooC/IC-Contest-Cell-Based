@@ -1,0 +1,719 @@
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+# (A) Global Parameters
+#======================================================
+set DESIGN "STI_DAC"
+STI_DAC
+set CYCLE 15.0
+15.0
+set INPUT_DLY [expr 0.5*$CYCLE]
+7.5
+set OUTPUT_DLY [expr 0.5*$CYCLE]
+7.5
+#======================================================
+# (B) Read RTL Code
+#======================================================
+# (B-1) analyze + elaborate
+set hdlin_auto_save_templates TRUE
+TRUE
+analyze -f sverilog $DESIGN\.v 
+Running PRESTO HDLC
+Compiling source file ./STI_DAC.v
+Warning:  ./STI_DAC.v:26: the undeclared symbol 'so_end' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/fast.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb'
+1
+elaborate $DESIGN  
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'fast'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (STI_DAC)
+Elaborated 1 design.
+Current design is now 'STI_DAC'.
+Information: Building the design 'STI'. (HDL-193)
+Warning:  ./STI_DAC.v:116: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./STI_DAC.v:125: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 90 in file
+        './STI_DAC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            91            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 108 in file
+        './STI_DAC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           111            |    auto/auto     |
+|           120            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 131 in file
+        './STI_DAC.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           133            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine STI line 98 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine STI line 108 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   data_buffer_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine STI line 131 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  pi_length_reg_reg  | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine STI line 143 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine STI line 152 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| count_done_reg_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine STI line 165 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     so_data_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine STI line 177 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    so_valid_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine STI line 189 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     so_end_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|     STI/170      |   32   |    1    |      5       |
+======================================================
+Presto compilation completed successfully. (STI)
+Information: Building the design 'DAC'. (HDL-193)
+
+Inferred memory devices in process
+        in routine DAC line 242 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   data_buffer_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine DAC line 261 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine DAC line 270 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     wr_flag_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine DAC line 282 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  so_end_toggle_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine DAC line 291 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    mem_addr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine DAC line 300 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  even_col_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine DAC line 309 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  even_row_flag_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine DAC line 318 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mem_idx_reg     | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine DAC line 327 in file
+                './STI_DAC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   finish_reg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (DAC)
+1
+# (B-2) read_sverilog
+#read_sverilog $DESIGN\.v
+# (B-3) set current design
+current_design $DESIGN
+Current design is 'STI_DAC'.
+{STI_DAC}
+link
+
+  Linking design 'STI_DAC'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/M13/m0bochun/IC_Contest/2014/2014_grad_cell/02_SYN/STI_DAC.db, etc
+  slow (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db
+  fast (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/fast.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb
+
+1
+#======================================================
+#  (C) Global Setting
+#======================================================
+set_operating_conditions -max_library slow -max slow
+Using operating conditions 'slow' found in library 'slow'.
+1
+set_wire_load_model -name tsmc13_wl10 -library slow       
+1
+#======================================================
+#  (D) Set Design Constraints
+#======================================================
+# (D-1) Setting Clock Constraints
+create_clock -name clk -period $CYCLE [get_ports clk] 
+1
+set_dont_touch_network             [get_clocks clk]
+1
+#set_fix_hold                       [get_clocks clk]
+set_clock_uncertainty       0.1    [get_clocks clk]
+1
+set_clock_latency           0.5    [get_clocks clk] 
+1
+#set_input_transition        0.5    [all_inputs] 
+#set_clock_transition        0.1    [all_clocks] 
+# (D-2) Setting in/out Constraints
+#set_input_delay   -max  $INPUT_DLY  -clock clk   [all_inputs] ;  # set_up time check 
+#set_input_delay   -min  0           -clock clk   [all_inputs] ;  # hold   time check 
+#set_output_delay  -max  $OUTPUT_DLY -clock clk   [all_outputs] ; # set_up time check 
+#set_output_delay  -min  0           -clock clk   [all_outputs] ; # hold   time check 
+#set_input_delay 0 -clock clk clk
+#set_input_delay 0 -clock clk reset
+#set_max_delay $CYCLE -from [all_inputs] -to [all_outputs]
+set_input_delay  $INPUT_DLY -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
+1
+set_output_delay 0.5        -clock clk [all_outputs] 
+1
+# (D-3) Setting Design Environment
+set_load         1     [all_outputs]
+1
+set_drive        1     [all_inputs]
+1
+# (D-4) Setting DRC Constraint
+#set_max_delay           0     ; # Optimize delay max effort                 
+#set_max_area            0      ; # Optimize area max effort           
+set_max_fanout          20      [all_inputs]
+1
+# (D-5) Report Clock skew
+report_clock -skew clk
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : clock_skew
+Design : STI_DAC
+Version: U-2022.12
+Date   : Sun Jan 26 14:34:55 2025
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+clk              0.50      0.50      0.50      0.50      0.10      0.10
+1
+check_timing
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+#======================================================
+#  (E) Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_fix_hold [all_clocks]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 8 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.0 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler NXT WLM                                                           |
+| Comand Line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 218                                    |
+| Number of User Hierarchies                              | 2                                      |
+| Sequential Cell Count                                   | 71                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 39                                     |
+| Number of Dont Touch Nets                               | 3                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'STI_DAC'
+
+  Loading target library 'fast'
+Loaded alib file './alib-52/slow.db.alib'
+Loaded alib file './alib-52/fast.db.alib'
+Warning: Operating condition slow set on design STI_DAC has different process,
+voltage and temperatures parameters than the parameters at which target library 
+fast is characterized. Delays may be inaccurate as a result. (OPT-998)
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy STI_inst before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy DAC_inst before Pass 1 (OPT-776)
+Information: Ungrouping 2 of 3 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'STI_DAC'
+Information: Added key list 'DesignWare' to design 'STI_DAC'. (DDB-72)
+Information: The register 'STI_inst/state_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'STI_inst/pi_length_reg_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'STI_inst/pi_length_reg_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'STI_inst/pi_length_reg_reg[0]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'STI_DAC'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:05    5742.3      0.00       0.0   16852.1                           4932277.5000      0.00  
+    0:00:05    5742.3      0.00       0.0   16852.1                           4932277.5000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:05    5742.3      0.00       0.0   16852.1                           4932277.5000      0.00  
+    0:00:05    5742.3      0.00       0.0   16852.1                           4932277.5000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:05    4000.8     11.28      22.9   28599.8                           2455873.2500      0.00  
+    0:00:05    4012.7      0.00       0.0   27662.6                           2459580.2500      0.00  
+    0:00:05    4012.7      0.00       0.0   27662.6                           2459580.2500      0.00  
+    0:00:06    4011.0      0.00       0.0   27662.6                           2459245.7500      0.00  
+    0:00:06    4011.0      0.00       0.0   27662.6                           2459245.7500      0.00  
+    0:00:06    4011.0      0.00       0.0   27662.6                           2459245.7500      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:06    3995.7      0.00       0.0   27377.6                           2445516.5000      0.00  
+    0:00:06    3995.7      0.00       0.0   27377.6                           2445516.5000      0.00  
+    0:00:06    3995.7      0.00       0.0   27377.6                           2445516.5000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06    3992.3      0.00       0.0   27377.6                           2443552.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:06    4443.8      0.00       0.0       0.0                           2859491.2500      0.00  
+    0:00:06    4443.8      0.00       0.0       0.0                           2859491.2500      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06    4443.8      0.00       0.0       0.0                           2859491.2500      0.00  
+    0:00:06    4443.8      0.00       0.0       0.0                           2859491.2500      0.00  
+    0:00:06    4443.8      0.00       0.0       0.0                           2859491.2500      0.00  
+    0:00:06    4443.8      0.00       0.0       0.0                           2859491.2500      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06    4435.3      0.00       0.0       0.0                           2840752.5000      0.00  
+    0:00:07    4413.2      0.00       0.0       0.0                           2812559.0000      0.00  
+    0:00:07    4413.2      0.00       0.0       0.0                           2812559.0000      0.00  
+    0:00:07    4413.2      0.00       0.0       0.0                           2812559.0000      0.00  
+    0:00:07    4413.2      0.00       0.0       0.0                           2812558.7500      0.00  
+    0:00:07    4372.5      0.00       0.0       0.0                           2800438.7500      0.00  
+    0:00:07    4372.5      0.00       0.0       0.0                           2800438.7500      0.00  
+    0:00:07    4372.5      0.00       0.0       0.0                           2800438.7500      0.00  
+    0:00:07    4372.5      0.00       0.0       0.0                           2800438.7500      0.00  
+    0:00:07    4372.5      0.00       0.0       0.0                           2800438.7500      0.00  
+    0:00:07    4372.5      0.00       0.0       0.0                           2800438.7500      0.00  
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
+Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/fast.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'fast'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#uniquify
+#compile
+#======================================================
+#  (F) Output Reports 
+#======================================================
+report_design  >  Report/$DESIGN\.design
+report_resource >  Report/$DESIGN\.resource
+report_timing -max_paths 3 >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_power > Report/$DESIGN\.power
+report_clock > Report/$DESIGN\.clock
+report_port >  Report/$DESIGN\.port
+report_power >  Report/$DESIGN\.power
+#report_reference > Report/$DESIGN\.reference
+#======================================================
+#  (G) Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  (H) Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/home/M13/m0bochun/IC_Contest/2014/2014_grad_cell/02_SYN/Netlist/STI_DAC_SYN.v'.
+1
+write -format ddc     -hierarchy -output $DESIGN\_SYN.ddc
+Writing ddc file 'STI_DAC_SYN.ddc'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/home/M13/m0bochun/IC_Contest/2014/2014_grad_cell/02_SYN/Netlist/STI_DAC_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  (I) Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : STI_DAC
+Version: U-2022.12
+Date   : Sun Jan 26 14:35:05 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
+
+Number of ports:                           49
+Number of nets:                           385
+Number of cells:                          346
+Number of combinational cells:            279
+Number of sequential cells:                67
+Number of macros/black boxes:               0
+Number of buf/inv:                         64
+Number of references:                      51
+
+Combinational area:               2440.861202
+Buf/Inv area:                      521.101807
+Noncombinational area:            1931.641178
+Macro/Black Box area:                0.000000
+Net Interconnect area:           47460.237396
+
+Total cell area:                  4372.502381
+Total area:                      51832.739777
+1
+report_timing 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : STI_DAC
+Version: U-2022.12
+Date   : Sun Jan 26 14:35:05 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: pi_length[1]
+              (input port clocked by clk)
+  Endpoint: STI_inst_data_buffer_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  STI_DAC            tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    7.50       8.00 r
+  pi_length[1] (in)                                       0.05       8.05 r
+  U261/Y (INVXL)                                          0.20       8.26 f
+  U404/Y (NOR2X1)                                         0.78       9.03 r
+  U265/Y (NAND2X2)                                        0.61       9.64 f
+  U440/Y (OAI22XL)                                        0.79      10.43 r
+  U445/Y (AOI22XL)                                        0.34      10.77 f
+  U446/Y (OAI211XL)                                       0.35      11.13 r
+  STI_inst_data_buffer_reg_16_/D (DFFQX1)                 0.00      11.13 r
+  data arrival time                                                 11.13
+
+  clock clk (rise edge)                                  15.00      15.00
+  clock network delay (ideal)                             0.50      15.50
+  clock uncertainty                                      -0.10      15.40
+  STI_inst_data_buffer_reg_16_/CK (DFFQX1)                0.00      15.40 r
+  library setup time                                     -0.16      15.24
+  data required time                                                15.24
+  --------------------------------------------------------------------------
+  data required time                                                15.24
+  data arrival time                                                -11.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.11
+
+
+1
+exit
+
+Memory usage for this session 324 Mbytes.
+Memory usage for this session including child processes 464 Mbytes.
+CPU usage for this session 15 seconds ( 0.00 hours ).
+Elapsed time for this session 16 seconds ( 0.00 hours ).
+
+Thank you...
+

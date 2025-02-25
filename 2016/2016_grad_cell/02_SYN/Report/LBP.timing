@@ -1,0 +1,166 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : LBP
+Version: U-2022.12
+Date   : Sun Jan 26 14:49:07 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: addr_y_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: gray_addr_reg[13]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LBP                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  addr_y_reg[3]/CK (DFFRX2)                0.00       0.50 r
+  addr_y_reg[3]/Q (DFFRX2)                 0.51       1.01 r
+  U550/Y (NAND2X2)                         0.13       1.13 f
+  U381/Y (NOR3X2)                          0.26       1.39 r
+  U551/Y (NAND2BX4)                        0.15       1.54 f
+  U417/Y (INVX8)                           0.17       1.71 r
+  U377/Y (NOR2X6)                          0.10       1.81 f
+  U411/Y (INVX3)                           0.09       1.90 r
+  U589/Y (CLKMX2X6)                        0.17       2.07 r
+  U536/Y (CLKINVX1)                        0.15       2.22 f
+  U364/Y (NAND2X4)                         0.19       2.40 r
+  U355/Y (INVX4)                           0.12       2.53 f
+  U387/Y (NOR2X2)                          0.23       2.76 r
+  U611/Y (NAND2X2)                         0.17       2.93 f
+  U612/Y (NOR2X2)                          0.23       3.17 r
+  U613/Y (NAND2X1)                         0.24       3.41 f
+  U614/Y (NOR2X2)                          0.18       3.59 r
+  U615/Y (XNOR2X1)                         0.23       3.82 f
+  U642/Y (AO22X2)                          0.32       4.14 f
+  gray_addr_reg[13]/D (DFFQX1)             0.00       4.14 f
+  data arrival time                                   4.14
+
+  clock clk (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.50       4.50
+  clock uncertainty                       -0.10       4.40
+  gray_addr_reg[13]/CK (DFFQX1)            0.00       4.40 r
+  library setup time                      -0.26       4.14
+  data required time                                  4.14
+  -----------------------------------------------------------
+  data required time                                  4.14
+  data arrival time                                  -4.14
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: addr_x_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: gray_addr_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LBP                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  addr_x_reg[6]/CK (DFFRX2)                0.00       0.50 r
+  addr_x_reg[6]/Q (DFFRX2)                 0.59       1.09 f
+  U541/Y (NAND2X2)                         0.15       1.24 r
+  U543/Y (NOR3X4)                          0.09       1.34 f
+  U544/Y (NAND2BX4)                        0.15       1.49 r
+  U418/Y (INVX8)                           0.14       1.63 f
+  U413/Y (NOR2X6)                          0.14       1.77 r
+  U455/Y (INVX3)                           0.08       1.85 f
+  U590/Y (CLKMX2X2)                        0.22       2.07 f
+  U450/Y (INVX3)                           0.10       2.17 r
+  U591/Y (NAND2X4)                         0.13       2.30 f
+  U360/Y (NOR2X1)                          0.36       2.66 r
+  U357/Y (NAND2X1)                         0.20       2.86 f
+  U352/Y (NOR2X2)                          0.27       3.13 r
+  U421/Y (INVX3)                           0.13       3.27 f
+  U733/Y (NOR2X1)                          0.21       3.48 r
+  U734/Y (NAND2X1)                         0.27       3.75 f
+  U735/Y (NOR2X4)                          0.17       3.92 r
+  U741/Y (MXI2X1)                          0.19       4.11 f
+  U742/Y (OAI2BB1X2)                       0.15       4.26 r
+  gray_addr_reg[6]/D (DFFQX1)              0.00       4.26 r
+  data arrival time                                   4.26
+
+  clock clk (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.50       4.50
+  clock uncertainty                       -0.10       4.40
+  gray_addr_reg[6]/CK (DFFQX1)             0.00       4.40 r
+  library setup time                      -0.14       4.26
+  data required time                                  4.26
+  -----------------------------------------------------------
+  data required time                                  4.26
+  data arrival time                                  -4.26
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: state_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: gray_addr_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LBP                tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  state_reg[0]/CK (DFFRX4)                 0.00       0.50 r
+  state_reg[0]/Q (DFFRX4)                  0.53       1.03 f
+  U389/Y (NOR2X4)                          0.28       1.31 r
+  U546/Y (NAND2X8)                         0.16       1.47 f
+  U571/Y (BUFX20)                          0.19       1.65 f
+  U572/Y (NAND2X4)                         0.11       1.76 r
+  U576/Y (NAND2X8)                         0.11       1.87 f
+  U577/Y (NAND2X6)                         0.09       1.96 r
+  U578/Y (NAND2X6)                         0.08       2.04 f
+  U581/Y (NAND2X4)                         0.12       2.17 r
+  U585/Y (NAND2X6)                         0.11       2.28 f
+  U633/Y (NOR2X4)                          0.15       2.43 r
+  U354/Y (INVX1)                           0.12       2.55 f
+  U634/Y (NOR2X1)                          0.34       2.89 r
+  U635/Y (NOR2X6)                          0.21       3.09 f
+  U788/Y (OAI21X1)                         0.43       3.52 r
+  U847/Y (AOI21X1)                         0.19       3.71 f
+  U848/Y (MXI2X1)                          0.27       3.98 r
+  U849/Y (AO21X1)                          0.26       4.24 r
+  gray_addr_reg[12]/D (DFFHQX4)            0.00       4.24 r
+  data arrival time                                   4.24
+
+  clock clk (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.50       4.50
+  clock uncertainty                       -0.10       4.40
+  gray_addr_reg[12]/CK (DFFHQX4)           0.00       4.40 r
+  library setup time                      -0.15       4.25
+  data required time                                  4.25
+  -----------------------------------------------------------
+  data required time                                  4.25
+  data arrival time                                  -4.24
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1

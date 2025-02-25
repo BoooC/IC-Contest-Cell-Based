@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : clocks
+Design : geofence
+Version: U-2022.12
+Date   : Thu Jan 30 23:07:15 2025
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk             50.00   {0 25}              d f       {clk}
+--------------------------------------------------------------------------------
+1

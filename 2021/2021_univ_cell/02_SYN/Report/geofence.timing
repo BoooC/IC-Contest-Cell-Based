@@ -1,0 +1,258 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : geofence
+Version: U-2022.12
+Date   : Wed Jan 29 21:38:43 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: count_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: receiver_y_reg[2][1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  geofence           tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  count_reg[2]/CK (DFFRX1)                 0.00       0.50 r
+  count_reg[2]/Q (DFFRX1)                  1.06       1.56 r
+  U1066/Y (CLKINVX2)                       0.97       2.53 f
+  U1081/Y (NAND2X4)                        0.89       3.42 r
+  U1045/Y (OAI22XL)                        0.50       3.91 f
+  U1099/Y (OAI22XL)                        0.58       4.49 r
+  U913/Y (BUFX2)                           0.64       5.14 r
+  U1100/Y (OAI22XL)                        0.32       5.46 f
+  U909/Y (AOI211XL)                        0.53       5.99 r
+  U1062/Y (OAI21XL)                        0.45       6.44 f
+  U1102/Y (NOR2X1)                         0.47       6.91 r
+  U1760/CO (ADDFX2)                        0.50       7.40 r
+  intadd_1/U9/S (ADDFXL)                   0.88       8.28 r
+  U867/Y (INVXL)                           0.39       8.68 f
+  U1108/Y (OAI22XL)                        0.56       9.24 r
+  U908/Y (BUFX2)                           0.68       9.92 r
+  U997/Y (OAI221X4)                        0.55      10.47 f
+  U1607/Y (OA22X1)                         0.58      11.05 f
+  U1608/Y (NOR2X1)                         0.38      11.43 r
+  U905/Y (AOI21XL)                         0.22      11.65 f
+  intadd_0/U19/S (ADDFXL)                  0.94      12.59 f
+  U983/Y (OAI2BB1XL)                       0.43      13.02 f
+  U1155/Y (OAI21XL)                        0.47      13.49 r
+  U853/Y (AOI222XL)                        0.58      14.08 f
+  U975/Y (OAI2BB1XL)                       0.44      14.51 f
+  U973/Y (OAI21XL)                         0.51      15.03 r
+  U1156/Y (AOI222X1)                       0.52      15.55 f
+  U1053/Y (OAI21XL)                        0.80      16.35 r
+  U1054/Y (AOI222XL)                       0.58      16.93 f
+  U1055/Y (OAI21XL)                        0.89      17.82 r
+  U883/Y (AOI222X1)                        0.52      18.34 f
+  U1056/Y (OAI21XL)                        0.87      19.21 r
+  U969/Y (AOI222X1)                        0.52      19.73 f
+  U849/Y (OAI21XL)                         0.87      20.60 r
+  U968/Y (AOI222X1)                        0.52      21.12 f
+  U848/Y (OAI21XL)                         0.80      21.92 r
+  U859/Y (AOI222XL)                        0.58      22.50 f
+  U847/Y (OAI21XL)                         0.89      23.39 r
+  U897/Y (AOI222X1)                        0.52      23.91 f
+  U846/Y (OAI21XL)                         0.87      24.78 r
+  U967/Y (AOI222X1)                        0.55      25.33 f
+  U872/Y (AOI222X1)                        1.05      26.38 r
+  U882/Y (NOR2X4)                          0.47      26.85 f
+  U964/Y (INVX3)                           0.23      27.08 r
+  U1330/Y (OAI31X4)                        0.55      27.63 f
+  U1061/Y (NAND3X1)                        0.81      28.43 r
+  U892/Y (BUFX6)                           0.65      29.09 r
+  U1458/Y (OAI22XL)                        0.33      29.41 f
+  U944/Y (AOI21XL)                         0.45      29.87 r
+  U1459/Y (OAI21XL)                        0.27      30.13 f
+  receiver_y_reg[2][1]/D (DFFRX1)          0.00      30.13 f
+  data arrival time                                  30.13
+
+  clock clk (rise edge)                   30.00      30.00
+  clock network delay (ideal)              0.50      30.50
+  clock uncertainty                       -0.10      30.40
+  receiver_y_reg[2][1]/CK (DFFRX1)         0.00      30.40 r
+  library setup time                      -0.27      30.13
+  data required time                                 30.13
+  -----------------------------------------------------------
+  data required time                                 30.13
+  data arrival time                                 -30.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: count_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: receiver_y_reg[2][2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  geofence           tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  count_reg[2]/CK (DFFRX1)                 0.00       0.50 r
+  count_reg[2]/Q (DFFRX1)                  1.06       1.56 r
+  U1066/Y (CLKINVX2)                       0.97       2.53 f
+  U1081/Y (NAND2X4)                        0.89       3.42 r
+  U1045/Y (OAI22XL)                        0.50       3.91 f
+  U1099/Y (OAI22XL)                        0.58       4.49 r
+  U913/Y (BUFX2)                           0.64       5.14 r
+  U1100/Y (OAI22XL)                        0.32       5.46 f
+  U909/Y (AOI211XL)                        0.53       5.99 r
+  U1062/Y (OAI21XL)                        0.45       6.44 f
+  U1102/Y (NOR2X1)                         0.47       6.91 r
+  U1760/CO (ADDFX2)                        0.50       7.40 r
+  intadd_1/U9/S (ADDFXL)                   0.88       8.28 r
+  U867/Y (INVXL)                           0.39       8.68 f
+  U1108/Y (OAI22XL)                        0.56       9.24 r
+  U908/Y (BUFX2)                           0.68       9.92 r
+  U997/Y (OAI221X4)                        0.55      10.47 f
+  U1607/Y (OA22X1)                         0.58      11.05 f
+  U1608/Y (NOR2X1)                         0.38      11.43 r
+  U905/Y (AOI21XL)                         0.22      11.65 f
+  intadd_0/U19/S (ADDFXL)                  0.94      12.59 f
+  U983/Y (OAI2BB1XL)                       0.43      13.02 f
+  U1155/Y (OAI21XL)                        0.47      13.49 r
+  U853/Y (AOI222XL)                        0.58      14.08 f
+  U975/Y (OAI2BB1XL)                       0.44      14.51 f
+  U973/Y (OAI21XL)                         0.51      15.03 r
+  U1156/Y (AOI222X1)                       0.52      15.55 f
+  U1053/Y (OAI21XL)                        0.80      16.35 r
+  U1054/Y (AOI222XL)                       0.58      16.93 f
+  U1055/Y (OAI21XL)                        0.89      17.82 r
+  U883/Y (AOI222X1)                        0.52      18.34 f
+  U1056/Y (OAI21XL)                        0.87      19.21 r
+  U969/Y (AOI222X1)                        0.52      19.73 f
+  U849/Y (OAI21XL)                         0.87      20.60 r
+  U968/Y (AOI222X1)                        0.52      21.12 f
+  U848/Y (OAI21XL)                         0.80      21.92 r
+  U859/Y (AOI222XL)                        0.58      22.50 f
+  U847/Y (OAI21XL)                         0.89      23.39 r
+  U897/Y (AOI222X1)                        0.52      23.91 f
+  U846/Y (OAI21XL)                         0.87      24.78 r
+  U967/Y (AOI222X1)                        0.55      25.33 f
+  U872/Y (AOI222X1)                        1.05      26.38 r
+  U882/Y (NOR2X4)                          0.47      26.85 f
+  U964/Y (INVX3)                           0.23      27.08 r
+  U1330/Y (OAI31X4)                        0.55      27.63 f
+  U1061/Y (NAND3X1)                        0.81      28.43 r
+  U892/Y (BUFX6)                           0.65      29.09 r
+  U1462/Y (OAI22XL)                        0.33      29.41 f
+  U942/Y (AOI21XL)                         0.45      29.87 r
+  U1463/Y (OAI21XL)                        0.27      30.13 f
+  receiver_y_reg[2][2]/D (DFFRX1)          0.00      30.13 f
+  data arrival time                                  30.13
+
+  clock clk (rise edge)                   30.00      30.00
+  clock network delay (ideal)              0.50      30.50
+  clock uncertainty                       -0.10      30.40
+  receiver_y_reg[2][2]/CK (DFFRX1)         0.00      30.40 r
+  library setup time                      -0.27      30.13
+  data required time                                 30.13
+  -----------------------------------------------------------
+  data required time                                 30.13
+  data arrival time                                 -30.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: count_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: receiver_y_reg[2][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  geofence           tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  count_reg[2]/CK (DFFRX1)                 0.00       0.50 r
+  count_reg[2]/Q (DFFRX1)                  1.06       1.56 r
+  U1066/Y (CLKINVX2)                       0.97       2.53 f
+  U1081/Y (NAND2X4)                        0.89       3.42 r
+  U1045/Y (OAI22XL)                        0.50       3.91 f
+  U1099/Y (OAI22XL)                        0.58       4.49 r
+  U913/Y (BUFX2)                           0.64       5.14 r
+  U1100/Y (OAI22XL)                        0.32       5.46 f
+  U909/Y (AOI211XL)                        0.53       5.99 r
+  U1062/Y (OAI21XL)                        0.45       6.44 f
+  U1102/Y (NOR2X1)                         0.47       6.91 r
+  U1760/CO (ADDFX2)                        0.50       7.40 r
+  intadd_1/U9/S (ADDFXL)                   0.88       8.28 r
+  U867/Y (INVXL)                           0.39       8.68 f
+  U1108/Y (OAI22XL)                        0.56       9.24 r
+  U908/Y (BUFX2)                           0.68       9.92 r
+  U997/Y (OAI221X4)                        0.55      10.47 f
+  U1607/Y (OA22X1)                         0.58      11.05 f
+  U1608/Y (NOR2X1)                         0.38      11.43 r
+  U905/Y (AOI21XL)                         0.22      11.65 f
+  intadd_0/U19/S (ADDFXL)                  0.94      12.59 f
+  U983/Y (OAI2BB1XL)                       0.43      13.02 f
+  U1155/Y (OAI21XL)                        0.47      13.49 r
+  U853/Y (AOI222XL)                        0.58      14.08 f
+  U975/Y (OAI2BB1XL)                       0.44      14.51 f
+  U973/Y (OAI21XL)                         0.51      15.03 r
+  U1156/Y (AOI222X1)                       0.52      15.55 f
+  U1053/Y (OAI21XL)                        0.80      16.35 r
+  U1054/Y (AOI222XL)                       0.58      16.93 f
+  U1055/Y (OAI21XL)                        0.89      17.82 r
+  U883/Y (AOI222X1)                        0.52      18.34 f
+  U1056/Y (OAI21XL)                        0.87      19.21 r
+  U969/Y (AOI222X1)                        0.52      19.73 f
+  U849/Y (OAI21XL)                         0.87      20.60 r
+  U968/Y (AOI222X1)                        0.52      21.12 f
+  U848/Y (OAI21XL)                         0.80      21.92 r
+  U859/Y (AOI222XL)                        0.58      22.50 f
+  U847/Y (OAI21XL)                         0.89      23.39 r
+  U897/Y (AOI222X1)                        0.52      23.91 f
+  U846/Y (OAI21XL)                         0.87      24.78 r
+  U967/Y (AOI222X1)                        0.55      25.33 f
+  U872/Y (AOI222X1)                        1.05      26.38 r
+  U882/Y (NOR2X4)                          0.47      26.85 f
+  U964/Y (INVX3)                           0.23      27.08 r
+  U1330/Y (OAI31X4)                        0.55      27.63 f
+  U1061/Y (NAND3X1)                        0.81      28.43 r
+  U892/Y (BUFX6)                           0.65      29.09 r
+  U1456/Y (OAI22XL)                        0.33      29.41 f
+  U939/Y (AOI21XL)                         0.45      29.87 r
+  U1457/Y (OAI21XL)                        0.27      30.13 f
+  receiver_y_reg[2][3]/D (DFFRX1)          0.00      30.13 f
+  data arrival time                                  30.13
+
+  clock clk (rise edge)                   30.00      30.00
+  clock network delay (ideal)              0.50      30.50
+  clock uncertainty                       -0.10      30.40
+  receiver_y_reg[2][3]/CK (DFFRX1)         0.00      30.40 r
+  library setup time                      -0.27      30.13
+  data required time                                 30.13
+  -----------------------------------------------------------
+  data required time                                 30.13
+  data arrival time                                 -30.13
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
