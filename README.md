@@ -15,7 +15,7 @@ Each folder corresponds to the respective year's competition and includes proble
 | 2021 | Univ  | Geofence           | 30 ns | Area < 22000um²                      | Area : 15527um² <br> Cycle: 2005            |  A    |
 | 2020 | Grad  | SME                | 3.5ns | Score = 100                          | Area : 31362um² <br> Cycle: 1806            |  A    |
 | 2019 | Grad  | CONV               |  8 ns | Area > 270000um²                     | Area : 29908um² <br> Cycle: 88075           |  S    |
-| 2018 | Grad  | Huffman            |  7 ns | ---                                  | Area : 32461um² <br> Cycle: 168             |  A    |
+| 2018 | Grad  | Huffman            |  4 ns | ---                                  | Area : 26177um² <br> Cycle: 156             |  A    |
 | 2018 | Univ  | LCD_CTRL           | 15 ns | ---                                  | Area : 60176um² <br> Cycle: 178             |  A    |
 | 2017 | Grad  | DT                 | 3.5ns | Area < 12500um²<br>Time < 1920000 ns | Area : 7623um² <br> Cycle: 79126            |  A    |
 | 2016 | Grad  | LBP                |  4 ns | Area * Time < 12x10⁹                 | Area : 9104um² <br> Cycle: 48391            |  A    |

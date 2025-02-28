@@ -8,7 +8,7 @@
 # (A) Global Parameters
 #======================================================
 set DESIGN "huffman"
-set CYCLE 7.0
+set CYCLE 4.0
 set INPUT_DLY [expr 0.5*$CYCLE]
 set OUTPUT_DLY [expr 0.5*$CYCLE]
 
@@ -30,6 +30,7 @@ link
 #======================================================
 #  (C) Global Setting
 #======================================================
+set_operating_conditions -max_library slow -max slow
 set_operating_conditions  -max slow  -min fast
 set_wire_load_model -name tsmc13_wl10 -library slow   
 

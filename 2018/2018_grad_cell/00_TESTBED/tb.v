@@ -1,7 +1,7 @@
 // version 0.9%2018-03-14
 // version 0.91% move the section of initial $sdf_annotate
 `timescale 1ns/10ps
-`define CLK_period 7.0            // CLK period. DO NOT modify period
+`define CLK_period 4.0            // CLK period. DO NOT modify period
 `define End_CYCLE  10000       	  // Modify cycle times once your design need more cycle times!
 `define SDFFILE "huffman_syn.sdf" // Modify your sdf file name
 

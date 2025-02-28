@@ -3,7 +3,7 @@
 Report : area
 Design : huffman
 Version: U-2022.12
-Date   : Mon Jan 27 23:53:48 2025
+Date   : Fri Feb 28 21:11:16 2025
 ****************************************
 
 Library(s) Used:
@@ -11,20 +11,20 @@ Library(s) Used:
     slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
 
 Number of ports:                          157
-Number of nets:                          2866
-Number of cells:                         2769
-Number of combinational cells:           2205
-Number of sequential cells:               522
+Number of nets:                          1955
+Number of cells:                         1778
+Number of combinational cells:           1559
+Number of sequential cells:               219
 Number of macros/black boxes:               0
-Number of buf/inv:                        364
-Number of references:                     103
+Number of buf/inv:                        197
+Number of references:                     125
 
-Combinational area:              17308.387821
-Buf/Inv area:                     1661.754580
-Noncombinational area:           15152.689779
+Combinational area:              18079.007381
+Buf/Inv area:                     1843.376418
+Noncombinational area:            8098.295357
 Macro/Black Box area:                0.000000
-Net Interconnect area:          373101.891937
+Net Interconnect area:          206174.375183
 
-Total cell area:                 32461.077601
-Total area:                     405562.969538
+Total cell area:                 26177.302738
+Total area:                     232351.677921
 1

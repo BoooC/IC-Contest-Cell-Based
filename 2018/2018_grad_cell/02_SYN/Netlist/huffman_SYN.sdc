@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Mon Jan 27 23:53:48 2025
+# Created by write_sdc on Fri Feb 28 21:11:16 2025
 
 ###################################################################
 set sdc_version 2.1
@@ -166,19 +166,19 @@ set_max_fanout 20 [get_ports {gray_data[3]}]
 set_max_fanout 20 [get_ports {gray_data[2]}]
 set_max_fanout 20 [get_ports {gray_data[1]}]
 set_max_fanout 20 [get_ports {gray_data[0]}]
-create_clock [get_ports clk]  -period 7  -waveform {0 3.5}
+create_clock [get_ports clk]  -period 4  -waveform {0 2}
 set_clock_latency 0.5  [get_clocks clk]
 set_clock_uncertainty 0.1  [get_clocks clk]
-set_input_delay -clock clk  3.5  [get_ports reset]
-set_input_delay -clock clk  3.5  [get_ports gray_valid]
-set_input_delay -clock clk  3.5  [get_ports {gray_data[7]}]
-set_input_delay -clock clk  3.5  [get_ports {gray_data[6]}]
-set_input_delay -clock clk  3.5  [get_ports {gray_data[5]}]
-set_input_delay -clock clk  3.5  [get_ports {gray_data[4]}]
-set_input_delay -clock clk  3.5  [get_ports {gray_data[3]}]
-set_input_delay -clock clk  3.5  [get_ports {gray_data[2]}]
-set_input_delay -clock clk  3.5  [get_ports {gray_data[1]}]
-set_input_delay -clock clk  3.5  [get_ports {gray_data[0]}]
+set_input_delay -clock clk  2  [get_ports reset]
+set_input_delay -clock clk  2  [get_ports gray_valid]
+set_input_delay -clock clk  2  [get_ports {gray_data[7]}]
+set_input_delay -clock clk  2  [get_ports {gray_data[6]}]
+set_input_delay -clock clk  2  [get_ports {gray_data[5]}]
+set_input_delay -clock clk  2  [get_ports {gray_data[4]}]
+set_input_delay -clock clk  2  [get_ports {gray_data[3]}]
+set_input_delay -clock clk  2  [get_ports {gray_data[2]}]
+set_input_delay -clock clk  2  [get_ports {gray_data[1]}]
+set_input_delay -clock clk  2  [get_ports {gray_data[0]}]
 set_output_delay -clock clk  0.5  [get_ports CNT_valid]
 set_output_delay -clock clk  0.5  [get_ports {CNT1[7]}]
 set_output_delay -clock clk  0.5  [get_ports {CNT1[6]}]

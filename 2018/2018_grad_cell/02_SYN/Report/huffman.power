@@ -4,7 +4,7 @@ Report : power
         -analysis_effort low
 Design : huffman
 Version: U-2022.12
-Date   : Mon Jan 27 23:53:48 2025
+Date   : Fri Feb 28 21:11:16 2025
 ****************************************
 
 
@@ -35,12 +35,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   1.4319 mW   (94%)
-  Net Switching Power  =  98.2822 uW    (6%)
+  Cell Internal Power  =   1.4267 mW   (87%)
+  Net Switching Power  = 205.8454 uW   (13%)
                          ---------
-Total Dynamic Power    =   1.5301 mW  (100%)
+Total Dynamic Power    =   1.6325 mW  (100%)
 
-Cell Leakage Power     =  21.6563 uW
+Cell Leakage Power     =  22.0365 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -49,10 +49,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      1.4161            0.0000            0.0000            1.4161  (  91.25%)  i
-register       6.9735e-03        1.1578e-02        1.2150e+07        3.0702e-02  (   1.98%)
+clock_network      1.3642            0.0000            0.0000            1.3642  (  82.45%)  i
+register       1.1877e-02        1.1059e-02        6.7888e+06        2.9724e-02  (   1.80%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  8.8219e-03        8.6705e-02        9.5058e+06            0.1050  (   6.77%)
+combinational  5.0614e-02            0.1948        1.5248e+07            0.2606  (  15.75%)
 --------------------------------------------------------------------------------------------------
-Total              1.4319 mW     9.8282e-02 mW     2.1656e+07 pW         1.5518 mW
+Total              1.4267 mW         0.2058 mW     2.2036e+07 pW         1.6545 mW
 1

@@ -8,12 +8,12 @@
 #======================================================
 set DESIGN "huffman"
 huffman
-set CYCLE 7.0
-7.0
+set CYCLE 4.0
+4.0
 set INPUT_DLY [expr 0.5*$CYCLE]
-3.5
+2.0
 set OUTPUT_DLY [expr 0.5*$CYCLE]
-3.5
+2.0
 #======================================================
 # (B) Read RTL Code
 #======================================================
@@ -35,25 +35,18 @@ Loading db file '/usr/cad/synopsys/synthesis/2022.12/libraries/syn/standard.sldb
   Loading link library 'fast'
   Loading link library 'gtech'
 Running PRESTO HDLC
+Warning:  ./huffman.v:165: signed to unsigned assignment occurs. (VER-318)
 
-Statistics for case statements in always block at line 84 in file
+Statistics for case statements in always block at line 133 in file
         './huffman.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            85            |    auto/auto     |
-===============================================
-
-Statistics for case statements in always block at line 208 in file
-        './huffman.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           218            |    auto/auto     |
+|           134            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-        in routine huffman line 97 in file
+        in routine huffman line 150 in file
                 './huffman.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -62,119 +55,28 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-        in routine huffman line 106 in file
+        in routine huffman line 161 in file
                 './huffman.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|    symbol_P_reg     | Flip-flop |  42   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      prob_reg       | Flip-flop |  48   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     symbol_reg      | Flip-flop |  21   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     symbol_reg      | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-        in routine huffman line 141 in file
+        in routine huffman line 192 in file
                 './huffman.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|    symbol_S_reg     | Flip-flop |  135  |  Y  | N  | Y  | N  | N  | N  | N  |
-|    symbol_S_reg     | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      addr_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      addr_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
 ===============================================================================
 
 Inferred memory devices in process
-        in routine huffman line 164 in file
-                './huffman.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    symbol_C0_reg    | Flip-flop |  40   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-        in routine huffman line 175 in file
-                './huffman.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    symbol_C1_reg    | Flip-flop |  40   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-        in routine huffman line 186 in file
-                './huffman.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    symbol_C2_reg    | Flip-flop |  40   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-        in routine huffman line 197 in file
-                './huffman.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    symbol_C3_reg    | Flip-flop |  40   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-        in routine huffman line 208 in file
-                './huffman.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    symbol_C4_reg    | Flip-flop |  40   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-        in routine huffman line 256 in file
-                './huffman.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  combine_count_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-        in routine huffman line 268 in file
-                './huffman.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   split_count_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-        in routine huffman line 280 in file
-                './huffman.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   encode_reg_reg    | Flip-flop |  30   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-        in routine huffman line 307 in file
-                './huffman.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   encode_len_reg    | Flip-flop |  30   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Presto compilation completed successfully. (huffman)
-Elaborated 1 design.
-Current design is now 'huffman'.
-Information: Building the design 'SORT'. (HDL-193)
-
-Statistics for case statements in always block at line 397 in file
-        './huffman.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           398            |     no/auto      |
-===============================================
-
-Inferred memory devices in process
-        in routine SORT line 384 in file
+        in routine huffman line 210 in file
                 './huffman.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -183,17 +85,166 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-        in routine SORT line 397 in file
+        in routine huffman line 219 in file
+                './huffman.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| conbination_times_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+        in routine huffman line 228 in file
                 './huffman.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
-|    sorted_P_reg     | Flip-flop |  42   |  Y  | N  | N  | N  | N  | N  | N  |
-|    sorted_S_reg     | Flip-flop |  144  |  Y  | N  | N  | N  | N  | N  | N  |
+| exchange_times_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
-Presto compilation completed successfully. (SORT)
-Information: Building the design 'group_combine'. (HDL-193)
-Presto compilation completed successfully. (group_combine)
+
+Inferred memory devices in process
+        in routine huffman line 241 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  exchange_reg_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 253 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| exchange_2_reg_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 265 in file
+                './huffman.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| encoding_2_sets_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+        in routine huffman line 275 in file
+                './huffman.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| mult_set_comb_flag_reg | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+        in routine huffman line 290 in file
+                './huffman.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| encoding_reverse_flag_reg | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+        in routine huffman line 304 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  encoding_temp_reg  | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 319 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     M_temp_reg      | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 335 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       M1_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       HC1_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 350 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       M2_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       HC2_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 365 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       M3_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       HC3_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 380 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       M4_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       HC4_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 395 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       M5_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       HC5_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 410 in file
+                './huffman.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       M6_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       HC6_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine huffman line 426 in file
+                './huffman.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| statistic_done_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+        in routine huffman line 435 in file
+                './huffman.v'.
+=======================================================================================
+|        Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================
+| statistic_done_reg_dly1_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=======================================================================================
+Presto compilation completed successfully. (huffman)
+Elaborated 1 design.
+Current design is now 'huffman'.
 1
 # (B-2) read_sverilog
 #read_sverilog $DESIGN\.v
@@ -206,7 +257,7 @@ link
   Linking design 'huffman'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (3 designs)               /home/M13/m0bochun/IC_Contest/2018/2018_grad_cell/02_SYN/huffman.db, etc
+  huffman                     /home/M13/m0bochun/IC_Contest/2018/2018_grad_cell/02_SYN/huffman.db
   slow (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db
   fast (library)              /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/fast.db
   dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/2022.12/libraries/syn/dw_foundation.sldb
@@ -215,6 +266,9 @@ link
 #======================================================
 #  (C) Global Setting
 #======================================================
+set_operating_conditions -max_library slow -max slow
+Using operating conditions 'slow' found in library 'slow'.
+1
 set_operating_conditions  -max slow  -min fast
 Using operating conditions 'slow' found in library 'slow'.
 Using operating conditions 'fast' found in library 'fast'.
@@ -257,14 +311,16 @@ set_max_fanout 20 [all_inputs]
 # (D-5) Report Clock skew
 report_clock -skew clk
 Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'alt1' from '(none)' to 'tsmc13_wl10'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'tsmc13_wl10'. (OPT-170)
 Information: Updating design information... (UID-85)
-Warning: Design 'huffman' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Design 'huffman' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
  
 ****************************************
 Report : clock_skew
 Design : huffman
 Version: U-2022.12
-Date   : Mon Jan 27 23:53:28 2025
+Date   : Fri Feb 28 21:10:52 2025
 ****************************************
 
                  Rise      Fall  Min Rise  Min fall        Uncertainty
@@ -318,16 +374,16 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 2833                                   |
-| Number of User Hierarchies                              | 2                                      |
-| Sequential Cell Count                                   | 644                                    |
+| Leaf Cell Count                                         | 1723                                   |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 219                                    |
 | Macro Count                                             | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 2                                      |
 | Number of VT Class                                      | 0                                      |
 | Number of Clocks                                        | 1                                      |
-| Number of Dont Touch Cells                              | 270                                    |
-| Number of Dont Touch Nets                               | 2                                      |
+| Number of Dont Touch Cells                              | 374                                    |
+| Number of Dont Touch Nets                               | 1                                      |
 | Number of Size Only Cells                               | 0                                      |
 | Design with UPF Data                                    | false                                  |
 ----------------------------------------------------------------------------------------------------
@@ -337,7 +393,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ====================================================================================================
 Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
 
-Information: There are 106 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 13 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
   Simplifying Design 'huffman'
 
@@ -348,15 +404,11 @@ Warning: Operating condition slow set on design huffman has different process,
 voltage and temperatures parameters than the parameters at which target library 
 fast is characterized. Delays may be inaccurate as a result. (OPT-998)
   Building model 'DW01_NAND2'
-Information: Ungrouping hierarchy group_combine_inst before Pass 1 (OPT-776)
-Information: Ungrouping 1 of 3 hierarchies before Pass 1 (OPT-775)
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
 Information: State dependent leakage is now switched from on to off.
 
   Beginning Pass 1 Mapping
   ------------------------
-  Processing 'SORT'
-Information: Added key list 'DesignWare' to design 'SORT'. (DDB-72)
- Implement Synthetic for 'SORT'.
   Processing 'huffman'
 Information: Added key list 'DesignWare' to design 'huffman'. (DDB-72)
  Implement Synthetic for 'huffman'.
@@ -365,145 +417,25 @@ Information: Added key list 'DesignWare' to design 'huffman'. (DDB-72)
 Information: Updating design information... (UID-85)
 Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
 Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
-Information: The register 'SORT_inst/sorted_S_reg[4][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[4][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[2][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[2][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[1][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[1][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[6][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[6][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[5][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[5][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[5][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[5][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[3][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[3][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[5][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[4][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[4][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[2][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[1][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[1][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[6][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[3][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[3][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[5][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[4][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[4][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[2][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[1][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[1][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[6][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[6][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[2][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[3][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[3][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[5][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[4][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[4][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[2][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[1][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[1][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[6][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[6][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[2][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[5][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[3][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[3][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[5][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[4][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[4][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[2][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[1][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[1][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[6][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[6][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[2][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[3][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[3][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[5][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[3][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[3][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[5][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[4][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[4][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[2][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[2][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[1][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[1][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'SORT_inst/sorted_S_reg[6][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[6][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[5][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[6][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_S_reg[2][23]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[6][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[6][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[6][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[6][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[6][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[5][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[5][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[5][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[5][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C2_reg[5][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[5][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[5][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[5][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[5][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[5][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[6][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[6][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[6][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[6][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C3_reg[6][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[6][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[6][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[6][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[6][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[6][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[5][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[5][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[5][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[5][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C0_reg[5][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[6][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[6][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[6][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[6][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[6][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[5][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[5][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[5][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[5][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C1_reg[5][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[5][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[5][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[5][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[5][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[5][3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[6][19]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[6][15]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[6][11]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[6][7]' is a constant and will be removed. (OPT-1206)
-Information: The register 'symbol_C4_reg[6][3]' is a constant and will be removed. (OPT-1206)
 
   Beginning Mapping Optimizations  (Ultra High effort)
   -------------------------------
-Information: Ungrouping hierarchy SORT_inst 'SORT' #insts = 1460. (OPT-777)
   Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
 
                                   TOTAL                                                            
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:10   47523.8      0.00      -0.0    2166.2                           43427648.0000      0.00  
-    0:00:10   47522.1      0.00       0.0    2166.2                           43427732.0000      0.00  
+    0:00:14   52590.5      0.05       1.4      89.4                           45065308.0000      0.00  
+    0:00:14   51436.3      0.05       1.4      89.4                           44062652.0000      0.00  
 
   Beginning Constant Register Removal
   -----------------------------------
-    0:00:10   47522.1      0.00       0.0    2166.2                           43427732.0000      0.00  
-    0:00:10   47522.1      0.00       0.0    2166.2                           43427732.0000      0.00  
+    0:00:14   51436.3      0.05       1.4      89.4                           44062652.0000      0.00  
+    0:00:14   51436.3      0.05       1.4      89.4                           44062652.0000      0.00  
 
   Beginning Global Optimizations
   ------------------------------
@@ -546,37 +478,37 @@ Information: Ungrouping hierarchy SORT_inst 'SORT' #insts = 1460. (OPT-777)
 
   Beginning Delay Optimization
   ----------------------------
-    0:00:12   32545.9      1.20      47.6    4029.3                           22068056.0000      0.00  
-    0:00:12   32995.8      0.00       0.0    3921.3                           22489750.0000      0.00  
-    0:00:12   32995.8      0.00       0.0    3921.3                           22489750.0000      0.00  
-    0:00:12   32990.7      0.10       0.2    3920.3                           22489152.0000      0.00  
-    0:00:13   32744.5      0.00       0.0    3906.6                           22530270.0000      0.00  
-    0:00:13   32744.5      0.00       0.0    3906.6                           22530270.0000      0.00  
+    0:00:15   25656.2      0.52      49.4    3801.4                           22257660.0000      0.00  
+    0:00:16   28407.7      0.00       0.0    2791.1                           24633390.0000      0.00  
+    0:00:16   28407.7      0.00       0.0    2791.1                           24633390.0000      0.00  
+    0:00:16   28382.2      0.06       2.1    2791.1                           24623104.0000      0.00  
+    0:00:16   28341.5      0.71     109.7    2795.9                           24595236.0000      0.00  
+    0:00:16   28324.5      0.71     109.7    2795.9                           24585138.0000      0.00  
 
   Beginning WLM Backend Optimization
   --------------------------------------
-    0:00:14   32101.2      0.00       0.0    3899.5                           22131260.0000      0.00  
-    0:00:14   32101.2      0.00       0.0    3899.5                           22131260.0000      0.00  
-    0:00:14   32101.2      0.00       0.0    3899.5                           22131260.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
+    0:00:17   27676.1      0.62      24.6    2776.8                           23965612.0000      0.00  
+    0:00:17   27628.6      0.03       0.1    2766.6                           23865350.0000      0.00  
+    0:00:17   27628.6      0.03       0.1    2766.6                           23865350.0000      0.00  
+    0:00:17   27338.3      0.02       0.0    2669.5                           23580640.0000      0.00  
+    0:00:17   27338.3      0.02       0.0    2669.5                           23580640.0000      0.00  
+    0:00:18   28755.7      0.04       0.4    2809.9                           24813412.0000      0.00  
+    0:00:18   28755.7      0.04       0.4    2809.9                           24813412.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
 
 
   Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
@@ -586,12 +518,12 @@ Information: Ungrouping hierarchy SORT_inst 'SORT' #insts = 1460. (OPT-777)
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:14   32074.1      0.00       0.0    3899.5                           22110104.0000      0.00  
+    0:00:18   28845.6      0.00       0.0    2793.5                           24930170.0000      0.00  
   Global Optimization (Phase 32)
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
-    0:00:15   32652.9      0.00       0.0       0.0                           22177316.0000      0.00  
-    0:00:15   32652.9      0.00       0.0       0.0                           22177316.0000      0.00  
+    0:00:19   28947.5      0.00       0.0       0.0                           24800572.0000      0.00  
+    0:00:19   28947.5      0.00       0.0       0.0                           24800572.0000      0.00  
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -601,47 +533,46 @@ Information: Ungrouping hierarchy SORT_inst 'SORT' #insts = 1460. (OPT-777)
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:15   32652.9      0.00       0.0       0.0                           22177316.0000      0.00  
-    0:00:15   32652.9      0.00       0.0       0.0                           22177316.0000      0.00  
-    0:00:15   32652.9      0.00       0.0       0.0                           22177316.0000      0.00  
-    0:00:15   32652.9      0.00       0.0       0.0                           22177316.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32642.7      0.00       0.0       0.0                           22132760.0000      0.00  
-    0:00:15   32856.6      0.00       0.0       0.0                           22229200.0000      0.00  
+    0:00:19   28947.5      0.00       0.0       0.0                           24800572.0000      0.00  
+    0:00:19   28947.5      0.00       0.0       0.0                           24800572.0000      0.00  
+    0:00:19   28947.5      0.00       0.0       0.0                           24800572.0000      0.00  
+    0:00:19   28947.5      0.00       0.0       0.0                           24800572.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
 
                                   TOTAL                                                            
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
   --------- --------- --------- --------- --------- ------------------------- --------- -----------
-    0:00:15   32856.6      0.00       0.0       0.0                           22229200.0000      0.00  
-    0:00:16   32618.9      0.00       0.0       0.0                           21898704.0000      0.00  
-    0:00:16   32618.9      0.00       0.0       0.0                           21898704.0000      0.00  
-    0:00:16   32618.9      0.00       0.0       0.0                           21898704.0000      0.00  
-    0:00:16   32635.9      0.00       0.0       0.0                           21858682.0000      0.00  
-    0:00:16   32544.3      0.00       0.0       0.0                           21723792.0000      0.00  
-    0:00:16   32544.3      0.00       0.0       0.0                           21723792.0000      0.00  
-    0:00:16   32544.3      0.00       0.0       0.0                           21723792.0000      0.00  
-    0:00:16   32544.3      0.00       0.0       0.0                           21723792.0000      0.00  
-    0:00:16   32544.3      0.00       0.0       0.0                           21723792.0000      0.00  
-    0:00:16   32544.3      0.00       0.0       0.0                           21723792.0000      0.00  
-    0:00:17   32461.1      0.00       0.0       0.0                           21656280.0000      0.00  
+    0:00:19   28518.0      0.00       0.0       0.0                           24385342.0000      0.00  
+    0:00:19   27497.9      0.00       0.0       0.0                           23296304.0000      0.00  
+    0:00:19   27508.1      0.00       0.0       0.0                           23299852.0000      0.00  
+    0:00:19   27508.1      0.00       0.0       0.0                           23299852.0000      0.00  
+    0:00:20   27482.6      0.00       0.0       0.0                           23279082.0000      0.00  
+    0:00:20   27187.3      0.00       0.0       0.0                           22971778.0000      0.00  
+    0:00:20   27187.3      0.00       0.0       0.0                           22971778.0000      0.00  
+    0:00:20   27187.3      0.00       0.0       0.0                           22971778.0000      0.00  
+    0:00:20   27187.3      0.00       0.0       0.0                           22971778.0000      0.00  
+    0:00:20   27187.3      0.00       0.0       0.0                           22971778.0000      0.00  
+    0:00:20   27187.3      0.00       0.0       0.0                           22971778.0000      0.00  
+    0:00:20   26177.3      0.00       0.0       0.0                           22036494.0000      0.00  
 Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db'
 Loading db file '/home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/fast.db'
 
@@ -715,7 +646,7 @@ report_area
 Report : area
 Design : huffman
 Version: U-2022.12
-Date   : Mon Jan 27 23:53:48 2025
+Date   : Fri Feb 28 21:11:16 2025
 ****************************************
 
 Library(s) Used:
@@ -723,22 +654,22 @@ Library(s) Used:
     slow (File: /home/cell_library/CBDK_IC_Contest_v2.5/SynopsysDC/db/slow.db)
 
 Number of ports:                          157
-Number of nets:                          2866
-Number of cells:                         2769
-Number of combinational cells:           2205
-Number of sequential cells:               522
+Number of nets:                          1955
+Number of cells:                         1778
+Number of combinational cells:           1559
+Number of sequential cells:               219
 Number of macros/black boxes:               0
-Number of buf/inv:                        364
-Number of references:                     103
+Number of buf/inv:                        197
+Number of references:                     125
 
-Combinational area:              17308.387821
-Buf/Inv area:                     1661.754580
-Noncombinational area:           15152.689779
+Combinational area:              18079.007381
+Buf/Inv area:                     1843.376418
+Noncombinational area:            8098.295357
 Macro/Black Box area:                0.000000
-Net Interconnect area:          373101.891937
+Net Interconnect area:          206174.375183
 
-Total cell area:                 32461.077601
-Total area:                     405562.969538
+Total cell area:                 26177.302738
+Total area:                     232351.677921
 1
 report_timing 
  
@@ -749,16 +680,15 @@ Report : timing
         -max_paths 1
 Design : huffman
 Version: U-2022.12
-Date   : Mon Jan 27 23:53:48 2025
+Date   : Fri Feb 28 21:11:16 2025
 ****************************************
 
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: gray_data[6]
-              (input port clocked by clk)
-  Endpoint: symbol_P_reg_3__2_
-            (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: addr_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: M1_reg_0_ (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
 
@@ -770,41 +700,46 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.50       0.50
-  input external delay                     3.50       4.00 f
-  gray_data[6] (in)                        0.03       4.03 f
-  U1793/Y (NOR4X6)                         0.22       4.25 r
-  U1794/Y (NAND2BX4)                       0.19       4.44 f
-  U1795/Y (NOR3X4)                         0.24       4.68 r
-  U1812/Y (NOR2BX4)                        0.29       4.97 r
-  U1635/Y (CLKINVX1)                       0.57       5.54 f
-  U1897/Y (NOR2X1)                         0.51       6.04 r
-  U1898/Y (NOR2X1)                         0.26       6.30 f
-  U2515/Y (OAI21XL)                        0.32       6.63 r
-  U2516/Y (AOI22X1)                        0.26       6.88 f
-  U2517/Y (OAI31X1)                        0.23       7.11 r
-  symbol_P_reg_3__2_/D (DFFRX1)            0.00       7.11 r
-  data arrival time                                   7.11
+  addr_reg_2_/CK (DFFRX4)                  0.00       0.50 r
+  addr_reg_2_/Q (DFFRX4)                   0.52       1.02 r
+  U1414/Y (NOR2X6)                         0.14       1.15 f
+  U1141/Y (AND2X6)                         0.18       1.34 f
+  U1407/Y (INVX20)                         0.16       1.50 r
+  U1653/Y (INVX20)                         0.14       1.63 f
+  U1159/Y (AOI22X2)                        0.29       1.93 r
+  U1095/Y (NAND4X6)                        0.31       2.23 f
+  U1921/Y (NOR2X1)                         0.27       2.50 r
+  U1160/Y (MXI2X1)                         0.25       2.75 f
+  U1051/Y (NAND2X4)                        0.25       3.00 r
+  U1324/Y (INVX4)                          0.14       3.15 f
+  U2458/Y (NOR3X2)                         0.23       3.37 r
+  U997/Y (NAND2X2)                         0.17       3.54 f
+  U2459/Y (AND2X8)                         0.20       3.74 f
+  U1296/Y (INVX16)                         0.13       3.87 r
+  U2460/Y (MXI2X1)                         0.26       4.12 r
+  M1_reg_0_/D (DFFRX1)                     0.00       4.12 r
+  data arrival time                                   4.12
 
-  clock clk (rise edge)                    7.00       7.00
-  clock network delay (ideal)              0.50       7.50
-  clock uncertainty                       -0.10       7.40
-  symbol_P_reg_3__2_/CK (DFFRX1)           0.00       7.40 r
-  library setup time                      -0.28       7.12
-  data required time                                  7.12
+  clock clk (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.50       4.50
+  clock uncertainty                       -0.10       4.40
+  M1_reg_0_/CK (DFFRX1)                    0.00       4.40 r
+  library setup time                      -0.28       4.12
+  data required time                                  4.12
   -----------------------------------------------------------
-  data required time                                  7.12
-  data arrival time                                  -7.11
+  data required time                                  4.12
+  data arrival time                                  -4.12
   -----------------------------------------------------------
-  slack (MET)                                         0.01
+  slack (MET)                                         0.00
 
 
 1
 exit
 
-Memory usage for this session 345 Mbytes.
-Memory usage for this session including child processes 562 Mbytes.
-CPU usage for this session 36 seconds ( 0.01 hours ).
-Elapsed time for this session 28 seconds ( 0.01 hours ).
+Memory usage for this session 355 Mbytes.
+Memory usage for this session including child processes 557 Mbytes.
+CPU usage for this session 66 seconds ( 0.02 hours ).
+Elapsed time for this session 31 seconds ( 0.01 hours ).
 
 Thank you...
 

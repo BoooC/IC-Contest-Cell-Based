@@ -4,7 +4,7 @@ vcs.log -P /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/novas.tab /usr
 +define+RTL +notimingchecks
 *** Using c compiler gcc instead of cc ...
                          Chronologic VCS (TM)
-         Version U-2023.03_Full64 -- Mon Jan 27 23:54:05 2025
+         Version U-2023.03_Full64 -- Fri Feb 28 21:04:45 2025
 
                     Copyright (c) 1991 - 2023 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -42,8 +42,8 @@ rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
 g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
 -Wl,-rpath=/usr/cad/synopsys/vcs/2023.03/linux64/lib -L/usr/cad/synopsys/vcs/2023.03/linux64/lib \
--Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _31832_archive_1.so \
-_31853_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1   objs/amcQw_d.o   _8737_archive_1.so \
+_8758_archive_1.so _prev_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o \
 rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc \
 -lvfs /usr/cad/synopsys/verdi/2023.03//share/PLI/VCS/linux64/pli.a    -lvcsnew -lsimprofile \
 -luclinative /usr/cad/synopsys/vcs/2023.03/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
@@ -56,7 +56,7 @@ make[1]: Leaving directory `/home/M13/m0bochun/IC_Contest/2018/2018_grad_cell/01
 Command: /home/M13/m0bochun/IC_Contest/2018/2018_grad_cell/01_RTL/./simv +v2k +libext+.v -a vcs.log +define+RTL +notimingchecks
 Chronologic VCS simulator copyright 1991-2023
 Contains Synopsys proprietary information.
-Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Jan 27 23:54 2025
+Compiler version U-2023.03_Full64; Runtime version U-2023.03_Full64;  Feb 28 21:04 2025
 *Verdi* Loading libsscore_vcs202303.so
 FSDB Dumper for VCS, Release Verdi_U-2023.03, Linux x86_64/64bit, 02/16/2023
 (C) 1996 - 2023 by Synopsys, Inc.
@@ -73,9 +73,9 @@ Check HC : PASS
 Check M : PASS
 You PASS the contest now.
 $finish called from file "tb.v", line 195.
-$finish at simulation time               117600
+$finish at simulation time               109200
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 1176000 ps
-CPU Time:      0.470 seconds;       Data structure size:   0.0Mb
-Mon Jan 27 23:54:09 2025
-CPU time: .800 seconds to compile + .531 seconds to elab + .484 seconds to link + .524 seconds in simulation
+Time: 1092000 ps
+CPU Time:      0.480 seconds;       Data structure size:   0.0Mb
+Fri Feb 28 21:04:48 2025
+CPU time: .751 seconds to compile + .526 seconds to elab + .481 seconds to link + .529 seconds in simulation
